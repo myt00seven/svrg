@@ -15,6 +15,8 @@ import time
 
 import matplotlib
 import matplotlib.pyplot as plt
+plt.switch_backend('agg')
+
 import pylab
 
 import numpy as np
