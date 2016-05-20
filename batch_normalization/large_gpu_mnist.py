@@ -19,6 +19,7 @@ plt.switch_backend('agg')
 
 import pylab 
 
+#THEANO_FLAGS='floatX=float32,device=gpu0,mode=FAST_RUN'
 import numpy as np 
 import theano
 import theano.tensor as T
@@ -30,15 +31,15 @@ from collections import OrderedDict
 # May 18, 2016, Yintai Ma
 # standard setting , epoch = 20, batch size = 100
 
-OUTPUT_FIGURE_PATH = 'large_data/'
-OUTPUT_DATA_PATH = 'large_data/'
-NUM_EPOCHS = 200
+OUTPUT_FIGURE_PATH = 'data_large/'
+OUTPUT_DATA_PATH = 'data_large/'
+NUM_EPOCHS = 1000
 BATCH_SIZE = 100
 NUM_HIDDEN_UNITS = 500
 LEARNING_RATE = 0.01
 MOMENTUM = 0.9
 FREQUENCY = 0.1
-MODEL = 'mlp'
+MODEL = 'mlpbn'
 GRADIENT = 'sgd'
 
 # ################## Download and prepare the MNIST dataset ##################
@@ -308,14 +309,14 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
 
         # and a full pass over the test data, bingo!
         test_err = 0
-	    test_acc = 0
-	    test_batches = 0
-	    for batch in iterate_minibatches(X_test, y_test, BATCH_SIZE, shuffle=False):
-	        inputs, targets = batch
-	        err, acc = val_fn(inputs, targets)
-	        test_err += err
-	        test_acc += acc
-	        test_batches += 1
+        test_acc = 0
+        test_batches = 0
+        for batch in iterate_minibatches(X_test, y_test, BATCH_SIZE, shuffle=False):
+            inputs, targets = batch
+            err, acc = val_fn(inputs, targets)
+            test_err += err
+            test_acc += acc
+            test_batches += 1
 
         # Then we print the results for this epoch:
         times.append(time.time() - start_time)
@@ -365,7 +366,7 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
     plt.ylabel('Loss')
     plt.legend()
     # plt.show()
-    pylab.savefig(OUTPUT_FIGURE_PATH+'LossTrain-'+model+'-'+gradient+'-'+str(NUM_EPOCHS)+'.png',
+    pylab.savefig(OUTPUT_FIGURE_PATH+'fig_LossTrain-'+model+'-'+gradient+'-'+str(NUM_EPOCHS)+'.png',
        bbox_inches='tight')
     
     plt.figure(2)
@@ -377,16 +378,16 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
     plt.ylabel('Predict Accuracy')
     plt.legend(bbox_to_anchor=(1,0.25))
     # plt.show()
-    pylab.savefig(OUTPUT_FIGURE_PATH+'Pred-'+model+'-'+gradient+'-'+str(NUM_EPOCHS)+'.png',
+    pylab.savefig(OUTPUT_FIGURE_PATH+'fig_Pred-'+model+'-'+gradient+'-'+str(NUM_EPOCHS)+'.png',
        bbox_inches='tight')
 
     print ("Finish plotting...")
 
-    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_loss_train.txt",loss_train)
-    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_loss_val.txt",loss_val)
-    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_acc_train.txt",acc_train)
-    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_acc_val.txt",acc_val)
-    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_acc_test.txt",acc_test)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"_loss_train.txt",loss_train)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"_loss_val.txt",loss_val)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"_acc_train.txt",acc_train)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"_acc_val.txt",acc_val)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"_acc_test.txt",acc_test)
     print ("Data saved...")
 
 
