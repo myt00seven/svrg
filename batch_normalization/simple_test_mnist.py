@@ -17,9 +17,9 @@ import matplotlib
 import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 
-import pylab
+import pylab 
 
-import numpy as np
+import numpy as np 
 import theano
 import theano.tensor as T
 
@@ -30,9 +30,9 @@ from collections import OrderedDict
 # May 18, 2016, Yintai Ma
 # standard setting , epoch = 20, batch size = 100
 
-NUM_EPOCHS = 20
+NUM_EPOCHS = 100
 BATCH_SIZE = 100
-NUM_HIDDEN_UNITS = 100
+NUM_HIDDEN_UNITS = 500
 LEARNING_RATE = 0.01
 MOMENTUM = 0.9
 FREQUENCY = 0.1
