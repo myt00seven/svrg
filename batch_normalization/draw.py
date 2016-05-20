@@ -1,6 +1,8 @@
 import matplotlib
 import matplotlib.pyplot as plt
+plt.switch_backend('agg') 
 import pylab
+
 import numpy as np
 
 import sys
@@ -119,7 +121,8 @@ def main(num_epochs=NUM_EPOCHS):
 	plt.legend()
 	pylab.savefig(PATH_FIGURE+'CrossModel_Test Set_Loss'+'.png',bbox_inches='tight')
 	# plt.show()
-
+	
+	print ("Finish drawing cross model plots.")
 
 if __name__ == '__main__':
     if ('--help' in sys.argv) or ('-h' in sys.argv) or ('help' in sys.argv):
