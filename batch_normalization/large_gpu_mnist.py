@@ -30,9 +30,13 @@ from collections import OrderedDict
 # May 18, 2016, Yintai Ma
 # standard setting , epoch = 20, batch size = 100
 
+<<<<<<< HEAD:batch_normalization/large_gpu_mnist.py
 OUTPUT_FIGURE_PATH = 'large_data/'
 OUTPUT_DATA_PATH = 'large_data/'
 NUM_EPOCHS = 200
+=======
+NUM_EPOCHS = 100
+>>>>>>> origin/master:batch_normalization/simple_test_mnist.py
 BATCH_SIZE = 100
 NUM_HIDDEN_UNITS = 500
 LEARNING_RATE = 0.01
