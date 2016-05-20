@@ -17,9 +17,9 @@ import matplotlib
 import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 
-import pylab
+import pylab 
 
-import numpy as np
+import numpy as np 
 import theano
 import theano.tensor as T
 
@@ -30,9 +30,11 @@ from collections import OrderedDict
 # May 18, 2016, Yintai Ma
 # standard setting , epoch = 20, batch size = 100
 
-NUM_EPOCHS = 20
+OUTPUT_FIGURE_PATH = 'large_data/'
+OUTPUT_DATA_PATH = 'large_data/'
+NUM_EPOCHS = 200
 BATCH_SIZE = 100
-NUM_HIDDEN_UNITS = 100
+NUM_HIDDEN_UNITS = 500
 LEARNING_RATE = 0.01
 MOMENTUM = 0.9
 FREQUENCY = 0.1
@@ -278,6 +280,7 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
     loss_val =  []
     acc_val = []
     acc_train = []
+    acc_test = []
     times = []
 
     for epoch in range(NUM_EPOCHS):
@@ -303,6 +306,17 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
             val_acc += acc
             val_batches += 1
 
+        # and a full pass over the test data, bingo!
+        test_err = 0
+	    test_acc = 0
+	    test_batches = 0
+	    for batch in iterate_minibatches(X_test, y_test, BATCH_SIZE, shuffle=False):
+	        inputs, targets = batch
+	        err, acc = val_fn(inputs, targets)
+	        test_err += err
+	        test_acc += acc
+	        test_batches += 1
+
         # Then we print the results for this epoch:
         times.append(time.time() - start_time)
         print("Epoch {} of {} took {:.3f}s".format(epoch + 1, num_epochs, time.time() - start_time))
@@ -314,6 +328,9 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
         acc_val.append(val_acc / val_batches)
         print("  validation accuracy:\t\t{:.2f} %".format(
             val_acc / val_batches * 100))
+        acc_test.append(test_acc / val_batches)
+        print("  test accuracy:\t\t{:.2f} %".format(
+            test_acc / val_batches * 100))
 
     # After training, we compute and print the test error:
     test_err = 0
@@ -327,8 +344,7 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
         test_batches += 1
     print("Final results:")
     print("  test loss:\t\t\t{:.6f}".format(test_err / test_batches))
-    print("  test accuracy:\t\t{:.2f} %".format(
-        test_acc / test_batches * 100))
+    print("  test accuracy:\t\t{:.2f} %".format(test_acc / test_batches * 100))
     print("  average time per epoch :\t\t{:.3f} %".format(np.mean(times)))
 
 
@@ -337,9 +353,6 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
     file_handle.write("  test loss:\t\t\t{:.6f}\n".format(test_err / test_batches))
     file_handle.write("  test accuracy:\t\t{:.2f} %".format(test_acc / test_batches * 100))
     
-
-
-
     count = (np.arange(NUM_EPOCHS)+1) #*X_train.shape[0]
 
     #PLOT 
@@ -352,26 +365,28 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
     plt.ylabel('Loss')
     plt.legend()
     # plt.show()
-    pylab.savefig('test/'+'LossTrain-'+model+'-'+gradient+'-'+str(NUM_EPOCHS)+'.png',
+    pylab.savefig(OUTPUT_FIGURE_PATH+'LossTrain-'+model+'-'+gradient+'-'+str(NUM_EPOCHS)+'.png',
        bbox_inches='tight')
     
     plt.figure(2)
     plt.plot(count, acc_train, 'bs-',label="Training Set")
     plt.title(model+'-'+gradient+'-Predict Accuracy of Training/Validation Set')
     plt.plot(count, acc_val, 'ro--',label="Validation Set")
+    plt.plot(count, acc_test, 'g^:',label="Test Set")
     plt.xlabel('# Epochs')
     plt.ylabel('Predict Accuracy')
     plt.legend(bbox_to_anchor=(1,0.25))
     # plt.show()
-    pylab.savefig('test/'+'Pred-'+model+'-'+gradient+'-'+str(NUM_EPOCHS)+'.png',
+    pylab.savefig(OUTPUT_FIGURE_PATH+'Pred-'+model+'-'+gradient+'-'+str(NUM_EPOCHS)+'.png',
        bbox_inches='tight')
 
     print ("Finish plotting...")
 
-    np.savetxt("test/"+model+"_"+gradient+"_loss_train.txt",loss_train)
-    np.savetxt("test/"+model+"_"+gradient+"_loss_val.txt",loss_val)
-    np.savetxt("test/"+model+"_"+gradient+"_acc_train.txt",acc_train)
-    np.savetxt("test/"+model+"_"+gradient+"_acc_val.txt",acc_val)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_loss_train.txt",loss_train)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_loss_val.txt",loss_val)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_acc_train.txt",acc_train)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_acc_val.txt",acc_val)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_acc_test.txt",acc_test)
     print ("Data saved...")
 
 
