@@ -33,13 +33,13 @@ from collections import OrderedDict
 
 OUTPUT_FIGURE_PATH = 'data_large/'
 OUTPUT_DATA_PATH = 'data_large/'
-NUM_EPOCHS = 1000
+NUM_EPOCHS = 2
 BATCH_SIZE = 100
 NUM_HIDDEN_UNITS = 500
 LEARNING_RATE = 0.01
 MOMENTUM = 0.9
 FREQUENCY = 0.1
-MODEL = 'mlpbn'
+MODEL = 'mlp'
 GRADIENT = 'sgd'
 
 # ################## Download and prepare the MNIST dataset ##################
@@ -159,11 +159,11 @@ def load_dataset():
 # function that takes a Theano variable representing the input and returns
 # the output layer of a neural network model built in Lasagne.
 
-def build_mlp(input_var=None):
+def build_mlp(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS):
     l_in = lasagne.layers.InputLayer(shape=(None, 1, 28, 28),
                                      input_var=input_var)
     l_hid = lasagne.layers.DenseLayer(
-            l_in, num_units=NUM_HIDDEN_UNITS,
+            l_in, num_units=num_hidden_units,
             nonlinearity=lasagne.nonlinearities.rectify,
             W=lasagne.init.GlorotUniform())
     # l_hid = lasagne.layers.DenseLayer(
@@ -174,13 +174,13 @@ def build_mlp(input_var=None):
             nonlinearity=lasagne.nonlinearities.softmax)
     return l_out
 
-def build_mlpbn(input_var=None):
+def build_mlpbn(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS):
     l_in = lasagne.layers.InputLayer(shape=(None, 1, 28, 28),
                                      input_var=input_var)
     l_hidden = lasagne.layers.batch_norm (
         lasagne.layers.DenseLayer(
         l_in,
-        num_units=NUM_HIDDEN_UNITS,
+        num_units=num_hidden_units,
         nonlinearity=lasagne.nonlinearities.rectify,
         )
     )
@@ -228,7 +228,7 @@ def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
 # more functions to better separate the code, but it wouldn't make it any
 # easier to read.
 
-def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
+def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_units = NUM_HIDDEN_UNITS):
     # Load the dataset
     NUM_EPOCHS = num_epochs
     print("Loading data...")
@@ -241,9 +241,9 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
     # Create neural network model (depending on first command line parameter)
     print("Building model and compiling functions...")
     if model == 'mlp':
-        network = build_mlp(input_var)
+        network = build_mlp(input_var, num_hidden_units)
     elif model == 'mlpbn':
-        network = build_mlpbn(input_var)
+        network = build_mlpbn(input_var, num_hidden_units)
     else:
         print("Unrecognized model type %r." % model)
         return
@@ -282,6 +282,7 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
     acc_val = []
     acc_train = []
     acc_test = []
+    loss_test = []
     times = []
 
     for epoch in range(NUM_EPOCHS):
@@ -330,8 +331,9 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
         print("  validation accuracy:\t\t{:.2f} %".format(
             val_acc / val_batches * 100))
         acc_test.append(test_acc / val_batches)
-        print("  test accuracy:\t\t{:.2f} %".format(
-            test_acc / val_batches * 100))
+        loss_test.append(test_err / val_batches)
+        print("  test accuracy:\t\t{:.2f} %".format(test_acc / val_batches * 100))
+        # print("  test loss:\t\t{:.2f}".format(test_err / val_batches))
 
     # After training, we compute and print the test error:
     test_err = 0
@@ -383,11 +385,15 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS):
 
     print ("Finish plotting...")
 
-    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"_loss_train.txt",loss_train)
-    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"_loss_val.txt",loss_val)
-    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"_acc_train.txt",acc_train)
-    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"_acc_val.txt",acc_val)
-    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"_acc_test.txt",acc_test)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"loss_train.txt",loss_train)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"loss_val.txt",loss_val)
+
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"acc_train.txt",acc_train)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"acc_val.txt",acc_val)
+
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"acc_test.txt",acc_test)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(NUM_EPOCHS)+"_"+"loss_test.txt",loss_test)
+
     print ("Data saved...")
 
 
@@ -409,6 +415,7 @@ if __name__ == '__main__':
         print("       'mlpbn: for an MLP with batch Normalization")
         print("GRADIENT: 'sgd', 'svrg'")
         print("NUM_EPOCHS: ")
+        print("NUM_HIDDEN_UNITS: ")
     else:
         kwargs = {}
         if len(sys.argv) > 1:
@@ -417,5 +424,7 @@ if __name__ == '__main__':
             kwargs['gradient'] = sys.argv[2]
         if len(sys.argv) > 3:
             kwargs['num_epochs'] = int(sys.argv[3])
+        if len(sys.argv) > 4:
+            kwargs['num_hidden_units'] = int(sys.argv[4])
         main(**kwargs)
 
