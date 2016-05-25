@@ -161,7 +161,7 @@ class SVRGOptimizer:
 #                print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
 
         print("Average time per epoch \t {:.3f}".format(np.mean(times)))
-        return train_error, validation_error, acc_train, acc_val
+        return train_error, validation_error, acc_train, acc_val, acc_test, test_error
 
     def make_updates(self, loss, params):
 
