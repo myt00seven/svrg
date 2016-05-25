@@ -11,8 +11,8 @@ from custom_updates import *
 from SVRGOptimizer import SVRGOptimizer
 from operator import itemgetter
 
-MLPBN= True
-# MLPBN= False
+#MLPBN= True
+MLPBN= False
 
 def classifier_network(input_var, n_input, n_hidden, n_output):
 
