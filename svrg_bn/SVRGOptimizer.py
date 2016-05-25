@@ -31,9 +31,10 @@ class SVRGOptimizer:
         self.Ls = [1. / self.learning_rate for _  in range(num_batches)]
 
         w_updates, mu_updates = self.make_updates(loss, params)
+        train_bn = lasagne.layers.get_output(output_layer, deterministic=False, batch_norm_update_averages = True)
 
-        train_mu = theano.function([self.input_var, self.target_var], loss, updates=mu_updates, batch_norm_update_averages= True)
-        train_w = theano.function([self.input_var, self.target_var], loss, updates=w_updates, batch_norm_update_averages= True)
+        train_mu = theano.function([self.input_var, self.target_var], loss, updates=mu_updates)
+        train_w = theano.function([self.input_var, self.target_var], loss, updates=w_updates)
 
         prediction = lasagne.layers.get_output(output_layer, deterministic=True)
         test_prediction = lasagne.layers.get_output(output_layer, deterministic=True)
@@ -43,6 +44,7 @@ class SVRGOptimizer:
         train_acc = theano.function([self.input_var, self.target_var], test_acc)
 
         val_fn = theano.function([self.input_var, self.target_var], [loss, test_acc])
+        update_bn_fn = theano.function([self.input_var, self.target_var], [train_bn])
 
 
         train_error = []
@@ -50,8 +52,8 @@ class SVRGOptimizer:
         acc_train = []
         acc_val = []
         test_error = []
-	acc_test = []
-	times = []
+        acc_test = []
+        times = []
 
         print "NUMBATCHES: ", n
 
@@ -88,6 +90,9 @@ class SVRGOptimizer:
                 j += 1               
                 inputs, targets = batch
                 #print "learning_rate: ", 1. / self.L.get_value()
+
+                update_bn_fn(inputs, targets)
+                #update the std and mean in bn layer.
 
                 L = self.Ls[self.idx]
                 self.L.set_value(L)
