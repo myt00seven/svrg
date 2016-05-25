@@ -34,7 +34,7 @@ from collections import OrderedDict
 
 OUTPUT_FIGURE_PATH = 'data_large/'
 OUTPUT_DATA_PATH = 'data_large/'
-NUM_EPOCHS = 2
+NUM_EPOCHS = 20
 BATCH_SIZE = 100
 NUM_HIDDEN_UNITS = 500
 LEARNING_RATE = 0.01
@@ -167,9 +167,6 @@ def build_mlp(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS):
             l_in, num_units=num_hidden_units,
             nonlinearity=lasagne.nonlinearities.rectify,
             W=lasagne.init.GlorotUniform())
-    # l_hid = lasagne.layers.DenseLayer(
-    #         l_hid, num_units=NUM_HIDDEN_UNITS,
-    #         nonlinearity=lasagne.nonlinearities.rectify)
     l_out = lasagne.layers.DenseLayer(
             l_hid, num_units=10,
             nonlinearity=lasagne.nonlinearities.softmax)
@@ -185,13 +182,6 @@ def build_mlpbn(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS):
         nonlinearity=lasagne.nonlinearities.rectify,
         )
     )
-    # l_hidden = lasagne.layers.batch_norm (
-    #     lasagne.layers.DenseLayer(
-    #     l_hidden,
-    #     num_units=NUM_HIDDEN_UNITS,
-    #     nonlinearity=lasagne.nonlinearities.rectify,
-    #     )
-    # )
     l_out = lasagne.layers.batch_norm (
         lasagne.layers.DenseLayer(
         l_hidden,
@@ -211,7 +201,7 @@ def build_mlpbn(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS):
 # them to GPU at once for slightly improved performance. This would involve
 # several changes in the main program, though, and is not demonstrated here.
 
-def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
+def iterate_minibatches(inputs, targets, batchsize, shuffle=False ):
     assert len(inputs) == len(targets)
     if shuffle:
         indices = np.arange(len(inputs))
@@ -230,6 +220,9 @@ def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
 # easier to read.
 
 def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_units = NUM_HIDDEN_UNITS):
+    rng = np.random.RandomState(42)
+    lasagne.random.set_rng(rng)
+
     # Load the dataset
     NUM_EPOCHS = num_epochs
     print("Loading data...")

@@ -21,13 +21,13 @@ def main():
     print("Loading data...")
     X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
 
-    n_epochs = 1000
+    n_epochs = 200
     n_hidden = 500
 
     objective = lasagne.objectives.categorical_crossentropy
 
     models = {
-        'svrg_classif': (custom_svrg1, {'learning_rate': 0.1, 'm': 50})
+        'svrg_classif': (custom_svrg1, {'learning_rate': 0.01, 'm': 50})
         #'adam_classif': (custom_adam, {'learning_rate': 0.01})
 #        'adam_classif_dropout': (lasagne.updates.adam, {'learning_rate': 0.01})
     }

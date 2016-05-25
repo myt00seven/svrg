@@ -2,9 +2,9 @@ import os
 import sys
 
 #default value
-NUM_EPOCHS = "200"
-DEVICE = "CPU" 
-NUM_HIDDEN_NODES ="100"
+NUM_EPOCHS = "1000"
+DEVICE = "GPU" 
+NUM_HIDDEN_NODES ="500"
 
 def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES):
 	device = device.lower()

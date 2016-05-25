@@ -49,7 +49,9 @@ class SVRGOptimizer:
         validation_error = []
         acc_train = []
         acc_val = []
-        times = []
+        test_error = []
+	acc_test = []
+	times = []
 
         print "NUMBATCHES: ", n
 
