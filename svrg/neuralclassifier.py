@@ -48,7 +48,7 @@ class NeuralClassifier:
    
         self.input_layer, self.hidden_layer, self.output_layer = classifier_network(self.input_var, n_input, n_hidden, n_output)
     
-    def train(self, X_train, Y_train, X_val=None, Y_val=None,
+    def train(self, X_train, Y_train, X_val=None, Y_val=None, X_test=None, y_test=None,
             objective=lasagne.objectives.binary_crossentropy, 
             update=lasagne.updates.adam, 
             n_epochs=100, batch_size=100, lambd=0.0,
@@ -71,7 +71,7 @@ class NeuralClassifier:
         if svrg:
             optimizer = SVRGOptimizer(update_params['m'], update_params['learning_rate'])
             train_error, validation_error, acc_train, acc_val = optimizer.minimize(loss, params,
-                    X_train, Y_train, 
+                    X_train, Y_train, X_test, y_test, 
                     self.input_var, self.target_var, 
                     X_val, Y_val, 
                     n_epochs=n_epochs, batch_size=batch_size, output_layer=network)
@@ -98,5 +98,8 @@ class NeuralClassifier:
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_loss_val.txt",map(itemgetter(0), validation_error))
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_acc_train.txt",acc_train)
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_acc_val.txt",acc_val)
+
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_acc_test.txt",acc_test)
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_loss_test.txt",test_error)
 
         return train_error, validation_error

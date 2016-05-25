@@ -37,7 +37,7 @@ def main():
 
         network = neuralclassifier.NeuralClassifier(n_input=X_train.shape[1], n_hidden=n_hidden, n_output=10)
 
-        train_err, val_err = network.train(X_train, y_train, X_val, y_val,
+        train_err, val_err = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
                                            n_epochs=n_epochs, lambd=0.0,
                                            objective=objective, update=update, batch_size=BATCH_SIZE, **update_params )
 
