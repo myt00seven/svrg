@@ -8,9 +8,10 @@ NUM_HIDDEN_NODES ="100"
 
 def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES):
 	device = device.lower()
+	str_device = "THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 "
 	if (device == "cpu") or ("gpu" in device):
-		os.system("THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 python large_gpu_mnist.py mlp sgd "+num_epochs+" "+num_hidden_nodes)
-		os.system("THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 python large_gpu_mnist.py mlpbn sgd "+num_epochs+" "+num_hidden_nodes)
+		os.system(str_device + " python large_gpu_mnist.py mlp sgd "+num_epochs+" "+num_hidden_nodes)
+		os.system(str_device + " python large_gpu_mnist.py mlpbn sgd "+num_epochs+" "+num_hidden_nodes)
 	# else:
 	#	 print "Unsupported device, please type cpu or gpu"
 	os.system("python draw.py "+num_epochs)

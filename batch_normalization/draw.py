@@ -27,9 +27,9 @@ DRAW_MLPBN_SVRG = False
 # SPEC_L4 = 'r*-.'
 
 SPEC_L1 = 'b-'
-SPEC_L2 = 'g-'
-SPEC_L3 = 'c-'
-SPEC_L4 = 'r-'
+SPEC_L2 = 'g:'
+SPEC_L3 = 'c-.'
+SPEC_L4 = 'r--'
 
 NUM_EPOCHS = 1000
 

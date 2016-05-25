@@ -3,7 +3,7 @@
 """
 Batch Normalization + SVRG on MNIST
 Independent Study
-May 18, 2016
+May 24, 2016
 Yintai Ma
 """
 
@@ -15,7 +15,9 @@ import time
 
 import matplotlib
 import matplotlib.pyplot as plt
+# parameters for Linux
 plt.switch_backend('agg')
+
 
 import pylab 
 
@@ -23,13 +25,12 @@ import pylab
 import numpy as np 
 import theano
 import theano.tensor as T
-
 import lasagne
 
 from collections import OrderedDict
 
 # May 18, 2016, Yintai Ma
-# standard setting , epoch = 20, batch size = 100
+# standard setting , epoch = 500, batch size = 100
 
 OUTPUT_FIGURE_PATH = 'data_large/'
 OUTPUT_DATA_PATH = 'data_large/'
