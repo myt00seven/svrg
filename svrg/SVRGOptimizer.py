@@ -12,7 +12,7 @@ from collections import OrderedDict
 import time
 
 EXTRA_INFO = False 
-DEFAULT_ADAPTIVE = False
+DEFAULT_ADAPTIVE = True
 STREAMING_SVRG = False
 
 class SVRGOptimizer:

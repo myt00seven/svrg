@@ -14,14 +14,14 @@ PATH_DATA_LARGE_SCALE  = "data_large/"
 PATH_DATA  = PATH_DATA_LARGE_SCALE
 PATH_FIGURE = "figure/"
 
-MAXLENGTH = 200
+MAXLENGTH = -1
 
 LOAD_SGD = True
-LOAD_SVRG = False
+LOAD_SVRG = True
 
 DRAW_MLP_SGD = True
 DRAW_MLPBN_SGD = True
-DRAW_MLP_SVRG = False
+DRAW_MLP_SVRG = True
 DRAW_MLPBN_SVRG = False
 
 # SPEC_L1 = 'bo-'
@@ -134,17 +134,16 @@ def main(num_epochs=NUM_EPOCHS):
 	# plt.show()
 	pylab.savefig(PATH_FIGURE+'CrossModel_Training Set_Predict Accuracy'+'.png',bbox_inches='tight')
 
-	if DRAW_MLP_SGD: 	count_mlp_sgd = count_mlp_sgd[0:MAXLENGTH+1]
-	if DRAW_MLPBN_SGD: 	count_mlpbn_sgd = count_mlpbn_sgd[0:MAXLENGTH+1]
-	if DRAW_MLP_SVRG: 	count_mlp_svrg = count_mlp_svrg[0:MAXLENGTH+1]
-
-	if DRAW_MLP_SGD: 	mlp_sgd_acc_test = mlp_sgd_acc_test[0:MAXLENGTH+1]
-	if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_test = mlpbn_sgd_acc_test[0:MAXLENGTH+1]
-	if DRAW_MLP_SVRG: 	mlp_svrg_acc_test = mlp_svrg_acc_test[0:MAXLENGTH+1]
-
-	if DRAW_MLP_SGD:	mlp_sgd_loss_test = mlp_sgd_loss_test[0:MAXLENGTH+1]
-	if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_test = mlpbn_sgd_loss_test[0:MAXLENGTH+1]
-	if DRAW_MLP_SVRG: 	mlp_svrg_loss_test = mlp_svrg_loss_test[0:MAXLENGTH+1]
+	if MAXLENGTH>0:
+		if DRAW_MLP_SGD: 	count_mlp_sgd = count_mlp_sgd[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	count_mlpbn_sgd = count_mlpbn_sgd[0:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	count_mlp_svrg = count_mlp_svrg[0:MAXLENGTH+1]
+		if DRAW_MLP_SGD: 	mlp_sgd_acc_test = mlp_sgd_acc_test[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_test = mlpbn_sgd_acc_test[0:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_acc_test = mlp_svrg_acc_test[0:MAXLENGTH+1]
+		if DRAW_MLP_SGD:	mlp_sgd_loss_test = mlp_sgd_loss_test[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_test = mlpbn_sgd_loss_test[0:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_loss_test = mlp_svrg_loss_test[0:MAXLENGTH+1]
 
 	plt.figure(5)
 	plt.title('Predict Accuracy of Test Set')
