@@ -12,9 +12,10 @@ from collections import OrderedDict
 import time
 
 EXTRA_INFO =True 
+DEFAULT_ADAPTIVE = False
 
 class SVRGOptimizer:
-    def __init__(self, m, learning_rate, adaptive=True, non_uniform_prob=True):
+    def __init__(self, m, learning_rate, adaptive=DEFAULT_ADAPTIVE, non_uniform_prob=True):
         self.m = m
         self.learning_rate = learning_rate
         # Adaptive is if we use line search to dynamically decide the learning rate.
