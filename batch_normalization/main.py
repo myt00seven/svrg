@@ -18,8 +18,9 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
 
 if __name__ == '__main__':
 	if ('--help' in sys.argv) or ('-h' in sys.argv) or ('help' in sys.argv):
-		print ("arg:\t[NUM_EPOCHS](200)")
-		print ("\t[NUM_HIDDEN_NODES](100)")
+		print ("Run MLP and MLPBN with given parameters:")
+		print ("arg:\t[NUM_EPOCHS](500)")
+		print ("\t[NUM_HIDDEN_NODES](500)")
 		print ("\t[cpu\gpu\draw](default="+DEVICE+")")
 	else:
 		kwargs = {}
