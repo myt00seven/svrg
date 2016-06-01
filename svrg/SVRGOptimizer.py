@@ -13,6 +13,7 @@ import time
 
 EXTRA_INFO = False 
 DEFAULT_ADAPTIVE = False
+STREAMING_SVRG = False
 
 class SVRGOptimizer:
     def __init__(self, m, learning_rate, adaptive=DEFAULT_ADAPTIVE, non_uniform_prob=True):

@@ -47,12 +47,12 @@ def main():
 #       else:
 #           plt.plot(val_err, label=model)
   
-        np.savez('models/model_%s.npz' % model, *lasagne.layers.get_all_param_values(network.output_layer))
-        np.savez('models/model_%s_val_error.npz' % model, val_err)
+        # np.savez('models/model_%s.npz' % model, *lasagne.layers.get_all_param_values(network.output_layer))
+        # np.savez('models/model_%s_val_error.npz' % model, val_err)
 
-    plt.title('Validation error/epoch')    
-    plt.legend()
-    plt.show()
+    # plt.title('Validation error/epoch')    
+    # plt.legend()
+    # plt.show()
         
 
 if __name__ == '__main__':
