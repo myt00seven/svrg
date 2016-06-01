@@ -12,7 +12,7 @@ from collections import OrderedDict
 import time
 
 EXTRA_INFO = True
-DEFAULT_ADAPTIVE = True
+DEFAULT_ADAPTIVE = False
 STREAMING_SVRG = False
 
 class SVRGOptimizer:
@@ -34,9 +34,9 @@ class SVRGOptimizer:
         n = num_batches
 
         if EXTRA_INFO:
-            flog.write("Learning Rate:{:.2f}".format(self.learning_rate))
-            flog.write("Adaptive:{:.2f}".format(self.adaptive))
-            flog.write("Non Uniform Prob of mini batch:{:.2f}".format(self.non_uniform_prob))
+            flog.write("Learning Rate:{:.2f}\n".format(self.learning_rate))
+            flog.write("Adaptive:{:.2f}\n".format(self.adaptive))
+            flog.write("Non Uniform Prob of mini batch:{:.2f}\n".format(self.non_uniform_prob))
 
         self.L = theano.shared(np.cast['float32'](1. / self.learning_rate))
 #        self.Ls = [theano.shared(np.cast['float32'](1. / self.learning_rate)) for _  in range(num_batches)]
@@ -70,6 +70,9 @@ class SVRGOptimizer:
 
         print("Starting training...")
         for epoch in range(n_epochs):
+
+            if EXTRA_INFO:
+                flog.write("Epoch:{:.2f}\n".format(epoch))
 
             t = time.time()
 
@@ -106,9 +109,9 @@ class SVRGOptimizer:
                 self.L.set_value(L)
                 
                 current_loss, current_acc = val_fn(inputs, targets)
-
+                
+                l_iter = 0
                 if self.adaptive: 
-                    l_iter = 0
                     while True:
                         loss_next, sq_sum = L_fn(inputs, targets)
                         if loss_next <= current_loss - 0.5 * sq_sum / self.L.get_value():
@@ -120,10 +123,9 @@ class SVRGOptimizer:
 
                 if EXTRA_INFO:
                     print >>flog, "No. of batch:",train_batches
-                    if self.adaptive:
-                        flog.write("Iterlation of L (learning rate):{:.2f}\n".format(l_iter))
-                        print >>flog, "learning_rate: ", 1. / self.L.get_value()
-                    print >>flog, "\n"
+                    #Each iteration here decrease learning rate by half 
+                    flog.write("Iteration of L:{:.2f}\n".format(l_iter))
+                    print >>flog, "learning_rate: ", 1. / self.L.get_value()
 
                 # Batch updates for parameters w
                 train_err += train_w(inputs, targets)
