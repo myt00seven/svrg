@@ -14,7 +14,7 @@ PATH_DATA  = "data_large/"
 
 PATH_FIGURE = "figure/"
 
-MAXLENGTH = -1
+MAXLENGTH = 200
 
 LOAD_SGD = True
 LOAD_SVRG = True
@@ -75,6 +75,45 @@ def main(num_epochs=NUM_EPOCHS):
 
 	# print mlp_sgd_acc_train
 
+
+	if MAXLENGTH>0:
+		if DRAW_MLP_SGD: 	count_mlp_sgd = count_mlp_sgd[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	count_mlpbn_sgd = count_mlpbn_sgd[0:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	count_mlp_svrg = count_mlp_svrg[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: count_mlpbn_svrg = count_mlpbn_svrg[0:MAXLENGTH+1]		
+
+		if DRAW_MLP_SGD: 	mlp_sgd_acc_test = mlp_sgd_acc_test[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_test = mlpbn_sgd_acc_test[0:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_acc_test = mlp_svrg_acc_test[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_test = mlpbn_svrg_acc_test[0:MAXLENGTH+1]		
+
+		if DRAW_MLP_SGD:	mlp_sgd_loss_test = mlp_sgd_loss_test[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_test = mlpbn_sgd_loss_test[0:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_loss_test = mlp_svrg_loss_test[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_test = mlpbn_svrg_loss_test[0:MAXLENGTH+1]
+
+		if DRAW_MLP_SGD: 	mlp_sgd_acc_val = mlp_sgd_acc_val[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_val = mlpbn_sgd_acc_val[0:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_acc_val = mlp_svrg_acc_val[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_val = mlpbn_svrg_acc_val[0:MAXLENGTH+1]		
+		
+		if DRAW_MLP_SGD:	mlp_sgd_loss_val = mlp_sgd_loss_val[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_val = mlpbn_sgd_loss_val[0:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_loss_val = mlp_svrg_loss_val[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_val = mlpbn_svrg_loss_val[0:MAXLENGTH+1]
+
+		if DRAW_MLP_SGD: 	mlp_sgd_acc_train = mlp_sgd_acc_train[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_train = mlpbn_sgd_acc_train[0:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_acc_train = mlp_svrg_acc_train[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_train = mlpbn_svrg_acc_train[0:MAXLENGTH+1]		
+		
+		if DRAW_MLP_SGD:	mlp_sgd_loss_train = mlp_sgd_loss_train[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_train = mlpbn_sgd_loss_train[0:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_loss_train = mlp_svrg_loss_train[0:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_train = mlpbn_svrg_loss_train[0:MAXLENGTH+1]
+
+
+
 	#PLOT 
 	matplotlib.rcParams.update({'font.size': 16})
 	plt.figure(1)
@@ -97,7 +136,7 @@ def main(num_epochs=NUM_EPOCHS):
 	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_val, SPEC_L4 ,label="MLPBN SVRG", linewidth='1')
 	plt.xlabel('# Epochs')
 	plt.ylabel('Predict Accuracy')
-	plt.legend(bbox_to_anchor=(1,0.25))
+	plt.legend(bbox_to_anchor=(1,0.4))
 	# plt.show()
 	pylab.savefig(PATH_FIGURE+'CrossModel_Validation Set_Predict Accuracy'+'.png',bbox_inches='tight')
 
@@ -121,20 +160,9 @@ def main(num_epochs=NUM_EPOCHS):
 	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_train, SPEC_L4 ,label="MLPBN SVRG", linewidth='1')
 	plt.xlabel('# Epochs')
 	plt.ylabel('Predict Accuracy')
-	plt.legend(bbox_to_anchor=(1,0.25))
+	plt.legend(bbox_to_anchor=(1,0.4))
 	# plt.show()
 	pylab.savefig(PATH_FIGURE+'CrossModel_Training Set_Predict Accuracy'+'.png',bbox_inches='tight')
-
-	if MAXLENGTH>0:
-		if DRAW_MLP_SGD: 	count_mlp_sgd = count_mlp_sgd[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SGD: 	count_mlpbn_sgd = count_mlpbn_sgd[0:MAXLENGTH+1]
-		if DRAW_MLP_SVRG: 	count_mlp_svrg = count_mlp_svrg[0:MAXLENGTH+1]
-		if DRAW_MLP_SGD: 	mlp_sgd_acc_test = mlp_sgd_acc_test[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_test = mlpbn_sgd_acc_test[0:MAXLENGTH+1]
-		if DRAW_MLP_SVRG: 	mlp_svrg_acc_test = mlp_svrg_acc_test[0:MAXLENGTH+1]
-		if DRAW_MLP_SGD:	mlp_sgd_loss_test = mlp_sgd_loss_test[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_test = mlpbn_sgd_loss_test[0:MAXLENGTH+1]
-		if DRAW_MLP_SVRG: 	mlp_svrg_loss_test = mlp_svrg_loss_test[0:MAXLENGTH+1]
 
 	plt.figure(5)
 	plt.title('Predict Accuracy of Test Set')
@@ -144,7 +172,7 @@ def main(num_epochs=NUM_EPOCHS):
 	if DRAW_MLPBN_SVRG: 	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_test, SPEC_L4 ,label="MLPBN SVRG", linewidth='1')
 	plt.xlabel('# Epochs')
 	plt.ylabel('Predict Accuracy')
-	plt.legend(bbox_to_anchor=(1,0.25))
+	plt.legend(bbox_to_anchor=(1,0.4))
 	# plt.show()
 	pylab.savefig(PATH_FIGURE+'CrossModel_Test Set_Predict Accuracy'+'.png',bbox_inches='tight')
 
