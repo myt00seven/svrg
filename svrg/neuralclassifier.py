@@ -70,7 +70,7 @@ class NeuralClassifier:
     
         if svrg:
             optimizer = SVRGOptimizer(update_params['m'], update_params['learning_rate'])
-            train_error, validation_error, acc_train, acc_val = optimizer.minimize(loss, params,
+            train_error, validation_error, acc_train, acc_val, acc_test, test_error = optimizer.minimize(loss, params,
                     X_train, Y_train, X_test, y_test, 
                     self.input_var, self.target_var, 
                     X_val, Y_val, 

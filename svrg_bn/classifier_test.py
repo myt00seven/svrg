@@ -41,12 +41,21 @@ def main():
                                            n_epochs=n_epochs, lambd=0.0,
                                            objective=objective, update=update, batch_size=BATCH_SIZE, **update_params )
 
+<<<<<<< HEAD
         if type(val_err[0]) == tuple:
             y, x = zip(*val_err)
             plt.plot(x, y, label=model)
         else:
             plt.plot(val_err, label=model)
     
+=======
+#       if type(val_err[0]) == tuple:
+#           y, x = zip(*val_err)
+#           plt.plot(x, y, label=model)
+#       else:
+#           plt.plot(val_err, label=model)
+  
+>>>>>>> 5abe8eeb0f6f3982bedf205e1a251b71c184a31a
         np.savez('models/model_%s.npz' % model, *lasagne.layers.get_all_param_values(network.output_layer))
         np.savez('models/model_%s_val_error.npz' % model, val_err)
 

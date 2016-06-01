@@ -12,7 +12,11 @@ from SVRGOptimizer import SVRGOptimizer
 from operator import itemgetter
 
 MLPBN= True
+<<<<<<< HEAD
 # MLPBN= False
+=======
+#MLPBN= False
+>>>>>>> 5abe8eeb0f6f3982bedf205e1a251b71c184a31a
 
 def classifier_network(input_var, n_input, n_hidden, n_output):
 
@@ -70,7 +74,11 @@ class NeuralClassifier:
     
         if svrg:
             optimizer = SVRGOptimizer(update_params['m'], update_params['learning_rate'])
+<<<<<<< HEAD
             train_error, validation_error, acc_train, acc_val = optimizer.minimize(loss, params,
+=======
+            train_error, validation_error, acc_train, acc_val, acc_test, test_error = optimizer.minimize(loss, params,
+>>>>>>> 5abe8eeb0f6f3982bedf205e1a251b71c184a31a
                     X_train, Y_train, X_test, y_test, 
                     self.input_var, self.target_var, 
                     X_val, Y_val, 
