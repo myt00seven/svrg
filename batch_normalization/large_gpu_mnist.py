@@ -167,6 +167,10 @@ def build_mlp(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS):
             l_in, num_units=num_hidden_units,
             nonlinearity=lasagne.nonlinearities.rectify,
             W=lasagne.init.GlorotUniform())
+    l_hid = lasagne.layers.DenseLayer(
+            l_hid, num_units=num_hidden_units,
+            nonlinearity=lasagne.nonlinearities.rectify,
+            W=lasagne.init.GlorotUniform())
     l_out = lasagne.layers.DenseLayer(
             l_hid, num_units=10,
             nonlinearity=lasagne.nonlinearities.softmax)
@@ -178,6 +182,13 @@ def build_mlpbn(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS):
     l_hidden = lasagne.layers.batch_norm (
         lasagne.layers.DenseLayer(
         l_in,
+        num_units=num_hidden_units,
+        nonlinearity=lasagne.nonlinearities.rectify,
+        )
+    )
+    l_hidden = lasagne.layers.batch_norm (
+        lasagne.layers.DenseLayer(
+        l_hidden,
         num_units=num_hidden_units,
         nonlinearity=lasagne.nonlinearities.rectify,
         )
