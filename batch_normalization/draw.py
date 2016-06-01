@@ -7,11 +7,11 @@ import numpy as np
 		
 import sys
 
-PATH_DATA  = "data/"
+PATH_DATA  = "data_large/"
 PATH_DATA_SVRG  = "../svrg/data/"
-PATH_DATA_SVRG_BN  = "NotDefinedYet"
-PATH_DATA_LARGE_SCALE  = "data_large/"
-PATH_DATA  = PATH_DATA_LARGE_SCALE
+PATH_DATA_SVRG_BN  = "../svrg_bn/data/"
+PATH_DATA  = "data_large/"
+
 PATH_FIGURE = "figure/"
 
 MAXLENGTH = -1
@@ -22,7 +22,7 @@ LOAD_SVRG = True
 DRAW_MLP_SGD = True
 DRAW_MLPBN_SGD = True
 DRAW_MLP_SVRG = True
-DRAW_MLPBN_SVRG = False
+DRAW_MLPBN_SVRG = True
 
 # SPEC_L1 = 'bo-'
 # SPEC_L2 = 'g^--'
@@ -40,25 +40,19 @@ def main(num_epochs=NUM_EPOCHS):
 
 	str_epochs = str(num_epochs)
 
-	if LOAD_SGD: mlp_sgd_acc_train=		np.loadtxt(PATH_DATA +"mlp_sgd_"+str_epochs+"_acc_train.txt")
-	if LOAD_SGD: mlp_sgd_acc_val=		np.loadtxt(PATH_DATA +"mlp_sgd_"+str_epochs+"_acc_val.txt")
-	if LOAD_SGD: mlp_sgd_loss_train=	np.loadtxt(PATH_DATA +"mlp_sgd_"+str_epochs+"_loss_train.txt")
-	if LOAD_SGD: mlp_sgd_loss_val=		np.loadtxt(PATH_DATA +"mlp_sgd_"+str_epochs+"_loss_val.txt")
+	if LOAD_SGD: mlp_sgd_loss_train=		np.loadtxt(PATH_DATA +"mlp_sgd_"+str_epochs+"_loss_train.txt")
+	if LOAD_SGD: mlp_sgd_loss_val=			np.loadtxt(PATH_DATA +"mlp_sgd_"+str_epochs+"_loss_val.txt")
+	if LOAD_SGD: mlp_sgd_loss_test=			np.loadtxt(PATH_DATA +"mlp_sgd_"+str_epochs+"_loss_test.txt")
+	if LOAD_SGD: mlp_sgd_acc_train=			np.loadtxt(PATH_DATA +"mlp_sgd_"+str_epochs+"_acc_train.txt")
+	if LOAD_SGD: mlp_sgd_acc_val=			np.loadtxt(PATH_DATA +"mlp_sgd_"+str_epochs+"_acc_val.txt")
+	if LOAD_SGD: mlp_sgd_acc_test=			np.loadtxt(PATH_DATA +"mlp_sgd_"+str_epochs+"_acc_test.txt")
+
+	if LOAD_SGD: mlpbn_sgd_acc_test=		np.loadtxt(PATH_DATA +"mlpbn_sgd_"+str_epochs+"_acc_test.txt")
 	if LOAD_SGD: mlpbn_sgd_acc_train=		np.loadtxt(PATH_DATA +"mlpbn_sgd_"+str_epochs+"_acc_train.txt")
 	if LOAD_SGD: mlpbn_sgd_acc_val=			np.loadtxt(PATH_DATA +"mlpbn_sgd_"+str_epochs+"_acc_val.txt")
+	if LOAD_SGD: mlpbn_sgd_loss_test=		np.loadtxt(PATH_DATA +"mlpbn_sgd_"+str_epochs+"_loss_test.txt")
 	if LOAD_SGD: mlpbn_sgd_loss_train=		np.loadtxt(PATH_DATA +"mlpbn_sgd_"+str_epochs+"_loss_train.txt")
 	if LOAD_SGD: mlpbn_sgd_loss_val=		np.loadtxt(PATH_DATA +"mlpbn_sgd_"+str_epochs+"_loss_val.txt")
-
-	# if LOAD_SVRG: mlp_svrg_acc_train=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_"+str_epochs+"_acc_train.txt")
-	# if LOAD_SVRG: mlp_svrg_acc_val=			np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_"+str_epochs+"_acc_val.txt")
-	# if LOAD_SVRG: mlp_svrg_loss_train=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_"+str_epochs+"_loss_train.txt")
-	# if LOAD_SVRG: mlp_svrg_loss_val=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_"+str_epochs+"_loss_val.txt")
-	# if LOAD_SVRG: mlp_svrg_acc_test=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_"+str_epochs+"_acc_test.txt")
-	# if LOAD_SVRG: mlp_svrg_loss_test=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_"+str_epochs+"_loss_test.txt")
-	# if LOAD_SVRG: mlpbn_svrg_acc_train=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_"+str_epochs+"_acc_train.txt")
-	# if LOAD_SVRG: mlpbn_svrg_acc_val=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_"+str_epochs+"_acc_val.txt")
-	# if LOAD_SVRG: mlpbn_svrg_loss_train=	np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_"+str_epochs+"_loss_train.txt")
-	# if LOAD_SVRG: mlpbn_svrg_loss_val=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_"+str_epochs+"_loss_val.txt")
 
 	if LOAD_SVRG: mlp_svrg_acc_train=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_acc_train.txt")
 	if LOAD_SVRG: mlp_svrg_acc_val=			np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_acc_val.txt")
@@ -67,16 +61,12 @@ def main(num_epochs=NUM_EPOCHS):
 	if LOAD_SVRG: mlp_svrg_acc_test=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_acc_test.txt")
 	if LOAD_SVRG: mlp_svrg_loss_test=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_loss_test.txt")
 	
-	# if LOAD_SVRG: mlpbn_svrg_acc_train=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_acc_train.txt")
-	# if LOAD_SVRG: mlpbn_svrg_acc_val=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_acc_val.txt")
-	# if LOAD_SVRG: mlpbn_svrg_loss_train=	np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_loss_train.txt")
-	# if LOAD_SVRG: mlpbn_svrg_loss_val=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_loss_val.txt")
-
-
-	if LOAD_SGD: mlp_sgd_acc_test=			np.loadtxt( PATH_DATA_LARGE_SCALE +"mlp_sgd_"+str_epochs+"_acc_test.txt")
-	if LOAD_SGD: mlp_sgd_loss_test=			np.loadtxt( PATH_DATA_LARGE_SCALE +"mlp_sgd_"+str_epochs+"_loss_test.txt")
-	if LOAD_SGD: mlpbn_sgd_acc_test=		np.loadtxt( PATH_DATA_LARGE_SCALE +"mlpbn_sgd_"+str_epochs+"_acc_test.txt")
-	if LOAD_SGD: mlpbn_sgd_loss_test=		np.loadtxt( PATH_DATA_LARGE_SCALE +"mlpbn_sgd_"+str_epochs+"_loss_test.txt")
+	if LOAD_SVRG: mlpbn_svrg_acc_train=		np.loadtxt(PATH_DATA_SVRG_BN +"_mlpbnTrue_SVRG_acc_train.txt")
+	if LOAD_SVRG: mlpbn_svrg_acc_val=		np.loadtxt(PATH_DATA_SVRG_BN +"_mlpbnTrue_SVRG_acc_val.txt")
+	if LOAD_SVRG: mlpbn_svrg_loss_train=	np.loadtxt(PATH_DATA_SVRG_BN +"_mlpbnTrue_SVRG_loss_train.txt")
+	if LOAD_SVRG: mlpbn_svrg_loss_val=		np.loadtxt(PATH_DATA_SVRG_BN +"_mlpbnTrue_SVRG_loss_val.txt")
+	if LOAD_SVRG: mlpbn_svrg_acc_test=		np.loadtxt(PATH_DATA_SVRG_BN +"_mlpbnTrue_SVRG_acc_test.txt")
+	if LOAD_SVRG: mlpbn_svrg_loss_test=		np.loadtxt(PATH_DATA_SVRG_BN +"_mlpbnTrue_SVRG_loss_test.txt")
 
 	if DRAW_MLP_SGD: 	count_mlp_sgd = np.arange(mlp_sgd_acc_train.shape[0])+1
 	if DRAW_MLPBN_SGD: 	count_mlpbn_sgd = np.arange(mlpbn_sgd_acc_train.shape[0])+1
@@ -151,6 +141,7 @@ def main(num_epochs=NUM_EPOCHS):
 	if DRAW_MLP_SGD: plt.plot(count_mlp_sgd, mlp_sgd_acc_test, SPEC_L1 ,label="MLP SGD")
 	if DRAW_MLPBN_SGD: plt.plot(count_mlpbn_sgd, mlpbn_sgd_acc_test, SPEC_L2 ,label="MLPBN SGD")
 	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_acc_test, SPEC_L3 ,label="MLP SVRG", linewidth='1')
+	if DRAW_MLPBN_SVRG: 	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_test, SPEC_L4 ,label="MLPBN SVRG", linewidth='1')
 	plt.xlabel('# Epochs')
 	plt.ylabel('Predict Accuracy')
 	plt.legend(bbox_to_anchor=(1,0.25))
@@ -162,6 +153,7 @@ def main(num_epochs=NUM_EPOCHS):
 	if DRAW_MLP_SGD: plt.plot(count_mlp_sgd, mlp_sgd_loss_test, SPEC_L1 ,label="MLP SGD")
 	if DRAW_MLPBN_SGD: plt.plot(count_mlpbn_sgd, mlpbn_sgd_loss_test, SPEC_L2 ,label="MLPBN SGD")
 	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_loss_test, SPEC_L3 ,label="MLP SVRG", linewidth='1')
+	if DRAW_MLPBN_SVRG: 	plt.plot(count_mlpbn_svrg, mlpbn_svrg_loss_test, SPEC_L4 ,label="MLPBN SVRG", linewidth='1')
 	plt.xlabel('# Epochs')
 	plt.ylabel('Loss')
 	plt.legend()
