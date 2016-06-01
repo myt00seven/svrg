@@ -31,16 +31,11 @@ class SVRGOptimizer:
         self.Ls = [1. / self.learning_rate for _  in range(num_batches)]
 
         w_updates, mu_updates = self.make_updates(loss, params)
-<<<<<<< HEAD
-        train_bn = lasagne.layers.get_output(output_layer, deterministic=False, batch_norm_update_averages = True)
 
+        train_bn = lasagne.layers.get_output(output_layer, deterministic=False, batch_norm_update_averages = True)
         train_mu = theano.function([self.input_var, self.target_var], loss, updates=mu_updates)
         train_w = theano.function([self.input_var, self.target_var], loss, updates=w_updates)
-=======
 
-        train_mu = theano.function([self.input_var, self.target_var], loss, updates=mu_updates, batch_norm_update_averages= True)
-        train_w = theano.function([self.input_var, self.target_var], loss, updates=w_updates, batch_norm_update_averages= True)
->>>>>>> 5abe8eeb0f6f3982bedf205e1a251b71c184a31a
 
         prediction = lasagne.layers.get_output(output_layer, deterministic=True)
         test_prediction = lasagne.layers.get_output(output_layer, deterministic=True)
@@ -50,24 +45,16 @@ class SVRGOptimizer:
         train_acc = theano.function([self.input_var, self.target_var], test_acc)
 
         val_fn = theano.function([self.input_var, self.target_var], [loss, test_acc])
-<<<<<<< HEAD
-        update_bn_fn = theano.function([self.input_var, self.target_var], [train_bn])
-=======
->>>>>>> 5abe8eeb0f6f3982bedf205e1a251b71c184a31a
 
+        update_bn_fn = theano.function([self.input_var, self.target_var], [train_bn])
 
         train_error = []
         validation_error = []
         acc_train = []
         acc_val = []
         test_error = []
-<<<<<<< HEAD
         acc_test = []
         times = []
-=======
-	acc_test = []
-	times = []
->>>>>>> 5abe8eeb0f6f3982bedf205e1a251b71c184a31a
 
         print "NUMBATCHES: ", n
 
@@ -105,12 +92,9 @@ class SVRGOptimizer:
                 inputs, targets = batch
                 #print "learning_rate: ", 1. / self.L.get_value()
 
-<<<<<<< HEAD
                 update_bn_fn(inputs, targets)
                 #update the std and mean in bn layer.
 
-=======
->>>>>>> 5abe8eeb0f6f3982bedf205e1a251b71c184a31a
                 L = self.Ls[self.idx]
                 self.L.set_value(L)
                 
@@ -183,11 +167,8 @@ class SVRGOptimizer:
 #                print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
 
         print("Average time per epoch \t {:.3f}".format(np.mean(times)))
-<<<<<<< HEAD
-        return train_error, validation_error, acc_train, acc_val
-=======
         return train_error, validation_error, acc_train, acc_val, acc_test, test_error
->>>>>>> 5abe8eeb0f6f3982bedf205e1a251b71c184a31a
+
 
     def make_updates(self, loss, params):
 
