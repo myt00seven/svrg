@@ -11,7 +11,7 @@ from neuralnet import iterate_minibatches
 from collections import OrderedDict
 import time
 
-EXTRA_INFO =True 
+EXTRA_INFO = False 
 DEFAULT_ADAPTIVE = False
 
 class SVRGOptimizer:
@@ -132,7 +132,7 @@ class SVRGOptimizer:
             val_err = 0
             val_acc = 0
             val_batches = 0
-            for i, batch in enumerate(iterate_minibatches(X_val, Y_val, batch_size, shuffle=True)):
+            for i, batch in enumerate(iterate_minibatches(X_val, Y_val, batch_size, shuffle=False)):
                 inputs, targets = batch
                 current_err, current_acc = val_fn(inputs, targets)
                 val_err += current_err
@@ -143,7 +143,7 @@ class SVRGOptimizer:
             test_err = 0
             test_acc = 0
             test_batches = 0
-            for i, batch in enumerate(iterate_minibatches(X_test, y_test, batch_size, shuffle=True)):
+            for i, batch in enumerate(iterate_minibatches(X_test, y_test, batch_size, shuffle=False)):
                 inputs, targets = batch
                 current_err, current_acc = val_fn(inputs, targets)
                 test_err += current_err
@@ -155,12 +155,10 @@ class SVRGOptimizer:
             print("Epoch {} of {} took {:.3f}s".format(epoch + 1, n_epochs, time.time() - t))
 
             print("  training loss:\t\t{:.6f}".format(train_err / train_batches))
-            print("  train accuracy:\t\t{:.6f}".format(train_acc / train_batches))
-
             print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
+            print("  test loss:\t\t\t{:.6f}".format(test_err / test_batches))
+            print("  train accuracy:\t\t{:.6f}".format(train_acc / train_batches))
             print("  validation accuracy:\t\t{:.6f}".format(val_acc / val_batches))
-
-            print("  test loss:\t\t{:.6f}".format(test_err / test_batches))
             print("  test accuracy:\t\t{:.6f}\n".format(test_acc / test_batches))
 
             train_error.append(train_err / train_batches)
