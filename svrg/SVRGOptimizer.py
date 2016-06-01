@@ -17,7 +17,7 @@ class SVRGOptimizer:
     def __init__(self, m, learning_rate, adaptive=True, non_uniform_prob=True):
         self.m = m
         self.learning_rate = learning_rate
-        #My guess is adaptive is if we use line search to dynamically decide the learning rate.
+        # Adaptive is if we use line search to dynamically decide the learning rate.
         self.adaptive = adaptive
         self.non_uniform_prob = non_uniform_prob
         self.counted_gradient = theano.shared(0)
@@ -79,6 +79,7 @@ class SVRGOptimizer:
                 batches = iterate_minibatches(X_train, Y_train, batch_size, shuffle=True)
 
             for batch in batches:
+
                 #every m batches
                 if j % self.m == 0:
                     for mu in self.mu:
@@ -87,7 +88,7 @@ class SVRGOptimizer:
                     for mu_batch in iterate_minibatches(X_train, Y_train, batch_size, shuffle=False):
                         inputs, targets = mu_batch
                         train_mu(inputs, targets)
-#                        train_mu(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
+                        # ??? where is the summation for mu?
                     
                     for mu in self.mu:
                         mu.set_value(mu.get_value() / n)
@@ -114,9 +115,11 @@ class SVRGOptimizer:
                         l_iter += 1
 
                 if EXTRA_INFO:
-		    print "No. of batch:",train_batches
-                    print("Iterlation of L (learning rate):{:.2f}".format(l_iter))
-                    print "learning_rate: ", 1. / self.L.get_value(),"\n"
+                    print "No. of batch:",train_batches
+                    if self.adaptive:
+                        print("Iterlation of L (learning rate):{:.2f}".format(l_iter))
+                        print "learning_rate: ", 1. / self.L.get_value()
+                    print "\n"
 
                 # Batch updates for parameters w
                 train_err += train_w(inputs, targets)
