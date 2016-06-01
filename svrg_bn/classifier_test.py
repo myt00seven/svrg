@@ -21,7 +21,7 @@ def main():
     print("Loading data...")
     X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
 
-    n_epochs = 200
+    n_epochs = 500
     n_hidden = 500
 
     objective = lasagne.objectives.categorical_crossentropy
@@ -41,27 +41,12 @@ def main():
                                            n_epochs=n_epochs, lambd=0.0,
                                            objective=objective, update=update, batch_size=BATCH_SIZE, **update_params )
 
-<<<<<<< HEAD
-        if type(val_err[0]) == tuple:
-            y, x = zip(*val_err)
-            plt.plot(x, y, label=model)
-        else:
-            plt.plot(val_err, label=model)
-    
-=======
-#       if type(val_err[0]) == tuple:
-#           y, x = zip(*val_err)
-#           plt.plot(x, y, label=model)
-#       else:
-#           plt.plot(val_err, label=model)
-  
->>>>>>> 5abe8eeb0f6f3982bedf205e1a251b71c184a31a
-        np.savez('models/model_%s.npz' % model, *lasagne.layers.get_all_param_values(network.output_layer))
-        np.savez('models/model_%s_val_error.npz' % model, val_err)
+    #     np.savez('models/model_%s.npz' % model, *lasagne.layers.get_all_param_values(network.output_layer))
+    #     np.savez('models/model_%s_val_error.npz' % model, val_err)
 
-    plt.title('Validation error/epoch')    
-    plt.legend()
-    plt.show()
+    # plt.title('Validation error/epoch')    
+    # plt.legend()
+    # plt.show()
         
 
 if __name__ == '__main__':

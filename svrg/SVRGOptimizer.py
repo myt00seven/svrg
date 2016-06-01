@@ -28,7 +28,7 @@ class SVRGOptimizer:
         self.input_var = input_var
         self.target_var = target_var
         
-        flog = open("log.txt",'w')
+        flog = open("data/log.txt",'w')
 
         num_batches = X_train.shape[0] / batch_size
         n = num_batches

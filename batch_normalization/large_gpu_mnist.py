@@ -254,10 +254,9 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_unit
         return
 
     prediction = lasagne.layers.get_output(network, deterministic= False, batch_norm_update_averages = True)
-    loss = lasagne.objectives.categorical_crossentropy(prediction, target_var)
-    loss = loss.mean()
-    acc = T.mean(T.eq(T.argmax(prediction, axis=1), target_var),
-                      dtype=theano.config.floatX)
+    loss = T.mean(lasagne.objectives.categorical_crossentropy(prediction, target_var))
+    acc = T.mean(T.eq(T.argmax(prediction, axis=1), target_var),dtype=theano.config.floatX)
+    
     params = lasagne.layers.get_all_params(network, trainable=True)
 
     if gradient == 'sgd':

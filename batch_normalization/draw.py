@@ -66,10 +66,11 @@ def main(num_epochs=NUM_EPOCHS):
 	if LOAD_SVRG: mlp_svrg_loss_val=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_loss_val.txt")
 	if LOAD_SVRG: mlp_svrg_acc_test=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_acc_test.txt")
 	if LOAD_SVRG: mlp_svrg_loss_test=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnFalse_SVRG_loss_test.txt")
-	if LOAD_SVRG: mlpbn_svrg_acc_train=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_acc_train.txt")
-	if LOAD_SVRG: mlpbn_svrg_acc_val=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_acc_val.txt")
-	if LOAD_SVRG: mlpbn_svrg_loss_train=	np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_loss_train.txt")
-	if LOAD_SVRG: mlpbn_svrg_loss_val=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_loss_val.txt")
+	
+	# if LOAD_SVRG: mlpbn_svrg_acc_train=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_acc_train.txt")
+	# if LOAD_SVRG: mlpbn_svrg_acc_val=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_acc_val.txt")
+	# if LOAD_SVRG: mlpbn_svrg_loss_train=	np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_loss_train.txt")
+	# if LOAD_SVRG: mlpbn_svrg_loss_val=		np.loadtxt(PATH_DATA_SVRG +"_mlpbnTrue_SVRG_loss_val.txt")
 
 
 	if LOAD_SGD: mlp_sgd_acc_test=			np.loadtxt( PATH_DATA_LARGE_SCALE +"mlp_sgd_"+str_epochs+"_acc_test.txt")

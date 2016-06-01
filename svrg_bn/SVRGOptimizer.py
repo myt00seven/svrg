@@ -11,8 +11,12 @@ from neuralnet import iterate_minibatches
 from collections import OrderedDict
 import time
 
+EXTRA_INFO = True
+DEFAULT_ADAPTIVE = False
+STREAMING_SVRG = False
+
 class SVRGOptimizer:
-    def __init__(self, m, learning_rate, adaptive=True, non_uniform_prob=True):
+    def __init__(self, m, learning_rate, adaptive=DEFAULT_ADAPTIVE, non_uniform_prob=True):
         self.m = m
         self.learning_rate = learning_rate
         self.adaptive = adaptive
@@ -23,30 +27,37 @@ class SVRGOptimizer:
     def minimize(self, loss, params, X_train, Y_train, X_test, y_test, input_var, target_var, X_val, Y_val, n_epochs=1000, batch_size=100, output_layer=None ):
         self.input_var = input_var
         self.target_var = target_var
+
+        flog = open("data/log.txt",'w')
         
         num_batches = X_train.shape[0] / batch_size
         n = num_batches
+
+        if EXTRA_INFO:
+            flog.write("Learning Rate:{:.2f}\n".format(self.learning_rate))
+            flog.write("Adaptive:{:.2f}\n".format(self.adaptive))
+            flog.write("Non Uniform Prob of mini batch:{:.2f}\n".format(self.non_uniform_prob))
+
         self.L = theano.shared(np.cast['float32'](1. / self.learning_rate))
 #        self.Ls = [theano.shared(np.cast['float32'](1. / self.learning_rate)) for _  in range(num_batches)]
         self.Ls = [1. / self.learning_rate for _  in range(num_batches)]
 
         w_updates, mu_updates = self.make_updates(loss, params)
 
+        # Update function for batch normalization layer
         train_bn = lasagne.layers.get_output(output_layer, deterministic=False, batch_norm_update_averages = True)
+        loss_bn  = T.mean(lasagne.objectives.categorical_crossentropy(train_bn, target_var))
+        update_bn_fn = theano.function([self.input_var, self.target_var], loss_bn)
+
         train_mu = theano.function([self.input_var, self.target_var], loss, updates=mu_updates)
         train_w = theano.function([self.input_var, self.target_var], loss, updates=w_updates)
 
 
         prediction = lasagne.layers.get_output(output_layer, deterministic=True)
-        test_prediction = lasagne.layers.get_output(output_layer, deterministic=True)
-        acc =      T.mean(T.eq(T.argmax(prediction, axis=1), target_var),dtype=theano.config.floatX)
-        test_acc = T.mean(T.eq(T.argmax(test_prediction, axis=1), target_var),dtype=theano.config.floatX)
+        test_acc_fn = T.mean(T.eq(T.argmax(prediction, axis=1), target_var),dtype=theano.config.floatX)
 
-        train_acc = theano.function([self.input_var, self.target_var], test_acc)
+        val_fn = theano.function([self.input_var, self.target_var], [loss, test_acc_fn])
 
-        val_fn = theano.function([self.input_var, self.target_var], [loss, test_acc])
-
-        update_bn_fn = theano.function([self.input_var, self.target_var], [train_bn])
 
         train_error = []
         validation_error = []
@@ -64,6 +75,9 @@ class SVRGOptimizer:
 
         print("Starting training...")
         for epoch in range(n_epochs):
+
+            if EXTRA_INFO:
+                flog.write("Epoch:{:.2f}\n".format(epoch))
 
             t = time.time()
 
@@ -83,7 +97,6 @@ class SVRGOptimizer:
                     for mu_batch in iterate_minibatches(X_train, Y_train, batch_size, shuffle=False):
                         inputs, targets = mu_batch
                         train_mu(inputs, targets)
-#                        train_mu(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
                     
                     for mu in self.mu:
                         mu.set_value(mu.get_value() / n)
@@ -92,6 +105,7 @@ class SVRGOptimizer:
                 inputs, targets = batch
                 #print "learning_rate: ", 1. / self.L.get_value()
 
+                # !!! Check again to see if I actually need here.
                 update_bn_fn(inputs, targets)
                 #update the std and mean in bn layer.
 
@@ -100,15 +114,11 @@ class SVRGOptimizer:
                 
                 current_loss, current_acc = val_fn(inputs, targets)
 #                current_loss = val_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
-
+                
+                l_iter = 0
                 if self.adaptive: 
-                    l_iter = 0
                     while True:
-
-#                    print "learning_rate: ", 1. / self.L.get_value()
-
                         loss_next, sq_sum = L_fn(inputs, targets)
-     #                   loss_next, sq_sum = L_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
                         if loss_next <= current_loss - 0.5 * sq_sum / self.L.get_value():
                             break
                         else:
@@ -116,52 +126,54 @@ class SVRGOptimizer:
 
                         l_iter += 1
 
+                if EXTRA_INFO:
+                    print >>flog, "No. of batch:",train_batches
+                    #Each iteration here decrease learning rate by half 
+                    flog.write("Iteration of L:{:.2f}\n".format(l_iter))
+                    print >>flog, "learning_rate: ", 1. / self.L.get_value()
+
+                #update w
                 train_err += train_w(inputs, targets)
-                current_err, current_acc = val_fn(inputs, targets)
                 train_acc += current_acc
 
                 self.Ls[self.idx] = self.L.get_value()
-#                train_err += train_w(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
                 train_batches += 1
             
             val_err = 0
             val_acc = 0
             val_batches = 0
-            for i, batch in enumerate(iterate_minibatches(X_val, Y_val, batch_size, shuffle=True)):
+            for i, batch in enumerate(iterate_minibatches(X_val, Y_val, batch_size, shuffle=False)):
                 inputs, targets = batch
                 current_err, current_acc = val_fn(inputs, targets)
                 val_err += current_err
                 val_acc += current_acc
-#                val_err += val_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
                 val_batches += 1
 
             test_err = 0
             test_acc = 0
             test_batches = 0
-            for i, batch in enumerate(iterate_minibatches(X_test, y_test, batch_size, shuffle=True)):
+            for i, batch in enumerate(iterate_minibatches(X_test, y_test, batch_size, shuffle=False)):
                 inputs, targets = batch
                 current_err, current_acc = val_fn(inputs, targets)
                 test_err += current_err
                 test_acc += current_acc
-#                test_err += test_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
                 test_batches += 1
 
             times.append(time.time() - t)
             print("Epoch {} of {} took {:.3f}s".format(epoch + 1, n_epochs, time.time() - t))
             print("  training loss:\t\t{:.6f}".format(train_err / train_batches))
             print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
-            print("  train accuracy:\t\t{:.6f}".format(train_acc / val_batches))
+            print("  test loss:\t\t\t{:.6f}".format(test_err / test_batches))
+            print("  train accuracy:\t\t{:.6f}".format(train_acc / train_batches))
             print("  validation accuracy:\t\t{:.6f}".format(val_acc / val_batches))
-
-            print("  test loss:\t\t{:.6f}".format(test_err / val_batches))
-            print("  test accuracy:\t\t{:.6f}".format(test_acc / val_batches))
+            print("  test accuracy:\t\t{:.6f}\n".format(test_acc / test_batches))
 
             train_error.append(train_err / train_batches)
             validation_error.append((val_err / val_batches, self.counted_gradient.get_value()))
-            acc_train.append(train_acc / val_batches/5)
+            acc_train.append(train_acc / train_batches)
             acc_val.append(val_acc / val_batches)
-            test_error.append(test_err / val_batches)
-            acc_test.append(test_acc / val_batches)
+            test_error.append(test_err / test_batches)
+            acc_test.append(test_acc / test_batches)
             
 #            if X_val is not None:
 #                print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
