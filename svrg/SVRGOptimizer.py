@@ -11,7 +11,7 @@ from neuralnet import iterate_minibatches
 from collections import OrderedDict
 import time
 
-EXTRA_INFO = False 
+EXTRA_INFO = True
 DEFAULT_ADAPTIVE = True
 STREAMING_SVRG = False
 
@@ -28,13 +28,15 @@ class SVRGOptimizer:
         self.input_var = input_var
         self.target_var = target_var
         
+        flog = open("log.txt",'w')
+
         num_batches = X_train.shape[0] / batch_size
         n = num_batches
 
         if EXTRA_INFO:
-            print("Learning Rate:{:.2f}".format(self.learning_rate))
-            print("Adaptive:{:.2f}".format(self.adaptive))
-            print("Non Uniform Prob of mini batch:{:.2f}".format(self.non_uniform_prob))
+            flog.write("Learning Rate:{:.2f}".format(self.learning_rate))
+            flog.write("Adaptive:{:.2f}".format(self.adaptive))
+            flog.write("Non Uniform Prob of mini batch:{:.2f}".format(self.non_uniform_prob))
 
         self.L = theano.shared(np.cast['float32'](1. / self.learning_rate))
 #        self.Ls = [theano.shared(np.cast['float32'](1. / self.learning_rate)) for _  in range(num_batches)]
@@ -117,11 +119,11 @@ class SVRGOptimizer:
                         l_iter += 1
 
                 if EXTRA_INFO:
-                    print "No. of batch:",train_batches
+                    print >>flog, "No. of batch:",train_batches
                     if self.adaptive:
-                        print("Iterlation of L (learning rate):{:.2f}".format(l_iter))
-                        print "learning_rate: ", 1. / self.L.get_value()
-                    print "\n"
+                        flog.write("Iterlation of L (learning rate):{:.2f}\n".format(l_iter))
+                        print >>flog, "learning_rate: ", 1. / self.L.get_value()
+                    print >>flog, "\n"
 
                 # Batch updates for parameters w
                 train_err += train_w(inputs, targets)
