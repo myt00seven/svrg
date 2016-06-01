@@ -11,7 +11,7 @@ from neuralnet import iterate_minibatches
 from collections import OrderedDict
 import time
 
-EXTRA_INFO = False
+EXTRA_INFO =True 
 
 class SVRGOptimizer:
     def __init__(self, m, learning_rate, adaptive=True, non_uniform_prob=True):
@@ -96,21 +96,16 @@ class SVRGOptimizer:
                 inputs, targets = batch
                 #print "learning_rate: ", 1. / self.L.get_value()
 
-                # what is L?
+                # what is L? L is learning rate. Ls is the list storing learning rate.
                 L = self.Ls[self.idx]
                 self.L.set_value(L)
                 
                 current_loss, current_acc = val_fn(inputs, targets)
-               # current_loss = val_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
 
                 if self.adaptive: 
                     l_iter = 0
                     while True:
-
-                   # print "learning_rate: ", 1. / self.L.get_value()
-
                         loss_next, sq_sum = L_fn(inputs, targets)
-                       # loss_next, sq_sum = L_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
                         if loss_next <= current_loss - 0.5 * sq_sum / self.L.get_value():
                             break
                         else:
@@ -119,15 +114,15 @@ class SVRGOptimizer:
                         l_iter += 1
 
                 if EXTRA_INFO:
+		    print "No. of batch:",train_batches
                     print("Iterlation of L (learning rate):{:.2f}".format(l_iter))
+                    print "learning_rate: ", 1. / self.L.get_value(),"\n"
 
                 # Batch updates for parameters w
                 train_err += train_w(inputs, targets)
-                # current_err, current_acc = val_fn(inputs, targets)
                 train_acc += current_acc
 
                 self.Ls[self.idx] = self.L.get_value()
-               # train_err += train_w(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
                 train_batches += 1
             
             val_err = 0
