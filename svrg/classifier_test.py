@@ -27,7 +27,7 @@ def main():
     objective = lasagne.objectives.categorical_crossentropy
 
     models = {
-        'svrg_classif': (custom_svrg1, {'learning_rate': 0.02, 'm': 50})
+        'svrg_classif': (custom_svrg1, {'learning_rate': 0.01, 'm': 50})
         #'adam_classif': (custom_adam, {'learning_rate': 0.01})
 #        'adam_classif_dropout': (lasagne.updates.adam, {'learning_rate': 0.01})
     }
