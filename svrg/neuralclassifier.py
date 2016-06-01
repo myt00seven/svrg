@@ -20,6 +20,10 @@ def classifier_network(input_var, n_input, n_hidden, n_output):
             input_layer, #            lasagne.layers.dropout(input_layer, p=0.5),
             num_units=n_hidden,
             nonlinearity=lasagne.nonlinearities.rectify)
+    hidden_layer = lasagne.layers.DenseLayer(
+            hidden_layer, #            lasagne.layers.dropout(input_layer, p=0.5),
+            num_units=n_hidden,
+            nonlinearity=lasagne.nonlinearities.rectify)
     output_layer = lasagne.layers.DenseLayer(hidden_layer, num_units=n_output, nonlinearity=lasagne.nonlinearities.softmax)
 
     return input_layer, hidden_layer, output_layer
