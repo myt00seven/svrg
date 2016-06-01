@@ -32,8 +32,8 @@ class SVRGOptimizer:
 
         w_updates, mu_updates = self.make_updates(loss, params)
 
-        train_mu = theano.function([self.input_var, self.target_var], loss, updates=mu_updates, batch_norm_update_averages= True)
-        train_w = theano.function([self.input_var, self.target_var], loss, updates=w_updates, batch_norm_update_averages= True)
+        train_mu = theano.function([self.input_var, self.target_var], loss, updates=mu_updates)
+        train_w = theano.function([self.input_var, self.target_var], loss, updates=w_updates)
 
         prediction = lasagne.layers.get_output(output_layer, deterministic=True)
         test_prediction = lasagne.layers.get_output(output_layer, deterministic=True)

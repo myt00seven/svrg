@@ -8,9 +8,10 @@ import numpy as np
 import sys
 
 PATH_DATA  = "data/"
-PATH_DATA_SVRG  = "data_svrg/"
+PATH_DATA_SVRG  = "../svrg/data/"
+PATH_DATA_SVRG_BN  = "NotDefinedYet"
 PATH_DATA_LARGE_SCALE  = "data_large/"
-PATH_DATA = PATH_DATA_SVRG =PATH_DATA_LARGE_SCALE
+PATH_DATA  = PATH_DATA_LARGE_SCALE
 PATH_FIGURE = "figure/"
 
 MAXLENGTH = 200
@@ -76,10 +77,10 @@ def main(num_epochs=NUM_EPOCHS):
 	if LOAD_SGD: mlpbn_sgd_acc_test=		np.loadtxt( PATH_DATA_LARGE_SCALE +"mlpbn_sgd_"+str_epochs+"_acc_test.txt")
 	if LOAD_SGD: mlpbn_sgd_loss_test=		np.loadtxt( PATH_DATA_LARGE_SCALE +"mlpbn_sgd_"+str_epochs+"_loss_test.txt")
 
-	count_mlp_sgd = np.arange(mlp_sgd_acc_train.shape[0])+1
-	count_mlpbn_sgd = np.arange(mlpbn_sgd_acc_train.shape[0])+1
-	count_mlp_svrg = np.arange(mlp_svrg_acc_train.shape[0])+1
-	count_mlpbn_svrg = np.arange(mlpbn_svrg_acc_train.shape[0])+1
+	if DRAW_MLP_SGD: 	count_mlp_sgd = np.arange(mlp_sgd_acc_train.shape[0])+1
+	if DRAW_MLPBN_SGD: 	count_mlpbn_sgd = np.arange(mlpbn_sgd_acc_train.shape[0])+1
+	if DRAW_MLP_SVRG: 	count_mlp_svrg = np.arange(mlp_svrg_acc_train.shape[0])+1
+	if DRAW_MLPBN_SVRG: count_mlpbn_svrg = np.arange(mlpbn_svrg_acc_train.shape[0])+1
 
 	# print mlp_sgd_acc_train
 
@@ -133,17 +134,17 @@ def main(num_epochs=NUM_EPOCHS):
 	# plt.show()
 	pylab.savefig(PATH_FIGURE+'CrossModel_Training Set_Predict Accuracy'+'.png',bbox_inches='tight')
 
-	count_mlp_sgd = count_mlp_sgd[0:MAXLENGTH+1]
-	count_mlpbn_sgd = count_mlpbn_sgd[0:MAXLENGTH+1]
-	count_mlp_svrg = count_mlp_svrg[0:MAXLENGTH+1]
+	if DRAW_MLP_SGD: 	count_mlp_sgd = count_mlp_sgd[0:MAXLENGTH+1]
+	if DRAW_MLPBN_SGD: 	count_mlpbn_sgd = count_mlpbn_sgd[0:MAXLENGTH+1]
+	if DRAW_MLP_SVRG: 	count_mlp_svrg = count_mlp_svrg[0:MAXLENGTH+1]
 
-	mlp_sgd_acc_test = mlp_sgd_acc_test[0:MAXLENGTH+1]
-	mlpbn_sgd_acc_test = mlpbn_sgd_acc_test[0:MAXLENGTH+1]
-	mlp_svrg_acc_test = mlp_svrg_acc_test[0:MAXLENGTH+1]
+	if DRAW_MLP_SGD: 	mlp_sgd_acc_test = mlp_sgd_acc_test[0:MAXLENGTH+1]
+	if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_test = mlpbn_sgd_acc_test[0:MAXLENGTH+1]
+	if DRAW_MLP_SVRG: 	mlp_svrg_acc_test = mlp_svrg_acc_test[0:MAXLENGTH+1]
 
-	mlp_sgd_loss_test = mlp_sgd_loss_test[0:MAXLENGTH+1]
-	mlpbn_sgd_loss_test = mlpbn_sgd_loss_test[0:MAXLENGTH+1]
-	mlp_svrg_loss_test = mlp_svrg_loss_test[0:MAXLENGTH+1]
+	if DRAW_MLP_SGD:	mlp_sgd_loss_test = mlp_sgd_loss_test[0:MAXLENGTH+1]
+	if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_test = mlpbn_sgd_loss_test[0:MAXLENGTH+1]
+	if DRAW_MLP_SVRG: 	mlp_svrg_loss_test = mlp_svrg_loss_test[0:MAXLENGTH+1]
 
 	plt.figure(5)
 	plt.title('Predict Accuracy of Test Set')

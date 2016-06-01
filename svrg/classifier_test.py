@@ -22,8 +22,8 @@ def main():
     X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
 
     n_epochs = 200
-    n_hidden = 500
-
+    n_hidden = 100
+ 
     objective = lasagne.objectives.categorical_crossentropy
 
     models = {
