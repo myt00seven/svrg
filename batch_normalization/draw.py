@@ -14,7 +14,9 @@ PATH_DATA  = "data_large/"
 
 PATH_FIGURE = "figure/"
 
-MAXLENGTH = 200
+MAXLENGTH = 1000
+STARTPOINT = 10
+LINEWIDTH = 3
 
 LOAD_SGD = True
 LOAD_SVRG = True
@@ -23,6 +25,8 @@ DRAW_MLP_SGD = True
 DRAW_MLPBN_SGD = True
 DRAW_MLP_SVRG = True
 DRAW_MLPBN_SVRG = True
+
+Y_LIM_FINE_TUNING = True
 
 # SPEC_L1 = 'bo-'
 # SPEC_L2 = 'g^--'
@@ -76,41 +80,41 @@ def main(num_epochs=NUM_EPOCHS):
 	# print mlp_sgd_acc_train
 
 
-	if MAXLENGTH>0:
-		if DRAW_MLP_SGD: 	count_mlp_sgd = count_mlp_sgd[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SGD: 	count_mlpbn_sgd = count_mlpbn_sgd[0:MAXLENGTH+1]
-		if DRAW_MLP_SVRG: 	count_mlp_svrg = count_mlp_svrg[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SVRG: count_mlpbn_svrg = count_mlpbn_svrg[0:MAXLENGTH+1]		
+	if (MAXLENGTH>0 or STARTPOINT>0):
+		if DRAW_MLP_SGD: 	count_mlp_sgd = count_mlp_sgd[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	count_mlpbn_sgd = count_mlpbn_sgd[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	count_mlp_svrg = count_mlp_svrg[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: count_mlpbn_svrg = count_mlpbn_svrg[STARTPOINT:MAXLENGTH+1]		
 
-		if DRAW_MLP_SGD: 	mlp_sgd_acc_test = mlp_sgd_acc_test[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_test = mlpbn_sgd_acc_test[0:MAXLENGTH+1]
-		if DRAW_MLP_SVRG: 	mlp_svrg_acc_test = mlp_svrg_acc_test[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_test = mlpbn_svrg_acc_test[0:MAXLENGTH+1]		
+		if DRAW_MLP_SGD: 	mlp_sgd_acc_test = mlp_sgd_acc_test[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_test = mlpbn_sgd_acc_test[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_acc_test = mlp_svrg_acc_test[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_test = mlpbn_svrg_acc_test[STARTPOINT:MAXLENGTH+1]		
 
-		if DRAW_MLP_SGD:	mlp_sgd_loss_test = mlp_sgd_loss_test[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_test = mlpbn_sgd_loss_test[0:MAXLENGTH+1]
-		if DRAW_MLP_SVRG: 	mlp_svrg_loss_test = mlp_svrg_loss_test[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_test = mlpbn_svrg_loss_test[0:MAXLENGTH+1]
+		if DRAW_MLP_SGD:	mlp_sgd_loss_test = mlp_sgd_loss_test[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_test = mlpbn_sgd_loss_test[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_loss_test = mlp_svrg_loss_test[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_test = mlpbn_svrg_loss_test[STARTPOINT:MAXLENGTH+1]
 
-		if DRAW_MLP_SGD: 	mlp_sgd_acc_val = mlp_sgd_acc_val[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_val = mlpbn_sgd_acc_val[0:MAXLENGTH+1]
-		if DRAW_MLP_SVRG: 	mlp_svrg_acc_val = mlp_svrg_acc_val[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_val = mlpbn_svrg_acc_val[0:MAXLENGTH+1]		
+		if DRAW_MLP_SGD: 	mlp_sgd_acc_val = mlp_sgd_acc_val[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_val = mlpbn_sgd_acc_val[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_acc_val = mlp_svrg_acc_val[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_val = mlpbn_svrg_acc_val[STARTPOINT:MAXLENGTH+1]		
 		
-		if DRAW_MLP_SGD:	mlp_sgd_loss_val = mlp_sgd_loss_val[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_val = mlpbn_sgd_loss_val[0:MAXLENGTH+1]
-		if DRAW_MLP_SVRG: 	mlp_svrg_loss_val = mlp_svrg_loss_val[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_val = mlpbn_svrg_loss_val[0:MAXLENGTH+1]
+		if DRAW_MLP_SGD:	mlp_sgd_loss_val = mlp_sgd_loss_val[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_val = mlpbn_sgd_loss_val[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_loss_val = mlp_svrg_loss_val[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_val = mlpbn_svrg_loss_val[STARTPOINT:MAXLENGTH+1]
 
-		if DRAW_MLP_SGD: 	mlp_sgd_acc_train = mlp_sgd_acc_train[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_train = mlpbn_sgd_acc_train[0:MAXLENGTH+1]
-		if DRAW_MLP_SVRG: 	mlp_svrg_acc_train = mlp_svrg_acc_train[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_train = mlpbn_svrg_acc_train[0:MAXLENGTH+1]		
+		if DRAW_MLP_SGD: 	mlp_sgd_acc_train = mlp_sgd_acc_train[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_acc_train = mlpbn_sgd_acc_train[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_acc_train = mlp_svrg_acc_train[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_train = mlpbn_svrg_acc_train[STARTPOINT:MAXLENGTH+1]		
 		
-		if DRAW_MLP_SGD:	mlp_sgd_loss_train = mlp_sgd_loss_train[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_train = mlpbn_sgd_loss_train[0:MAXLENGTH+1]
-		if DRAW_MLP_SVRG: 	mlp_svrg_loss_train = mlp_svrg_loss_train[0:MAXLENGTH+1]
-		if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_train = mlpbn_svrg_loss_train[0:MAXLENGTH+1]
+		if DRAW_MLP_SGD:	mlp_sgd_loss_train = mlp_sgd_loss_train[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SGD: 	mlpbn_sgd_loss_train = mlpbn_sgd_loss_train[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLP_SVRG: 	mlp_svrg_loss_train = mlp_svrg_loss_train[STARTPOINT:MAXLENGTH+1]
+		if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_train = mlpbn_svrg_loss_train[STARTPOINT:MAXLENGTH+1]
 
 
 
@@ -118,74 +122,76 @@ def main(num_epochs=NUM_EPOCHS):
 	matplotlib.rcParams.update({'font.size': 16})
 	plt.figure(1)
 	plt.title('Loss of Validation Set')
-	if DRAW_MLP_SGD: 	plt.plot(count_mlp_sgd, mlp_sgd_loss_val, SPEC_L1 ,label="MLP SGD", linewidth='1')
-	if DRAW_MLPBN_SGD: 	plt.plot(count_mlpbn_sgd, mlpbn_sgd_loss_val, SPEC_L2 ,label="MLPBN SGD", linewidth='1')
-	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_loss_val, SPEC_L3 ,label="MLP SVRG", linewidth='1')
-	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_loss_val, SPEC_L4 ,label="MLPBN SVRG", linewidth='1')
+	if DRAW_MLP_SGD: 	plt.plot(count_mlp_sgd, mlp_sgd_loss_val, SPEC_L1 ,label="MLP SGD",  linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SGD: 	plt.plot(count_mlpbn_sgd, mlpbn_sgd_loss_val, SPEC_L2 ,label="MLPBN SGD",  linewidth = LINEWIDTH)
+	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_loss_val, SPEC_L3 ,label="MLP SVRG",  linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_loss_val, SPEC_L4 ,label="MLPBN SVRG",  linewidth = LINEWIDTH)
 	plt.xlabel('# Epochs')
 	plt.ylabel('Loss')
 	plt.legend()
 	# plt.show()
-	pylab.savefig(PATH_FIGURE+'CroszsModel_Validation Set_Loss'+'.png',bbox_inches='tight')
+	pylab.savefig(PATH_FIGURE+'CroszsModel_Validation_Set_Loss'+'.png',bbox_inches='tight')
 
 	plt.figure(2)
 	plt.title('Predict Accuracy of Validation Set')
-	if DRAW_MLP_SGD: 	plt.plot(count_mlp_sgd, mlp_sgd_acc_val, SPEC_L1 ,label="MLP SGD")
-	if DRAW_MLPBN_SGD: 	plt.plot(count_mlpbn_sgd, mlpbn_sgd_acc_val, SPEC_L2 ,label="MLPBN SGD")
-	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_acc_val, SPEC_L3 ,label="MLP SVRG", linewidth='1')
-	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_val, SPEC_L4 ,label="MLPBN SVRG", linewidth='1')
+	if DRAW_MLP_SGD: 	plt.plot(count_mlp_sgd, mlp_sgd_acc_val, SPEC_L1 ,label="MLP SGD", linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SGD: 	plt.plot(count_mlpbn_sgd, mlpbn_sgd_acc_val, SPEC_L2 ,label="MLPBN SGD", linewidth = LINEWIDTH)
+	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_acc_val, SPEC_L3 ,label="MLP SVRG",  linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_val, SPEC_L4 ,label="MLPBN SVRG",  linewidth = LINEWIDTH)
 	plt.xlabel('# Epochs')
 	plt.ylabel('Predict Accuracy')
 	plt.legend(bbox_to_anchor=(1,0.4))
 	# plt.show()
-	pylab.savefig(PATH_FIGURE+'CrossModel_Validation Set_Predict Accuracy'+'.png',bbox_inches='tight')
+	pylab.savefig(PATH_FIGURE+'CrossModel_Validation_Set_Predict_Accuracy'+'.png',bbox_inches='tight')
 
 	plt.figure(3)
 	plt.title('Loss of Training Set')
-	if DRAW_MLP_SGD: 	plt.plot(count_mlp_sgd, mlp_sgd_loss_train, SPEC_L1 ,label="MLP SGD")
-	if DRAW_MLPBN_SGD: 	plt.plot(count_mlpbn_sgd, mlpbn_sgd_loss_train, SPEC_L2 ,label="MLPBN SGD")
-	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_loss_train, SPEC_L3 ,label="MLP SVRG", linewidth='1')
-	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_loss_train, SPEC_L4 ,label="MLPBN SVRG", linewidth='1')
+	if Y_LIM_FINE_TUNING:	pylab.ylim([-0.01,0.25])
+	if DRAW_MLP_SGD: 	plt.plot(count_mlp_sgd, mlp_sgd_loss_train, SPEC_L1 ,label="MLP SGD", linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SGD: 	plt.plot(count_mlpbn_sgd, mlpbn_sgd_loss_train, SPEC_L2 ,label="MLPBN SGD", linewidth = LINEWIDTH)
+	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_loss_train, SPEC_L3 ,label="MLP SVRG",  linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_loss_train, SPEC_L4 ,label="MLPBN SVRG", linewidth = LINEWIDTH)
 	plt.xlabel('# Epochs')
 	plt.ylabel('Loss')
 	plt.legend()
 	# plt.show()
-	pylab.savefig(PATH_FIGURE+'CrossModel_Training Set_Loss'+'.png',bbox_inches='tight')
+	pylab.savefig(PATH_FIGURE+'CrossModel_Training_Set_Loss'+'.png',bbox_inches='tight')
 
 	plt.figure(4)
 	plt.title('Predict Accuracy of Training Set')
-	if DRAW_MLP_SGD: 	plt.plot(count_mlp_sgd, mlp_sgd_acc_train, SPEC_L1 ,label="MLP SGD")
-	if DRAW_MLPBN_SGD: 	plt.plot(count_mlpbn_sgd, mlpbn_sgd_acc_train, SPEC_L2 ,label="MLPBN SGD")
-	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_acc_train, SPEC_L3 ,label="MLP SVRG", linewidth='1')
-	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_train, SPEC_L4 ,label="MLPBN SVRG", linewidth='1')
+	if Y_LIM_FINE_TUNING:	pylab.ylim([0.93,1.01])
+	if DRAW_MLP_SGD: 	plt.plot(count_mlp_sgd, mlp_sgd_acc_train, SPEC_L1 ,label="MLP SGD", linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SGD: 	plt.plot(count_mlpbn_sgd, mlpbn_sgd_acc_train, SPEC_L2 ,label="MLPBN SGD", linewidth = LINEWIDTH)
+	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_acc_train, SPEC_L3 ,label="MLP SVRG",  linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_train, SPEC_L4 ,label="MLPBN SVRG",  linewidth = LINEWIDTH)
 	plt.xlabel('# Epochs')
 	plt.ylabel('Predict Accuracy')
 	plt.legend(bbox_to_anchor=(1,0.4))
 	# plt.show()
-	pylab.savefig(PATH_FIGURE+'CrossModel_Training Set_Predict Accuracy'+'.png',bbox_inches='tight')
+	pylab.savefig(PATH_FIGURE+'CrossModel_Training_Set_Predict_Accuracy'+'.png',bbox_inches='tight')
 
 	plt.figure(5)
 	plt.title('Predict Accuracy of Test Set')
-	if DRAW_MLP_SGD: plt.plot(count_mlp_sgd, mlp_sgd_acc_test, SPEC_L1 ,label="MLP SGD")
-	if DRAW_MLPBN_SGD: plt.plot(count_mlpbn_sgd, mlpbn_sgd_acc_test, SPEC_L2 ,label="MLPBN SGD")
-	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_acc_test, SPEC_L3 ,label="MLP SVRG", linewidth='1')
-	if DRAW_MLPBN_SVRG: 	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_test, SPEC_L4 ,label="MLPBN SVRG", linewidth='1')
+	if DRAW_MLP_SGD: plt.plot(count_mlp_sgd, mlp_sgd_acc_test, SPEC_L1 ,label="MLP SGD", linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SGD: plt.plot(count_mlpbn_sgd, mlpbn_sgd_acc_test, SPEC_L2 ,label="MLPBN SGD", linewidth = LINEWIDTH)
+	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_acc_test, SPEC_L3 ,label="MLP SVRG",  linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SVRG: 	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_test, SPEC_L4 ,label="MLPBN SVRG", linewidth = LINEWIDTH)
 	plt.xlabel('# Epochs')
 	plt.ylabel('Predict Accuracy')
 	plt.legend(bbox_to_anchor=(1,0.4))
 	# plt.show()
-	pylab.savefig(PATH_FIGURE+'CrossModel_Test Set_Predict Accuracy'+'.png',bbox_inches='tight')
+	pylab.savefig(PATH_FIGURE+'CrossModel_Test_Set_Predict_Accuracy'+'.png',bbox_inches='tight')
 
 	plt.figure(6)
 	plt.title('Loss of Test Set')
-	if DRAW_MLP_SGD: plt.plot(count_mlp_sgd, mlp_sgd_loss_test, SPEC_L1 ,label="MLP SGD")
-	if DRAW_MLPBN_SGD: plt.plot(count_mlpbn_sgd, mlpbn_sgd_loss_test, SPEC_L2 ,label="MLPBN SGD")
-	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_loss_test, SPEC_L3 ,label="MLP SVRG", linewidth='1')
-	if DRAW_MLPBN_SVRG: 	plt.plot(count_mlpbn_svrg, mlpbn_svrg_loss_test, SPEC_L4 ,label="MLPBN SVRG", linewidth='1')
+	if DRAW_MLP_SGD: plt.plot(count_mlp_sgd, mlp_sgd_loss_test, SPEC_L1 ,label="MLP SGD", linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SGD: plt.plot(count_mlpbn_sgd, mlpbn_sgd_loss_test, SPEC_L2 ,label="MLPBN SGD", linewidth = LINEWIDTH)
+	if DRAW_MLP_SVRG: 	plt.plot(count_mlp_svrg, mlp_svrg_loss_test, SPEC_L3 ,label="MLP SVRG",  linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SVRG: 	plt.plot(count_mlpbn_svrg, mlpbn_svrg_loss_test, SPEC_L4 ,label="MLPBN SVRG", linewidth = LINEWIDTH)
 	plt.xlabel('# Epochs')
 	plt.ylabel('Loss')
 	plt.legend()
-	pylab.savefig(PATH_FIGURE+'CrossModel_Test Set_Loss'+'.png',bbox_inches='tight')
+	pylab.savefig(PATH_FIGURE+'CrossModel_Test_Set_Loss'+'.png',bbox_inches='tight')
 	# plt.show()
 	
 	print ("Finish drawing cross model plots.")
