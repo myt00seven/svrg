@@ -26,8 +26,10 @@ if __name__ == '__main__':
         kwargs = {}
         if len(sys.argv) > 1:
             kwargs['device'] = sys.argv[1]
+
         if len(sys.argv) > 2:
             kwargs['num_epochs'] = sys.argv[2]
+            
         if len(sys.argv) > 3:
             kwargs['num_hidden_nodes'] = sys.argv[3]
         main(**kwargs)
