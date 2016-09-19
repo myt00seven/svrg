@@ -13,7 +13,6 @@ import time
 
 EXTRA_INFO = True
 DEFAULT_ADAPTIVE = False
-STREAMING_SVRG = False
 
 class SVRGOptimizer:
     def __init__(self, m, learning_rate, adaptive=DEFAULT_ADAPTIVE, non_uniform_prob=True):
@@ -39,9 +38,10 @@ class SVRGOptimizer:
             flog.write("Non Uniform Prob of mini batch:{:.2f}\n".format(self.non_uniform_prob))
 
         self.L = theano.shared(np.cast['float32'](1. / self.learning_rate))
-#        self.Ls = [theano.shared(np.cast['float32'](1. / self.learning_rate)) for _  in range(num_batches)]
+        #self.Ls = [theano.shared(np.cast['float32'](1. / self.learning_rate)) for _  in range(num_batches)]
         self.Ls = [1. / self.learning_rate for _  in range(num_batches)]
 
+        # params are all trainable parameters
         w_updates, mu_updates = self.make_updates(loss, params)
 
         train_mu = theano.function([self.input_var, self.target_var], loss, updates=mu_updates)
@@ -65,7 +65,7 @@ class SVRGOptimizer:
 
         j = 0
 
-        #what does this do?
+        #what does this do?        
         L_fn = self.make_L_fn(loss, params)
 
         print("Starting training...")
@@ -80,6 +80,7 @@ class SVRGOptimizer:
             train_acc = 0
             train_batches = 0
 
+            # get the batches instances from the train set
             if self.non_uniform_prob:
                 batches = self.iterate_minibatches(X_train, Y_train, batch_size)
             else:
@@ -87,29 +88,33 @@ class SVRGOptimizer:
 
             for batch in batches:
 
-                #every m batches
+                # recompute the \mu based on current values of params every m batches
                 if j % self.m == 0:
                     for mu in self.mu:
                         mu.set_value(0 * mu.get_value())
-
                     for mu_batch in iterate_minibatches(X_train, Y_train, batch_size, shuffle=False):
                         inputs, targets = mu_batch
                         train_mu(inputs, targets)
-                        # ??? where is the summation for mu?
-                    
+                        # ??? where is the summation for mu?                    
+                        # ??? where is the definition of mu? is it a shared theano variabe defined somewhere else?
+                        # ??? There is a clean mu to [] in the update_mu, how can it succeed values from other batches?
                     for mu in self.mu:
                         mu.set_value(mu.get_value() / n)
+                        # n is number of batches
 
-                j += 1               
+                j += 1
+                # construct the current train sample based on one batch
                 inputs, targets = batch
-                #print "learning_rate: ", 1. / self.L.get_value()
+                # print "learning_rate: ", 1. / self.L.get_value()
 
-                # what is L? L is learning rate. Ls is the list storing learning rate.
+                # what is L? 
+                # A:L is learning rate. Ls is the list storing learning rate.
                 L = self.Ls[self.idx]
                 self.L.set_value(L)
                 
                 current_loss, current_acc = val_fn(inputs, targets)
                 
+                # Use adaptive option to find the right learning rate by line search
                 l_iter = 0
                 if self.adaptive: 
                     while True:
@@ -121,6 +126,7 @@ class SVRGOptimizer:
 
                         l_iter += 1
 
+                # Print the extra debug infomation
                 if EXTRA_INFO:
                     print >>flog, "No. of batch:",train_batches
                     #Each iteration here decrease learning rate by half 
@@ -190,20 +196,28 @@ class SVRGOptimizer:
 
     def make_mu_updates(self, loss, params):
         mu_updates = OrderedDict()
+        # mu is the partial derivative for every param
 
         grads = theano.grad(loss, params)
+        # grads: the partial gradient w.r.t each param
 
         self.mu = []
         for param, grad in zip(params, grads):
+            # param: for each param in all trainable parameters
+
             value = param.get_value(borrow=True)
 
             mu_updates[self.counted_gradient] = self.counted_gradient + 1
 
             mu = theano.shared(np.zeros(value.shape, dtype=value.dtype), broadcastable=param.broadcastable)
+            # seems that mu is just a zero
+            # so when we create this mu here???
+
             mu_updates[mu] = mu + grad
             self.mu.append(mu)
 
         return mu_updates
+
 
     def make_w_updates(self, loss, params):
         w_updates = OrderedDict()
@@ -212,22 +226,31 @@ class SVRGOptimizer:
         loss_tilde = theano.clone(loss, replace=zip(params, params_tilde))
 
         grads = theano.grad(loss, params)
+        # grades is the gradient that change per iteration
+
         grads_tilde = theano.grad(loss_tilde, params_tilde)
+        # grades_tilde is the gradient that change every 'm' iterations
 
         it_num = theano.shared(np.cast['int16'](0))
+        # do we succeed the it_num among different update processes??? Otherwise how do we keep counting it correctly?
         it = it_num + 1
 
         for param, grad, mu, param_tilde, grad_tilde in zip(params, grads, self.mu, params_tilde, grads_tilde):
-#            new_param = param - self.learning_rate * (grad - grad_tilde + mu)
 
             new_param = param - (1. / self.L) * (grad - grad_tilde + mu)
+            # compute the w_t based on w_{t-1}, w_tilde and mu
             w_updates[param] = new_param
+            # update w_t
             w_updates[param_tilde] = ifelse(T.eq(it % self.m, 0), new_param, param_tilde)
+            # update w_tilde every 'm' iterations 
+            # We can print the output of ifelse here to see if we are counting the iterations correctly
             
             w_updates[self.counted_gradient] = self.counted_gradient + 2
+            # why do we have this ???
         
         if self.adaptive:
             w_updates[self.L] = self.L / 2
+            # so why adaptive means we are using larger step sizes?
 
         self.it_num = it_num
         

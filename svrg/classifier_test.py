@@ -17,6 +17,8 @@ import neuralclassifier
 
 BATCH_SIZE= 100
 
+USE_STREAMING_SVRG = 0
+
 def main():
     print("Loading data...")
     X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
@@ -27,9 +29,14 @@ def main():
     objective = lasagne.objectives.categorical_crossentropy
 
     models = {
-        'svrg_classif': (custom_svrg1, {'learning_rate': 0.01, 'm': 50})
-        #'adam_classif': (custom_adam, {'learning_rate': 0.01})
-#        'adam_classif_dropout': (lasagne.updates.adam, {'learning_rate': 0.01})
+    # According to Nocedal's paper, m should be 2n~5n
+        'svrg_classif': (custom_svrg1, {'learning_rate': 0.01, 'm': 2*BATCH_SIZE, 'streaming': USE_STREAMING_SVRG})
+    # straming control if we use straming SVRG
+
+    # Right here we have adam!
+
+    #'adam_classif': (custom_adam, {'learning_rate': 0.01})
+    #'adam_classif_dropout': (lasagne.updates.adam, {'learning_rate': 0.01})
     }
 
     for model in models.keys():
