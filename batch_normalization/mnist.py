@@ -2,9 +2,11 @@
 
 """
 Batch Normalization + SVRG on MNIST
+CPU Version
 Independent Study
 May 18, 2016
 Yintai Ma
+
 """
 
 from __future__ import print_function
@@ -30,7 +32,7 @@ from collections import OrderedDict
 
 NUM_EPOCHS = 20
 BATCH_SIZE = 100
-NUM_HIDDEN_UNITS = 100
+NUM_HIDDEN_UNITS = 500
 LEARNING_RATE = 0.01
 MOMENTUM = 0.9
 FREQUENCY = 0.1

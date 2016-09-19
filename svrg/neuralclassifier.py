@@ -9,31 +9,23 @@ from neuralnet import train
 
 from custom_updates import *
 from SVRGOptimizer import SVRGOptimizer
+from StreamingSVRGOptimizer import StreamingSVRGOptimizer
 from operator import itemgetter
 
-MLPBN= True
-# MLPBN= False
+MLPBN= False
 
 def classifier_network(input_var, n_input, n_hidden, n_output):
 
-    if MLPBN:
-        input_layer  = lasagne.layers.InputLayer(shape=(None, n_input), input_var=input_var)
-        hidden_layer = lasagne.layers.batch_norm(
-                lasagne.layers.DenseLayer(
-                input_layer, #            lasagne.layers.dropout(input_layer, p=0.5),
-                num_units=n_hidden,
-                nonlinearity=lasagne.nonlinearities.rectify)
-                        )
-        output_layer = lasagne.layers.batch_norm(
-                lasagne.layers.DenseLayer(hidden_layer, num_units=n_output, nonlinearity=lasagne.nonlinearities.softmax)
-                        )
-    else:
-        input_layer  = lasagne.layers.InputLayer(shape=(None, n_input), input_var=input_var)
-        hidden_layer = lasagne.layers.DenseLayer(
-                input_layer, #            lasagne.layers.dropout(input_layer, p=0.5),
-                num_units=n_hidden,
-                nonlinearity=lasagne.nonlinearities.rectify)
-        output_layer = lasagne.layers.DenseLayer(hidden_layer, num_units=n_output, nonlinearity=lasagne.nonlinearities.softmax)
+    input_layer  = lasagne.layers.InputLayer(shape=(None, n_input), input_var=input_var)
+    hidden_layer = lasagne.layers.DenseLayer(
+            input_layer, #            lasagne.layers.dropout(input_layer, p=0.5),
+            num_units=n_hidden,
+            nonlinearity=lasagne.nonlinearities.rectify)
+    hidden_layer = lasagne.layers.DenseLayer(
+            hidden_layer, #            lasagne.layers.dropout(input_layer, p=0.5),
+            num_units=n_hidden,
+            nonlinearity=lasagne.nonlinearities.rectify)
+    output_layer = lasagne.layers.DenseLayer(hidden_layer, num_units=n_output, nonlinearity=lasagne.nonlinearities.softmax)
 
     return input_layer, hidden_layer, output_layer
 
@@ -48,7 +40,7 @@ class NeuralClassifier:
    
         self.input_layer, self.hidden_layer, self.output_layer = classifier_network(self.input_var, n_input, n_hidden, n_output)
     
-    def train(self, X_train, Y_train, X_val=None, Y_val=None,
+    def train(self, X_train, Y_train, X_val=None, Y_val=None, X_test=None, y_test=None,
             objective=lasagne.objectives.binary_crossentropy, 
             update=lasagne.updates.adam, 
             n_epochs=100, batch_size=100, lambd=0.0,
@@ -68,10 +60,17 @@ class NeuralClassifier:
         svrg = True
         svrg = (update == custom_svrg1)
     
-        if svrg:
+        if update_params['streaming']: # If we use Straming SVRG for this case
+            optimizer = StreamingSVRGOptimizer(update_params['m'], update_params['learning_rate'])
+            train_error, validation_error, acc_train, acc_val, acc_test, test_error = optimizer.minimize(loss, params,
+                    X_train, Y_train, X_test, y_test, 
+                    self.input_var, self.target_var, 
+                    X_val, Y_val, 
+                    n_epochs=n_epochs, batch_size=batch_size, output_layer=network)
+        elif svrg: # If we use SVRG without streaming
             optimizer = SVRGOptimizer(update_params['m'], update_params['learning_rate'])
-            train_error, validation_error, acc_train, acc_val = optimizer.minimize(loss, params,
-                    X_train, Y_train, 
+            train_error, validation_error, acc_train, acc_val, acc_test, test_error = optimizer.minimize(loss, params,
+                    X_train, Y_train, X_test, y_test, 
                     self.input_var, self.target_var, 
                     X_val, Y_val, 
                     n_epochs=n_epochs, batch_size=batch_size, output_layer=network)
@@ -96,7 +95,11 @@ class NeuralClassifier:
 
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_loss_train.txt",train_error)
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_loss_val.txt",map(itemgetter(0), validation_error))
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_loss_gradient_number.txt",map(itemgetter(1), validation_error))
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_acc_train.txt",acc_train)
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_acc_val.txt",acc_val)
+
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_acc_test.txt",acc_test)
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_loss_test.txt",test_error)
 
         return train_error, validation_error

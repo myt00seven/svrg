@@ -1,4 +1,6 @@
-
+"""
+Using Theano to test if the theano is using gpu
+"""
 from theano import function, config, shared, sandbox
 import theano.tensor as T
 import numpy

@@ -3,8 +3,14 @@
 """
 Batch Normalization + SVRG on MNIST
 Independent Study
-May 18, 2016
+May 24, 2016
 Yintai Ma
+"""
+
+"""
+under folder of batch_normalization
+Before merge; number 1
+have options for "mlp", "mlpbn"; "sgd" and "custom_svrg2"
 """
 
 from __future__ import print_function
@@ -15,7 +21,9 @@ import time
 
 import matplotlib
 import matplotlib.pyplot as plt
+# parameters for Linux
 plt.switch_backend('agg')
+
 
 import pylab 
 
@@ -23,17 +31,16 @@ import pylab
 import numpy as np 
 import theano
 import theano.tensor as T
-
 import lasagne
 
 from collections import OrderedDict
 
 # May 18, 2016, Yintai Ma
-# standard setting , epoch = 20, batch size = 100
+# standard setting , epoch = 500, batch size = 100
 
 OUTPUT_FIGURE_PATH = 'data_large/'
 OUTPUT_DATA_PATH = 'data_large/'
-NUM_EPOCHS = 2
+NUM_EPOCHS = 20
 BATCH_SIZE = 100
 NUM_HIDDEN_UNITS = 500
 LEARNING_RATE = 0.01
@@ -166,9 +173,10 @@ def build_mlp(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS):
             l_in, num_units=num_hidden_units,
             nonlinearity=lasagne.nonlinearities.rectify,
             W=lasagne.init.GlorotUniform())
-    # l_hid = lasagne.layers.DenseLayer(
-    #         l_hid, num_units=NUM_HIDDEN_UNITS,
-    #         nonlinearity=lasagne.nonlinearities.rectify)
+    l_hid = lasagne.layers.DenseLayer(
+            l_hid, num_units=num_hidden_units,
+            nonlinearity=lasagne.nonlinearities.rectify,
+            W=lasagne.init.GlorotUniform())
     l_out = lasagne.layers.DenseLayer(
             l_hid, num_units=10,
             nonlinearity=lasagne.nonlinearities.softmax)
@@ -184,13 +192,13 @@ def build_mlpbn(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS):
         nonlinearity=lasagne.nonlinearities.rectify,
         )
     )
-    # l_hidden = lasagne.layers.batch_norm (
-    #     lasagne.layers.DenseLayer(
-    #     l_hidden,
-    #     num_units=NUM_HIDDEN_UNITS,
-    #     nonlinearity=lasagne.nonlinearities.rectify,
-    #     )
-    # )
+    l_hidden = lasagne.layers.batch_norm (
+        lasagne.layers.DenseLayer(
+        l_hidden,
+        num_units=num_hidden_units,
+        nonlinearity=lasagne.nonlinearities.rectify,
+        )
+    )
     l_out = lasagne.layers.batch_norm (
         lasagne.layers.DenseLayer(
         l_hidden,
@@ -210,7 +218,7 @@ def build_mlpbn(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS):
 # them to GPU at once for slightly improved performance. This would involve
 # several changes in the main program, though, and is not demonstrated here.
 
-def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
+def iterate_minibatches(inputs, targets, batchsize, shuffle=False ):
     assert len(inputs) == len(targets)
     if shuffle:
         indices = np.arange(len(inputs))
@@ -229,6 +237,9 @@ def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
 # easier to read.
 
 def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_units = NUM_HIDDEN_UNITS):
+    rng = np.random.RandomState(42)
+    lasagne.random.set_rng(rng)
+
     # Load the dataset
     NUM_EPOCHS = num_epochs
     print("Loading data...")
@@ -248,11 +259,10 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_unit
         print("Unrecognized model type %r." % model)
         return
 
-    prediction = lasagne.layers.get_output(network)
-    loss = lasagne.objectives.categorical_crossentropy(prediction, target_var)
-    loss = loss.mean()
-    acc = T.mean(T.eq(T.argmax(prediction, axis=1), target_var),
-                      dtype=theano.config.floatX)
+    prediction = lasagne.layers.get_output(network, deterministic= False, batch_norm_update_averages = True)
+    loss = T.mean(lasagne.objectives.categorical_crossentropy(prediction, target_var))
+    acc = T.mean(T.eq(T.argmax(prediction, axis=1), target_var),dtype=theano.config.floatX)
+    
     params = lasagne.layers.get_all_params(network, trainable=True)
 
     if gradient == 'sgd':
