@@ -2,9 +2,11 @@
 
 """
 Batch Normalization + SVRG on MNIST
+CPU Version
 Independent Study
 May 18, 2016
 Yintai Ma
+
 """
 
 from __future__ import print_function

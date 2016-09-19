@@ -1,5 +1,10 @@
 import os
 import sys
+"""
+A script the run the program automatically and switch the parameters
+run the python script of DL
+"""
+
 
 #default value
 NUM_EPOCHS = "500"

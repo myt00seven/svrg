@@ -7,6 +7,12 @@ May 24, 2016
 Yintai Ma
 """
 
+"""
+under folder of batch_normalization
+Before merge; number 1
+have options for "mlp", "mlpbn"; "sgd" and "custom_svrg2"
+"""
+
 from __future__ import print_function
 
 import sys
