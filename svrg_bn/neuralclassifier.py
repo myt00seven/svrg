@@ -48,7 +48,7 @@ class NeuralClassifier:
     def train(self, X_train, Y_train, X_val=None, Y_val=None, X_test=None, y_test=None,
             objective=lasagne.objectives.binary_crossentropy, 
             update=lasagne.updates.adam, 
-            n_epochs=100, batch_size=100, lambd=0.0,
+            n_epochs=100, batch_size=100, gradient="SVRG" , lambd=0.0,
             **update_params):
 
         network = self.output_layer
@@ -91,13 +91,12 @@ class NeuralClassifier:
                     n_epochs, batch_size=batch_size#, toprint=it
             )
 
-        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_loss_train.txt",train_error)
-        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_loss_val.txt",map(itemgetter(0), validation_error))
-        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_loss_gradient_number.txt",map(itemgetter(1),validation_error))
-        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_acc_train.txt",acc_train)
-        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_acc_val.txt",acc_val)
-
-        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_acc_test.txt",acc_test)
-        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_SVRG_loss_test.txt",test_error)
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_train.txt",train_error)
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_val.txt",map(itemgetter(0), validation_error))
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_gradient_number.txt",map(itemgetter(1),validation_error))
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_acc_train.txt",acc_train)
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_acc_val.txt",acc_val)
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_acc_test.txt",acc_test)
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_test.txt",test_error)
 
         return train_error, validation_error
