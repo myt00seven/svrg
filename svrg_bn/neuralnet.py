@@ -26,6 +26,8 @@ def train(X_train, Y_train, X_val, Y_val, train_fn, val_fn, n_epochs, batch_size
 
     train_error = []
     validation_error = []
+    acc_train = []
+    acc_val = []
 
     gradient_times = 0
 
@@ -34,6 +36,7 @@ def train(X_train, Y_train, X_val, Y_val, train_fn, val_fn, n_epochs, batch_size
     for epoch in range(n_epochs):
 
         train_err = 0
+        train_acc = 0
         train_batches = 0
 
         t = time.time()
@@ -73,4 +76,10 @@ def train(X_train, Y_train, X_val, Y_val, train_fn, val_fn, n_epochs, batch_size
                 print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
                 print("  validation accuracy:\t\t{:.2f} %".format(val_acc / val_batches * 100))
 
-    return train_error, validation_error
+        # train_error.append(train_err / train_batches)
+        # validation_error.append((val_err / val_batches, self.counted_gradient.get_value()))
+
+        # acc_train.append(train_acc / train_batches)
+        acc_val.append(val_acc / val_batches)
+
+    return train_error, validation_error, acc_train, acc_val

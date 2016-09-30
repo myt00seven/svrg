@@ -94,8 +94,12 @@ class NeuralClassifier:
                 val_fn = theano.function([self.input_var, self.target_var], [test_loss, test_acc_fn])
             else:
                 val_fn = None
+
+            test_error = []
+            acc_test = []
+            # these two are not realized yet
             
-            train_error, validation_error = train(
+            train_error, validation_error, acc_train, acc_val = train(
                     X_train, Y_train, X_val, Y_val,
                     train_fn, val_fn,
                     n_epochs, batch_size=batch_size#, toprint=it
@@ -104,9 +108,11 @@ class NeuralClassifier:
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_train.txt",train_error)
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_val.txt",map(itemgetter(0), validation_error))
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_gradient_number.txt",map(itemgetter(1),validation_error))
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_test.txt",test_error)
+
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_acc_train.txt",acc_train)
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_acc_val.txt",acc_val)
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_acc_test.txt",acc_test)
-        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_test.txt",test_error)
+        
 
         return train_error, validation_error
