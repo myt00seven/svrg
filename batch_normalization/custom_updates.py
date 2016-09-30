@@ -178,28 +178,31 @@ def custom_svrg1(loss, params, m=100, learning_rate=0.01):
 
     updates = OrderedDict()
     
-    it_num = theano.shared(np.cast['int16'](0.))
-    it = it_num + 1
+    # it_num = theano.shared(np.cast['int16'](0.))
+    # it = it_num + 1
 
-    for param, grad in zip(params, grads):
-        value = param.get_value(borrow=True)
+    # for param, grad in zip(params, grads):
+    #     value = param.get_value(borrow=True)
 
-        mu = theano.shared(np.zeros(value.shape, dtype=value.dtype), broadcastable=param.broadcastable)
+    #     mu = theano.shared(np.zeros(value.shape, dtype=value.dtype), broadcastable=param.broadcastable)
 
-        grad_w_tilde = theano.shared(np.zeros(value.shape, dtype=value.dtype), broadcastable=param.broadcastable)
-        new_grad_w_tilde = theano.ifelse.ifelse(T.eq(it, m), grad, grad_w_tilde)
+    #     grad_w_tilde = theano.shared(np.zeros(value.shape, dtype=value.dtype), broadcastable=param.broadcastable)
+    #     new_grad_w_tilde = theano.ifelse.ifelse(T.eq(it, m), grad, grad_w_tilde)
 
-        mu_acc = theano.shared(np.zeros(value.shape, dtype=value.dtype), broadcastable=param.broadcastable)
+    #     mu_acc = theano.shared(np.zeros(value.shape, dtype=value.dtype), broadcastable=param.broadcastable)
 
-        updates[param] = param - learning_rate * (grad - grad_w_tilde + mu)
-        updates[grad_w_tilde] = new_grad_w_tilde
+    #     updates[param] = param - learning_rate * (grad - grad_w_tilde + mu)
+    #     updates[grad_w_tilde] = new_grad_w_tilde
 
-        updates[mu] = theano.ifelse.ifelse(T.eq(T.mod(it, m), 0), mu_acc, mu)
-        updates[mu_acc] = theano.ifelse.ifelse(T.eq(T.mod(it, m), 0), 0*mu_acc, mu_acc + grad)
+    #     updates[mu] = theano.ifelse.ifelse(T.eq(T.mod(it, m), 0), mu_acc, mu)
+    #     updates[mu_acc] = theano.ifelse.ifelse(T.eq(T.mod(it, m), 0), 0*mu_acc, mu_acc + grad)
 
-    updates[it_num] = theano.ifelse.ifelse(T.eq(it, m), np.cast['int16'](1), np.cast['int16'](m))
+    # updates[it_num] = theano.ifelse.ifelse(T.eq(it, m), np.cast['int16'](1), np.cast['int16'](m))
 
     return updates
+
+# def custom_streaming_svrg1(loss, params)
+
 
 #def custom_svrg(loss, params, m=100, learning_rate=0.01):
 #    

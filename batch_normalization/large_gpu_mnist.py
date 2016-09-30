@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+from __future__ import print_function
+
 
 """
 Batch Normalization + SVRG on MNIST
@@ -8,12 +10,15 @@ Yintai Ma
 """
 
 """
-under folder of batch_normalization
-Before merge; number 1
-have options for "mlp", "mlpbn"; "sgd" and "custom_svrg2"
+# Use SGD AdaGrad instead
 """
 
-from __future__ import print_function
+"""
+under folder of batch_normalization
+Before merge; number 1
+have options for "mlp", "mlpbn"; "sgd" and "custom_svrg2" and "sgd_adagrad"
+"""
+
 
 import sys
 import os
@@ -46,8 +51,9 @@ NUM_HIDDEN_UNITS = 500
 LEARNING_RATE = 0.01
 MOMENTUM = 0.9
 FREQUENCY = 0.1
-MODEL = 'mlp'
-GRADIENT = 'sgd'
+
+MODEL = 'mlpbn'
+GRADIENT = 'sgd_adagrad'
 
 # ################## Download and prepare the MNIST dataset ##################
 # This is just some way of getting the MNIST dataset from an online location
@@ -94,6 +100,26 @@ def mysgd(loss_or_grads, params, learning_rate):
 
     for param, grad in zip(params, grads):
         updates[param] = param - learning_rate * grad
+
+    return updates
+
+def mysgd_adagrad(loss_or_grads, params, learning_rate=0.01, eps=1.0e-8):
+    
+    if not isinstance(loss_or_grads, list):
+        grads = theano.grad(loss_or_grads, params)
+    else:
+        grads = loss_or_grads
+
+    updates = OrderedDict()    
+
+    for param, grad in zip(params, grads):
+        value = param.get_value(borrow=True)
+        acc = theano.shared(np.zeros(value.shape, dtype=value.dtype), broadcastable=param.broadcastable)
+        
+        acc_new = acc + grad ** 2
+
+        updates[acc] = acc_new
+        updates[param] = param - learning_rate * grad / T.sqrt(acc_new + eps)
 
     return updates
 
@@ -267,6 +293,8 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_unit
 
     if gradient == 'sgd':
         updates = mysgd(loss, params, LEARNING_RATE)
+    elif gradient == 'sgd_adagrad':
+        updates = mysgd_adagrad(loss, params, LEARNING_RATE)        
     elif gradient == 'svrg':
         updates = custom_svrg2(loss,params, m=100, learning_rate = LEARNING_RATE, objective=lasagne.objectives.categorical_crossentropy , data=input_var, target = target_var, getpred= getpred)
 
