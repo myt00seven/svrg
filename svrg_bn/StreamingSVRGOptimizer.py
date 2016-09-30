@@ -103,9 +103,9 @@ class StreamingSVRGOptimizer:
                     for mu in self.mu:
                         mu.set_value(0 * mu.get_value())
                 
-                    mu_batch = random_minibatches(X_train, Y_train, batch_size, shuffle=False):
-                    inputs, targets = mu_batch
-                    train_mu(inputs, targets)
+                        mu_batch = random_minibatches(X_train, Y_train, batch_size, shuffle=False)
+                        inputs, targets = mu_batch
+                        # train_mu(inputs, targets)
                 
                     # ??? where is the summation for mu?                    
                     # ??? where is the definition of mu? is it a shared theano variabe defined somewhere else?
