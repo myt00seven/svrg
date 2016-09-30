@@ -22,6 +22,8 @@ def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
         yield inputs[excerpt], targets[excerpt]
 
 def train(X_train, Y_train, X_val, Y_val, train_fn, val_fn, n_epochs, batch_size=500, verbose=True, toprint=None):
+    #train_fn includes the AdaGrad update functino
+
     train_error = []
     validation_error = []
 
@@ -55,11 +57,11 @@ def train(X_train, Y_train, X_val, Y_val, train_fn, val_fn, n_epochs, batch_size
             for batch in iterate_minibatches(X_val, Y_val, batch_size, shuffle=False):
                 inputs, targets = batch
                 err = val_fn(inputs, targets)
-#                err = val_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
+                # err = val_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
 
-#                err, acc = val_fn(inputs, targets)
+                err, acc = val_fn(inputs, targets)
                 val_err += err
-#                val_acc += acc
+                val_acc += acc
                 val_batches += 1
        
             validation_error.append((val_err / val_batches, gradient_times))

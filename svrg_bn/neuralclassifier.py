@@ -9,6 +9,7 @@ from neuralnet import train
 
 from custom_updates import *
 from SVRGOptimizer import SVRGOptimizer
+from StreamingSVRGOptimizer import StreamingSVRGOptimizer
 from operator import itemgetter
 
 MLPBN= True
@@ -62,17 +63,25 @@ class NeuralClassifier:
         params = lasagne.layers.get_all_params(network, trainable=True)
 
  #       svrg = False
-        svrg = True
-        svrg = (update == custom_svrg1)
+        
     
-        if svrg:
+        if (update == custom_svrg1):
             optimizer = SVRGOptimizer(update_params['m'], update_params['learning_rate'])
             train_error, validation_error, acc_train, acc_val, acc_test, test_error = optimizer.minimize(loss, params,
                     X_train, Y_train, X_test, y_test, 
                     self.input_var, self.target_var, 
                     X_val, Y_val, 
                     n_epochs=n_epochs, batch_size=batch_size, output_layer=network)
-        else:
+            
+        elif (update == custom_streaming_svrg1):
+            optimizer = StreamingSVRGOptimizer(update_params['m'], update_params['learning_rate'], update_params['k_s'])
+            train_error, validation_error, acc_train, acc_val, acc_test, test_error = optimizer.minimize(loss, params,
+                    X_train, Y_train, X_test, y_test, 
+                    self.input_var, self.target_var, 
+                    X_val, Y_val, 
+                    n_epochs=n_epochs, batch_size=batch_size, output_layer=network)
+
+        else: # The AdaGrad version of SGD
             updates = update(loss, params, **update_params)
 
             train_fn = theano.function([self.input_var, self.target_var], loss, updates=updates)

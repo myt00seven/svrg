@@ -33,8 +33,8 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
 
     if gradient == "svrg":
         models = { 'svrg_classif': (custom_svrg1, {'learning_rate': 0.01, 'm': 50}) }
-    # elif gradient == "stream": # It is StreamingSVRG
-    #     models = { 'streaming_svrg_classif': (custom_streaming_svrg1, {'learning_rate': 0.01, 'm': 50}) }
+    elif gradient == "stream": # It is StreamingSVRG
+        models = { 'streaming_svrg_classif': (custom_streaming_svrg1, {'learning_rate': 0.01, 'm': 50, 'k_s': 4}) }
     elif gradient == "adagrad":
         models = { 'adagrad_classif': (custom_adagrad, {'learning_rate': 0.01, 'eps': 1.0e-8}) }
 

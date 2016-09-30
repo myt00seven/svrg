@@ -201,7 +201,13 @@ def custom_svrg1(loss, params, m=100, learning_rate=0.01):
 
     return updates
 
-#def custom_svrg(loss, params, m=100, learning_rate=0.01):
+def custom_streaming_svrg1(loss, params, m=100, learning_rate=0.01, k_s = 4):
+
+    grads = theano.grad(loss, params)
+
+    updates = OrderedDict()
+
+    return updates
 #    
 #    params_tilde = [theano.shared(x.get_value()) for x in params] 
 #    loss_tilde = theano.clone(loss, replace=zip(params, params_tilde))
