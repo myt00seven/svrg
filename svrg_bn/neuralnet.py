@@ -56,7 +56,7 @@ def train(X_train, Y_train, X_val, Y_val, train_fn, val_fn, n_epochs, batch_size
             val_batches = 0
             for batch in iterate_minibatches(X_val, Y_val, batch_size, shuffle=False):
                 inputs, targets = batch
-                err = val_fn(inputs, targets)
+                # err = val_fn(inputs, targets)
                 # err = val_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
 
                 err, acc = val_fn(inputs, targets)

@@ -90,7 +90,8 @@ class NeuralClassifier:
                 test_prediction = lasagne.layers.get_output(network, deterministic=True)
                 test_loss = objective(test_prediction, self.target_var)
                 test_loss = test_loss.mean()
-                val_fn = theano.function([self.input_var, self.target_var], test_loss)
+                test_acc_fn = T.mean(T.eq(T.argmax(test_prediction, axis=1), target_var),dtype=theano.config.floatX)
+                val_fn = theano.function([self.input_var, self.target_var], [test_loss, test_acc_fn])
             else:
                 val_fn = None
             
