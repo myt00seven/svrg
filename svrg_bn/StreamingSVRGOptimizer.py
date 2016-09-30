@@ -7,6 +7,7 @@ import lasagne
 from theano.ifelse import ifelse
 
 from neuralnet import iterate_minibatches
+from neuralnet import random_minibatches
 
 from collections import OrderedDict
 import time
@@ -18,16 +19,25 @@ DEFAULT_ADAPTIVE = False
 # Set up parameters for Streaming SVRG
 SMOOTHNESS = 1
 
+# The parameters are that m=50, so each epoch will compute the average gradient 10 times as the batch size is 500
+# Design goal is to increase the k_s from 1 to 500 after 200 epoches, which is 2000 times of computing average gradient
+# The reason to increase k_s from 1 to 500 is that, in the begining we just use k_s_0=1 batch, eventually we use 500 batches, which is the entire training set for the computation of average gradient
+# therefore, (500/1)^(1/2000)=1.003, the number of k_s will increase by 0.3% after each computation of average gradient
+# I 'll just se it as 0.3%
 
 class StreamingSVRGOptimizer:
-    def __init__(self, m, learning_rate, adaptive=DEFAULT_ADAPTIVE, non_uniform_prob=True):
+    def __init__(self, m, learning_rate, k_s_0, k_s_ratio, adaptive=DEFAULT_ADAPTIVE, non_uniform_prob=True):
         self.m = m
         self.learning_rate = learning_rate
+        self.k_s_0 = k_s_0
+        self.k_s_ratio = k_s_ratio
         # Adaptive is if we use line search to dynamically decide the learning rate.
         self.adaptive = adaptive
         self.non_uniform_prob = non_uniform_prob
+
         self.counted_gradient = theano.shared(0)
         self.smoothness = SMOOTHNESS
+
 
     def minimize(self, loss, params, X_train, Y_train, X_test, y_test, input_var, target_var, X_val, Y_val, n_epochs=1000, batch_size=100, output_layer=None ):
         self.input_var = input_var
@@ -86,6 +96,9 @@ class StreamingSVRGOptimizer:
             train_acc = 0
             train_batches = 0
 
+            k_s = self.k_s_0
+            k_s_ratio = self.k_s_ratio
+
             # get the batches instances from the train set
             if self.non_uniform_prob:
                 batches = self.iterate_minibatches(X_train, Y_train, batch_size)
@@ -102,17 +115,23 @@ class StreamingSVRGOptimizer:
                     m_tilde = random.choice(m_list)
                     for mu in self.mu:
                         mu.set_value(0 * mu.get_value())
-                
-                        mu_batch = random_minibatches(X_train, Y_train, batch_size, shuffle=False)
+                    
+                    k_s = k_s * k_s_ratio
+                    if (k_s>batch_size):
+                        k_s = batch_size
+                    k_s_int = int(k_s)
+
+                    for mu_batch in random_minibatches(X_train, Y_train, batch_size, k_s_int):
+                        # According to my understading, the number of batches used here is  k_s_int
                         inputs, targets = mu_batch
-                        # train_mu(inputs, targets)
+                        train_mu(inputs, targets)
                 
                     # ??? where is the summation for mu?                    
                     # ??? where is the definition of mu? is it a shared theano variabe defined somewhere else?
                     # ??? There is a clean mu to [] in the update_mu, how can it succeed values from other batches?
-                    # for mu in self.mu:
-                    #     mu.set_value(mu.get_value() / n)
-                        # n is number of batches
+                    
+                    for mu in self.mu:
+                        mu.set_value(mu.get_value() / k_s_int)
 
                 j += 1
                 # construct the current train sample based on one batch

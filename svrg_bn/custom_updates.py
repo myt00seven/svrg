@@ -201,7 +201,7 @@ def custom_svrg1(loss, params, m=100, learning_rate=0.01):
 
     return updates
 
-def custom_streaming_svrg1(loss, params, m=100, learning_rate=0.01, k_s = 4):
+def custom_streaming_svrg1(loss, params, m=100, learning_rate=0.01, k_s_0 = 1.0, k_s_ratio=1.003):
 
     grads = theano.grad(loss, params)
 

@@ -67,6 +67,7 @@ class NeuralClassifier:
     
         if (update == custom_svrg1):
             optimizer = SVRGOptimizer(update_params['m'], update_params['learning_rate'])
+            # m is fixed as 50
             train_error, validation_error, acc_train, acc_val, acc_test, test_error = optimizer.minimize(loss, params,
                     X_train, Y_train, X_test, y_test, 
                     self.input_var, self.target_var, 
@@ -74,7 +75,7 @@ class NeuralClassifier:
                     n_epochs=n_epochs, batch_size=batch_size, output_layer=network)
             
         elif (update == custom_streaming_svrg1):
-            optimizer = StreamingSVRGOptimizer(update_params['m'], update_params['learning_rate'], update_params['k_s'])
+            optimizer = StreamingSVRGOptimizer(update_params['m'], update_params['learning_rate'], update_params['k_s_0'], update_params['k_s_ratio'])
             train_error, validation_error, acc_train, acc_val, acc_test, test_error = optimizer.minimize(loss, params,
                     X_train, Y_train, X_test, y_test, 
                     self.input_var, self.target_var, 

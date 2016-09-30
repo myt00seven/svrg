@@ -15,10 +15,25 @@ def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
         np.random.shuffle(indices)
 #    for start_idx in range(0, len(inputs) - batchsize + 1, batchsize):
     for start_idx in range(0, inputs.shape[0] - batchsize + 1, batchsize):
+        # Output the entire training set, which output size of batchsize each time
+        # Need to call iterate_minibatches from outside for n times to output the entire training set
+        # n = training_set_size / batch_size
         if shuffle:
             excerpt = indices[start_idx:start_idx + batchsize]
         else:
             excerpt = slice(start_idx, start_idx + batchsize)
+        yield inputs[excerpt], targets[excerpt]
+
+def random_minibatches(inputs, targets, batchsize, k_s):
+    # technically, if batchsize== certain dimension of X_train (inputs) , then no need to shuffle
+    # for simplicity, here we just always shuffle
+
+    assert inputs.shape[0] == len(targets)        
+    indices = np.arange(inputs.shape[0])
+    np.random.shuffle(indices)
+
+    for start_idx in range(0, batchsize*k_s - batchsize + 1, batchsize):                
+        excerpt = indices[start_idx:start_idx + batchsize]
         yield inputs[excerpt], targets[excerpt]
 
 def train(X_train, Y_train, X_val, Y_val, train_fn, val_fn, n_epochs, batch_size=500, verbose=True, toprint=None):

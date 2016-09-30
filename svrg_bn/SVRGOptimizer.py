@@ -91,6 +91,7 @@ class SVRGOptimizer:
                 batches = iterate_minibatches(X_train, Y_train, batch_size, shuffle=True)
             for batch in batches:
                 if j % self.m == 0:
+                    # When updating w_t for every m times, compute a \mu_tilde as an average directin over all training samples
                     for mu in self.mu:
                         mu.set_value(0 * mu.get_value())
 

@@ -21,6 +21,8 @@ NUM_HIDDEN_UNITS = 500
 GRADIENT = "SVRG"
 MODEL = "MLPBN"
 
+# as the training set of MNIST is 50000, set the batch size to 100 means it taks 500 batches to go through the entire training set
+
 def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HIDDEN_UNITS):
 
     print("Loading data...")
@@ -34,7 +36,8 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
     if gradient == "svrg":
         models = { 'svrg_classif': (custom_svrg1, {'learning_rate': 0.01, 'm': 50}) }
     elif gradient == "stream": # It is StreamingSVRG
-        models = { 'streaming_svrg_classif': (custom_streaming_svrg1, {'learning_rate': 0.01, 'm': 50, 'k_s': 4}) }
+        models = { 'streaming_svrg_classif': (custom_streaming_svrg1, {'learning_rate': 0.01, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.003}) }
+        #k_s is the ratio of how many batches are used in this iteration of StreamingSVRG
     elif gradient == "adagrad":
         models = { 'adagrad_classif': (custom_adagrad, {'learning_rate': 0.01, 'eps': 1.0e-8}) }
 
