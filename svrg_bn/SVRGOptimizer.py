@@ -11,9 +11,11 @@ from neuralnet import iterate_minibatches
 from collections import OrderedDict
 import time
 
-EXTRA_INFO = True
+EXTRA_INFO = False
 DEFAULT_ADAPTIVE = False
 STREAMING_SVRG = False
+
+DEBUG_PARA = True # Debug of parameters insides the layers
 
 class SVRGOptimizer:
     def __init__(self, m, learning_rate, adaptive=DEFAULT_ADAPTIVE, non_uniform_prob=True):
@@ -28,16 +30,17 @@ class SVRGOptimizer:
         self.input_var = input_var
         self.target_var = target_var
 
-        # np.random.seed(19921010)
-        flog = open("data/log.txt",'w')
-        
         num_batches = X_train.shape[0] / batch_size
         n = num_batches
 
         if EXTRA_INFO:
+            flog = open("data/log.txt",'w')        
             flog.write("Learning Rate:{:.2f}\n".format(self.learning_rate))
             flog.write("Adaptive:{:.2f}\n".format(self.adaptive))
-            flog.write("Non Uniform Prob of mini batch:{:.2f}\n".format(self.non_uniform_prob))
+            flog.write("Non Uniform Prob of mini batch:{:.2f}\n\n".format(self.non_uniform_prob))
+        if DEBUG_PARA:
+            fpara_train = open("data/log_para_train.txt",'w')        
+            fpara_bn    = open("data/log_para_BN.txt",'w')        
 
         self.L = theano.shared(np.cast['float32'](1. / self.learning_rate))
 #        self.Ls = [theano.shared(np.cast['float32'](1. / self.learning_rate)) for _  in range(num_batches)]
@@ -79,6 +82,24 @@ class SVRGOptimizer:
 
             if EXTRA_INFO:
                 flog.write("Epoch:{:.2f}\n".format(epoch))
+            if DEBUG_PARA:
+                fpara_train.write("\nEpoch:{:.2f}\n".format(epoch))
+                train_para_list = lasagne.layers.get_all_params(output_layer, trainable=True)
+                for item in train_para_list:
+                    fpara_train.write("%s\n" % item)
+                train_para_list = lasagne.layers.get_all_params_values(output_layer, trainable=True)
+                for item in train_para_list:
+                    fpara_train.write("%s\n" % item)
+
+                fpara_bn.write("\nEpoch:{:.2f}\n".format(epoch))
+                bn_para_list = lasagne.layers.get_all_params(output_layer, trainable=False)
+                for item in bn_para_list:
+                    fpara_bn.write("%s\n" % item)
+                bn_para_list = lasagne.layers.get_all_params_values(output_layer, trainable=False)
+                for item in bn_para_list:
+                    fpara_bn.write("%s\n" % item)
+
+
 
             t = time.time()
 
