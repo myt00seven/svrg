@@ -48,10 +48,10 @@ def main(num_epochs=NUM_EPOCHS):
 
 	str_epochs = str(num_epochs)
 
-	# if LOAD_SGD: mlpbn_ADAsgd_acc_test=			np.loadtxt(PATH_DATA +"_mlpbnTrue_adagrad_acc_test.txt")
-	# if LOAD_SGD: mlpbn_ADAsgd_acc_train=		np.loadtxt(PATH_DATA +"_mlpbnTrue_adagrad_acc_train.txt")
+	if LOAD_SGD: mlpbn_ADAsgd_acc_test=			np.loadtxt(PATH_DATA +"_mlpbnTrue_adagrad_acc_test.txt")
+	if LOAD_SGD: mlpbn_ADAsgd_acc_train=		np.loadtxt(PATH_DATA +"_mlpbnTrue_adagrad_acc_train.txt")
 	if LOAD_SGD: mlpbn_ADAsgd_acc_val=			np.loadtxt(PATH_DATA +"_mlpbnTrue_adagrad_acc_val.txt")
-	# if LOAD_SGD: mlpbn_ADAsgd_loss_test=		np.loadtxt(PATH_DATA +"_mlpbnTrue_adagrad_loss_test.txt")
+	if LOAD_SGD: mlpbn_ADAsgd_loss_test=		np.loadtxt(PATH_DATA +"_mlpbnTrue_adagrad_loss_test.txt")
 	if LOAD_SGD: mlpbn_ADAsgd_loss_train=		np.loadtxt(PATH_DATA +"_mlpbnTrue_adagrad_loss_train.txt")
 	if LOAD_SGD: mlpbn_ADAsgd_loss_val=			np.loadtxt(PATH_DATA +"_mlpbnTrue_adagrad_loss_val.txt")
 
