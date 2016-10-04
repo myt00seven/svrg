@@ -37,7 +37,7 @@ class NeuralClassifier:
     def train(self, X_train, Y_train, X_val=None, Y_val=None, X_test=None, y_test=None,
             objective=lasagne.objectives.binary_crossentropy, 
             update=lasagne.updates.adam, 
-            n_epochs=100, batch_size=100, gradient="SVRG" , lambd=0.0,
+            n_epochs=100, batch_size=100, gradient="SVRG" , lambd=0.0, 
             **update_params):
 
         network = self.output_layer
@@ -56,7 +56,7 @@ class NeuralClassifier:
         if (update == custom_svrg1):
             optimizer = SVRGOptimizer(update_params['m'], update_params['learning_rate'])
             # m is fixed as 50
-            train_error, validation_error, acc_train, acc_val, acc_test, test_error = optimizer.minimize(loss, params,
+            train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times = optimizer.minimize(loss, params,
                     X_train, Y_train, X_test, y_test, 
                     self.input_var, self.target_var, 
                     X_val, Y_val, 
@@ -64,7 +64,7 @@ class NeuralClassifier:
             
         elif (update == custom_streaming_svrg1):
             optimizer = StreamingSVRGOptimizer(update_params['m'], update_params['learning_rate'], update_params['k_s_0'], update_params['k_s_ratio'])
-            train_error, validation_error, acc_train, acc_val, acc_test, test_error = optimizer.minimize(loss, params,
+            train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times = optimizer.minimize(loss, params,
                     X_train, Y_train, X_test, y_test, 
                     self.input_var, self.target_var, 
                     X_val, Y_val, 
@@ -88,8 +88,8 @@ class NeuralClassifier:
             acc_test = []
             # these two are not realized yet
             
-            train_error, validation_error, acc_train, acc_val = train(
-                    X_train, Y_train, X_val, Y_val,
+            train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times = train(
+                    X_train, Y_train, X_val, Y_val, X_test, y_test,
                     train_fn, val_fn,
                     n_epochs, batch_size=batch_size#, toprint=it
             )
@@ -102,6 +102,7 @@ class NeuralClassifier:
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_acc_train.txt",acc_train)
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_acc_val.txt",acc_val)
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_acc_test.txt",acc_test)
+        np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_epoch_times.txt",epoch_times)
         
 
         return train_error, validation_error

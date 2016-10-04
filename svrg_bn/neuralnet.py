@@ -36,13 +36,19 @@ def random_minibatches(inputs, targets, batchsize, k_s):
         excerpt = indices[start_idx:start_idx + batchsize]
         yield inputs[excerpt], targets[excerpt]
 
-def train(X_train, Y_train, X_val, Y_val, train_fn, val_fn, n_epochs, batch_size=500, verbose=True, toprint=None):
+def train(X_train, Y_train, X_val, Y_val, X_test, y_test, train_fn, val_fn, n_epochs, batch_size=500, verbose=True, toprint=None):
     #train_fn includes the AdaGrad update functino
 
     train_error = []
     validation_error = []
+    test_error =[]
+
     acc_train = []
     acc_val = []
+    acc_test = []
+
+    times = []
+    epoch_times = []
 
     gradient_times = 0
 
@@ -60,6 +66,9 @@ def train(X_train, Y_train, X_val, Y_val, train_fn, val_fn, n_epochs, batch_size
             inputs, targets = batch
             train_err += train_fn(inputs, targets)
 #            train_err += train_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
+            current_loss, current_acc = val_fn(inputs, targets)
+            train_acc += current_acc    
+            
             gradient_times += 1
             train_batches += 1
 
@@ -67,6 +76,7 @@ def train(X_train, Y_train, X_val, Y_val, train_fn, val_fn, n_epochs, batch_size
                 print toprint.get_value()
 
         train_error.append(train_err / train_batches)
+        acc_train.append(train_acc / train_batches)        
 
         if X_val is not None:
             val_err = 0
@@ -83,18 +93,37 @@ def train(X_train, Y_train, X_val, Y_val, train_fn, val_fn, n_epochs, batch_size
                 val_batches += 1
        
             validation_error.append((val_err / val_batches, gradient_times))
+            acc_val.append(val_acc / val_batches)
+
+        test_err = 0
+        test_acc = 0
+        test_batches = 0
+        for i, batch in enumerate(iterate_minibatches(X_test, y_test, batch_size, shuffle=False)):
+            inputs, targets = batch
+            current_err, current_acc = val_fn(inputs, targets)
+            test_err += current_err
+            test_acc += current_acc
+            test_batches += 1
+        test_error.append(test_err / test_batches)
+        acc_test.append(test_acc / test_batches)
+
+        epoch_times.append(time.time())
 
         if verbose:
             print("Epoch {} of {} took {:.3f}s".format(epoch + 1, n_epochs, time.time() - t))
-            print("  training loss:\t\t{:.6f}".format(train_err / train_batches))
+            # print("  training loss:\t\t{:.6f}".format(train_err / train_batches))
             if X_val is not None:
+                print("  training loss:\t\t{:.6f}".format(train_err / train_batches))
                 print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
-                print("  validation accuracy:\t\t{:.2f} %".format(val_acc / val_batches * 100))
+                print("  test loss:\t\t\t{:.6f}".format(test_err / test_batches))
+                print("  train accuracy:\t\t{:.6f}".format(train_acc / train_batches))
+                print("  validation accuracy:\t\t{:.6f}".format(val_acc / val_batches))
+                print("  test accuracy:\t\t{:.6f}\n".format(test_acc / test_batches))
 
         # train_error.append(train_err / train_batches)
         # validation_error.append((val_err / val_batches, self.counted_gradient.get_value()))
 
         # acc_train.append(train_acc / train_batches)
-        acc_val.append(val_acc / val_batches)
+        
 
-    return train_error, validation_error, acc_train, acc_val
+    return train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times

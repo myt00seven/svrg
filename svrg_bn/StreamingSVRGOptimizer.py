@@ -13,7 +13,7 @@ from collections import OrderedDict
 import time
 import random
 
-EXTRA_INFO = True
+EXTRA_INFO = False
 DEFAULT_ADAPTIVE = False
 
 # Set up parameters for Streaming SVRG
@@ -77,6 +77,7 @@ class StreamingSVRGOptimizer:
         test_error = []
         acc_test = []
         times = []
+        epoch_times = []
 
         print "NUMBATCHES: ", n
 
@@ -195,6 +196,8 @@ class StreamingSVRGOptimizer:
                 test_batches += 1
 
             times.append(time.time() - t)
+            epoch_times.append(time.time())
+
             print("Epoch {} of {} took {:.3f}s".format(epoch + 1, n_epochs, time.time() - t))
 
             print("  training loss:\t\t{:.6f}".format(train_err / train_batches))
@@ -217,7 +220,7 @@ class StreamingSVRGOptimizer:
 #                print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
 
         print("Average time per epoch \t {:.3f}".format(np.mean(times)))
-        return train_error, validation_error, acc_train, acc_val, acc_test, test_error
+        return train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times
 
     def make_updates(self, loss, params):
 

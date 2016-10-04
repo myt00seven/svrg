@@ -15,7 +15,7 @@ EXTRA_INFO = False
 DEFAULT_ADAPTIVE = False
 STREAMING_SVRG = False
 
-DEBUG_PARA = True # Debug of parameters insides the layers
+DEBUG_PARA = False # Debug of parameters insides the layers
 
 class SVRGOptimizer:
     def __init__(self, m, learning_rate, adaptive=DEFAULT_ADAPTIVE, non_uniform_prob=True):
@@ -70,6 +70,7 @@ class SVRGOptimizer:
         test_error = []
         acc_test = []
         times = []
+        epoch_times = []
 
         print "NUMBATCHES: ", n
 
@@ -183,6 +184,8 @@ class SVRGOptimizer:
                 test_batches += 1
 
             times.append(time.time() - t)
+            epoch_times.append(time.time())
+            
             print("Epoch {} of {} took {:.3f}s".format(epoch + 1, n_epochs, time.time() - t))
             print("  training loss:\t\t{:.6f}".format(train_err / train_batches))
             print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
@@ -202,7 +205,7 @@ class SVRGOptimizer:
 #                print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
 
         print("Average time per epoch \t {:.3f}".format(np.mean(times)))
-        return train_error, validation_error, acc_train, acc_val, acc_test, test_error
+        return train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times
 
 
     def make_updates(self, loss, params):
