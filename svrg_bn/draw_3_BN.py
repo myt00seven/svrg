@@ -79,39 +79,31 @@ def main(num_epochs=NUM_EPOCHS):
 
 	# print mlp_sgd_acc_train
 
-
-	# if (MAXLENGTH>0 or STARTPOINT>0):
-		
+	# if (MAXLENGTH>0 or STARTPOINT>0):		
 	# 	if DRAW_MLPBN_ADASGD: 	count_mlpbn_ADAsgd = count_mlpbn_ADAsgd[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPbn_streaming: 	count_mlpbn_streaming = count_mlpbn_streaming[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPBN_SVRG: count_mlpbn_svrg = count_mlpbn_svrg[STARTPOINT:MAXLENGTH+1]		
-
 		
 	# 	if DRAW_MLPBN_ADASGD: 	mlpbn_ADAsgd_acc_test = mlpbn_ADAsgd_acc_test[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPbn_streaming: 	mlpbn_streaming_acc_test = mlpbn_streaming_acc_test[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_test = mlpbn_svrg_acc_test[STARTPOINT:MAXLENGTH+1]		
-
 		
 	# 	if DRAW_MLPBN_ADASGD: 	mlpbn_ADAsgd_loss_test = mlpbn_ADAsgd_loss_test[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPbn_streaming: 	mlpbn_streaming_loss_test = mlpbn_streaming_loss_test[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_test = mlpbn_svrg_loss_test[STARTPOINT:MAXLENGTH+1]
-
 		
 	# 	if DRAW_MLPBN_ADASGD: 	mlpbn_ADAsgd_acc_val = mlpbn_ADAsgd_acc_val[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPbn_streaming: 	mlpbn_streaming_acc_val = mlpbn_streaming_acc_val[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_val = mlpbn_svrg_acc_val[STARTPOINT:MAXLENGTH+1]		
 		
-		
 	# 	if DRAW_MLPBN_ADASGD: 	mlpbn_ADAsgd_loss_val = mlpbn_ADAsgd_loss_val[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPbn_streaming: 	mlpbn_streaming_loss_val = mlpbn_streaming_loss_val[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_val = mlpbn_svrg_loss_val[STARTPOINT:MAXLENGTH+1]
-
 		
 	# 	if DRAW_MLPBN_ADASGD: 	mlpbn_ADAsgd_acc_train = mlpbn_ADAsgd_acc_train[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPbn_streaming: 	mlpbn_streaming_acc_train = mlpbn_streaming_acc_train[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPBN_SVRG: mlpbn_svrg_acc_train = mlpbn_svrg_acc_train[STARTPOINT:MAXLENGTH+1]		
-		
-		
+				
 	# 	if DRAW_MLPBN_ADASGD: 	mlpbn_ADAsgd_loss_train = mlpbn_ADAsgd_loss_train[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPbn_streaming: 	mlpbn_streaming_loss_train = mlpbn_streaming_loss_train[STARTPOINT:MAXLENGTH+1]
 	# 	if DRAW_MLPBN_SVRG: mlpbn_svrg_loss_train = mlpbn_svrg_loss_train[STARTPOINT:MAXLENGTH+1]
@@ -157,42 +149,42 @@ def main(num_epochs=NUM_EPOCHS):
 	# plt.show()
 	pylab.savefig(PATH_FIGURE+'CrossModel_Training_Set_Loss'+'.png',bbox_inches='tight')
 
-	# plt.figure(4)
-	# plt.title('Predict Accuracy of Training Set')
-	# if Y_LIM_FINE_TUNING:	pylab.ylim([0.93,1.01])
+	plt.figure(4)
+	plt.title('Predict Accuracy of Training Set')
+	if Y_LIM_FINE_TUNING:	pylab.ylim([0.93,1.01])
 	
-	# if DRAW_MLPBN_ADASGD: 	plt.plot(count_mlpbn_ADAsgd, mlpbn_ADAsgd_acc_train, SPEC_L1 ,label="AdaGrad", linewidth = LINEWIDTH)
-	# if DRAW_MLPbn_streaming: 	plt.plot(count_mlpbn_streaming, mlpbn_streaming_acc_train, SPEC_L3 ,label="Streaming SVRG",  linewidth = LINEWIDTH)
-	# if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_train, SPEC_L4 ,label="SVRG",  linewidth = LINEWIDTH)
-	# plt.xlabel('# Epochs')
-	# plt.ylabel('Predict Accuracy')
-	# plt.legend(bbox_to_anchor=(1,0.4))
-	# # plt.show()
-	# pylab.savefig(PATH_FIGURE+'CrossModel_Training_Set_Predict_Accuracy'+'.png',bbox_inches='tight')
+	if DRAW_MLPBN_ADASGD: 	plt.plot(count_mlpbn_ADAsgd, mlpbn_ADAsgd_acc_train, SPEC_L1 ,label="AdaGrad", linewidth = LINEWIDTH)
+	if DRAW_MLPBN_streaming: 	plt.plot(count_mlpbn_streaming, mlpbn_streaming_acc_train, SPEC_L3 ,label="Streaming SVRG",  linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_train, SPEC_L4 ,label="SVRG",  linewidth = LINEWIDTH)
+	plt.xlabel('# Epochs')
+	plt.ylabel('Predict Accuracy')
+	plt.legend(bbox_to_anchor=(1,0.4))
+	# plt.show()
+	pylab.savefig(PATH_FIGURE+'CrossModel_Training_Set_Predict_Accuracy'+'.png',bbox_inches='tight')
 
-	# plt.figure(5)
-	# plt.title('Predict Accuracy of Test Set')
+	plt.figure(5)
+	plt.title('Predict Accuracy of Test Set')
 	
-	# if DRAW_MLPBN_ADASGD: plt.plot(count_mlpbn_ADAsgd, mlpbn_ADAsgd_acc_test, SPEC_L1 ,label="AdaGrad", linewidth = LINEWIDTH)
-	# if DRAW_MLPbn_streaming: 	plt.plot(count_mlpbn_streaming, mlpbn_streaming_acc_test, SPEC_L3 ,label="Streaming SVRG",  linewidth = LINEWIDTH)
-	# if DRAW_MLPBN_SVRG: 	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_test, SPEC_L4 ,label="SVRG", linewidth = LINEWIDTH)
-	# plt.xlabel('# Epochs')
-	# plt.ylabel('Predict Accuracy')
-	# plt.legend(bbox_to_anchor=(1,0.4))
-	# # plt.show()
-	# pylab.savefig(PATH_FIGURE+'CrossModel_Test_Set_Predict_Accuracy'+'.png',bbox_inches='tight')
+	if DRAW_MLPBN_ADASGD: plt.plot(count_mlpbn_ADAsgd, mlpbn_ADAsgd_acc_test, SPEC_L1 ,label="AdaGrad", linewidth = LINEWIDTH)
+	if DRAW_MLPBN_streaming: 	plt.plot(count_mlpbn_streaming, mlpbn_streaming_acc_test, SPEC_L3 ,label="Streaming SVRG",  linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SVRG: 	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_test, SPEC_L4 ,label="SVRG", linewidth = LINEWIDTH)
+	plt.xlabel('# Epochs')
+	plt.ylabel('Predict Accuracy')
+	plt.legend(bbox_to_anchor=(1,0.4))
+	# plt.show()
+	pylab.savefig(PATH_FIGURE+'CrossModel_Test_Set_Predict_Accuracy'+'.png',bbox_inches='tight')
 
-	# plt.figure(6)
-	# plt.title('Loss of Test Set')
+	plt.figure(6)
+	plt.title('Loss of Test Set')
 	
-	# if DRAW_MLPBN_ADASGD: plt.plot(count_mlpbn_ADAsgd, mlpbn_ADAsgd_loss_test, SPEC_L1 ,label="AdaGrad", linewidth = LINEWIDTH)
-	# if DRAW_MLPbn_streaming: 	plt.plot(count_mlpbn_streaming, mlpbn_streaming_loss_test, SPEC_L3 ,label="Streaming SVRG",  linewidth = LINEWIDTH)
-	# if DRAW_MLPBN_SVRG: 	plt.plot(count_mlpbn_svrg, mlpbn_svrg_loss_test, SPEC_L4 ,label="SVRG", linewidth = LINEWIDTH)
-	# plt.xlabel('# Epochs')
-	# plt.ylabel('Loss')
-	# plt.legend()
-	# pylab.savefig(PATH_FIGURE+'CrossModel_Test_Set_Loss'+'.png',bbox_inches='tight')
-	# # plt.show()
+	if DRAW_MLPBN_ADASGD: plt.plot(count_mlpbn_ADAsgd, mlpbn_ADAsgd_loss_test, SPEC_L1 ,label="AdaGrad", linewidth = LINEWIDTH)
+	if DRAW_MLPBN_streaming: 	plt.plot(count_mlpbn_streaming, mlpbn_streaming_loss_test, SPEC_L3 ,label="Streaming SVRG",  linewidth = LINEWIDTH)
+	if DRAW_MLPBN_SVRG: 	plt.plot(count_mlpbn_svrg, mlpbn_svrg_loss_test, SPEC_L4 ,label="SVRG", linewidth = LINEWIDTH)
+	plt.xlabel('# Epochs')
+	plt.ylabel('Loss')
+	plt.legend()
+	pylab.savefig(PATH_FIGURE+'CrossModel_Test_Set_Loss'+'.png',bbox_inches='tight')
+	# plt.show()
 	
 	print ("Finish drawing cross model plots.")
 

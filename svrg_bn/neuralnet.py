@@ -52,6 +52,8 @@ def train(X_train, Y_train, X_val, Y_val, X_test, y_test, train_fn, val_fn, n_ep
 
     gradient_times = 0
 
+    start_time = time.time()
+
     if verbose:
         print("Starting training...")
     for epoch in range(n_epochs):
@@ -107,7 +109,7 @@ def train(X_train, Y_train, X_val, Y_val, X_test, y_test, train_fn, val_fn, n_ep
         test_error.append(test_err / test_batches)
         acc_test.append(test_acc / test_batches)
 
-        epoch_times.append(time.time())
+        epoch_times.append(time.time()-start_time)        
 
         if verbose:
             print("Epoch {} of {} took {:.3f}s".format(epoch + 1, n_epochs, time.time() - t))

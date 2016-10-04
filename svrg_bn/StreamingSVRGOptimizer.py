@@ -85,6 +85,7 @@ class StreamingSVRGOptimizer:
 
         #what does this do?        
         L_fn = self.make_L_fn(loss, params)
+        start_time = time.time()
 
         print("Starting training...")
         for epoch in range(n_epochs):
@@ -196,7 +197,7 @@ class StreamingSVRGOptimizer:
                 test_batches += 1
 
             times.append(time.time() - t)
-            epoch_times.append(time.time())
+            epoch_times.append(time.time()-start_time)
 
             print("Epoch {} of {} took {:.3f}s".format(epoch + 1, n_epochs, time.time() - t))
 
