@@ -27,7 +27,7 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
         max_processes = 5
         for method in combos:
             device = combos[method]
-
+	    device = device.lower()
             str_device = "THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 "
             command = str_device + " python classifier_test.py mlpbn "+ method + " "+num_epochs+" "+num_hidden_nodes	
 	    #command = 'help'
