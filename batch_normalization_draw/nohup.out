@@ -1,0 +1,691 @@
+Using gpu device 0: GeForce GTX TITAN X (CNMeM is disabled, cuDNN not available)
+Loading data...
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 1000 took 1.241s
+  training loss:		1.086573
+  validation loss:		0.565616
+  validation accuracy:		87.59 %
+  test accuracy:		87.13 %
+Epoch 2 of 1000 took 1.289s
+  training loss:		0.514100
+  validation loss:		0.409206
+  validation accuracy:		89.71 %
+  test accuracy:		89.24 %
+Epoch 3 of 1000 took 1.308s
+  training loss:		0.416469
+  validation loss:		0.354891
+  validation accuracy:		90.65 %
+  test accuracy:		90.38 %
+Epoch 4 of 1000 took 1.241s
+  training loss:		0.371869
+  validation loss:		0.324204
+  validation accuracy:		91.34 %
+  test accuracy:		90.94 %
+Epoch 5 of 1000 took 1.313s
+  training loss:		0.344245
+  validation loss:		0.304675
+  validation accuracy:		91.84 %
+  test accuracy:		91.48 %
+Epoch 6 of 1000 took 1.465s
+  training loss:		0.324305
+  validation loss:		0.289805
+  validation accuracy:		92.01 %
+  test accuracy:		91.85 %
+Epoch 7 of 1000 took 1.419s
+  training loss:		0.308647
+  validation loss:		0.277536
+  validation accuracy:		92.38 %
+  test accuracy:		92.15 %
+Epoch 8 of 1000 took 1.265s
+  training loss:		0.295569
+  validation loss:		0.268946
+  validation accuracy:		92.66 %
+  test accuracy:		92.35 %
+Epoch 9 of 1000 took 1.233s
+  training loss:		0.284272
+  validation loss:		0.259527
+  validation accuracy:		92.86 %
+  test accuracy:		92.65 %
+Epoch 10 of 1000 took 1.231s
+  training loss:		0.274207
+  validation loss:		0.250990
+  validation accuracy:		93.01 %
+  test accuracy:		92.89 %
+Epoch 11 of 1000 took 1.239s
+  training loss:		0.265052
+  validation loss:		0.243380
+  validation accuracy:		93.21 %
+  test accuracy:		93.16 %
+Epoch 12 of 1000 took 1.239s
+  training loss:		0.256687
+  validation loss:		0.237249
+  validation accuracy:		93.41 %
+  test accuracy:		93.27 %
+Epoch 13 of 1000 took 1.239s
+  training loss:		0.248925
+  validation loss:		0.230089
+  validation accuracy:		93.61 %
+  test accuracy:		93.44 %
+Epoch 14 of 1000 took 1.290s
+  training loss:		0.241969
+  validation loss:		0.224275
+  validation accuracy:		93.81 %
+  test accuracy:		93.58 %
+Epoch 15 of 1000 took 1.259s
+  training loss:		0.235214
+  validation loss:		0.219309
+  validation accuracy:		93.94 %
+  test accuracy:		93.64 %
+Epoch 16 of 1000 took 1.229s
+  training loss:		0.228859
+  validation loss:		0.213846
+  validation accuracy:		94.20 %
+  test accuracy:		93.74 %
+Epoch 17 of 1000 took 1.222s
+  training loss:		0.223120
+  validation loss:		0.208855
+  validation accuracy:		94.28 %
+  test accuracy:		93.89 %
+Epoch 18 of 1000 took 1.216s
+  training loss:		0.217500
+  validation loss:		0.204356
+  validation accuracy:		94.43 %
+  test accuracy:		94.06 %
+Epoch 19 of 1000 took 1.217s
+  training loss:		0.212133
+  validation loss:		0.199937
+  validation accuracy:		94.59 %
+  test accuracy:		94.21 %
+Epoch 20 of 1000 took 1.217s
+  training loss:		0.207226
+  validation loss:		0.195782
+  validation accuracy:		94.76 %
+  test accuracy:		94.32 %
+Epoch 21 of 1000 took 1.216s
+  training loss:		0.202297
+  validation loss:		0.192332
+  validation accuracy:		94.90 %
+  test accuracy:		94.40 %
+Epoch 22 of 1000 took 1.224s
+  training loss:		0.197814
+  validation loss:		0.188450
+  validation accuracy:		95.07 %
+  test accuracy:		94.45 %
+Epoch 23 of 1000 took 1.234s
+  training loss:		0.193448
+  validation loss:		0.184927
+  validation accuracy:		95.10 %
+  test accuracy:		94.57 %
+Epoch 24 of 1000 took 1.224s
+  training loss:		0.189369
+  validation loss:		0.181214
+  validation accuracy:		95.17 %
+  test accuracy:		94.77 %
+Epoch 25 of 1000 took 1.214s
+  training loss:		0.185163
+  validation loss:		0.178043
+  validation accuracy:		95.26 %
+  test accuracy:		94.87 %
+Epoch 26 of 1000 took 1.217s
+  training loss:		0.181426
+  validation loss:		0.175481
+  validation accuracy:		95.31 %
+  test accuracy:		94.96 %
+Epoch 27 of 1000 took 1.215s
+  training loss:		0.177699
+  validation loss:		0.172060
+  validation accuracy:		95.40 %
+  test accuracy:		95.03 %
+Epoch 28 of 1000 took 1.222s
+  training loss:		0.174066
+  validation loss:		0.169482
+  validation accuracy:		95.59 %
+  test accuracy:		95.03 %
+Epoch 29 of 1000 took 1.232s
+  training loss:		0.170711
+  validation loss:		0.166409
+  validation accuracy:		95.66 %
+  test accuracy:		95.13 %
+Epoch 30 of 1000 took 1.232s
+  training loss:		0.167511
+  validation loss:		0.163924
+  validation accuracy:		95.74 %
+  test accuracy:		95.24 %
+Epoch 31 of 1000 took 1.238s
+  training loss:		0.164198
+  validation loss:		0.161542
+  validation accuracy:		95.84 %
+  test accuracy:		95.30 %
+Epoch 32 of 1000 took 1.221s
+  training loss:		0.161145
+  validation loss:		0.159606
+  validation accuracy:		95.81 %
+  test accuracy:		95.37 %
+Epoch 33 of 1000 took 1.243s
+  training loss:		0.158208
+  validation loss:		0.156622
+  validation accuracy:		95.91 %
+  test accuracy:		95.41 %
+Epoch 34 of 1000 took 1.237s
+  training loss:		0.155251
+  validation loss:		0.154270
+  validation accuracy:		96.01 %
+  test accuracy:		95.44 %
+Epoch 35 of 1000 took 1.230s
+  training loss:		0.152660
+  validation loss:		0.152144
+  validation accuracy:		96.09 %
+  test accuracy:		95.48 %
+Epoch 36 of 1000 took 1.220s
+  training loss:		0.149875
+  validation loss:		0.150124
+  validation accuracy:		96.04 %
+  test accuracy:		95.53 %
+Epoch 37 of 1000 took 1.242s
+  training loss:		0.147300
+  validation loss:		0.148233
+  validation accuracy:		96.18 %
+  test accuracy:		95.59 %
+Epoch 38 of 1000 took 1.228s
+  training loss:		0.144748
+  validation loss:		0.146058
+  validation accuracy:		96.14 %
+  test accuracy:		95.59 %
+Epoch 39 of 1000 took 1.245s
+  training loss:		0.142356
+  validation loss:		0.144788
+  validation accuracy:		96.20 %
+  test accuracy:		95.72 %
+Epoch 40 of 1000 took 1.215s
+  training loss:		0.140056
+  validation loss:		0.142620
+  validation accuracy:		96.23 %
+  test accuracy:		95.78 %
+Epoch 41 of 1000 took 1.219s
+  training loss:		0.137693
+  validation loss:		0.140824
+  validation accuracy:		96.30 %
+  test accuracy:		95.81 %
+Epoch 42 of 1000 took 1.243s
+  training loss:		0.135539
+  validation loss:		0.139496
+  validation accuracy:		96.28 %
+  test accuracy:		95.80 %
+Epoch 43 of 1000 took 1.220s
+  training loss:		0.133346
+  validation loss:		0.137563
+  validation accuracy:		96.34 %
+  test accuracy:		95.88 %
+Epoch 44 of 1000 took 1.240s
+  training loss:		0.131303
+  validation loss:		0.136425
+  validation accuracy:		96.41 %
+  test accuracy:		95.92 %
+Epoch 45 of 1000 took 1.218s
+  training loss:		0.129296
+  validation loss:		0.134836
+  validation accuracy:		96.43 %
+  test accuracy:		95.95 %
+Epoch 46 of 1000 took 1.218s
+  training loss:		0.127352
+  validation loss:		0.133032
+  validation accuracy:		96.43 %
+  test accuracy:		96.05 %
+Epoch 47 of 1000 took 1.241s
+  training loss:		0.125399
+  validation loss:		0.131789
+  validation accuracy:		96.51 %
+  test accuracy:		96.03 %
+Epoch 48 of 1000 took 1.431s
+  training loss:		0.123497
+  validation loss:		0.130838
+  validation accuracy:		96.58 %
+  test accuracy:		96.06 %
+Epoch 49 of 1000 took 1.406s
+  training loss:		0.121688
+  validation loss:		0.128964
+  validation accuracy:		96.57 %
+  test accuracy:		96.18 %
+Epoch 50 of 1000 took 1.224s
+  training loss:		0.119949
+  validation loss:		0.128091
+  validation accuracy:		96.70 %
+  test accuracy:		96.14 %
+Epoch 51 of 1000 took 1.241s
+  training loss:		0.118135
+  validation loss:		0.126784
+  validation accuracy:		96.65 %
+  test accuracy:		96.25 %
+Epoch 52 of 1000 took 1.242s
+  training loss:		0.116642
+  validation loss:		0.125286
+  validation accuracy:		96.67 %
+  test accuracy:		96.26 %
+Epoch 53 of 1000 took 1.242s
+  training loss:		0.114942
+  validation loss:		0.124401
+  validation accuracy:		96.67 %
+  test accuracy:		96.27 %
+Epoch 54 of 1000 took 1.222s
+  training loss:		0.113365
+  validation loss:		0.123157
+  validation accuracy:		96.70 %
+  test accuracy:		96.35 %
+Epoch 55 of 1000 took 1.219s
+  training loss:		0.111729
+  validation loss:		0.122190
+  validation accuracy:		96.77 %
+  test accuracy:		96.37 %
+Epoch 56 of 1000 took 1.218s
+  training loss:		0.110315
+  validation loss:		0.120733
+  validation accuracy:		96.78 %
+  test accuracy:		96.45 %
+Epoch 57 of 1000 took 1.229s
+  training loss:		0.108769
+  validation loss:		0.119793
+  validation accuracy:		96.79 %
+  test accuracy:		96.48 %
+Epoch 58 of 1000 took 1.239s
+  training loss:		0.107400
+  validation loss:		0.118642
+  validation accuracy:		96.84 %
+  test accuracy:		96.54 %
+Epoch 59 of 1000 took 1.236s
+  training loss:		0.105940
+  validation loss:		0.117731
+  validation accuracy:		96.89 %
+  test accuracy:		96.51 %
+Epoch 60 of 1000 took 1.221s
+  training loss:		0.104548
+  validation loss:		0.116588
+  validation accuracy:		96.92 %
+  test accuracy:		96.62 %
+Epoch 61 of 1000 took 1.217s
+  training loss:		0.103223
+  validation loss:		0.115859
+  validation accuracy:		96.91 %
+  test accuracy:		96.59 %
+Epoch 62 of 1000 took 1.221s
+  training loss:		0.101929
+  validation loss:		0.115019
+  validation accuracy:		96.94 %
+  test accuracy:		96.61 %
+Epoch 63 of 1000 took 1.239s
+  training loss:		0.100598
+  validation loss:		0.114600
+  validation accuracy:		96.96 %
+  test accuracy:		96.61 %
+Epoch 64 of 1000 took 1.237s
+  training loss:		0.099422
+  validation loss:		0.113121
+  validation accuracy:		96.98 %
+  test accuracy:		96.69 %
+Epoch 65 of 1000 took 1.218s
+  training loss:		0.098140
+  validation loss:		0.112145
+  validation accuracy:		97.03 %
+  test accuracy:		96.81 %
+Epoch 66 of 1000 took 1.217s
+  training loss:		0.096947
+  validation loss:		0.111713
+  validation accuracy:		97.03 %
+  test accuracy:		96.74 %
+Epoch 67 of 1000 took 1.218s
+  training loss:		0.095706
+  validation loss:		0.110592
+  validation accuracy:		97.05 %
+  test accuracy:		96.83 %
+Epoch 68 of 1000 took 1.215s
+  training loss:		0.094658
+  validation loss:		0.110207
+  validation accuracy:		97.11 %
+  test accuracy:		96.73 %
+Epoch 69 of 1000 took 1.230s
+  training loss:		0.093474
+  validation loss:		0.109684
+  validation accuracy:		97.01 %
+  test accuracy:		96.79 %
+Epoch 70 of 1000 took 1.240s
+  training loss:		0.092403
+  validation loss:		0.108615
+  validation accuracy:		97.11 %
+  test accuracy:		96.85 %
+Epoch 71 of 1000 took 1.238s
+  training loss:		0.091241
+  validation loss:		0.108058
+  validation accuracy:		97.10 %
+  test accuracy:		96.88 %
+Epoch 72 of 1000 took 1.241s
+  training loss:		0.090235
+  validation loss:		0.106973
+  validation accuracy:		97.03 %
+  test accuracy:		96.88 %
+Epoch 73 of 1000 took 1.429s
+  training loss:		0.089094
+  validation loss:		0.106538
+  validation accuracy:		97.09 %
+  test accuracy:		96.93 %
+Epoch 74 of 1000 took 1.449s
+  training loss:		0.088235
+  validation loss:		0.105594
+  validation accuracy:		97.12 %
+  test accuracy:		96.93 %
+Epoch 75 of 1000 took 1.259s
+  training loss:		0.087145
+  validation loss:		0.104884
+  validation accuracy:		97.12 %
+  test accuracy:		97.01 %
+Epoch 76 of 1000 took 1.259s
+  training loss:		0.086159
+  validation loss:		0.104422
+  validation accuracy:		97.18 %
+  test accuracy:		96.98 %
+Epoch 77 of 1000 took 1.237s
+  training loss:		0.085164
+  validation loss:		0.104067
+  validation accuracy:		97.13 %
+  test accuracy:		97.08 %
+Epoch 78 of 1000 took 1.239s
+  training loss:		0.084237
+  validation loss:		0.103013
+  validation accuracy:		97.16 %
+  test accuracy:		96.97 %
+Epoch 79 of 1000 took 1.239s
+  training loss:		0.083325
+  validation loss:		0.102583
+  validation accuracy:		97.18 %
+  test accuracy:		97.05 %
+Epoch 80 of 1000 took 1.238s
+  training loss:		0.082395
+  validation loss:		0.101933
+  validation accuracy:		97.16 %
+  test accuracy:		97.07 %
+Epoch 81 of 1000 took 1.238s
+  training loss:		0.081534
+  validation loss:		0.101406
+  validation accuracy:		97.18 %
+  test accuracy:		97.08 %
+Epoch 82 of 1000 took 1.231s
+  training loss:		0.080616
+  validation loss:		0.100757
+  validation accuracy:		97.24 %
+  test accuracy:		97.10 %
+Epoch 83 of 1000 took 1.217s
+  training loss:		0.079746
+  validation loss:		0.100245
+  validation accuracy:		97.18 %
+  test accuracy:		97.13 %
+Epoch 84 of 1000 took 1.218s
+  training loss:		0.078910
+  validation loss:		0.099887
+  validation accuracy:		97.28 %
+  test accuracy:		97.10 %
+Epoch 85 of 1000 took 1.217s
+  training loss:		0.078057
+  validation loss:		0.098824
+  validation accuracy:		97.27 %
+  test accuracy:		97.14 %
+Epoch 86 of 1000 took 1.216s
+  training loss:		0.077230
+  validation loss:		0.098983
+  validation accuracy:		97.25 %
+  test accuracy:		97.17 %
+Epoch 87 of 1000 took 1.217s
+  training loss:		0.076447
+  validation loss:		0.098037
+  validation accuracy:		97.28 %
+  test accuracy:		97.24 %
+Epoch 88 of 1000 took 1.220s
+  training loss:		0.075648
+  validation loss:		0.097593
+  validation accuracy:		97.28 %
+  test accuracy:		97.24 %
+Epoch 89 of 1000 took 1.229s
+  training loss:		0.074871
+  validation loss:		0.096821
+  validation accuracy:		97.32 %
+  test accuracy:		97.22 %
+Epoch 90 of 1000 took 1.237s
+  training loss:		0.074051
+  validation loss:		0.097009
+  validation accuracy:		97.24 %
+  test accuracy:		97.27 %
+Epoch 91 of 1000 took 1.238s
+  training loss:		0.073350
+  validation loss:		0.095672
+  validation accuracy:		97.29 %
+  test accuracy:		97.25 %
+Epoch 92 of 1000 took 1.237s
+  training loss:		0.072578
+  validation loss:		0.095662
+  validation accuracy:		97.33 %
+  test accuracy:		97.29 %
+Epoch 93 of 1000 took 1.239s
+  training loss:		0.071862
+  validation loss:		0.094998
+  validation accuracy:		97.36 %
+  test accuracy:		97.20 %
+Epoch 94 of 1000 took 1.219s
+  training loss:		0.071132
+  validation loss:		0.094381
+  validation accuracy:		97.37 %
+  test accuracy:		97.25 %
+Epoch 95 of 1000 took 1.217s
+  training loss:		0.070451
+  validation loss:		0.094019
+  validation accuracy:		97.36 %
+  test accuracy:		97.33 %
+Epoch 96 of 1000 took 1.216s
+  training loss:		0.069691
+  validation loss:		0.093866
+  validation accuracy:		97.43 %
+  test accuracy:		97.36 %
+Epoch 97 of 1000 took 1.217s
+  training loss:		0.069095
+  validation loss:		0.093768
+  validation accuracy:		97.40 %
+  test accuracy:		97.34 %
+Epoch 98 of 1000 took 1.219s
+  training loss:		0.068447
+  validation loss:		0.093017
+  validation accuracy:		97.40 %
+  test accuracy:		97.39 %
+Epoch 99 of 1000 took 1.239s
+  training loss:		0.067706
+  validation loss:		0.092276
+  validation accuracy:		97.44 %
+  test accuracy:		97.38 %
+Epoch 100 of 1000 took 1.228s
+  training loss:		0.067108
+  validation loss:		0.092278
+  validation accuracy:		97.43 %
+  test accuracy:		97.41 %
+Epoch 101 of 1000 took 1.247s
+  training loss:		0.066418
+  validation loss:		0.092095
+  validation accuracy:		97.39 %
+  test accuracy:		97.40 %
+Epoch 102 of 1000 took 1.445s
+  training loss:		0.065851
+  validation loss:		0.091584
+  validation accuracy:		97.39 %
+  test accuracy:		97.44 %
+Epoch 103 of 1000 took 1.240s
+  training loss:		0.065158
+  validation loss:		0.091057
+  validation accuracy:		97.45 %
+  test accuracy:		97.38 %
+Epoch 104 of 1000 took 1.236s
+  training loss:		0.064560
+  validation loss:		0.090807
+  validation accuracy:		97.45 %
+  test accuracy:		97.38 %
+Epoch 105 of 1000 took 1.243s
+  training loss:		0.063906
+  validation loss:		0.090234
+  validation accuracy:		97.49 %
+  test accuracy:		97.46 %
+Epoch 106 of 1000 took 1.238s
+  training loss:		0.063373
+  validation loss:		0.090125
+  validation accuracy:		97.41 %
+  test accuracy:		97.45 %
+Epoch 107 of 1000 took 1.239s
+  training loss:		0.062746
+  validation loss:		0.089822
+  validation accuracy:		97.50 %
+  test accuracy:		97.45 %
+Epoch 108 of 1000 took 1.241s
+  training loss:		0.062216
+  validation loss:		0.089189
+  validation accuracy:		97.45 %
+  test accuracy:		97.54 %
+Epoch 109 of 1000 took 1.242s
+  training loss:		0.061663
+  validation loss:		0.088889
+  validation accuracy:		97.45 %
+  test accuracy:		97.52 %
+Epoch 110 of 1000 took 1.217s
+  training loss:		0.061012
+  validation loss:		0.088833
+  validation accuracy:		97.47 %
+  test accuracy:		97.50 %
+Epoch 111 of 1000 took 1.216s
+  training loss:		0.060520
+  validation loss:		0.088472
+  validation accuracy:		97.54 %
+  test accuracy:		97.53 %
+Epoch 112 of 1000 took 1.218s
+  training loss:		0.059918
+  validation loss:		0.088137
+  validation accuracy:		97.55 %
+  test accuracy:		97.56 %
+Epoch 113 of 1000 took 1.220s
+  training loss:		0.059442
+  validation loss:		0.087671
+  validation accuracy:		97.53 %
+  test accuracy:		97.56 %
+Epoch 114 of 1000 took 1.220s
+  training loss:		0.058854
+  validation loss:		0.087483
+  validation accuracy:		97.55 %
+  test accuracy:		97.56 %
+Epoch 115 of 1000 took 1.225s
+  training loss:		0.058385
+  validation loss:		0.086901
+  validation accuracy:		97.55 %
+  test accuracy:		97.52 %
+Epoch 116 of 1000 took 1.251s
+  training loss:		0.057805
+  validation loss:		0.087017
+  validation accuracy:		97.58 %
+  test accuracy:		97.52 %
+Epoch 117 of 1000 took 1.241s
+  training loss:		0.057376
+  validation loss:		0.086755
+  validation accuracy:		97.59 %
+  test accuracy:		97.52 %
+Epoch 118 of 1000 took 1.240s
+  training loss:		0.056856
+  validation loss:		0.086274
+  validation accuracy:		97.58 %
+  test accuracy:		97.54 %
+Epoch 119 of 1000 took 1.243s
+  training loss:		0.056333
+  validation loss:		0.085871
+  validation accuracy:		97.57 %
+  test accuracy:		97.57 %
+Epoch 120 of 1000 took 1.221s
+  training loss:		0.055855
+  validation loss:		0.085771
+  validation accuracy:		97.59 %
+  test accuracy:		97.53 %
+Epoch 121 of 1000 took 1.239s
+  training loss:		0.055337
+  validation loss:		0.085469
+  validation accuracy:		97.57 %
+  test accuracy:		97.57 %
+Epoch 122 of 1000 took 1.246s
+  training loss:		0.054943
+  validation loss:		0.085461
+  validation accuracy:		97.64 %
+  test accuracy:		97.53 %
+Epoch 123 of 1000 took 1.237s
+  training loss:		0.054428
+  validation loss:		0.084740
+  validation accuracy:		97.55 %
+  test accuracy:		97.56 %
+Epoch 124 of 1000 took 1.310s
+  training loss:		0.053995
+  validation loss:		0.084576
+  validation accuracy:		97.62 %
+  test accuracy:		97.60 %
+Epoch 125 of 1000 took 1.329s
+  training loss:		0.053420
+  validation loss:		0.084305
+  validation accuracy:		97.57 %
+  test accuracy:		97.61 %
+Epoch 126 of 1000 took 1.234s
+  training loss:		0.053089
+  validation loss:		0.083922
+  validation accuracy:		97.65 %
+  test accuracy:		97.62 %
+Epoch 127 of 1000 took 1.296s
+  training loss:		0.052607
+  validation loss:		0.083620
+  validation accuracy:		97.61 %
+  test accuracy:		97.60 %
+Epoch 128 of 1000 took 1.359s
+  training loss:		0.052176
+  validation loss:		0.083779
+  validation accuracy:		97.64 %
+  test accuracy:		97.59 %
+Epoch 129 of 1000 took 1.241s
+  training loss:		0.051714
+  validation loss:		0.083250
+  validation accuracy:		97.65 %
+  test accuracy:		97.60 %
+Traceback (most recent call last):
+  File "large_gpu_mnist.py", line 429, in <module>
+    main(**kwargs)
+  File "large_gpu_mnist.py", line 297, in main
+    tmp_acc += train_acc(inputs, targets)
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/theano/compile/function_module.py", line 859, in __call__
+    outputs = self.fn()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "large_gpu_mnist.py", line 17, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/pyplot.py", line 114, in <module>
+    _backend_mod, new_figure_manager, draw_if_interactive, _show = pylab_setup()
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/backends/__init__.py", line 32, in pylab_setup
+    globals(),locals(),[backend_name],0)
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/backends/backend_qt4agg.py", line 18, in <module>
+    from .backend_qt5agg import FigureCanvasQTAggBase as _FigureCanvasQTAggBase
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/backends/backend_qt5agg.py", line 15, in <module>
+    from .backend_qt5 import QtCore
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/backends/backend_qt5.py", line 38, in <module>
+    SPECIAL_KEYS = {QtCore.Qt.Key_Control: 'control',
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "draw.py", line 2, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/pyplot.py", line 114, in <module>
+    _backend_mod, new_figure_manager, draw_if_interactive, _show = pylab_setup()
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/backends/__init__.py", line 32, in pylab_setup
+    globals(),locals(),[backend_name],0)
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/backends/backend_qt4agg.py", line 18, in <module>
+    from .backend_qt5agg import FigureCanvasQTAggBase as _FigureCanvasQTAggBase
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/backends/backend_qt5agg.py", line 15, in <module>
+    from .backend_qt5 import QtCore
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/backends/backend_qt5.py", line 27, in <module>
+    import matplotlib.backends.qt_editor.figureoptions as figureoptions
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/backends/qt_editor/figureoptions.py", line 17, in <module>
+    import matplotlib.backends.qt_editor.formlayout as formlayout
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/backends/qt_editor/formlayout.py", line 58, in <module>
+    from matplotlib.backends.qt_compat import QtGui, QtWidgets, QtCore
+  File "/home/yma/.conda/envs/svrg/lib/python2.7/site-packages/matplotlib/backends/qt_compat.py", line 124, in <module>
+    from PyQt4 import QtCore, QtGui
+KeyboardInterrupt
