@@ -51,6 +51,8 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
     for model in models.keys():
         update, update_params = models[model]
 
+        np.random.seed(19921010)
+
         network = neuralclassifier.NeuralClassifier(n_input=X_train.shape[1], n_hidden=n_hidden, n_output=10)
 
         train_err, val_err = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
