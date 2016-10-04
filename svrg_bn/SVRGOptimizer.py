@@ -87,7 +87,7 @@ class SVRGOptimizer:
                 train_para_list = lasagne.layers.get_all_params(output_layer, trainable=True)
                 for item in train_para_list:
                     fpara_train.write("%s\n" % item)
-                train_para_list = lasagne.layers.get_all_params_values(output_layer, trainable=True)
+                train_para_list = lasagne.layers.get_all_param_values(output_layer, trainable=True)
                 for item in train_para_list:
                     fpara_train.write("%s\n" % item)
 
@@ -95,7 +95,7 @@ class SVRGOptimizer:
                 bn_para_list = lasagne.layers.get_all_params(output_layer, trainable=False)
                 for item in bn_para_list:
                     fpara_bn.write("%s\n" % item)
-                bn_para_list = lasagne.layers.get_all_params_values(output_layer, trainable=False)
+                bn_para_list = lasagne.layers.get_all_param_values(output_layer, trainable=False)
                 for item in bn_para_list:
                     fpara_bn.write("%s\n" % item)
 
