@@ -25,13 +25,15 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
 
         processes = set()
         max_processes = 5
-        for combo in combos.keys():
-            method, device = combos[combo]
+        for method in combos:
+            device = combos[method]
 
             str_device = "THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 "
-            command = str_device + " python classifier_test.py mlpbn "+ method + " "+num_epochs+" "+num_hidden_nodes
+            command = str_device + " python classifier_test.py mlpbn "+ method + " "+num_epochs+" "+num_hidden_nodes	
+	    #command = 'help'
+	    print(command)
 
-            processes.add(subprocess.popen(command))
+            processes.add(subprocess.Popen(command , shell = True))
             if len(processes) >= max_processes:
                 os.wait()
                 processes.difference_update(
