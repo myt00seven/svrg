@@ -32,3 +32,4 @@ lasagne.layers.get_all_params(output_layer, trainable = True)
 
 lasagne.layers.get_all_param_values(output_layer)
 lasagne.layers.get_all_param_values(output_layer, trainable = True)
+lasagne.layers.get_all_param_values(output_layer, trainable = False)

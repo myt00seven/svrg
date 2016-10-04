@@ -33,13 +33,14 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
 
     objective = lasagne.objectives.categorical_crossentropy
 
-    if gradient == "svrg":
-        models = { 'svrg_classif': (custom_svrg1, {'learning_rate': 0.01, 'm': 50}) }
-    elif gradient == "stream": # It is StreamingSVRG
-        models = { 'streaming_svrg_classif': (custom_streaming_svrg1, {'learning_rate': 0.01, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.003}) }
+    models = {}
+    if gradient == "svrg" or gradient == "all":
+        models.update({ 'svrg_classif': (custom_svrg1, {'learning_rate': 0.01, 'm': 50}) }) 
+    elif gradient == "stream" or gradient == "all": # It is StreamingSVRG
+        models.update({ 'streaming_svrg_classif': (custom_streaming_svrg1, {'learning_rate': 0.01, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.003}) })
         #k_s is the ratio of how many batches are used in this iteration of StreamingSVRG
-    elif gradient == "adagrad":
-        models = { 'adagrad_classif': (custom_adagrad, {'learning_rate': 0.01, 'eps': 1.0e-8}) }
+    elif gradient == "adagrad" or gradient == "all":
+        models.update( { 'adagrad_classif': (custom_adagrad, {'learning_rate': 0.01, 'eps': 1.0e-8}) })
 
 
     # models = {
@@ -50,7 +51,6 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
 
     for model in models.keys():
         update, update_params = models[model]
-
         np.random.seed(19921010)
 
         network = neuralclassifier.NeuralClassifier(n_input=X_train.shape[1], n_hidden=n_hidden, n_output=10)
