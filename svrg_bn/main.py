@@ -53,21 +53,21 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
 if __name__ == '__main__':
     if ('--help' in sys.argv) or ('-h' in sys.argv) or ('help' in sys.argv):
         print ("Run MLPBN with SVRG or StreamingSVRG or adaGrad:")
-        print ("arg:\t[svrg\stream(OR streaming OR streamingsvrg)\ adagrad\ all(Parallel)](default="+GRADIENT+")")
-        print ("arg:\t[cpu\gpu\draw](default="+DEVICE+")")        
         print ("arg:\t[NUM_EPOCHS](500)")
+        print ("arg:\t[svrg\stream(OR streaming OR streamingsvrg)\ adagrad\ all(Parallel)](default="+GRADIENT+")")
+        print ("arg:\t[cpu\gpu\draw](default="+DEVICE+")")                
         print ("arg:\t[NUM_HIDDEN_NODES](500)")
     else:
         kwargs = {}
-        if len(sys.argv) > 1:            
-            gradient_name = sys.argv[1]
+        if len(sys.argv) > 1:
+            kwargs['num_epochs'] = sys.argv[1]
+        if len(sys.argv) > 2:
+            gradient_name = sys.argv[2]
             if (gradient_name == "streaming" or gradient_name == "streamingsvrg"):
                 gradient_name = "stream"
             kwargs['gradient'] = gradient_name            
-        if len(sys.argv) > 2:
-            kwargs['device'] = sys.argv[2]
         if len(sys.argv) > 3:
-            kwargs['num_epochs'] = sys.argv[3]
+            kwargs['device'] = sys.argv[3]        
         if len(sys.argv) > 4:
             kwargs['num_hidden_nodes'] = sys.argv[4]
         main(**kwargs)
