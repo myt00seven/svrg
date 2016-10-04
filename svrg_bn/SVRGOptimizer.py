@@ -28,6 +28,7 @@ class SVRGOptimizer:
         self.input_var = input_var
         self.target_var = target_var
 
+        np.random.seed(19921010)
         flog = open("data/log.txt",'w')
         
         num_batches = X_train.shape[0] / batch_size
