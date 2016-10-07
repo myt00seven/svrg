@@ -61,7 +61,7 @@ from collections import OrderedDict
 
 #     return updates
 
-def custom_adagrad(loss_or_grads, params, learning_rate=0.01, eps=1.0e-8):
+def custom_adagrad(loss_or_grads, params, learning_rate=1.0, eps=1.0e-6):
     
     if not isinstance(loss_or_grads, list):
         grads = theano.grad(loss_or_grads, params)
@@ -77,7 +77,8 @@ def custom_adagrad(loss_or_grads, params, learning_rate=0.01, eps=1.0e-8):
         acc_new = acc + grad ** 2
 
         updates[acc] = acc_new
-        updates[param] = param - learning_rate * grad / T.sqrt(acc_new + eps)
+        updates[param] = param - (learning_rate * grad / T.sqrt(acc_new + eps))
+        # This is the full matrix version of AdaGrad
 
     return updates
 
