@@ -7,7 +7,7 @@ import numpy as np
 import zmq
 import pycuda.driver as drv
 
-sys.path.append('./lib')
+#sys.path.append('./lib')
 from tools import (save_weights, load_weights,
                    save_momentums, load_momentums)
 from train_funcs import (unpack_configs, adjust_learning_rate,
