@@ -105,7 +105,7 @@ def get_val_error_loss(rand_arr, shared_x, shared_y,
             loss, error = validate_model()
 
 
-        if flag_para_load and (val_index + 1 < n_val_batches):
+        if flag_para_load and (val_index + 1 < n_val_batches):  
             send_queue.put('calc_finished')
 
         # print loss, error

@@ -44,6 +44,7 @@ def train_net(config):
 
     from layers import DropoutLayer
     from alex_net import AlexNet, compile_models
+    # from vgg_net import VggNet, compile_models
 
     import theano.misc.pycuda_init
     import theano.misc.pycuda_utils
@@ -180,11 +181,6 @@ if __name__ == '__main__':
         config = dict(config.items() + yaml.load(f).items())
         
     config = proc_configs(config)
-
-
-
-
-
 
     if config['para_load']:
         from proc_load import fun_load

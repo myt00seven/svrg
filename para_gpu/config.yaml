@@ -29,7 +29,7 @@ weight_decay: 0.0005 # def: 0.0005
 # Directories
 label_folder: /home/yma/imagenet/data/labels/
 mean_file: /home/yma/imagenet/data/misc/img_mean.npy
-weights_dir: ./models/  # directory for saving weights and results
+weights_dir: /home/yma/imagenet/models/  # directory for saving weights and results
 
 # conv library
 lib_conv: cudnn  # or cudaconvnet
