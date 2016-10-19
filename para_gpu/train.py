@@ -77,7 +77,7 @@ def train_net(config):
     minibatch_range = range(n_train_batches)
 
 
-
+    
     # Start Training Loop
     epoch = 0
     step_idx = 0
