@@ -67,7 +67,7 @@ def train_net(config):
 
     print '... training'
 
-    raw_input("Press Enter to continue...")
+    
 
     if flag_para_load:
         # pass ipc handle and related information
@@ -80,7 +80,7 @@ def train_net(config):
     n_train_batches = len(train_filenames)
     minibatch_range = range(n_train_batches)
 
-
+    raw_input("Press Enter to continue...")
     
     # Start Training Loop
     epoch = 0
