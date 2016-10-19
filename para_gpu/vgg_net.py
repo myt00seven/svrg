@@ -40,7 +40,7 @@ class VggNet(object):
         else:
             layer1_input = x
 
-        convpool_layer1_1 = ConvPoolLayer(input=layer1_input.output,
+        convpool_layer1_1 = ConvPoolLayer(input=layer1_input,
                                         image_shape=(3, 224, 224, batch_size), 
                                         filter_shape=(3, 3, 3, 64), 
                                         convstride=1, padsize=1, group=1, 
