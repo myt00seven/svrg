@@ -41,7 +41,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
         models.update({ 'streaming': (custom_streaming_svrg1, {'learning_rate': 0.1, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.03}) })
         #k_s is the ratio of how many batches are used in this iteration of StreamingSVRG
     if gradient == "adagrad" or gradient == "all":
-        models.update( { 'adagrad': (custom_adagrad, {'learning_rate': 0.1, 'eps': 1.0e-8}) })
+        models.update( { 'adagrad': (custom_adagrad, {'learning_rate': 0.01, 'eps': 1.0e-8}) })
 
     # print(models.keys())
 
