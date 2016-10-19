@@ -6,5 +6,5 @@ sock_data: 5001
 batch_size: 30 # def: 256
 
 # Directories
-train_folder: /home/yma/imagenet/data30/train_hkl_b256_b_256/
-val_folder: /home/yma/imagenet/data30/val_hkl_b256_b_256/
+train_folder: /home/yma/imagenet/data30/train_hkl_b30_b_30/
+val_folder: /home/yma/imagenet/data30/val_hkl_b30_b_30/
