@@ -123,10 +123,10 @@ def fun_load(config, sock_data=5000):
         # print 'load ', time.time() - bgn_time
 
         param_rand = recv_queue.get()
-        print '... ... get the original hkl size:',data.size
+        # print '... ... get the original hkl size:',data.size
 
         data = crop_and_mirror(data, param_rand, flag_batch=flag_batch, cropsize=cropsize)
-        print '... ... get the cropped size:',data.size
+        # print '... ... get the cropped size:',data.size
 
         gpu_data.set(data)
 
