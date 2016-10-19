@@ -51,7 +51,10 @@ def train_net(config):
 
     ## BUILD NETWORK ##
     #model = AlexNet(config)
+    print '...Start building network model'
     model = VggNet(config)
+    print '...Finish building network model'
+
     layers = model.layers
     batch_size = model.batch_size
 

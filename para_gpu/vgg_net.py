@@ -198,7 +198,7 @@ class VggNet(object):
         weight_types += convpool_layer5_3.weight_type
 
         fc_layer6_input = T.flatten(
-            convpool_layer2_2.output.dimshuffle(3, 0, 1, 2), 2)
+            convpool_layer5_3.output.dimshuffle(3, 0, 1, 2), 2)
         # fc_layer6 = FCLayer(input=fc_layer6_input, n_in=224*224*64, n_out=4096)
         # fc_layer6 = FCLayer(input=fc_layer6_input, n_in=401408, n_out=4096)
         fc_layer6 = FCLayer(input=fc_layer6_input, n_in=25088, n_out=4096)
@@ -236,6 +236,8 @@ class VggNet(object):
 
 def compile_models(model, config, flag_top_5=False):
 
+    print '...start compiling model'
+
     x = model.x
     y = model.y
     rand = model.rand
@@ -251,7 +253,11 @@ def compile_models(model, config, flag_top_5=False):
     eta = config['weight_decay']
 
     # create a list of gradients for all model parameters
+    print '...create a list of gradients for all model parameters'
+
+    print '...compute all grads'
     grads = T.grad(cost, params)
+    print '...finish compute all grads'
     updates = []
 
     learning_rate = theano.shared(np.float32(config['learning_rate']))
@@ -262,19 +268,23 @@ def compile_models(model, config, flag_top_5=False):
     else:
         raw_size = 227
 
+    print '...set up shared x'
     shared_x = theano.shared(np.zeros((3, raw_size, raw_size,
                                        batch_size),
                                       dtype=theano.config.floatX),
                              borrow=True)
+    print '...set up shared y'
     shared_y = theano.shared(np.zeros((batch_size,), dtype=int),
                              borrow=True)
 
+    print '...set up shared rand_arr'
     rand_arr = theano.shared(np.zeros(3, dtype=theano.config.floatX),
                              borrow=True)
 
     vels = [theano.shared(param_i.get_value() * 0.)
             for param_i in params]
 
+    print '...set up the update method'
     if config['use_momentum']:
 
         assert len(weight_types) == len(params)
@@ -310,7 +320,7 @@ def compile_models(model, config, flag_top_5=False):
                 raise TypeError("Weight Type Error")
 
     # Define Theano Functions
-
+    print '...Define Theano Functions'
     train_model = theano.function([], cost, updates=updates,
                                   givens=[(x, shared_x), (y, shared_y),
                                           (lr, learning_rate),
@@ -326,6 +336,8 @@ def compile_models(model, config, flag_top_5=False):
 
     train_error = theano.function(
         [], errors, givens=[(x, shared_x), (y, shared_y), (rand, rand_arr)])
+
+    print '...finish compiling model'
 
     return (train_model, validate_model, train_error,
             learning_rate, shared_x, shared_y, rand_arr, vels)
