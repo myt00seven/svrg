@@ -3,7 +3,7 @@
 gpu: 'gpu0'
 sock_data: 5001
 
-batch_size: 256 # def: 256
+batch_size: 30 # def: 256
 
 # Directories
 train_folder: /home/yma/imagenet/data/train_hkl_b256_b_256/
