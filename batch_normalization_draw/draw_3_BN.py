@@ -69,9 +69,9 @@ def main(num_epochs=NUM_EPOCHS):
 	if LOAD_SVRG: mlpbn_svrg_acc_test=		np.loadtxt(PATH_DATA +"_mlpbnTrue_SVRG_acc_test.txt")
 	if LOAD_SVRG: mlpbn_svrg_loss_test=		np.loadtxt(PATH_DATA +"_mlpbnTrue_SVRG_loss_test.txt")
 
-	# count_mlpbn_ADAsgd = 200
-	# count_mlpbn_Streamingsvrg = 200
-	# count_mlpbn_svrg = 200
+	count_mlpbn_ADAsgd = 100
+	count_mlpbn_Streamingsvrg = 100
+	count_mlpbn_svrg = 100
 
 	if DRAW_MLPBN_ADASGD: 	count_mlpbn_ADAsgd = np.arange(mlpbn_ADAsgd_acc_val.shape[0])+1
 	if DRAW_MLPBN_StreamingSVRG: 	count_mlpbn_Streamingsvrg = np.arange(mlpbn_Streamingsvrg_acc_train.shape[0])+1
