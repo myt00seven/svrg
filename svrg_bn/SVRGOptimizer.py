@@ -158,7 +158,7 @@ class SVRGOptimizer:
                     print >>flog, "learning_rate: ", 1. / self.L.get_value()
 
                 #update w
-                # train_err += train_w(inputs, targets)
+                train_err += train_w(inputs, targets)
                 train_acc += current_acc
 
                 self.Ls[self.idx] = self.L.get_value()
