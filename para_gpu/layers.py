@@ -12,7 +12,7 @@ from pylearn2.expr.normalize import CrossChannelNormalization
 import warnings
 warnings.filterwarnings("ignore")
 
-rng = np.random.RandomState(23455)
+rng = np.random.RandomState(1915)
 # set a fixed number for 2 purpose:
 #  1. repeatable experiments; 2. for multiple-GPU, the same initial weights
 
