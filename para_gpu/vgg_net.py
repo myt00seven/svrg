@@ -8,14 +8,6 @@ import numpy as np
 
 from layers import DataLayer, ConvPoolLayer, DropoutLayer, FCLayer, SoftmaxLayer
 
-from lasagne.layers import InputLayer
-from lasagne.layers import DenseLayer
-from lasagne.layers import NonlinearityLayer
-from lasagne.layers import DropoutLayer
-from lasagne.layers import Pool2DLayer as PoolLayer
-from lasagne.layers.dnn import Conv2DDNNLayer as ConvLayer
-from lasagne.nonlinearities import softmax
-
 class VggNet(object):
 
     def __init__(self, config):
@@ -41,76 +33,173 @@ class VggNet(object):
         if flag_datalayer:
             data_layer = DataLayer(input=x, image_shape=(3, 256, 256,
                                                          batch_size),
-                                   cropsize=227, rand=rand, mirror=True,
+                                   cropsize=224, rand=rand, mirror=True,
                                    flag_rand=config['rand_crop'])
 
             layer1_input = data_layer.output
         else:
             layer1_input = x
 
-        convpool_layer1 = ConvPoolLayer(input=layer1_input,
-                                        image_shape=(3, 227, 227, batch_size), 
-                                        filter_shape=(3, 11, 11, 96), 
-                                        convstride=4, padsize=0, group=1, 
-                                        poolsize=3, poolstride=2, 
-                                        bias_init=0.0, lrn=True,
-                                        lib_conv=lib_conv,
-                                        )
-        self.layers.append(convpool_layer1)
-        params += convpool_layer1.params
-        weight_types += convpool_layer1.weight_type
-
-        convpool_layer2 = ConvPoolLayer(input=convpool_layer1.output,
-                                        image_shape=(96, 27, 27, batch_size),
-                                        filter_shape=(96, 5, 5, 256), 
-                                        convstride=1, padsize=2, group=2, 
-                                        poolsize=3, poolstride=2, 
-                                        bias_init=0.1, lrn=True,
-                                        lib_conv=lib_conv,
-                                        )
-        self.layers.append(convpool_layer2)
-        params += convpool_layer2.params
-        weight_types += convpool_layer2.weight_type
-
-        convpool_layer3 = ConvPoolLayer(input=convpool_layer2.output,
-                                        image_shape=(256, 13, 13, batch_size),
-                                        filter_shape=(256, 3, 3, 384), 
+        convpool_layer1_1 = ConvPoolLayer(input=layer1_input,
+                                        image_shape=(3, 224, 224, batch_size), 
+                                        filter_shape=(3, 3, 3, 64), 
                                         convstride=1, padsize=1, group=1, 
-                                        poolsize=1, poolstride=0, 
+                                        poolsize=1, poolstride=1, 
                                         bias_init=0.0, lrn=False,
                                         lib_conv=lib_conv,
                                         )
-        self.layers.append(convpool_layer3)
-        params += convpool_layer3.params
-        weight_types += convpool_layer3.weight_type
+        self.layers.append(convpool_layer1_1)
+        params += convpool_layer1_1.params
+        weight_types += convpool_layer1_1.weight_type
 
-        convpool_layer4 = ConvPoolLayer(input=convpool_layer3.output,
-                                        image_shape=(384, 13, 13, batch_size),
-                                        filter_shape=(384, 3, 3, 384), 
-                                        convstride=1, padsize=1, group=2, 
-                                        poolsize=1, poolstride=0, 
-                                        bias_init=0.1, lrn=False,
-                                        lib_conv=lib_conv,
-                                        )
-        self.layers.append(convpool_layer4)
-        params += convpool_layer4.params
-        weight_types += convpool_layer4.weight_type
-
-        convpool_layer5 = ConvPoolLayer(input=convpool_layer4.output,
-                                        image_shape=(384, 13, 13, batch_size),
-                                        filter_shape=(384, 3, 3, 256), 
-                                        convstride=1, padsize=1, group=2, 
-                                        poolsize=3, poolstride=2, 
+        convpool_layer1_2 = ConvPoolLayer(input=convpool_layer1_1,
+                                        image_shape=(64, 224, 224, batch_size), 
+                                        filter_shape=(64, 3, 3, 64), 
+                                        convstride=1, padsize=1, group=1, 
+                                        poolsize=2, poolstride=2, 
                                         bias_init=0.0, lrn=False,
                                         lib_conv=lib_conv,
                                         )
-        self.layers.append(convpool_layer5)
-        params += convpool_layer5.params
-        weight_types += convpool_layer5.weight_type
+        self.layers.append(convpool_layer1_2)
+        params += convpool_layer1_2.params
+        weight_types += convpool_layer1_2.weight_type
+
+        convpool_layer2_1 = ConvPoolLayer(input=convpool_layer1_2,
+                                        image_shape=(64, 112, 112, batch_size), 
+                                        filter_shape=(64, 3, 3, 128), 
+                                        convstride=1, padsize=1, group=1, 
+                                        poolsize=1, poolstride=1, 
+                                        bias_init=0.0, lrn=False,
+                                        lib_conv=lib_conv,
+                                        )
+        self.layers.append(convpool_layer2_1)
+        params += convpool_layer2_1.params
+        weight_types += convpool_layer2_1.weight_type
+
+        convpool_layer2_2 = ConvPoolLayer(input=convpool_layer2_1,
+                                        image_shape=(128, 112, 112, batch_size), 
+                                        filter_shape=(128, 3, 3, 128), 
+                                        convstride=1, padsize=1, group=2, 
+                                        poolsize=2, poolstride=2, 
+                                        bias_init=0.0, lrn=False,
+                                        lib_conv=lib_conv,
+                                        )
+        self.layers.append(convpool_layer2_2)
+        params += convpool_layer2_2.params
+        weight_types += convpool_layer2_2.weight_type
+
+
+        convpool_layer3_1 = ConvPoolLayer(input=convpool_layer2_2,
+                                        image_shape=(128, 56, 56, batch_size), 
+                                        filter_shape=(128, 3, 3, 256), 
+                                        convstride=1, padsize=1, group=1, 
+                                        poolsize=1, poolstride=1, 
+                                        bias_init=0.0, lrn=False,
+                                        lib_conv=lib_conv,
+                                        )
+        self.layers.append(convpool_layer3_1)
+        params += convpool_layer3_1.params
+        weight_types += convpool_layer3_1.weight_type
+
+        convpool_layer3_2 = ConvPoolLayer(input=convpool_layer3_1,
+                                        image_shape=(256, 56, 56, batch_size), 
+                                        filter_shape=(256, 3, 3, 256), 
+                                        convstride=1, padsize=1, group=1, 
+                                        poolsize=1, poolstride=1, 
+                                        bias_init=0.0, lrn=False,
+                                        lib_conv=lib_conv,
+                                        )
+        self.layers.append(convpool_layer3_2)
+        params += convpool_layer3_2.params
+        weight_types += convpool_layer3_2.weight_types
+
+        convpool_layer3_3 = ConvPoolLayer(input=convpool_layer3_2,
+                                        image_shape=(256, 56, 56, batch_size), 
+                                        filter_shape=(256, 3, 3, 256), 
+                                        convstride=1, padsize=1, group=2, 
+                                        poolsize=2, poolstride=2, 
+                                        bias_init=0.0, lrn=False,
+                                        lib_conv=lib_conv,
+                                        )
+        self.layers.append(convpool_layer3_3)
+        params += convpool_layer3_3.params
+        weight_types += convpool_layer3_3.weight_types
+
+        convpool_layer4_1 = ConvPoolLayer(input=convpool_layer3_3,
+                                        image_shape=(256, 28, 28, batch_size), 
+                                        filter_shape=(256, 3, 3, 512), 
+                                        convstride=1, padsize=1, group=1, 
+                                        poolsize=1, poolstride=1, 
+                                        bias_init=0.0, lrn=False,
+                                        lib_conv=lib_conv,
+                                        )
+        self.layers.append(convpool_layer4_1)
+        params += convpool_layer4_1.params
+        weight_types += convpool_layer4_1.weight_type
+
+        convpool_layer4_2 = ConvPoolLayer(input=convpool_layer4_1,
+                                        image_shape=(512, 28, 28, batch_size), 
+                                        filter_shape=(512, 3, 3, 512), 
+                                        convstride=1, padsize=1, group=1, 
+                                        poolsize=1, poolstride=1, 
+                                        bias_init=0.0, lrn=False,
+                                        lib_conv=lib_conv,
+                                        )
+        self.layers.append(convpool_layer4_2)
+        params += convpool_layer4_2.params
+        weight_types += convpool_layer4_2.weight_types
+
+        convpool_layer4_3 = ConvPoolLayer(input=convpool_layer4_2,
+                                        image_shape=(512, 28, 28, batch_size), 
+                                        filter_shape=(512, 3, 3, 512), 
+                                        convstride=1, padsize=1, group=2, 
+                                        poolsize=2, poolstride=2, 
+                                        bias_init=0.0, lrn=False,
+                                        lib_conv=lib_conv,
+                                        )
+        self.layers.append(convpool_layer4_3)
+        params += convpool_layer4_3.params
+        weight_types += convpool_layer4_3.weight_types
+
+        convpool_layer5_1 = ConvPoolLayer(input=convpool_layer4_3,
+                                        image_shape=(512, 14, 14, batch_size), 
+                                        filter_shape=(512, 3, 3, 512), 
+                                        convstride=1, padsize=1, group=1, 
+                                        poolsize=1, poolstride=1, 
+                                        bias_init=0.0, lrn=False,
+                                        lib_conv=lib_conv,
+                                        )
+        self.layers.append(convpool_layer5_1)
+        params += convpool_layer5_1.params
+        weight_types += convpool_layer5_1.weight_type
+
+        convpool_layer5_2 = ConvPoolLayer(input=convpool_layer5_1,
+                                        image_shape=(512, 14, 14, batch_size), 
+                                        filter_shape=(512, 3, 3, 512), 
+                                        convstride=1, padsize=1, group=1, 
+                                        poolsize=1, poolstride=1, 
+                                        bias_init=0.0, lrn=False,
+                                        lib_conv=lib_conv,
+                                        )
+        self.layers.append(convpool_layer5_2)
+        params += convpool_layer5_2.params
+        weight_types += convpool_layer5_2.weight_types
+
+        convpool_layer5_3 = ConvPoolLayer(input=convpool_layer5_2,
+                                        image_shape=(512, 14, 14, batch_size), 
+                                        filter_shape=(512, 3, 3, 512), 
+                                        convstride=1, padsize=1, group=2, 
+                                        poolsize=2, poolstride=2, 
+                                        bias_init=0.0, lrn=False,
+                                        lib_conv=lib_conv,
+                                        )
+        self.layers.append(convpool_layer5_3)
+        params += convpool_layer5_3.params
+        weight_types += convpool_layer5_3.weight_types
 
         fc_layer6_input = T.flatten(
             convpool_layer5.output.dimshuffle(3, 0, 1, 2), 2)
-        fc_layer6 = FCLayer(input=fc_layer6_input, n_in=9216, n_out=4096)
+        fc_layer6 = FCLayer(input=fc_layer6_input, n_in=25088, n_out=4096)
         self.layers.append(fc_layer6)
         params += fc_layer6.params
         weight_types += fc_layer6.weight_type

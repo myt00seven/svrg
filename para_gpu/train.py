@@ -43,14 +43,15 @@ def train_net(config):
     theano.config.on_unused_input = 'warn'
 
     from layers import DropoutLayer
-    from alex_net import AlexNet, compile_models
-    # from vgg_net import VggNet, compile_models
+    #from alex_net import AlexNet, compile_models
+    from vgg_net import VggNet, compile_models
 
     import theano.misc.pycuda_init
     import theano.misc.pycuda_utils
 
     ## BUILD NETWORK ##
-    model = AlexNet(config)
+    #model = AlexNet(config)
+    model = VggNet(config)
     layers = model.layers
     batch_size = model.batch_size
 
