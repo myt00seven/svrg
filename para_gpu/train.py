@@ -69,8 +69,7 @@ def train_net(config):
 
     if flag_para_load:
         # pass ipc handle and related information
-        gpuarray_batch = theano.misc.pycuda_utils.to_gpuarray(
-            shared_x.container.value)
+        gpuarray_batch = theano.misc.pycuda_utils.to_gpuarray(shared_x.container.value)
         h = drv.mem_get_ipc_handle(gpuarray_batch.ptr)
         sock.send_pyobj((gpuarray_batch.shape, gpuarray_batch.dtype, h))
 

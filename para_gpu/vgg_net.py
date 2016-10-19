@@ -268,7 +268,7 @@ def compile_models(model, config, flag_top_5=False):
     if config['use_data_layer']:
         raw_size = 256
     else:
-        raw_size = 227
+        raw_size = config['cropsize']
 
     print '...set up shared x'
     shared_x = theano.shared(np.zeros((3, raw_size, raw_size,
