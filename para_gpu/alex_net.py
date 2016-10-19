@@ -103,7 +103,7 @@ class AlexNet(object):
 
         fc_layer6_input = T.flatten(
             convpool_layer5.output.dimshuffle(3, 0, 1, 2), 2)
-        # The 9216 is taht the previous layer 13*13*128 is max pooled, then become 6*6*128=4608; and 4608*2=9216
+        # The 9216 is 6*6*256
         # However, I still don't understand why 4608 need to time 2
         fc_layer6 = FCLayer(input=fc_layer6_input, n_in=9216, n_out=4096)
         self.layers.append(fc_layer6)

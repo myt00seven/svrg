@@ -150,6 +150,9 @@ class ConvPoolLayer(object):
         elif lib_conv == 'cudnn':
 
             input_shuffled = input.dimshuffle(3, 0, 1, 2)  # c01b to bc01
+            
+            
+
             # in01out to outin01
             # print image_shape_shuffled
             # print filter_shape_shuffled
