@@ -67,6 +67,8 @@ def train_net(config):
 
     print '... training'
 
+    raw_input("Press Enter to continue...")
+
     if flag_para_load:
         # pass ipc handle and related information
         gpuarray_batch = theano.misc.pycuda_utils.to_gpuarray(shared_x.container.value)
