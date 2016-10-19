@@ -198,7 +198,7 @@ class VggNet(object):
         weight_types += convpool_layer5_3.weight_type
 
         fc_layer6_input = T.flatten(
-            convpool_layer5.output.dimshuffle(3, 0, 1, 2), 2)
+            convpool_layer5_3.output.dimshuffle(3, 0, 1, 2), 2)
         fc_layer6 = FCLayer(input=fc_layer6_input, n_in=25088, n_out=4096)
         self.layers.append(fc_layer6)
         params += fc_layer6.params
