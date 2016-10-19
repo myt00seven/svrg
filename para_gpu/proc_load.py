@@ -127,7 +127,8 @@ def fun_load(config, sock_data=5000):
 
         data = crop_and_mirror(data, param_rand, flag_batch=flag_batch, cropsize=cropsize)
         # print '... ... get the cropped size:',data.size
-
+    
+        raw_input("Press Enter to continue...")
         gpu_data.set(data)
 
         # wait for computation on last minibatch to finish
