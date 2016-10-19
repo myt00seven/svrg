@@ -116,7 +116,7 @@ if __name__ == '__main__':
         os.makedirs(label_dir)
     train_label_name = os.path.join(label_dir, 'train_labels.npy')
     val_label_name = os.path.join(label_dir, 'val_labels.npy')
-    orig_batch_size = 128
+    orig_batch_size = 64
     
     save_val_labels(misc_dir, val_label_name)
     save_train_labels(misc_dir, train_label_name)
