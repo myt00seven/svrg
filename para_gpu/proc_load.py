@@ -27,7 +27,7 @@ def get_params_crop_and_mirror(param_rand, data_shape, cropsize):
     return crop_xs, crop_ys, flag_mirror
 
 
-def crop_and_mirror(data, param_rand, flag_batch=True, cropsize=224):
+def crop_and_mirror(data, param_rand, flag_batch=True, cropsize=227):
     '''
     when param_rand == (0.5, 0.5, 0), it means no randomness
     '''
@@ -91,6 +91,8 @@ def fun_load(config, sock_data=5000):
     # if need to do random crop and mirror
     flag_batch = config['batch_crop_mirror']
 
+    cropsize = config['cropsize']
+
     drv.init()
     dev = drv.Device(int(config['gpu'][-1]))
     ctx = dev.make_context()
@@ -121,7 +123,7 @@ def fun_load(config, sock_data=5000):
 
         param_rand = recv_queue.get()
 
-        data = crop_and_mirror(data, param_rand, flag_batch=flag_batch)
+        data = crop_and_mirror(data, param_rand, flag_batch=flag_batch, cropsize=cropsize)
 
         gpu_data.set(data)
 
