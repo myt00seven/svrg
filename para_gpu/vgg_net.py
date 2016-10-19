@@ -111,7 +111,7 @@ class VggNet(object):
                                         )
         self.layers.append(convpool_layer3_2)
         params += convpool_layer3_2.params
-        weight_types += convpool_layer3_2.weight_types
+        weight_types += convpool_layer3_2.weight_type
 
         convpool_layer3_3 = ConvPoolLayer(input=convpool_layer3_2.output,
                                         image_shape=(256, 56, 56, batch_size), 
@@ -123,7 +123,7 @@ class VggNet(object):
                                         )
         self.layers.append(convpool_layer3_3)
         params += convpool_layer3_3.params
-        weight_types += convpool_layer3_3.weight_types
+        weight_types += convpool_layer3_3.weight_type
 
         convpool_layer4_1 = ConvPoolLayer(input=convpool_layer3_3.output,
                                         image_shape=(256, 28, 28, batch_size), 
@@ -147,7 +147,7 @@ class VggNet(object):
                                         )
         self.layers.append(convpool_layer4_2)
         params += convpool_layer4_2.params
-        weight_types += convpool_layer4_2.weight_types
+        weight_types += convpool_layer4_2.weight_type
 
         convpool_layer4_3 = ConvPoolLayer(input=convpool_layer4_2.output,
                                         image_shape=(512, 28, 28, batch_size), 
@@ -159,7 +159,7 @@ class VggNet(object):
                                         )
         self.layers.append(convpool_layer4_3)
         params += convpool_layer4_3.params
-        weight_types += convpool_layer4_3.weight_types
+        weight_types += convpool_layer4_3.weight_type
 
         convpool_layer5_1 = ConvPoolLayer(input=convpool_layer4_3.output,
                                         image_shape=(512, 14, 14, batch_size), 
@@ -183,7 +183,7 @@ class VggNet(object):
                                         )
         self.layers.append(convpool_layer5_2)
         params += convpool_layer5_2.params
-        weight_types += convpool_layer5_2.weight_types
+        weight_types += convpool_layer5_2.weight_type
 
         convpool_layer5_3 = ConvPoolLayer(input=convpool_layer5_2.output,
                                         image_shape=(512, 14, 14, batch_size), 
@@ -195,7 +195,7 @@ class VggNet(object):
                                         )
         self.layers.append(convpool_layer5_3)
         params += convpool_layer5_3.params
-        weight_types += convpool_layer5_3.weight_types
+        weight_types += convpool_layer5_3.weight_type
 
         fc_layer6_input = T.flatten(
             convpool_layer5.output.dimshuffle(3, 0, 1, 2), 2)
