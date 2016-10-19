@@ -44,6 +44,7 @@ class NeuralClassifier:
 
         prediction = lasagne.layers.get_output(network)
 
+        l1_reg = lasagne.regularization.regularize_layer_params(network, lasagne.regularization.l1)
         l2_reg = lasagne.regularization.regularize_layer_params(network, lasagne.regularization.l2)
         loss = objective(prediction, self.target_var) + lambd * l2_reg
         loss = loss.mean()

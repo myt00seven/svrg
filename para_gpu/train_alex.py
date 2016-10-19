@@ -72,6 +72,7 @@ def train_net(config):
         sock.send_pyobj((gpuarray_batch.shape, gpuarray_batch.dtype, h))
 
         load_send_queue.put(img_mean)
+        print '... para load started'
 
     n_train_batches = len(train_filenames)
     minibatch_range = range(n_train_batches)
@@ -79,6 +80,7 @@ def train_net(config):
 
 
     # Start Training Loop
+    print '... start 0 epoch'
     epoch = 0
     step_idx = 0
     val_record = []
