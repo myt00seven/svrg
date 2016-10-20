@@ -64,7 +64,7 @@ def train(X_train, Y_train, X_val, Y_val, X_test, y_test, train_fn, val_fn, n_ep
 
         t = time.time()
 
-        if epoch>0 and divmod(epoch,update_params['adaptive_half_life_period']):
+        if epoch>0 and divmod(epoch,update_params['adaptive_half_life_period'])==0:
             # lr = update_params['learning_rate'].get_value()
             # lr = lr*update_params['ada_factor']
             update_params['learning_rate'].set_value(update_params['learning_rate'].get_value() * update_params['ada_factor'])
