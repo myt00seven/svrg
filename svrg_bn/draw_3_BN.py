@@ -19,7 +19,7 @@ PATH_DATA   = "data/"
 
 PATH_FIGURE = "figure_3/"
 
-MAXLENGTH = 999
+MAXLENGTH = 1999
 STARTPOINT = 10
 LINEWIDTH = 3
 
@@ -30,7 +30,7 @@ DRAW_MLPBN_ADASGD = True
 DRAW_MLPBN_streaming = True
 DRAW_MLPBN_SVRG = True
 
-Y_LIM_FINE_TUNING = True
+Y_LIM_FINE_TUNING = False
 
 # SPEC_L1 = 'bo-'
 # SPEC_L1 = 'g^--'

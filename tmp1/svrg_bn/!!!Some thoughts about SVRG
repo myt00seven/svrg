@@ -1,9 +1,0 @@
-
-In the numerical tests, the SVRG often gets the same loss and prediction accuracy per epoch as SGD. It seems that there is almost no benefits comparing using SVRG with SGD. 
-
-Comparing the prediction accuracy of the test set between MLPBN SGD and MLPBN SVRG, it is clear that SVRG is the reason of worse prediction accuracy. Since the gradient in SVRG, $ \tilde{g}_j $, is an unbiased estimator of $ \nabla R_n (\tilde{w}_j) $, the SVRG method is expected to have same gradients in expectation as classical SG methods. The differences appeared in out numerical experiments might be due to several possible reasons. 
-
-This might be becuase the SVRG is only proved to perform well on strongly convex problem. When we apply it directly to nonconvex machine learning problem, depending on the specific form of the nonconvex problem ,the gradients from previous iterates might be invalid. It suggests that we could eith different problems or different methods instead of SVRG.
-We can try other datasets or problems that are different from MNIST and then see how the SVRG compares with SGD. If the SVRG also doesn't work well on other machine learning problems, we should try to integrate variants of stochastic gradient methods, such as Adagrad with batch normalization to see if they give additional benefits. This is because the variants of stochastic gradient methods are more popular for training neural networks.
-
-In terms of run time, the computation time is decreased by 50\% when using GPU instead of solely on CPU. The GPU mainly participate in computing the gradients of neural networks using back propagation method. If we use a more complex model which has more parameters, using GPU might help to save more run time due to the increase amount gradients.
