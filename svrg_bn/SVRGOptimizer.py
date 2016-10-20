@@ -139,7 +139,7 @@ class SVRGOptimizer:
                 update_bn_fn(inputs, targets)
                 #update the std and mean in bn layer.
 
-                L = self.Ls[self.idx]                                
+                L = self.Ls[self.idx]
 
                 if EXTRA_INFO:
                     print >>flog, "No. of epoch:",epoch
@@ -171,7 +171,8 @@ class SVRGOptimizer:
                 train_err += train_w(inputs, targets)
                 train_acc += current_acc
 
-                self.Ls[self.idx] = self.L.get_value()
+                if DEMINISHING == False:
+                    self.Ls[self.idx] = self.L.get_value()
                 train_batches += 1
             
             val_err = 0
