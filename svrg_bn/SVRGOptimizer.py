@@ -138,11 +138,11 @@ class SVRGOptimizer:
                 update_bn_fn(inputs, targets)
                 #update the std and mean in bn layer.
 
-                if divmod(epoch,20)[1]==0 and epoch>0:
+                if divmod(epoch,2)[1]==0 and epoch>0:
                     current_factor.set_value(current_factor.get_value() / ada_factor.get_value())
 
                 L = self.Ls[self.idx]                
-                self.L.set_value(L * current_factor)
+                self.L.set_value(L * current_factor.get_value())
 
 
                 
