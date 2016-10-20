@@ -140,6 +140,15 @@ class SVRGOptimizer:
                 #update the std and mean in bn layer.
 
                 L = self.Ls[self.idx]                                
+
+                if EXTRA_INFO:
+                    print >>flog, "No. of epoch:",epoch
+                    print >>flog, "No. of batch:",train_batches
+                    #Each iteration here decrease learning rate by half 
+                    # flog.write("Iteration of L:{:.2f}\n".format(l_iter))
+                    print >>flog, "ori_learning_rate: ", 1. / self.L.get_value()
+                    print >>flog, "current_factor: ", 1. / current_factor.get_value()
+
                 self.L.set_value(np.float32(L * current_factor.get_value()))
 
                 current_loss, current_acc = val_fn(inputs, targets)
@@ -156,11 +165,7 @@ class SVRGOptimizer:
 
                         l_iter += 1
 
-                if EXTRA_INFO:
-                    print >>flog, "No. of batch:",train_batches
-                    #Each iteration here decrease learning rate by half 
-                    flog.write("Iteration of L:{:.2f}\n".format(l_iter))
-                    print >>flog, "learning_rate: ", 1. / self.L.get_value()
+
 
                 #update w
                 train_err += train_w(inputs, targets)
