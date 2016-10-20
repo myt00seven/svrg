@@ -1,0 +1,7509 @@
+Learning Rate:0.10
+Adaptive:0.00
+Non Uniform Prob of mini batch:20.00
+
+Epoch:0.00
+No. of batch: 0
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 1
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 2
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 3
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 4
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 5
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 6
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 7
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 8
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 9
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 10
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 11
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 12
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 13
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 14
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 15
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 16
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 17
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 18
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 19
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 20
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 21
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 22
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 23
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 24
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 25
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 26
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 27
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 28
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 29
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 30
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 31
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 32
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 33
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 34
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 35
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 36
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 37
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 38
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 39
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 40
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 41
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 42
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 43
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 44
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 45
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 46
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 47
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 48
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 49
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 50
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 51
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 52
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 53
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 54
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 55
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 56
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 57
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 58
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 59
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 60
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 61
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 62
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 63
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 64
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 65
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 66
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 67
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 68
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 69
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 70
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 71
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 72
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 73
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 74
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 75
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 76
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 77
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 78
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 79
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 80
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 81
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 82
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 83
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 84
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 85
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 86
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 87
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 88
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 89
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 90
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 91
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 92
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 93
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 94
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 95
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 96
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 97
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 98
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 99
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 100
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 101
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 102
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 103
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 104
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 105
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 106
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 107
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 108
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 109
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 110
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 111
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 112
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 113
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 114
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 115
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 116
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 117
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 118
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 119
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 120
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 121
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 122
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 123
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 124
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 125
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 126
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 127
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 128
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 129
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 130
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 131
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 132
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 133
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 134
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 135
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 136
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 137
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 138
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 139
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 140
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 141
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 142
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 143
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 144
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 145
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 146
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 147
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 148
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 149
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 150
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 151
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 152
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 153
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 154
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 155
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 156
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 157
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 158
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 159
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 160
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 161
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 162
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 163
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 164
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 165
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 166
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 167
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 168
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 169
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 170
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 171
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 172
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 173
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 174
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 175
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 176
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 177
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 178
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 179
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 180
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 181
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 182
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 183
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 184
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 185
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 186
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 187
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 188
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 189
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 190
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 191
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 192
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 193
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 194
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 195
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 196
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 197
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 198
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 199
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 200
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 201
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 202
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 203
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 204
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 205
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 206
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 207
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 208
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 209
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 210
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 211
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 212
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 213
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 214
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 215
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 216
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 217
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 218
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 219
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 220
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 221
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 222
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 223
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 224
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 225
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 226
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 227
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 228
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 229
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 230
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 231
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 232
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 233
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 234
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 235
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 236
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 237
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 238
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 239
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 240
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 241
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 242
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 243
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 244
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 245
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 246
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 247
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 248
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 249
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 250
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 251
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 252
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 253
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 254
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 255
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 256
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 257
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 258
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 259
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 260
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 261
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 262
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 263
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 264
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 265
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 266
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 267
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 268
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 269
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 270
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 271
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 272
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 273
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 274
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 275
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 276
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 277
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 278
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 279
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 280
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 281
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 282
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 283
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 284
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 285
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 286
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 287
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 288
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 289
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 290
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 291
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 292
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 293
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 294
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 295
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 296
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 297
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 298
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 299
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 300
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 301
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 302
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 303
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 304
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 305
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 306
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 307
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 308
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 309
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 310
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 311
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 312
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 313
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 314
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 315
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 316
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 317
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 318
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 319
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 320
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 321
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 322
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 323
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 324
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 325
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 326
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 327
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 328
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 329
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 330
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 331
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 332
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 333
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 334
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 335
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 336
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 337
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 338
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 339
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 340
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 341
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 342
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 343
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 344
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 345
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 346
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 347
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 348
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 349
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 350
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 351
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 352
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 353
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 354
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 355
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 356
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 357
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 358
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 359
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 360
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 361
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 362
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 363
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 364
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 365
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 366
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 367
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 368
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 369
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 370
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 371
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 372
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 373
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 374
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 375
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 376
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 377
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 378
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 379
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 380
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 381
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 382
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 383
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 384
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 385
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 386
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 387
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 388
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 389
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 390
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 391
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 392
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 393
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 394
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 395
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 396
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 397
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 398
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 399
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 400
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 401
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 402
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 403
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 404
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 405
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 406
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 407
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 408
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 409
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 410
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 411
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 412
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 413
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 414
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 415
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 416
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 417
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 418
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 419
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 420
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 421
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 422
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 423
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 424
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 425
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 426
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 427
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 428
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 429
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 430
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 431
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 432
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 433
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 434
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 435
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 436
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 437
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 438
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 439
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 440
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 441
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 442
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 443
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 444
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 445
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 446
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 447
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 448
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 449
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 450
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 451
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 452
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 453
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 454
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 455
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 456
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 457
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 458
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 459
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 460
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 461
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 462
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 463
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 464
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 465
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 466
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 467
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 468
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 469
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 470
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 471
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 472
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 473
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 474
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 475
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 476
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 477
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 478
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 479
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 480
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 481
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 482
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 483
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 484
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 485
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 486
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 487
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 488
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 489
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 490
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 491
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 492
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 493
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 494
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 495
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 496
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 497
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 498
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 499
+Iteration of L:0.00
+learning_rate:  0.1
+Epoch:1.00
+No. of batch: 0
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 1
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 2
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 3
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 4
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 5
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 6
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 7
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 8
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 9
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 10
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 11
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 12
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 13
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 14
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 15
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 16
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 17
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 18
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 19
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 20
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 21
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 22
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 23
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 24
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 25
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 26
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 27
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 28
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 29
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 30
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 31
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 32
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 33
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 34
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 35
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 36
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 37
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 38
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 39
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 40
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 41
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 42
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 43
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 44
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 45
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 46
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 47
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 48
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 49
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 50
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 51
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 52
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 53
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 54
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 55
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 56
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 57
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 58
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 59
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 60
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 61
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 62
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 63
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 64
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 65
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 66
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 67
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 68
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 69
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 70
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 71
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 72
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 73
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 74
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 75
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 76
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 77
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 78
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 79
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 80
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 81
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 82
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 83
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 84
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 85
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 86
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 87
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 88
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 89
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 90
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 91
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 92
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 93
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 94
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 95
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 96
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 97
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 98
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 99
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 100
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 101
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 102
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 103
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 104
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 105
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 106
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 107
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 108
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 109
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 110
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 111
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 112
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 113
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 114
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 115
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 116
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 117
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 118
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 119
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 120
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 121
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 122
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 123
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 124
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 125
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 126
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 127
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 128
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 129
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 130
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 131
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 132
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 133
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 134
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 135
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 136
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 137
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 138
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 139
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 140
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 141
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 142
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 143
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 144
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 145
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 146
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 147
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 148
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 149
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 150
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 151
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 152
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 153
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 154
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 155
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 156
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 157
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 158
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 159
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 160
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 161
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 162
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 163
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 164
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 165
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 166
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 167
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 168
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 169
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 170
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 171
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 172
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 173
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 174
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 175
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 176
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 177
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 178
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 179
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 180
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 181
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 182
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 183
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 184
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 185
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 186
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 187
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 188
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 189
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 190
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 191
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 192
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 193
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 194
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 195
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 196
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 197
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 198
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 199
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 200
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 201
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 202
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 203
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 204
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 205
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 206
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 207
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 208
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 209
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 210
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 211
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 212
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 213
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 214
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 215
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 216
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 217
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 218
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 219
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 220
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 221
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 222
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 223
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 224
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 225
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 226
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 227
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 228
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 229
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 230
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 231
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 232
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 233
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 234
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 235
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 236
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 237
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 238
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 239
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 240
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 241
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 242
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 243
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 244
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 245
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 246
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 247
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 248
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 249
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 250
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 251
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 252
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 253
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 254
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 255
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 256
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 257
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 258
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 259
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 260
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 261
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 262
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 263
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 264
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 265
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 266
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 267
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 268
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 269
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 270
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 271
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 272
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 273
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 274
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 275
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 276
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 277
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 278
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 279
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 280
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 281
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 282
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 283
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 284
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 285
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 286
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 287
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 288
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 289
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 290
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 291
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 292
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 293
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 294
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 295
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 296
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 297
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 298
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 299
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 300
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 301
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 302
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 303
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 304
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 305
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 306
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 307
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 308
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 309
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 310
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 311
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 312
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 313
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 314
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 315
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 316
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 317
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 318
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 319
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 320
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 321
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 322
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 323
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 324
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 325
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 326
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 327
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 328
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 329
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 330
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 331
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 332
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 333
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 334
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 335
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 336
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 337
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 338
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 339
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 340
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 341
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 342
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 343
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 344
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 345
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 346
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 347
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 348
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 349
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 350
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 351
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 352
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 353
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 354
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 355
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 356
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 357
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 358
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 359
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 360
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 361
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 362
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 363
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 364
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 365
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 366
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 367
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 368
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 369
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 370
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 371
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 372
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 373
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 374
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 375
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 376
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 377
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 378
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 379
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 380
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 381
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 382
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 383
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 384
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 385
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 386
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 387
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 388
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 389
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 390
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 391
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 392
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 393
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 394
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 395
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 396
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 397
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 398
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 399
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 400
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 401
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 402
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 403
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 404
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 405
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 406
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 407
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 408
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 409
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 410
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 411
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 412
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 413
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 414
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 415
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 416
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 417
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 418
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 419
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 420
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 421
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 422
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 423
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 424
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 425
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 426
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 427
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 428
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 429
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 430
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 431
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 432
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 433
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 434
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 435
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 436
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 437
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 438
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 439
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 440
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 441
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 442
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 443
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 444
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 445
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 446
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 447
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 448
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 449
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 450
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 451
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 452
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 453
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 454
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 455
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 456
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 457
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 458
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 459
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 460
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 461
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 462
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 463
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 464
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 465
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 466
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 467
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 468
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 469
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 470
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 471
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 472
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 473
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 474
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 475
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 476
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 477
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 478
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 479
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 480
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 481
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 482
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 483
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 484
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 485
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 486
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 487
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 488
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 489
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 490
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 491
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 492
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 493
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 494
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 495
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 496
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 497
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 498
+Iteration of L:0.00
+learning_rate:  0.1
+No. of batch: 499
+Iteration of L:0.00
+learning_rate:  0.1
+Epoch:2.00
+No. of batch: 0
+Iteration of L:0.00
+learning_rate:  0.08
+No. of batch: 1
+Iteration of L:0.00
+learning_rate:  0.064
+No. of batch: 2
+Iteration of L:0.00
+learning_rate:  0.0512
+No. of batch: 3
+Iteration of L:0.00
+learning_rate:  0.04096
+No. of batch: 4
+Iteration of L:0.00
+learning_rate:  0.032768
+No. of batch: 5
+Iteration of L:0.00
+learning_rate:  0.0262144
+No. of batch: 6
+Iteration of L:0.00
+learning_rate:  0.02097152
+No. of batch: 7
+Iteration of L:0.00
+learning_rate:  0.016777216
+No. of batch: 8
+Iteration of L:0.00
+learning_rate:  0.0134217728
+No. of batch: 9
+Iteration of L:0.00
+learning_rate:  0.0107374184599
+No. of batch: 10
+Iteration of L:0.00
+learning_rate:  0.00858993462718
+No. of batch: 11
+Iteration of L:0.00
+learning_rate:  0.00687194779182
+No. of batch: 12
+Iteration of L:0.00
+learning_rate:  0.00549755811816
+No. of batch: 13
+Iteration of L:0.00
+learning_rate:  0.00439804656832
+No. of batch: 14
+Iteration of L:0.00
+learning_rate:  0.00351843711298
+No. of batch: 15
+Iteration of L:0.00
+learning_rate:  0.00281475005306
+No. of batch: 16
+Iteration of L:0.00
+learning_rate:  0.00225180000377
+No. of batch: 17
+Iteration of L:0.00
+learning_rate:  0.00180144005253
+No. of batch: 18
+Iteration of L:0.00
+learning_rate:  0.00144115210541
+No. of batch: 19
+Iteration of L:0.00
+learning_rate:  0.00115292172489
+No. of batch: 20
+Iteration of L:0.00
+learning_rate:  0.000922337431835
+No. of batch: 21
+Iteration of L:0.00
+learning_rate:  0.000737869912237
+No. of batch: 22
+Iteration of L:0.00
+learning_rate:  0.000590295972325
+No. of batch: 23
+Iteration of L:0.00
+learning_rate:  0.00047223677786
+No. of batch: 24
+Iteration of L:0.00
+learning_rate:  0.000377789413577
+No. of batch: 25
+Iteration of L:0.00
+learning_rate:  0.000302231525286
+No. of batch: 26
+Iteration of L:0.00
+learning_rate:  0.000241785205957
+No. of batch: 27
+Iteration of L:0.00
+learning_rate:  0.000193428183034
+No. of batch: 28
+Iteration of L:0.00
+learning_rate:  0.00015474254935
+No. of batch: 29
+Iteration of L:0.00
+learning_rate:  0.000123794035739
+No. of batch: 30
+Iteration of L:0.00
+learning_rate:  9.90352381691e-05
+No. of batch: 31
+Iteration of L:0.00
+learning_rate:  7.92281936003e-05
+No. of batch: 32
+Iteration of L:0.00
+learning_rate:  1.66153559379e-05
+No. of batch: 33
+Iteration of L:0.00
+learning_rate:  5.0706042021e-05
+No. of batch: 34
+Iteration of L:0.00
+learning_rate:  4.05648368307e-05
+No. of batch: 35
+Iteration of L:0.00
+learning_rate:  3.24518699788e-05
+No. of batch: 36
+Iteration of L:0.00
+learning_rate:  2.59614956539e-05
+No. of batch: 37
+Iteration of L:0.00
+learning_rate:  2.07691969444e-05
+No. of batch: 38
+Iteration of L:0.00
+learning_rate:  1.66153580947e-05
+No. of batch: 39
+Iteration of L:0.00
+learning_rate:  1.32922864758e-05
+No. of batch: 40
+Iteration of L:0.00
+learning_rate:  1.06338294015e-05
+No. of batch: 41
+Iteration of L:0.00
+learning_rate:  8.50706352118e-06
+No. of batch: 42
+Iteration of L:0.00
+learning_rate:  6.80565081694e-06
+No. of batch: 43
+Iteration of L:0.00
+learning_rate:  5.44452042197e-06
+No. of batch: 44
+Iteration of L:0.00
+learning_rate:  9.80797745578e-08
+No. of batch: 45
+Iteration of L:0.00
+learning_rate:  3.48449356806e-06
+No. of batch: 46
+Iteration of L:0.00
+learning_rate:  2.78759485445e-06
+No. of batch: 47
+Iteration of L:0.00
+learning_rate:  2.23007580585e-06
+No. of batch: 48
+Iteration of L:0.00
+learning_rate:  1.78406084361e-06
+No. of batch: 49
+Iteration of L:0.00
+learning_rate:  1.42724867489e-06
+No. of batch: 50
+Iteration of L:0.00
+learning_rate:  1.14179893991e-06
+No. of batch: 51
+Iteration of L:0.00
+learning_rate:  9.1343919104e-07
+No. of batch: 52
+Iteration of L:0.00
+learning_rate:  7.30751369519e-07
+No. of batch: 53
+Iteration of L:0.00
+learning_rate:  5.84601095616e-07
+No. of batch: 54
+Iteration of L:0.00
+learning_rate:  4.67680855987e-07
+No. of batch: 55
+Iteration of L:0.00
+learning_rate:  3.74144728535e-07
+No. of batch: 56
+Iteration of L:0.00
+learning_rate:  2.99315794026e-07
+No. of batch: 57
+Iteration of L:0.00
+learning_rate:  2.39452635221e-07
+No. of batch: 58
+Iteration of L:0.00
+learning_rate:  1.9156211047e-07
+No. of batch: 59
+Iteration of L:0.00
+learning_rate:  1.53249682505e-07
+No. of batch: 60
+Iteration of L:0.00
+learning_rate:  1.22599757277e-07
+No. of batch: 61
+Iteration of L:0.00
+learning_rate:  9.80798034167e-08
+No. of batch: 62
+Iteration of L:0.00
+learning_rate:  7.7706856298e-11
+No. of batch: 63
+Iteration of L:0.00
+learning_rate:  1.39984254306e-12
+No. of batch: 64
+Iteration of L:0.00
+learning_rate:  5.0216856473e-08
+No. of batch: 65
+Iteration of L:0.00
+learning_rate:  4.01734884062e-08
+No. of batch: 66
+Iteration of L:0.00
+learning_rate:  3.21387902085e-08
+No. of batch: 67
+Iteration of L:0.00
+learning_rate:  4.97323840734e-11
+No. of batch: 68
+Iteration of L:0.00
+learning_rate:  3.6696037039e-13
+No. of batch: 69
+Iteration of L:0.00
+learning_rate:  1.50306976248e-13
+No. of batch: 70
+Iteration of L:0.00
+learning_rate:  1.31640485831e-08
+No. of batch: 71
+Iteration of L:0.00
+learning_rate:  1.05312386447e-08
+No. of batch: 72
+Iteration of L:0.00
+learning_rate:  8.42499105771e-09
+No. of batch: 73
+Iteration of L:0.00
+learning_rate:  6.73999275532e-09
+No. of batch: 74
+Iteration of L:0.00
+learning_rate:  5.67843782185e-16
+No. of batch: 75
+Iteration of L:0.00
+learning_rate:  6.21654682199e-11
+No. of batch: 76
+Iteration of L:0.00
+learning_rate:  3.45087625202e-09
+No. of batch: 77
+Iteration of L:0.00
+learning_rate:  2.76070094064e-09
+No. of batch: 78
+Iteration of L:0.00
+learning_rate:  2.20856079154e-09
+No. of batch: 79
+Iteration of L:0.00
+learning_rate:  1.76684858328e-09
+No. of batch: 80
+Iteration of L:0.00
+learning_rate:  1.41347889859e-09
+No. of batch: 81
+Iteration of L:0.00
+learning_rate:  1.13078307796e-09
+No. of batch: 82
+Iteration of L:0.00
+learning_rate:  9.04626488552e-10
+No. of batch: 83
+Iteration of L:0.00
+learning_rate:  7.23701274641e-10
+No. of batch: 84
+Iteration of L:0.00
+learning_rate:  5.78961019712e-10
+No. of batch: 85
+Iteration of L:0.00
+learning_rate:  4.27197927184e-12
+No. of batch: 86
+Iteration of L:0.00
+learning_rate:  3.70535035042e-10
+No. of batch: 87
+Iteration of L:0.00
+learning_rate:  2.96428050528e-10
+No. of batch: 88
+Iteration of L:0.00
+learning_rate:  2.37142433224e-10
+No. of batch: 89
+Iteration of L:0.00
+learning_rate:  4.49892309906e-19
+No. of batch: 90
+Iteration of L:0.00
+learning_rate:  1.51771172006e-10
+No. of batch: 91
+Iteration of L:0.00
+learning_rate:  1.21416937605e-10
+No. of batch: 92
+Iteration of L:0.00
+learning_rate:  2.52173215857e-14
+No. of batch: 93
+Iteration of L:0.00
+learning_rate:  7.77068439314e-11
+No. of batch: 94
+Iteration of L:0.00
+learning_rate:  6.21654761345e-11
+No. of batch: 95
+Iteration of L:0.00
+learning_rate:  4.97323790081e-11
+No. of batch: 96
+Iteration of L:0.00
+learning_rate:  2.01738589755e-14
+No. of batch: 97
+Iteration of L:0.00
+learning_rate:  3.18287246399e-11
+No. of batch: 98
+Iteration of L:0.00
+learning_rate:  2.546297938e-11
+No. of batch: 99
+Iteration of L:0.00
+learning_rate:  1.99792325409e-17
+No. of batch: 100
+Iteration of L:0.00
+learning_rate:  1.6296307755e-11
+No. of batch: 101
+Iteration of L:0.00
+learning_rate:  1.30370465521e-11
+No. of batch: 102
+Iteration of L:0.00
+learning_rate:  4.87774188711e-17
+No. of batch: 103
+Iteration of L:0.00
+learning_rate:  8.34370997155e-12
+No. of batch: 104
+Iteration of L:0.00
+learning_rate:  1.86071056845e-16
+No. of batch: 105
+Iteration of L:0.00
+learning_rate:  5.33997455699e-12
+No. of batch: 106
+Iteration of L:0.00
+learning_rate:  4.27197957084e-12
+No. of batch: 107
+Iteration of L:0.00
+learning_rate:  3.41758346531e-12
+No. of batch: 108
+Iteration of L:0.00
+learning_rate:  8.78696074839e-19
+No. of batch: 109
+Iteration of L:0.00
+learning_rate:  2.18725367254e-12
+No. of batch: 110
+Iteration of L:0.00
+learning_rate:  1.74980293803e-12
+No. of batch: 111
+Iteration of L:0.00
+learning_rate:  1.39984241464e-12
+No. of batch: 112
+Iteration of L:0.00
+learning_rate:  1.1198739728e-12
+No. of batch: 113
+Iteration of L:0.00
+learning_rate:  8.95899125642e-13
+No. of batch: 114
+Iteration of L:0.00
+learning_rate:  7.16719367844e-13
+No. of batch: 115
+Iteration of L:0.00
+learning_rate:  2.16615186199e-15
+No. of batch: 116
+Iteration of L:0.00
+learning_rate:  4.58700402315e-13
+No. of batch: 117
+Iteration of L:0.00
+learning_rate:  8.87255795553e-16
+No. of batch: 118
+Iteration of L:0.00
+learning_rate:  3.28759448492e-24
+No. of batch: 119
+Iteration of L:0.00
+learning_rate:  8.70218683347e-22
+No. of batch: 120
+Iteration of L:0.00
+learning_rate:  8.02635284744e-24
+No. of batch: 121
+Iteration of L:0.00
+learning_rate:  1.50306964403e-13
+No. of batch: 122
+Iteration of L:0.00
+learning_rate:  1.20245573418e-13
+No. of batch: 123
+Iteration of L:0.00
+learning_rate:  9.6196462373e-14
+No. of batch: 124
+Iteration of L:0.00
+learning_rate:  7.69571683459e-14
+No. of batch: 125
+Iteration of L:0.00
+learning_rate:  6.15657366639e-14
+No. of batch: 126
+Iteration of L:0.00
+learning_rate:  3.03227193536e-26
+No. of batch: 127
+Iteration of L:0.00
+learning_rate:  7.54794384573e-20
+No. of batch: 128
+Iteration of L:0.00
+learning_rate:  3.15216553161e-14
+No. of batch: 129
+Iteration of L:0.00
+learning_rate:  2.52173269201e-14
+No. of batch: 130
+Iteration of L:0.00
+learning_rate:  2.01738623896e-14
+No. of batch: 131
+Iteration of L:0.00
+learning_rate:  1.61390899117e-14
+No. of batch: 132
+Iteration of L:0.00
+learning_rate:  1.29112726285e-14
+No. of batch: 133
+Iteration of L:0.00
+learning_rate:  1.03290185503e-14
+No. of batch: 134
+Iteration of L:0.00
+learning_rate:  8.26321512663e-15
+No. of batch: 135
+Iteration of L:0.00
+learning_rate:  6.61057191802e-15
+No. of batch: 136
+Iteration of L:0.00
+learning_rate:  5.28845753441e-15
+No. of batch: 137
+Iteration of L:0.00
+learning_rate:  5.62365561245e-19
+No. of batch: 138
+Iteration of L:0.00
+learning_rate:  8.53508731376e-28
+No. of batch: 139
+Iteration of L:0.00
+learning_rate:  2.7076902211e-15
+No. of batch: 140
+Iteration of L:0.00
+learning_rate:  2.16615233433e-15
+No. of batch: 141
+Iteration of L:0.00
+learning_rate:  1.73292186746e-15
+No. of batch: 142
+Iteration of L:0.00
+learning_rate:  1.38633752621e-15
+No. of batch: 143
+Iteration of L:0.00
+learning_rate:  5.56940103311e-22
+No. of batch: 144
+Iteration of L:0.00
+learning_rate:  8.87256006871e-16
+No. of batch: 145
+Iteration of L:0.00
+learning_rate:  7.09804822402e-16
+No. of batch: 146
+Iteration of L:0.00
+learning_rate:  5.67843868741e-16
+No. of batch: 147
+Iteration of L:0.00
+learning_rate:  2.57957319663e-30
+No. of batch: 148
+Iteration of L:0.00
+learning_rate:  3.63420087074e-16
+No. of batch: 149
+Iteration of L:0.00
+learning_rate:  3.00301824301e-29
+No. of batch: 150
+Iteration of L:0.00
+learning_rate:  2.32588867526e-16
+No. of batch: 151
+Iteration of L:0.00
+learning_rate:  6.42108329922e-24
+No. of batch: 152
+Iteration of L:0.00
+learning_rate:  1.48856872243e-16
+No. of batch: 153
+Iteration of L:0.00
+learning_rate:  1.19085501601e-16
+No. of batch: 154
+Iteration of L:0.00
+learning_rate:  1.23003635314e-29
+No. of batch: 155
+Iteration of L:0.00
+learning_rate:  7.62147229736e-17
+No. of batch: 156
+Iteration of L:0.00
+learning_rate:  6.09717783789e-17
+No. of batch: 157
+Iteration of L:0.00
+learning_rate:  4.87774239805e-17
+No. of batch: 158
+Iteration of L:0.00
+learning_rate:  3.90219391844e-17
+No. of batch: 159
+Iteration of L:0.00
+learning_rate:  4.36996532993e-28
+No. of batch: 160
+Iteration of L:0.00
+learning_rate:  2.49740417477e-17
+No. of batch: 161
+Iteration of L:0.00
+learning_rate:  1.99792342554e-17
+No. of batch: 162
+Iteration of L:0.00
+learning_rate:  1.59833874043e-17
+No. of batch: 163
+Iteration of L:0.00
+learning_rate:  1.27867099234e-17
+No. of batch: 164
+Iteration of L:0.00
+learning_rate:  1.90338925488e-32
+No. of batch: 165
+Iteration of L:0.00
+learning_rate:  2.0437492888e-33
+No. of batch: 166
+Iteration of L:0.00
+learning_rate:  6.54679520467e-18
+No. of batch: 167
+Iteration of L:0.00
+learning_rate:  5.23743663499e-18
+No. of batch: 168
+Iteration of L:0.00
+learning_rate:  6.96175006361e-22
+No. of batch: 169
+Iteration of L:0.00
+learning_rate:  3.35195945846e-18
+No. of batch: 170
+Iteration of L:0.00
+learning_rate:  2.68156756677e-18
+No. of batch: 171
+Iteration of L:0.00
+learning_rate:  2.14525413248e-18
+No. of batch: 172
+Iteration of L:0.00
+learning_rate:  8.78696074839e-19
+No. of batch: 173
+Iteration of L:0.00
+learning_rate:  1.21816915452e-32
+No. of batch: 174
+Iteration of L:0.00
+learning_rate:  3.49597203849e-28
+No. of batch: 175
+Iteration of L:0.00
+learning_rate:  8.78696127898e-19
+No. of batch: 176
+Iteration of L:0.00
+learning_rate:  7.02956910807e-19
+No. of batch: 177
+Iteration of L:0.00
+learning_rate:  5.6236551778e-19
+No. of batch: 178
+Iteration of L:0.00
+learning_rate:  4.49892421178e-19
+No. of batch: 179
+Iteration of L:0.00
+learning_rate:  3.03227172335e-26
+No. of batch: 180
+Iteration of L:0.00
+learning_rate:  2.87931158812e-19
+No. of batch: 181
+Iteration of L:0.00
+learning_rate:  2.30344923403e-19
+No. of batch: 182
+Iteration of L:0.00
+learning_rate:  1.84275934056e-19
+No. of batch: 183
+Iteration of L:0.00
+learning_rate:  3.99169709741e-33
+No. of batch: 184
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 185
+Iteration of L:0.00
+learning_rate:  1.5080210763e-35
+No. of batch: 186
+Iteration of L:0.00
+learning_rate:  1.35971656783e-21
+No. of batch: 187
+Iteration of L:0.00
+learning_rate:  6.03835397411e-20
+No. of batch: 188
+Iteration of L:0.00
+learning_rate:  4.83068292271e-20
+No. of batch: 189
+Iteration of L:0.00
+learning_rate:  7.79628336046e-33
+No. of batch: 190
+Iteration of L:0.00
+learning_rate:  3.09163728072e-20
+No. of batch: 191
+Iteration of L:0.00
+learning_rate:  2.47330985821e-20
+No. of batch: 192
+Iteration of L:0.00
+learning_rate:  1.97864792961e-20
+No. of batch: 193
+Iteration of L:0.00
+learning_rate:  1.58291828859e-20
+No. of batch: 194
+Iteration of L:0.00
+learning_rate:  7.72106791063e-36
+No. of batch: 195
+Iteration of L:0.00
+learning_rate:  2.19445866778e-34
+No. of batch: 196
+Iteration of L:0.00
+learning_rate:  8.10454272088e-21
+No. of batch: 197
+Iteration of L:0.00
+learning_rate:  6.48363389938e-21
+No. of batch: 198
+Iteration of L:0.00
+learning_rate:  5.18690759281e-21
+No. of batch: 199
+Iteration of L:0.00
+learning_rate:  2.94535361825e-35
+No. of batch: 200
+Iteration of L:0.00
+learning_rate:  3.31962070188e-21
+No. of batch: 201
+Iteration of L:0.00
+learning_rate:  2.65569643743e-21
+No. of batch: 202
+Iteration of L:0.00
+learning_rate:  5.08730836171e-27
+No. of batch: 203
+Iteration of L:0.00
+learning_rate:  1.69964587242e-21
+No. of batch: 204
+Iteration of L:0.00
+learning_rate:  1.35971669793e-21
+No. of batch: 205
+Iteration of L:0.00
+learning_rate:  1.08777333753e-21
+No. of batch: 206
+Iteration of L:0.00
+learning_rate:  8.70218683347e-22
+No. of batch: 207
+Iteration of L:0.00
+learning_rate:  6.96174938152e-22
+No. of batch: 208
+Iteration of L:0.00
+learning_rate:  5.56939928694e-22
+No. of batch: 209
+Iteration of L:0.00
+learning_rate:  4.45551984863e-22
+No. of batch: 210
+Iteration of L:0.00
+learning_rate:  3.56441601301e-22
+No. of batch: 211
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 212
+Iteration of L:0.00
+learning_rate:  2.28122633072e-22
+No. of batch: 213
+Iteration of L:0.00
+learning_rate:  1.82498108801e-22
+No. of batch: 214
+Iteration of L:0.00
+learning_rate:  1.45998484041e-22
+No. of batch: 215
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 216
+Iteration of L:0.00
+learning_rate:  9.34390377734e-23
+No. of batch: 217
+Iteration of L:0.00
+learning_rate:  7.47512302187e-23
+No. of batch: 218
+Iteration of L:0.00
+learning_rate:  5.98009821618e-23
+No. of batch: 219
+Iteration of L:0.00
+learning_rate:  4.78407895947e-23
+No. of batch: 220
+Iteration of L:0.00
+learning_rate:  3.82726316758e-23
+No. of batch: 221
+Iteration of L:0.00
+learning_rate:  3.06181042851e-23
+No. of batch: 222
+Iteration of L:0.00
+learning_rate:  2.44944841036e-23
+No. of batch: 223
+Iteration of L:0.00
+learning_rate:  1.95955898769e-23
+No. of batch: 224
+Iteration of L:0.00
+learning_rate:  1.56764719015e-23
+No. of batch: 225
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 226
+Iteration of L:0.00
+learning_rate:  1.0032941422e-23
+No. of batch: 227
+Iteration of L:0.00
+learning_rate:  8.02635400797e-24
+No. of batch: 228
+Iteration of L:0.00
+learning_rate:  6.42108329922e-24
+No. of batch: 229
+Iteration of L:0.00
+learning_rate:  5.13686687705e-24
+No. of batch: 230
+Iteration of L:0.00
+learning_rate:  3.19335812174e-33
+No. of batch: 231
+Iteration of L:0.00
+learning_rate:  3.28759487433e-24
+No. of batch: 232
+Iteration of L:0.00
+learning_rate:  2.63007596177e-24
+No. of batch: 233
+Iteration of L:0.00
+learning_rate:  2.10406084917e-24
+No. of batch: 234
+Iteration of L:0.00
+learning_rate:  1.68324867933e-24
+No. of batch: 235
+Iteration of L:0.00
+learning_rate:  4.69221511055e-29
+No. of batch: 236
+Iteration of L:0.00
+learning_rate:  1.07727913909e-24
+No. of batch: 237
+Iteration of L:0.00
+learning_rate:  8.61823391554e-25
+No. of batch: 238
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 239
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 240
+Iteration of L:0.00
+learning_rate:  4.41253580203e-25
+No. of batch: 241
+Iteration of L:0.00
+learning_rate:  3.53002859672e-25
+No. of batch: 242
+Iteration of L:0.00
+learning_rate:  2.82402276245e-25
+No. of batch: 243
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 244
+Iteration of L:0.00
+learning_rate:  1.80737469743e-25
+No. of batch: 245
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 246
+Iteration of L:0.00
+learning_rate:  1.15671983046e-25
+No. of batch: 247
+Iteration of L:0.00
+learning_rate:  9.25375864365e-26
+No. of batch: 248
+Iteration of L:0.00
+learning_rate:  7.40300675696e-26
+No. of batch: 249
+Iteration of L:0.00
+learning_rate:  5.92240540557e-26
+No. of batch: 250
+Iteration of L:0.00
+learning_rate:  4.73792419505e-26
+No. of batch: 251
+Iteration of L:0.00
+learning_rate:  3.79033952168e-26
+No. of batch: 252
+Iteration of L:0.00
+learning_rate:  1.23003606734e-29
+No. of batch: 253
+Iteration of L:0.00
+learning_rate:  2.42581727691e-26
+No. of batch: 254
+Iteration of L:0.00
+learning_rate:  2.97404613846e-32
+No. of batch: 255
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 256
+Iteration of L:0.00
+learning_rate:  1.24201850914e-26
+No. of batch: 257
+Iteration of L:0.00
+learning_rate:  9.9361489837e-27
+No. of batch: 258
+Iteration of L:0.00
+learning_rate:  7.94891889557e-27
+No. of batch: 259
+Iteration of L:0.00
+learning_rate:  6.35913530295e-27
+No. of batch: 260
+Iteration of L:0.00
+learning_rate:  5.08730883913e-27
+No. of batch: 261
+Iteration of L:0.00
+learning_rate:  4.06984691853e-27
+No. of batch: 262
+Iteration of L:0.00
+learning_rate:  1.5375452628e-29
+No. of batch: 263
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 264
+Iteration of L:0.00
+learning_rate:  2.08376193516e-27
+No. of batch: 265
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 266
+Iteration of L:0.00
+learning_rate:  1.33360772873e-27
+No. of batch: 267
+Iteration of L:0.00
+learning_rate:  3.22446633867e-30
+No. of batch: 268
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 269
+Iteration of L:0.00
+learning_rate:  6.82807157108e-28
+No. of batch: 270
+Iteration of L:0.00
+learning_rate:  3.99169802201e-33
+No. of batch: 271
+Iteration of L:0.00
+learning_rate:  5.03822853909e-30
+No. of batch: 272
+Iteration of L:0.00
+learning_rate:  3.49597275994e-28
+No. of batch: 273
+Iteration of L:0.00
+learning_rate:  2.79677820795e-28
+No. of batch: 274
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 275
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 276
+Iteration of L:0.00
+learning_rate:  1.92193147384e-29
+No. of batch: 277
+Iteration of L:0.00
+learning_rate:  1.1455605201e-28
+No. of batch: 278
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 279
+Iteration of L:0.00
+learning_rate:  7.33158732866e-29
+No. of batch: 280
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 281
+Iteration of L:0.00
+learning_rate:  4.69221563041e-29
+No. of batch: 282
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 283
+Iteration of L:0.00
+learning_rate:  3.00301845595e-29
+No. of batch: 284
+Iteration of L:0.00
+learning_rate:  2.4024148329e-29
+No. of batch: 285
+Iteration of L:0.00
+learning_rate:  1.92193182271e-29
+No. of batch: 286
+Iteration of L:0.00
+learning_rate:  1.53754548608e-29
+No. of batch: 287
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 288
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 289
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 290
+Iteration of L:0.00
+learning_rate:  6.2977858237e-30
+No. of batch: 291
+Iteration of L:0.00
+learning_rate:  5.03822853909e-30
+No. of batch: 292
+Iteration of L:0.00
+learning_rate:  4.03058267784e-30
+No. of batch: 293
+Iteration of L:0.00
+learning_rate:  3.22446633867e-30
+No. of batch: 294
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 295
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 296
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 297
+Iteration of L:0.00
+learning_rate:  1.32074157346e-30
+No. of batch: 298
+Iteration of L:0.00
+learning_rate:  1.05659330095e-30
+No. of batch: 299
+Iteration of L:0.00
+learning_rate:  8.4527466775e-31
+No. of batch: 300
+Iteration of L:0.00
+learning_rate:  6.76219716925e-31
+No. of batch: 301
+Iteration of L:0.00
+learning_rate:  5.40975762484e-31
+No. of batch: 302
+Iteration of L:0.00
+learning_rate:  3.42884258533e-34
+No. of batch: 303
+Iteration of L:0.00
+learning_rate:  7.26085352801e-32
+No. of batch: 304
+Iteration of L:0.00
+learning_rate:  2.76979603434e-31
+No. of batch: 305
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 306
+Iteration of L:0.00
+learning_rate:  1.77266954508e-31
+No. of batch: 307
+Iteration of L:0.00
+learning_rate:  1.41813557528e-31
+No. of batch: 308
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 309
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 310
+Iteration of L:0.00
+learning_rate:  7.2608548027e-32
+No. of batch: 311
+Iteration of L:0.00
+learning_rate:  1.63499927592e-33
+No. of batch: 312
+Iteration of L:0.00
+learning_rate:  4.64694686162e-32
+No. of batch: 313
+Iteration of L:0.00
+learning_rate:  3.71755740576e-32
+No. of batch: 314
+Iteration of L:0.00
+learning_rate:  2.97404592461e-32
+No. of batch: 315
+Iteration of L:0.00
+learning_rate:  2.37923684234e-32
+No. of batch: 316
+Iteration of L:0.00
+learning_rate:  1.90338943007e-32
+No. of batch: 317
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 318
+Iteration of L:0.00
+learning_rate:  1.21816929803e-32
+No. of batch: 319
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 320
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 321
+Iteration of L:0.00
+learning_rate:  6.23702659431e-33
+No. of batch: 322
+Iteration of L:0.00
+learning_rate:  4.98962127545e-33
+No. of batch: 323
+Iteration of L:0.00
+learning_rate:  3.99169709741e-33
+No. of batch: 324
+Iteration of L:0.00
+learning_rate:  3.19335772724e-33
+No. of batch: 325
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 326
+Iteration of L:0.00
+learning_rate:  2.04374896563e-33
+No. of batch: 327
+Iteration of L:0.00
+learning_rate:  1.63499927592e-33
+No. of batch: 328
+Iteration of L:0.00
+learning_rate:  1.30799945383e-33
+No. of batch: 329
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 330
+Iteration of L:0.00
+learning_rate:  8.37119647062e-34
+No. of batch: 331
+Iteration of L:0.00
+learning_rate:  6.696957003e-34
+No. of batch: 332
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 333
+Iteration of L:0.00
+learning_rate:  4.28605232202e-34
+No. of batch: 334
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 335
+Iteration of L:0.00
+learning_rate:  2.74307342787e-34
+No. of batch: 336
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 337
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 338
+Iteration of L:0.00
+learning_rate:  1.20641650069e-35
+No. of batch: 339
+Iteration of L:0.00
+learning_rate:  1.12356295938e-34
+No. of batch: 340
+Iteration of L:0.00
+learning_rate:  8.98850342503e-35
+No. of batch: 341
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 342
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 343
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 344
+Iteration of L:0.00
+learning_rate:  3.681691016e-35
+No. of batch: 345
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 346
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 347
+Iteration of L:0.00
+learning_rate:  1.88502578232e-35
+No. of batch: 348
+Iteration of L:0.00
+learning_rate:  1.50802062586e-35
+No. of batch: 349
+Iteration of L:0.00
+learning_rate:  1.20641650069e-35
+No. of batch: 350
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 351
+Iteration of L:0.00
+learning_rate:  7.72106554905e-36
+No. of batch: 352
+Iteration of L:0.00
+learning_rate:  6.17685262816e-36
+No. of batch: 353
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 354
+Iteration of L:0.00
+learning_rate:  3.95318560464e-36
+No. of batch: 355
+Iteration of L:0.00
+learning_rate:  3.16254848371e-36
+No. of batch: 356
+Iteration of L:0.00
+learning_rate:  2.53003888206e-36
+No. of batch: 357
+Iteration of L:0.00
+learning_rate:  2.0240310245e-36
+No. of batch: 358
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 359
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 360
+Iteration of L:0.00
+learning_rate:  1.03630400553e-36
+No. of batch: 361
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 362
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 363
+Iteration of L:0.00
+learning_rate:  5.30587672437e-37
+No. of batch: 364
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 365
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 366
+Iteration of L:0.00
+learning_rate:  1.19477732576e-38
+No. of batch: 367
+Iteration of L:0.00
+learning_rate:  2.17328728464e-37
+No. of batch: 368
+Iteration of L:0.00
+learning_rate:  1.73862992351e-37
+No. of batch: 369
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 370
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 371
+Iteration of L:0.00
+learning_rate:  8.90178533392e-38
+No. of batch: 372
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 373
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 374
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 375
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 376
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 377
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 378
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 379
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 380
+Iteration of L:0.00
+learning_rate:  1.1947775429e-38
+No. of batch: 381
+Iteration of L:0.00
+learning_rate:  9.55822069067e-39
+No. of batch: 382
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 383
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 384
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 385
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 386
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 387
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 388
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 389
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 390
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 391
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 392
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 393
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 394
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 395
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 396
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 397
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 398
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 399
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 400
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 401
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 402
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 403
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 404
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 405
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 406
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 407
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 408
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 409
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 410
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 411
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 412
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 413
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 414
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 415
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 416
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 417
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 418
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 419
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 420
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 421
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 422
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 423
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 424
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 425
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 426
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 427
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 428
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 429
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 430
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 431
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 432
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 433
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 434
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 435
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 436
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 437
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 438
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 439
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 440
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 441
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 442
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 443
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 444
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 445
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 446
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 447
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 448
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 449
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 450
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 451
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 452
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 453
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 454
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 455
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 456
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 457
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 458
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 459
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 460
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 461
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 462
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 463
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 464
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 465
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 466
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 467
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 468
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 469
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 470
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 471
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 472
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 473
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 474
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 475
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 476
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 477
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 478
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 479
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 480
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 481
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 482
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 483
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 484
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 485
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 486
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 487
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 488
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 489
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 490
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 491
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 492
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 493
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 494
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 495
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 496
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 497
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 498
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 499
+Iteration of L:0.00
+learning_rate:  0.0
+Epoch:3.00
+No. of batch: 0
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 1
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 2
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 3
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 4
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 5
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 6
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 7
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 8
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 9
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 10
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 11
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 12
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 13
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 14
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 15
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 16
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 17
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 18
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 19
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 20
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 21
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 22
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 23
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 24
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 25
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 26
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 27
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 28
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 29
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 30
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 31
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 32
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 33
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 34
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 35
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 36
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 37
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 38
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 39
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 40
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 41
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 42
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 43
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 44
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 45
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 46
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 47
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 48
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 49
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 50
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 51
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 52
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 53
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 54
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 55
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 56
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 57
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 58
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 59
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 60
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 61
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 62
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 63
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 64
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 65
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 66
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 67
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 68
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 69
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 70
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 71
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 72
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 73
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 74
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 75
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 76
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 77
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 78
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 79
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 80
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 81
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 82
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 83
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 84
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 85
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 86
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 87
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 88
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 89
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 90
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 91
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 92
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 93
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 94
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 95
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 96
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 97
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 98
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 99
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 100
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 101
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 102
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 103
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 104
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 105
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 106
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 107
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 108
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 109
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 110
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 111
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 112
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 113
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 114
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 115
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 116
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 117
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 118
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 119
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 120
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 121
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 122
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 123
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 124
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 125
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 126
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 127
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 128
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 129
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 130
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 131
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 132
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 133
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 134
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 135
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 136
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 137
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 138
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 139
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 140
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 141
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 142
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 143
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 144
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 145
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 146
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 147
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 148
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 149
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 150
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 151
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 152
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 153
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 154
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 155
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 156
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 157
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 158
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 159
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 160
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 161
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 162
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 163
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 164
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 165
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 166
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 167
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 168
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 169
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 170
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 171
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 172
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 173
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 174
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 175
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 176
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 177
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 178
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 179
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 180
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 181
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 182
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 183
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 184
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 185
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 186
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 187
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 188
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 189
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 190
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 191
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 192
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 193
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 194
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 195
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 196
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 197
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 198
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 199
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 200
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 201
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 202
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 203
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 204
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 205
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 206
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 207
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 208
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 209
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 210
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 211
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 212
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 213
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 214
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 215
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 216
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 217
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 218
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 219
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 220
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 221
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 222
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 223
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 224
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 225
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 226
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 227
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 228
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 229
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 230
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 231
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 232
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 233
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 234
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 235
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 236
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 237
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 238
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 239
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 240
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 241
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 242
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 243
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 244
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 245
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 246
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 247
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 248
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 249
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 250
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 251
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 252
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 253
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 254
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 255
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 256
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 257
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 258
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 259
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 260
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 261
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 262
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 263
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 264
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 265
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 266
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 267
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 268
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 269
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 270
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 271
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 272
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 273
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 274
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 275
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 276
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 277
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 278
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 279
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 280
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 281
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 282
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 283
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 284
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 285
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 286
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 287
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 288
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 289
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 290
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 291
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 292
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 293
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 294
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 295
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 296
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 297
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 298
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 299
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 300
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 301
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 302
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 303
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 304
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 305
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 306
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 307
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 308
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 309
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 310
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 311
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 312
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 313
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 314
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 315
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 316
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 317
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 318
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 319
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 320
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 321
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 322
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 323
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 324
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 325
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 326
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 327
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 328
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 329
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 330
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 331
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 332
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 333
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 334
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 335
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 336
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 337
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 338
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 339
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 340
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 341
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 342
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 343
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 344
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 345
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 346
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 347
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 348
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 349
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 350
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 351
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 352
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 353
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 354
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 355
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 356
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 357
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 358
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 359
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 360
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 361
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 362
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 363
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 364
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 365
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 366
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 367
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 368
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 369
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 370
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 371
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 372
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 373
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 374
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 375
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 376
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 377
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 378
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 379
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 380
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 381
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 382
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 383
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 384
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 385
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 386
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 387
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 388
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 389
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 390
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 391
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 392
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 393
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 394
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 395
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 396
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 397
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 398
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 399
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 400
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 401
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 402
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 403
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 404
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 405
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 406
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 407
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 408
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 409
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 410
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 411
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 412
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 413
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 414
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 415
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 416
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 417
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 418
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 419
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 420
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 421
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 422
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 423
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 424
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 425
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 426
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 427
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 428
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 429
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 430
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 431
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 432
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 433
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 434
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 435
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 436
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 437
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 438
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 439
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 440
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 441
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 442
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 443
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 444
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 445
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 446
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 447
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 448
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 449
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 450
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 451
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 452
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 453
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 454
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 455
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 456
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 457
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 458
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 459
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 460
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 461
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 462
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 463
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 464
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 465
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 466
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 467
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 468
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 469
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 470
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 471
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 472
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 473
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 474
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 475
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 476
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 477
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 478
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 479
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 480
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 481
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 482
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 483
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 484
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 485
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 486
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 487
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 488
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 489
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 490
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 491
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 492
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 493
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 494
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 495
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 496
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 497
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 498
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 499
+Iteration of L:0.00
+learning_rate:  0.0
+Epoch:4.00
+No. of batch: 0
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 1
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 2
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 3
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 4
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 5
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 6
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 7
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 8
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 9
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 10
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 11
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 12
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 13
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 14
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 15
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 16
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 17
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 18
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 19
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 20
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 21
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 22
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 23
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 24
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 25
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 26
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 27
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 28
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 29
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 30
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 31
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 32
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 33
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 34
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 35
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 36
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 37
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 38
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 39
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 40
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 41
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 42
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 43
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 44
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 45
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 46
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 47
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 48
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 49
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 50
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 51
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 52
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 53
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 54
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 55
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 56
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 57
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 58
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 59
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 60
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 61
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 62
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 63
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 64
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 65
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 66
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 67
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 68
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 69
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 70
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 71
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 72
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 73
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 74
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 75
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 76
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 77
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 78
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 79
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 80
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 81
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 82
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 83
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 84
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 85
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 86
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 87
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 88
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 89
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 90
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 91
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 92
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 93
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 94
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 95
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 96
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 97
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 98
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 99
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 100
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 101
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 102
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 103
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 104
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 105
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 106
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 107
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 108
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 109
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 110
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 111
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 112
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 113
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 114
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 115
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 116
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 117
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 118
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 119
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 120
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 121
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 122
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 123
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 124
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 125
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 126
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 127
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 128
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 129
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 130
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 131
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 132
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 133
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 134
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 135
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 136
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 137
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 138
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 139
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 140
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 141
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 142
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 143
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 144
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 145
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 146
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 147
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 148
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 149
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 150
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 151
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 152
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 153
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 154
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 155
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 156
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 157
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 158
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 159
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 160
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 161
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 162
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 163
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 164
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 165
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 166
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 167
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 168
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 169
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 170
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 171
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 172
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 173
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 174
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 175
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 176
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 177
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 178
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 179
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 180
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 181
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 182
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 183
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 184
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 185
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 186
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 187
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 188
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 189
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 190
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 191
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 192
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 193
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 194
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 195
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 196
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 197
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 198
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 199
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 200
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 201
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 202
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 203
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 204
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 205
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 206
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 207
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 208
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 209
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 210
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 211
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 212
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 213
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 214
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 215
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 216
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 217
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 218
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 219
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 220
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 221
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 222
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 223
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 224
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 225
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 226
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 227
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 228
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 229
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 230
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 231
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 232
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 233
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 234
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 235
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 236
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 237
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 238
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 239
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 240
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 241
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 242
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 243
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 244
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 245
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 246
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 247
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 248
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 249
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 250
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 251
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 252
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 253
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 254
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 255
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 256
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 257
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 258
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 259
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 260
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 261
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 262
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 263
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 264
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 265
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 266
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 267
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 268
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 269
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 270
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 271
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 272
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 273
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 274
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 275
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 276
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 277
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 278
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 279
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 280
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 281
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 282
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 283
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 284
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 285
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 286
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 287
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 288
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 289
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 290
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 291
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 292
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 293
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 294
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 295
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 296
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 297
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 298
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 299
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 300
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 301
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 302
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 303
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 304
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 305
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 306
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 307
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 308
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 309
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 310
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 311
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 312
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 313
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 314
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 315
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 316
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 317
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 318
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 319
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 320
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 321
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 322
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 323
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 324
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 325
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 326
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 327
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 328
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 329
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 330
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 331
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 332
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 333
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 334
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 335
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 336
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 337
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 338
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 339
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 340
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 341
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 342
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 343
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 344
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 345
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 346
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 347
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 348
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 349
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 350
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 351
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 352
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 353
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 354
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 355
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 356
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 357
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 358
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 359
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 360
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 361
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 362
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 363
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 364
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 365
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 366
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 367
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 368
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 369
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 370
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 371
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 372
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 373
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 374
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 375
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 376
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 377
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 378
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 379
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 380
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 381
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 382
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 383
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 384
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 385
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 386
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 387
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 388
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 389
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 390
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 391
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 392
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 393
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 394
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 395
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 396
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 397
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 398
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 399
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 400
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 401
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 402
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 403
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 404
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 405
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 406
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 407
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 408
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 409
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 410
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 411
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 412
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 413
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 414
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 415
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 416
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 417
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 418
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 419
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 420
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 421
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 422
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 423
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 424
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 425
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 426
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 427
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 428
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 429
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 430
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 431
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 432
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 433
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 434
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 435
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 436
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 437
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 438
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 439
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 440
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 441
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 442
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 443
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 444
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 445
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 446
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 447
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 448
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 449
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 450
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 451
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 452
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 453
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 454
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 455
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 456
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 457
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 458
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 459
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 460
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 461
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 462
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 463
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 464
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 465
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 466
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 467
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 468
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 469
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 470
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 471
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 472
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 473
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 474
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 475
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 476
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 477
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 478
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 479
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 480
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 481
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 482
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 483
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 484
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 485
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 486
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 487
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 488
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 489
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 490
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 491
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 492
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 493
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 494
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 495
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 496
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 497
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 498
+Iteration of L:0.00
+learning_rate:  0.0
+No. of batch: 499
+Iteration of L:0.00
+learning_rate:  0.0
