@@ -36,7 +36,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
 
     models = {}
     l_r = theano.shared(np.array(0.1, dtype="float32")) 
-    ada_factor = theano.shared(np.array(0.7, dtype="float32")) 
+    ada_factor = theano.shared(np.array(0.8, dtype="float32")) 
     if gradient == "svrg" or gradient == "all":
         models.update({ 'svrg': (custom_svrg1, {'learning_rate': l_r, 'm': 50, 'adaptive': True, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
     if gradient == "stream" or gradient == "all": # It is StreamingSVRG
