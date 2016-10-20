@@ -35,7 +35,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
     objective = lasagne.objectives.categorical_crossentropy
 
     models = {}
-    l_r = theano.shared(np.array(0.1, dtype=theano.config.floatX)) 
+    l_r = theano.shared(np.array(0.1, dtype="float32")) 
     if gradient == "svrg" or gradient == "all":
         models.update({ 'svrg': (custom_svrg1, {'learning_rate': l_r, 'm': 50, 'adaptive': True, 'adaptive_half_life_period':20, 'ada_factor':0.9}) })
     if gradient == "stream" or gradient == "all": # It is StreamingSVRG
