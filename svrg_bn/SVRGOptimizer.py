@@ -86,6 +86,9 @@ class SVRGOptimizer:
         print("Starting training...")
         for epoch in range(n_epochs):
 
+            if DEMINISHING and divmod(epoch,2)[1]==0 and epoch>0:
+                    current_factor.set_value(np.float32(current_factor.get_value() / ada_factor.get_value() ) ) 
+
             if EXTRA_INFO:
                 flog.write("Epoch:{:.2f}\n".format(epoch))
             if DEBUG_PARA:
@@ -104,8 +107,6 @@ class SVRGOptimizer:
                 bn_para_list = lasagne.layers.get_all_param_values(output_layer, trainable=False)
                 for item in bn_para_list:
                     fpara_bn.write("%s\n" % item)
-
-
 
             t = time.time()
 
@@ -138,13 +139,9 @@ class SVRGOptimizer:
                 update_bn_fn(inputs, targets)
                 #update the std and mean in bn layer.
 
-                L = self.Ls[self.idx]                
-                if DEMINISHING and divmod(epoch,2)[1]==0 and epoch>0:
-                    current_factor.set_value(np.float32(current_factor.get_value() / ada_factor.get_value() ) ) 
+                L = self.Ls[self.idx]                                
                 self.L.set_value(np.float32(L * current_factor.get_value()))
 
-
-                
                 current_loss, current_acc = val_fn(inputs, targets)
 #                current_loss = val_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
                 
