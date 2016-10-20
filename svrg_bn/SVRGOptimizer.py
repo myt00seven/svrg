@@ -17,7 +17,7 @@ STREAMING_SVRG = False
 DEMINISHING = True
 
 current_factor = theano.shared(np.array(1, dtype="float32")) 
-ada_factor = theano.shared(np.array(0.8, dtype="float32")) 
+ada_factor = theano.shared(np.array(0.9, dtype="float32")) 
 
 DEBUG_PARA = False # Debug of parameters insides the layers
 
@@ -174,8 +174,8 @@ class SVRGOptimizer:
                 train_err += train_w(inputs, targets)
                 train_acc += current_acc
 
-                # if DEMINISHING == False:
-                self.Ls[self.idx] = self.L.get_value()
+                if DEMINISHING == False:
+                    self.Ls[self.idx] = self.L.get_value()
                 train_batches += 1
             
             val_err = 0
