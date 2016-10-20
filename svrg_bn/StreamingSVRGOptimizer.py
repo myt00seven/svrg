@@ -14,7 +14,7 @@ import time
 import random
 
 EXTRA_INFO = False
-DEFAULT_ADAPTIVE = True
+DEFAULT_ADAPTIVE = False
 
 # Set up parameters for Streaming SVRG
 SMOOTHNESS = 1

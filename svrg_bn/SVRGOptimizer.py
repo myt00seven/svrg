@@ -11,9 +11,13 @@ from neuralnet import iterate_minibatches
 from collections import OrderedDict
 import time
 
-EXTRA_INFO = False
-DEFAULT_ADAPTIVE = True
+EXTRA_INFO = True
+DEFAULT_ADAPTIVE = False
 STREAMING_SVRG = False
+DEMINISHING = True
+
+ada_factor=theano.shared(0.8)
+current_factor=theano.shared(1)
 
 DEBUG_PARA = False # Debug of parameters insides the layers
 
@@ -134,8 +138,13 @@ class SVRGOptimizer:
                 update_bn_fn(inputs, targets)
                 #update the std and mean in bn layer.
 
-                L = self.Ls[self.idx]
-                self.L.set_value(L)
+                if divmod(epoch,20)[1]==0 and epoch>0:
+                    current_factor.set_value(current_factor.get_value() / ada_factor.get_value())
+
+                L = self.Ls[self.idx]                
+                self.L.set_value(L * current_factor)
+
+
                 
                 current_loss, current_acc = val_fn(inputs, targets)
 #                current_loss = val_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
