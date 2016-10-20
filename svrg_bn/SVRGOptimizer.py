@@ -16,8 +16,8 @@ DEFAULT_ADAPTIVE = False
 STREAMING_SVRG = False
 DEMINISHING = True
 
-ada_factor=theano.shared(0.8)
-current_factor=theano.shared(1)
+current_factor = theano.shared(np.array(1, dtype="float32")) 
+ada_factor = theano.shared(np.array(0.8, dtype="float32")) 
 
 DEBUG_PARA = False # Debug of parameters insides the layers
 
