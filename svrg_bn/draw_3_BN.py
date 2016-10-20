@@ -19,7 +19,7 @@ PATH_DATA   = "data/"
 
 PATH_FIGURE = "figure_3/"
 
-MAXLENGTH = 99
+MAXLENGTH = 999
 STARTPOINT = 10
 LINEWIDTH = 3
 
@@ -145,8 +145,7 @@ def main(num_epochs=NUM_EPOCHS):
 
 	plt.figure(3)
 	plt.title('Loss of Training Set')
-	if Y_LIM_FINE_TUNING:	pylab.ylim([-0.01,0.25])
-	
+	# if Y_LIM_FINE_TUNING:	pylab.ylim([-0.01,0.25])	
 	if DRAW_MLPBN_ADASGD: 	plt.plot(count_mlpbn_ADAsgd, mlpbn_ADAsgd_loss_train, SPEC_L1 ,label="AdaGrad", linewidth = LINEWIDTH)
 	if DRAW_MLPBN_streaming: 	plt.plot(count_mlpbn_streaming, mlpbn_streaming_loss_train, SPEC_L3 ,label="Streaming SVRG",  linewidth = LINEWIDTH)
 	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_loss_train, SPEC_L4 ,label="SVRG", linewidth = LINEWIDTH)
@@ -158,8 +157,7 @@ def main(num_epochs=NUM_EPOCHS):
 
 	plt.figure(4)
 	plt.title('Predict Accuracy of Training Set')
-	if Y_LIM_FINE_TUNING:	pylab.ylim([0.93,1.01])
-	
+	if Y_LIM_FINE_TUNING:	pylab.ylim([0.93,1.01])	
 	if DRAW_MLPBN_ADASGD: 	plt.plot(count_mlpbn_ADAsgd, mlpbn_ADAsgd_acc_train, SPEC_L1 ,label="AdaGrad", linewidth = LINEWIDTH)
 	if DRAW_MLPBN_streaming: 	plt.plot(count_mlpbn_streaming, mlpbn_streaming_acc_train, SPEC_L3 ,label="Streaming SVRG",  linewidth = LINEWIDTH)
 	if DRAW_MLPBN_SVRG:	plt.plot(count_mlpbn_svrg, mlpbn_svrg_acc_train, SPEC_L4 ,label="SVRG",  linewidth = LINEWIDTH)
@@ -223,7 +221,7 @@ def main(num_epochs=NUM_EPOCHS):
 
 	plt.figure(9)
 	plt.title('Loss of Training Set')
-	if Y_LIM_FINE_TUNING:	pylab.ylim([-0.01,0.25])
+	# if Y_LIM_FINE_TUNING:	pylab.ylim([-0.01,0.25])
 	
 	if DRAW_MLPBN_ADASGD: 	plt.plot(mlpbn_ADAsgd_epoch_times, mlpbn_ADAsgd_loss_train, SPEC_L1 ,label="AdaGrad", linewidth = LINEWIDTH)
 	if DRAW_MLPBN_streaming: 	plt.plot(mlpbn_streaming_epoch_times, mlpbn_streaming_loss_train, SPEC_L3 ,label="Streaming SVRG",  linewidth = LINEWIDTH)

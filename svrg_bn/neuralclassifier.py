@@ -55,7 +55,7 @@ class NeuralClassifier:
         
     
         if (update == custom_svrg1):
-            optimizer = SVRGOptimizer(update_params['m'], update_params['learning_rate'])
+            optimizer = SVRGOptimizer(update_params['m'], update_params['learning_rate'],update_params['adaptive'], update_params['adaptive_half_life_period'])
             # m is fixed as 50
             train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times = optimizer.minimize(loss, params,
                     X_train, Y_train, X_test, y_test, 
@@ -64,7 +64,7 @@ class NeuralClassifier:
                     n_epochs=n_epochs, batch_size=batch_size, output_layer=network)
             
         elif (update == custom_streaming_svrg1):
-            optimizer = StreamingSVRGOptimizer(update_params['m'], update_params['learning_rate'], update_params['k_s_0'], update_params['k_s_ratio'])
+            optimizer = StreamingSVRGOptimizer(update_params['m'], update_params['learning_rate'], update_params['k_s_0'], update_params['k_s_ratio'],update_params['adaptive'], update_params['adaptive_half_life_period'])
             train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times = optimizer.minimize(loss, params,
                     X_train, Y_train, X_test, y_test, 
                     self.input_var, self.target_var, 
@@ -92,7 +92,7 @@ class NeuralClassifier:
             train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times = train(
                     X_train, Y_train, X_val, Y_val, X_test, y_test,
                     train_fn, val_fn,
-                    n_epochs, batch_size=batch_size#, toprint=it
+                    n_epochs, batch_size=batch_size, **update_params#, toprint=it
             )
 
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_train.txt",train_error)

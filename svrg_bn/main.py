@@ -5,9 +5,9 @@ import subprocess
 import time
 
 #default value
-NUM_EPOCHS = "500"
-DEVICE = "GPU1" 
-GRADIENT = "svrg"
+NUM_EPOCHS = "5"
+DEVICE = "cpu"
+GRADIENT = "adagrad"
 NUM_HIDDEN_NODES ="500"
 
 def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES, gradient = GRADIENT):

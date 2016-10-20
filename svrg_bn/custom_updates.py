@@ -61,7 +61,7 @@ from collections import OrderedDict
 
 #     return updates
 
-def custom_adagrad(loss_or_grads, params, learning_rate=1.0, eps=1.0e-6):
+def custom_adagrad(loss_or_grads, params, learning_rate, eps=1.0e-6, adaptive = False, adaptive_half_life_period=20, ada_factor=0.5):
     
     if not isinstance(loss_or_grads, list):
         grads = theano.grad(loss_or_grads, params)

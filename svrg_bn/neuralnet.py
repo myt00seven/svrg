@@ -36,7 +36,7 @@ def random_minibatches(inputs, targets, batchsize, k_s):
         excerpt = indices[start_idx:start_idx + batchsize]
         yield inputs[excerpt], targets[excerpt]
 
-def train(X_train, Y_train, X_val, Y_val, X_test, y_test, train_fn, val_fn, n_epochs, batch_size=500, verbose=True, toprint=None):
+def train(X_train, Y_train, X_val, Y_val, X_test, y_test, train_fn, val_fn, n_epochs, batch_size=500, verbose=True, toprint=None, **update_params):
     #train_fn includes the AdaGrad update functino
 
     train_error = []
@@ -63,7 +63,19 @@ def train(X_train, Y_train, X_val, Y_val, X_test, y_test, train_fn, val_fn, n_ep
         train_batches = 0
 
         t = time.time()
-        
+
+        if epoch>0 and divmod(epoch,update_params['adaptive_half_life_period']):
+            lr = update_params['learning_rate'].get_value()
+            lr = lr*update_params['ada_factor']
+            update_params['learning_rate'].set_value(lr)
+
+        # print ('...testing')
+        # print '...testing'
+        # print '...testing'
+
+        print 'Learning Rate: ',update_params['learning_rate'].get_value()
+        # print 'Learning Rate: ',update_params['learning_rate'].set_value(1)
+
         for batch in iterate_minibatches(X_train, Y_train, batch_size, shuffle=True):
             inputs, targets = batch
             train_err += train_fn(inputs, targets)

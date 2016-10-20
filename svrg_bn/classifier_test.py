@@ -19,7 +19,7 @@ import neuralclassifier
 BATCH_SIZE = 100
 NUM_EPOCHS = 500
 NUM_HIDDEN_UNITS = 500
-GRADIENT = "SVRG"
+GRADIENT = "adagrad"
 MODEL = "MLPBN"
 
 # as the training set of MNIST is 50000, set the batch size to 100 means it taks 500 batches to go through the entire training set
@@ -35,13 +35,16 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
     objective = lasagne.objectives.categorical_crossentropy
 
     models = {}
+    l_r = theano.shared(np.array(0.1, dtype=theano.config.floatX)) 
     if gradient == "svrg" or gradient == "all":
-        models.update({ 'svrg': (custom_svrg1, {'learning_rate': 0.01, 'm': 50}) }) 
+        models.update({ 'svrg': (custom_svrg1, {'learning_rate': l_r, 'm': 50, 'adaptive': True, 'adaptive_half_life_period':20, 'ada_factor':0.9}) })
     if gradient == "stream" or gradient == "all": # It is StreamingSVRG
-        models.update({ 'streaming': (custom_streaming_svrg1, {'learning_rate': 0.1, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.03}) })
+        models.update({ 'streaming': (custom_streaming_svrg1, {'learning_rate': l_r, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.03, 'adaptive': True, 'adaptive_half_life_period':20, 'ada_factor':0.9}) })
         #k_s is the ratio of how many batches are used in this iteration of StreamingSVRG
-    if gradient == "adagrad" or gradient == "all":
-        models.update( { 'adagrad': (custom_adagrad, {'learning_rate': 0.01, 'eps': 1.0e-8}) })
+    if gradient == "adagrad" or gradient == "all":        
+        models.update( { 'adagrad': (custom_adagrad, {'learning_rate': l_r, 'eps': 1.0e-8, 'adaptive': True, 'adaptive_half_life_period':20, 'ada_factor':0.9 }) })
+
+
 
     # print(models.keys())
 
