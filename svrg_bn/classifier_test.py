@@ -19,7 +19,7 @@ import neuralclassifier
 BATCH_SIZE = 100
 NUM_EPOCHS = 500
 NUM_HIDDEN_UNITS = 500
-GRADIENT = "adagrad"
+GRADIENT = "svrg"
 MODEL = "MLPBN"
 
 # as the training set of MNIST is 50000, set the batch size to 100 means it taks 500 batches to go through the entire training set

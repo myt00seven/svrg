@@ -86,8 +86,11 @@ class SVRGOptimizer:
         print("Starting training...")
         for epoch in range(n_epochs):
 
-            if DEMINISHING and divmod(epoch,2)[1]==0 and epoch>0:
-                    current_factor.set_value(np.float32(current_factor.get_value() / ada_factor.get_value() ) ) 
+            if DEMINISHING and epoch>0:
+                if divmod(epoch,2)[1]==0:
+                    current_factor.set_value(np.float32(ada_factor.get_value()))
+                else:
+                    current_factor.set_value(np.float32(1.))
 
             if EXTRA_INFO:
                 flog.write("Epoch:{:.2f}\n".format(epoch))
@@ -149,7 +152,7 @@ class SVRGOptimizer:
                     print >>flog, "ori_learning_rate: ", 1. / self.L.get_value()
                     print >>flog, "current_factor: ", 1. / current_factor.get_value()
 
-                self.L.set_value(np.float32(L * current_factor.get_value()))
+                self.L.set_value(np.float32(L / current_factor.get_value()))
 
                 current_loss, current_acc = val_fn(inputs, targets)
 #                current_loss = val_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
@@ -171,8 +174,8 @@ class SVRGOptimizer:
                 train_err += train_w(inputs, targets)
                 train_acc += current_acc
 
-                if DEMINISHING == False:
-                    self.Ls[self.idx] = self.L.get_value()
+                # if DEMINISHING == False:
+                self.Ls[self.idx] = self.L.get_value()
                 train_batches += 1
             
             val_err = 0
