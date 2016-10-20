@@ -17,7 +17,7 @@ STREAMING_SVRG = False
 DEMINISHING = True
 
 current_factor = theano.shared(np.array(1, dtype="float32")) 
-ada_factor = theano.shared(np.array(0.9, dtype="float32")) 
+ada_factor = theano.shared(np.array(0.8, dtype="float32"))
 
 DEBUG_PARA = False # Debug of parameters insides the layers
 
@@ -86,11 +86,9 @@ class SVRGOptimizer:
         print("Starting training...")
         for epoch in range(n_epochs):
 
-            if DEMINISHING and epoch>0:
-                if divmod(epoch,2)[1]==0:
-                    current_factor.set_value(np.float32(ada_factor.get_value()))
-                else:
-                    current_factor.set_value(np.float32(1.))
+            if DEMINISHING and epoch>0 and divmod(epoch,20)[1]==0:
+                current_factor.set_value(np.float32(current_factor.get_value() / ada_factor.get_value()))
+
 
             if EXTRA_INFO:
                 flog.write("Epoch:{:.2f}\n".format(epoch))
@@ -149,10 +147,10 @@ class SVRGOptimizer:
                     print >>flog, "No. of batch:",train_batches
                     #Each iteration here decrease learning rate by half 
                     # flog.write("Iteration of L:{:.2f}\n".format(l_iter))
-                    print >>flog, "ori_learning_rate: ", 1. / self.L.get_value()
+                    print >>flog, "ori_learning_rate: ", 1. / L
                     print >>flog, "current_factor: ", 1. / current_factor.get_value()
 
-                self.L.set_value(np.float32(L / current_factor.get_value()))
+                self.L.set_value(np.float32(L * current_factor.get_value()))
 
                 current_loss, current_acc = val_fn(inputs, targets)
 #                current_loss = val_fn(np.array(inputs.todense(), dtype=np.float32), np.array(targets, dtype=np.int32))
@@ -167,8 +165,6 @@ class SVRGOptimizer:
                             self.L.set_value(self.L.get_value() * 2)
 
                         l_iter += 1
-
-
 
                 #update w
                 train_err += train_w(inputs, targets)

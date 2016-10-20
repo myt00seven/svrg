@@ -13,8 +13,12 @@ from collections import OrderedDict
 import time
 import random
 
-EXTRA_INFO = False
+EXTRA_INFO = True
 DEFAULT_ADAPTIVE = False
+DEMINISHING = True
+
+current_factor = theano.shared(np.array(1, dtype="float32"))
+ada_factor = theano.shared(np.array(0.8, dtype="float32"))
 
 # Set up parameters for Streaming SVRG
 SMOOTHNESS = 1
@@ -90,6 +94,10 @@ class StreamingSVRGOptimizer:
         print("Starting training...")
         for epoch in range(n_epochs):
 
+            if DEMINISHING and epoch>0 and divmod(epoch,20)[1]==0:
+                current_factor.set_value(np.float32(current_factor.get_value() / ada_factor.get_value()))
+
+
             if EXTRA_INFO:
                 flog.write("Epoch:{:.2f}\n".format(epoch))
 
@@ -144,8 +152,23 @@ class StreamingSVRGOptimizer:
                 # what is L? 
                 # A:L is learning rate. Ls is the list storing learning rate.
                 L = self.Ls[self.idx]
-                self.L.set_value(L)
-                
+
+                if EXTRA_INFO:
+                    print >>flog, "No. of epoch:",epoch
+                    print >>flog, "No. of batch:",train_batches
+                    #Each iteration here decrease learning rate by half
+                    # flog.write("Iteration of L:{:.2f}\n".format(l_iter))
+                    print >>flog, "ori_learning_rate: ", 1. / L
+                    print >>flog, "current_factor: ", 1. / current_factor.get_value()
+
+                self.L.set_value(np.float32(L * current_factor.get_value()))
+
+                if EXTRA_INFO:
+                    # print >>flog, "No. of batch:",train_batches
+                    #Each iteration here decrease learning rate by half
+                    # flog.write("Iteration of L:{:.2f}\n".format(l_iter))
+                    print >>flog, "learning_rate: ", 1. / self.L.get_value()
+
                 current_loss, current_acc = val_fn(inputs, targets)
                 
                 # Use adaptive option to find the right learning rate by line search
@@ -162,16 +185,17 @@ class StreamingSVRGOptimizer:
 
                 # Print the extra debug infomation
                 if EXTRA_INFO:
-                    print >>flog, "No. of batch:",train_batches
+                    # print >>flog, "No. of batch:",train_batches
                     #Each iteration here decrease learning rate by half 
-                    flog.write("Iteration of L:{:.2f}\n".format(l_iter))
-                    print >>flog, "learning_rate: ", 1. / self.L.get_value()
+                    # flog.write("Iteration of L:{:.2f}\n".format(l_iter))
+                    print >>flog, "learning_rate(after adptive): ", 1. / self.L.get_value()
 
                 # Batch updates for parameters w
                 train_err += train_w(inputs, targets)
                 train_acc += current_acc
 
-                self.Ls[self.idx] = self.L.get_value()
+                if DEMINISHING == False:
+                    self.Ls[self.idx] = self.L.get_value()
                 train_batches += 1
             
             val_err = 0
