@@ -139,9 +139,9 @@ class SVRGOptimizer:
                 #update the std and mean in bn layer.
 
                 L = self.Ls[self.idx]                
-                if divmod(epoch,2)[1]==0 and epoch>0:
-                    current_factor.set_value(np.floate32(current_factor.get_value() / ada_factor.get_value() ) ) 
-                self.L.set_value(L * current_factor.get_value())
+                if DEMINISHING and divmod(epoch,2)[1]==0 and epoch>0:
+                    current_factor.set_value(np.float32(current_factor.get_value() / ada_factor.get_value() ) ) 
+                self.L.set_value(np.float32(L * current_factor.get_value()))
 
 
                 
