@@ -17,7 +17,7 @@ STREAMING_SVRG = False
 DEMINISHING = True
 
 current_factor = theano.shared(np.array(1, dtype="float32")) 
-ada_factor = theano.shared(np.array(0.8, dtype="float32"))
+ada_factor = theano.shared(np.array(1.0, dtype="float32"))
 
 DEBUG_PARA = False # Debug of parameters insides the layers
 
