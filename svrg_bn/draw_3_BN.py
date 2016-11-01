@@ -30,7 +30,7 @@ DRAW_MLPBN_ADASGD = True
 DRAW_MLPBN_streaming = True
 DRAW_MLPBN_SVRG = True
 
-Y_LIM_FINE_TUNING = False
+Y_LIM_FINE_TUNING = True
 
 # SPEC_L1 = 'bo-'
 # SPEC_L1 = 'g^--'
