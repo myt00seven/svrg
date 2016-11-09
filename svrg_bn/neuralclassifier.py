@@ -46,7 +46,15 @@ class NeuralClassifier:
 
         l1_reg = lasagne.regularization.regularize_layer_params(network, lasagne.regularization.l1)
         l2_reg = lasagne.regularization.regularize_layer_params(network, lasagne.regularization.l2)
-        loss = objective(prediction, self.target_var) + lambd * l1_reg
+
+        if (gradient == 'svrg'):
+            loss = objective(prediction, self.target_var) + 0.01 * l2_reg
+        elif (gradient == 'stream'):
+            loss = objective(prediction, self.target_var) + 0.1 * l1_reg        
+        elif (gradient == 'adagrad'):
+            loss = objective(prediction, self.target_var) + 0.1 * l1_reg        
+
+        # loss = objective(prediction, self.target_var) + lambd * l1_reg
         loss = loss.mean()
     
         params = lasagne.layers.get_all_params(network, trainable=True)
