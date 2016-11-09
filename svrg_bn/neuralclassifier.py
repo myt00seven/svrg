@@ -49,7 +49,7 @@ class NeuralClassifier:
 
         if (gradient == 'svrg'):
             loss = objective(prediction, self.target_var) + 0.01 * l2_reg
-        elif (gradient == 'stream'):
+        elif (gradient == 'streaming'):
             loss = objective(prediction, self.target_var) + 0.1 * l1_reg        
         elif (gradient == 'adagrad'):
             loss = objective(prediction, self.target_var) + 0.1 * l1_reg        
