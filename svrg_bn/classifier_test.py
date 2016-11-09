@@ -38,12 +38,12 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
     l_r = theano.shared(np.array(0.01, dtype="float32")) 
     ada_factor = theano.shared(np.array(1.0, dtype="float32")) 
     if gradient == "svrg" or gradient == "all":
-        models.update({ 'svrg': (custom_svrg1, {'learning_rate': 0.01, 'm': 50, 'adaptive': True, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
+        models.update({ 'svrg': (custom_svrg1, {'learning_rate': 0.01, 'm': 50, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
     if gradient == "stream" or gradient == "all": # It is StreamingSVRG
-        models.update({ 'streaming': (custom_streaming_svrg1, {'learning_rate': 0.1, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.03, 'adaptive': True, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
+        models.update({ 'streaming': (custom_streaming_svrg1, {'learning_rate': 0.1, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.03, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
         #k_s is the ratio of how many batches are used in this iteration of StreamingSVRG
     if gradient == "adagrad" or gradient == "all":        
-        models.update( { 'adagrad': (custom_adagrad, {'learning_rate': l_r, 'eps': 1.0e-8, 'adaptive': True, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
+        models.update( { 'adagrad': (custom_adagrad, {'learning_rate': l_r, 'eps': 1.0e-8, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
 
 
 
