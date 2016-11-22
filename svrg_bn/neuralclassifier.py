@@ -50,7 +50,7 @@ class NeuralClassifier:
         if (gradient == 'svrg'):
             loss = objective(prediction, self.target_var) + 0.01 * l2_reg
         elif (gradient == 'streaming'):
-            loss = objective(prediction, self.target_var) + 0.1 * l1_reg        
+            loss = objective(prediction, self.target_var) + 0.1 * l2_reg        
         elif (gradient == 'adagrad'):
             loss = objective(prediction, self.target_var) + 0.1 * l1_reg        
 
@@ -115,12 +115,12 @@ class NeuralClassifier:
                 min_idx = idx
         
         best_result = open("data/best_result_"+gradient+".txt",'w')        
-        best_result.write("Best Idx:{:.5f}\n".format(min_idx+1))
-        best_result.write("Run Time:{:.5f}\n".format(epoch_times[min_idx]))
-        best_result.write("Val Loss:{:.5f}\n".format(err_val[min_idx]))
-        best_result.write("Val Acc:{:.5f}\n".format(acc_val[min_idx]))
-        best_result.write("Test Loss:{:.5f}\n".format(test_error[min_idx]))
-        best_result.write("Test Acc:{:.5f}\n".format(acc_test[min_idx]))
+        best_result.write("Best Idx: {:.5f}\n".format(min_idx+1))
+        best_result.write("Run Time: {:.5f}\n".format(epoch_times[min_idx]))
+        best_result.write("Val Loss: {:.5f}\n".format(err_val[min_idx]))
+        best_result.write("Val Acc: {:.5f}\n".format(acc_val[min_idx]))
+        best_result.write("Test Loss: {:.5f}\n".format(test_error[min_idx]))
+        best_result.write("Test Acc: {:.5f}\n".format(acc_test[min_idx]))
 
 
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_train.txt",train_error)
