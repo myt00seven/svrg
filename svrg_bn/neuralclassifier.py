@@ -107,15 +107,17 @@ class NeuralClassifier:
         min_value = 1000000
         min_idx = -1
 
+        err_val = map(itemgetter(0), validation_error)
+
         for idx in xrange(1,epoch):
-            if validation_error[idx]<min_value:
-                min_value = validation_error[idx]
+            if err_val[idx]<min_value:
+                min_value = err_val[idx]
                 min_idx = idx
         
         best_result = open("data/best_result_"+gradient+".txt",'w')        
         best_result.write("Best Idx:{:.2f}\n".format(min_idx))
         best_result.write("Run Time:{:.2f}\n".format(epoch_times[min_idx]))
-        best_result.write("Val Loss:{:.2f}\n".format(validation_error[min_idx]))
+        best_result.write("Val Loss:{:.2f}\n".format(err_val[min_idx]))
         best_result.write("Val Acc:{:.2f}\n".format(acc_val[min_idx]))
         best_result.write("Test Loss:{:.2f}\n".format(test_error[min_idx]))
         best_result.write("Test Acc:{:.2f}\n".format(acc_test[min_idx]))
