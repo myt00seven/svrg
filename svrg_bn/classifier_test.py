@@ -39,7 +39,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
     ada_factor = theano.shared(np.array(1.0, dtype="float32")) 
     if gradient == "svrg" or gradient == "all":
         models.update({ 'svrg': (custom_svrg1, {'learning_rate': 0.01, 'm': 50, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
-    if gradient == "stream" or gradient == "all": # It is StreamingSVRG
+    if gradient == "streaming" or gradient == "all": # It is StreamingSVRG
         models.update({ 'streaming': (custom_streaming_svrg1, {'learning_rate': 0.1, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.04, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
         #k_s is the ratio of how many batches are used in this iteration of StreamingSVRG
     if gradient == "adagrad" or gradient == "all":        
@@ -58,7 +58,13 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
     for model in models.keys():
         update, update_params = models[model]
 
-        np.random.seed(20010101)
+        seed = int(np.random.random()*10000000)
+
+        np.random.seed(seed)
+
+        file_seed = open("data/file_seed_"+gradient+".txt",'w+')
+        best_result.write("Rand Seed: {:d}\n".format(seed))
+        file_seed.close()
 
         network = neuralclassifier.NeuralClassifier(n_input=X_train.shape[1], n_hidden=n_hidden, n_output=10)
 

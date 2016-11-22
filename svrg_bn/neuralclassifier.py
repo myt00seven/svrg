@@ -114,13 +114,14 @@ class NeuralClassifier:
                 min_value = err_val[idx]
                 min_idx = idx
         
-        best_result = open("data/best_result_"+gradient+".txt",'w')        
+        best_result = open("data/best_result_"+gradient+".txt",'w+')
+        
         best_result.write("Best Idx: {:.5f}\n".format(min_idx+1))
         best_result.write("Run Time: {:.5f}\n".format(epoch_times[min_idx]))
         best_result.write("Val Loss: {:.5f}\n".format(err_val[min_idx]))
         best_result.write("Val Acc: {:.5f}\n".format(acc_val[min_idx]))
         best_result.write("Test Loss: {:.5f}\n".format(test_error[min_idx]))
-        best_result.write("Test Acc: {:.5f}\n".format(acc_test[min_idx]))
+        best_result.write("Test Acc: {:.5f}\n\n".format(acc_test[min_idx]))
 
 
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_train.txt",train_error)
