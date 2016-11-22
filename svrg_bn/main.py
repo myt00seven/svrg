@@ -13,11 +13,11 @@ NUM_REP = "1"
 
 methods = ["svrg", "streaming", "adagrad"]
 
-def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES, gradient = GRADIENT, str_num_rep = NUM_REP):
+def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES, gradient = GRADIENT, num_rep = NUM_REP):
     device = device.lower()
     str_device = "THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 "
 
-    for loop_idx in range(0,int(str_num_rep)):
+    for loop_idx in range(0,int(num_rep)):
         for each in methods:
             file_clean = open("data/best_result_"+each+".txt",'w')
             file_clean.close()
