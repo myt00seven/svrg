@@ -103,6 +103,24 @@ class NeuralClassifier:
                     n_epochs, batch_size=batch_size, **update_params#, toprint=it
             )
 
+        epoch = len(train_error)
+        min_value = 1000000
+        min_idx = -1
+
+        for idx in xrange(1,epoch):
+            if validation_error[idx]<min_value:
+                min_value = validation_error[idx]
+                min_idx = idx
+        
+        best_result = open("data/best_result.txt",'w')        
+        best_result.write("Best Idx:{:.2d}\n".format(min_idx))
+        best_result.write("Run Time:{:.2d}\n".format(epoch_times[min_idx]))
+        best_result.write("Val Loss:{:.2d}\n".format(validation_error[min_idx]))
+        best_result.write("Val Acc:{:.2d}\n".format(acc_val[min_idx]))
+        best_result.write("Test Loss:{:.2d}\n".format(test_error[min_idx]))
+        best_result.write("Test Acc:{:.2d}\n".format(acc_test[min_idx]))
+
+
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_train.txt",train_error)
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_val.txt",map(itemgetter(0), validation_error))
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_loss_gradient_number.txt",map(itemgetter(1),validation_error))
