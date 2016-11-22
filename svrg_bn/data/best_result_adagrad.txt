@@ -1,6 +1,6 @@
-Best Idx: 195.00000
-Run Time: 616.23727
-Val Loss: 0.10962
-Val Acc: 0.98240
-Test Loss: 0.11183
-Test Acc: 0.98150
+Best Idx: 178.00000
+Run Time: 564.60914
+Val Loss: 0.10736
+Val Acc: 0.98280
+Test Loss: 0.11014
+Test Acc: 0.98070
