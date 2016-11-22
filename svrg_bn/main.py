@@ -16,12 +16,12 @@ methods = ["svrg", "streaming", "adagrad"]
 def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES, gradient = GRADIENT, num_rep = NUM_REP):
     device = device.lower()
     str_device = "THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 "
+    
+    for each in methods:
+        file_clean = open("data/best_result_"+each+".txt",'w')
+        file_clean.close()
 
     for loop_idx in range(0,int(num_rep)):
-        for each in methods:
-            file_clean = open("data/best_result_"+each+".txt",'w')
-            file_clean.close()
-
         if gradient != "all":
             if (device == "cpu") or ("gpu" in device):
                 os.system(str_device + " python classifier_test.py mlpbn "+ gradient + " "+num_epochs+" "+num_hidden_nodes)

@@ -62,7 +62,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
 
         np.random.seed(seed)
 
-        file_seed = open("data/file_seed_"+gradient+".txt",'w+')
+        file_seed = open("data/best_result_"+gradient+".txt",'a+')
         file_seed.write("Rand Seed: {:d}\n".format(seed))
         file_seed.close()
 

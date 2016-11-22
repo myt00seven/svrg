@@ -114,7 +114,7 @@ class NeuralClassifier:
                 min_value = err_val[idx]
                 min_idx = idx
         
-        best_result = open("data/best_result_"+gradient+".txt",'w+')
+        best_result = open("data/best_result_"+gradient+".txt",'a+')
         
         best_result.write("Best Idx: {:.5f}\n".format(min_idx+1))
         best_result.write("Run Time: {:.5f}\n".format(epoch_times[min_idx]))
