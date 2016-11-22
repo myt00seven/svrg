@@ -13,7 +13,7 @@ NUM_REP = "1"
 
 methods = ["svrg", "streaming", "adagrad"]
 
-def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES, gradient = GRADIENT, str_num_rep = NUM_REP](1):
+def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES, gradient = GRADIENT, str_num_rep = NUM_REP):
     device = device.lower()
     str_device = "THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 "
 
@@ -33,10 +33,10 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
             max_processes = 5
             for method in combos:
                 device = combos[method]
-        	    device = device.lower()
+                device = device.lower()
                 str_device = "THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 "
-                command = str_device + " python classifier_test.py mlpbn "+ method + " "+num_epochs+" "+num_hidden_nodes	
-        	    #command = 'help'
+                command = str_device + " python classifier_test.py mlpbn "+ method + " "+num_epochs+" "+num_hidden_nodes
+                #command = 'help'
                 print(command)
 
                 processes.add(subprocess.Popen(command , shell = True))

@@ -63,7 +63,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
         np.random.seed(seed)
 
         file_seed = open("data/file_seed_"+gradient+".txt",'w+')
-        best_result.write("Rand Seed: {:d}\n".format(seed))
+        file_seed.write("Rand Seed: {:d}\n".format(seed))
         file_seed.close()
 
         network = neuralclassifier.NeuralClassifier(n_input=X_train.shape[1], n_hidden=n_hidden, n_output=10)
