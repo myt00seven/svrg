@@ -1,0 +1,80 @@
+Rand Seed: 6731895
+Best Idx: 174.00000
+Run Time: 874.60815
+Val Loss: 0.08363
+Val Acc: 0.98190
+Test Loss: 0.07841
+Test Acc: 0.98340
+
+Rand Seed: 5036242
+Best Idx: 164.00000
+Run Time: 819.61659
+Val Loss: 0.08922
+Val Acc: 0.98240
+Test Loss: 0.08319
+Test Acc: 0.98380
+
+Rand Seed: 3307363
+Best Idx: 198.00000
+Run Time: 1353.30583
+Val Loss: 0.07887
+Val Acc: 0.98360
+Test Loss: 0.07456
+Test Acc: 0.98460
+
+Rand Seed: 414030
+Best Idx: 190.00000
+Run Time: 1299.52814
+Val Loss: 0.08269
+Val Acc: 0.98340
+Test Loss: 0.07919
+Test Acc: 0.98320
+
+Rand Seed: 6158326
+Best Idx: 176.00000
+Run Time: 1196.57467
+Val Loss: 0.08492
+Val Acc: 0.98190
+Test Loss: 0.07777
+Test Acc: 0.98550
+
+Rand Seed: 9310972
+Best Idx: 167.00000
+Run Time: 1117.91906
+Val Loss: 0.08636
+Val Acc: 0.98130
+Test Loss: 0.08511
+Test Acc: 0.98290
+
+Rand Seed: 8711793
+Best Idx: 200.00000
+Run Time: 1404.79869
+Val Loss: 0.08089
+Val Acc: 0.98400
+Test Loss: 0.07591
+Test Acc: 0.98470
+
+Rand Seed: 1772043
+Best Idx: 188.00000
+Run Time: 1288.04096
+Val Loss: 0.08170
+Val Acc: 0.98300
+Test Loss: 0.07987
+Test Acc: 0.98350
+
+Rand Seed: 7881603
+Best Idx: 164.00000
+Run Time: 1270.45256
+Val Loss: 0.08490
+Val Acc: 0.98310
+Test Loss: 0.08285
+Test Acc: 0.98270
+
+Rand Seed: 974776
+Best Idx: 173.00000
+Run Time: 1198.17531
+Val Loss: 0.08721
+Val Acc: 0.98210
+Test Loss: 0.08285
+Test Acc: 0.98370
+
