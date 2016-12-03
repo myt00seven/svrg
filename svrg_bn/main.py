@@ -61,7 +61,7 @@ if __name__ == '__main__':
         print ("Run MLPBN with SVRG or StreamingSVRG or adaGrad:")
         print ("arg:\t[NUM_Rep] (1) Repeat entire program for how many times")
         print ("arg:\t[NUM_EPOCHS](500)")
-        print ("arg:\t[svrg\stream(OR streaming OR streamingsvrg)\ adagrad\ all(Parallel)](default="+GRADIENT+")")
+        print ("arg:\t[svrg\stream(OR streaming OR streamingsvrg OR ssvrg)\ adagrad\ all(Parallel)](default="+GRADIENT+")")
         print ("arg:\t[cpu\gpu\draw](default="+DEVICE+")")                
         print ("arg:\t[NUM_HIDDEN_NODES](500)")
     else:
@@ -72,8 +72,8 @@ if __name__ == '__main__':
             kwargs['num_epochs'] = sys.argv[2]
         if len(sys.argv) > 3:
             gradient_name = sys.argv[3]
-            if (gradient_name == "streaming" or gradient_name == "streamingsvrg"):
-                gradient_name = "stream"
+            if (gradient_name == "stream" or gradient_name == "streamingsvrg" or gradient_name == "ssvrg"):
+                gradient_name = "streaming"
             kwargs['gradient'] = gradient_name            
         if len(sys.argv) > 4:
             kwargs['device'] = sys.argv[4]
