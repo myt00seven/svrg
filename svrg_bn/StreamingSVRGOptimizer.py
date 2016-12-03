@@ -20,6 +20,8 @@ DEMINISHING = True
 current_factor = theano.shared(np.array(1, dtype="float32"))
 ada_factor = theano.shared(np.array(1.0, dtype="float32"))
 
+DEBUG_PARA = True # Print out the \lambda parameters
+
 # Set up parameters for Streaming SVRG
 SMOOTHNESS = 1
 
@@ -58,6 +60,15 @@ class StreamingSVRGOptimizer:
             flog.write("Adaptive:{:.2f}\n".format(self.adaptive))
             flog.write("Non Uniform Prob of mini batch:{:.2f}\n".format(self.non_uniform_prob))
 
+        if DEBUG_PARA:
+            fpara_bn_all    = open("data/log_para_BN_ALL.txt",'w')        
+            fpara_bn        = open("data/log_para_BN.txt",'w') 
+            fpara_bn_mu     = open("data/log_para_BN_mu.txt",'w') 
+            fpara_bn_lambda = open("data/log_para_BN_lambda.txt",'w') 
+            fpara_bn_mu.write(" [ \n")
+            fpara_bn_lambda.write("[ \n")
+        
+
         self.L = theano.shared(np.cast['float32'](1. / self.learning_rate))
         #self.Ls = [theano.shared(np.cast['float32'](1. / self.learning_rate)) for _  in range(num_batches)]
         self.Ls = [1. / self.learning_rate for _  in range(num_batches)]
@@ -91,6 +102,7 @@ class StreamingSVRGOptimizer:
         L_fn = self.make_L_fn(loss, params)
         start_time = time.time()
 
+        
         print("Starting training...")
         for epoch in range(n_epochs):
 
@@ -100,6 +112,21 @@ class StreamingSVRGOptimizer:
 
             if EXTRA_INFO:
                 flog.write("Epoch:{:.2f}\n".format(epoch))
+            if DEBUG_PARA:
+                fpara_bn.write("\nEpoch:{:.2f}\n".format(epoch))
+                bn_para_list = lasagne.layers.get_all_params(output_layer, trainable=False)
+                for item in bn_para_list:
+                    fpara_bn.write("%s\n" % item)
+                
+                bn_para_list = lasagne.layers.get_all_param_values(output_layer, trainable=False)
+                fpara_bn_mu.write(" %s \n" % bn_para_list[0])
+                fpara_bn_lambda.write("%s \n" % bn_para_list[1])
+                if epoch < n_epochs-1:
+                    fpara_bn_mu.write(",")
+                    fpara_bn_lambda.write(",")
+
+                # for item in bn_para_list:
+                #     fpara_bn.write("%s\n" % item)
 
             t = time.time()
 
@@ -243,6 +270,10 @@ class StreamingSVRGOptimizer:
             
 #            if X_val is not None:
 #                print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
+
+        if DEBUG_PARA:
+            fpara_bn_mu.write(" ] \n")
+            fpara_bn_lambda.write("] \n")
 
         print("Average time per epoch \t {:.3f}".format(np.mean(times)))
         return train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times
