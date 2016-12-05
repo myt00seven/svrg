@@ -28,8 +28,8 @@ momentum: 0.9 # def: 0.9
 weight_decay: 0.0005 # def: 0.0005
 
 # Directories
-label_folder: /home/data/ilsvrc12-hkl-64/labels
-mean_file: /home/data/ilsvrc12-hkl-64/misc
+label_folder: /home/data/ilsvrc12-hkl-64/labels/
+mean_file: /home/data/ilsvrc12-hkl-64/misc/
 weights_dir: /home/yma/imagenet/models/  # directory for saving weights and results
 
 # conv library
