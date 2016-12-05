@@ -58,7 +58,8 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
     for model in models.keys():
         update, update_params = models[model]
 
-        seed = int(np.random.random()*10000000)
+        # seed = int(np.random.random()*10000000)
+        seed = 19921010
 
         np.random.seed(seed)
 
