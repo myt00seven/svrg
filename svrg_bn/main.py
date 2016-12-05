@@ -49,7 +49,7 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
                 if p.poll() is None:
                     p.wait()
 
-        os.system("python draw_3_BN.py")
+        os.system("python draw_3_BN.py " + num_epochs)
 
 
     # else:
