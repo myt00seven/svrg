@@ -279,7 +279,7 @@ def main(num_epochs=NUM_EPOCHS):
 		bn_para_mu		=	np.loadtxt(PATH_DATA +"log_para_BN_mu.txt")
 		bn_para_lambda	=	np.loadtxt(PATH_DATA +"log_para_BN_lambda.txt")
 
-		EPOCH = 50
+		EPOCH = num_epochs
 		NODES = 500
 
 		count_BN_para = np.arange(EPOCH)+1

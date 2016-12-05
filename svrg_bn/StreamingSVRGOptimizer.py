@@ -65,8 +65,8 @@ class StreamingSVRGOptimizer:
             fpara_bn        = open("data/log_para_BN.txt",'w') 
             fpara_bn_mu     = open("data/log_para_BN_mu.txt",'w') 
             fpara_bn_lambda = open("data/log_para_BN_lambda.txt",'w') 
-            fpara_bn_mu.write(" [ \n")
-            fpara_bn_lambda.write("[ \n")
+            # fpara_bn_mu.write(" [ \n")
+            # fpara_bn_lambda.write("[ \n")
         
 
         self.L = theano.shared(np.cast['float32'](1. / self.learning_rate))
