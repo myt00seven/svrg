@@ -1,12 +1,12 @@
 
-train_img_dir: '/home/yma/imagenet/train/'
+train_img_dir: '/home/data/iLSVRC12/train/'
 # the dir that contains folders like n01440764, n01443537, ...
 
-val_img_dir: '/home/yma/imagenet/val/'
+val_img_dir: '/home/data/iLSVRC12/val/'
 # the dir that contains ILSVRC2012_val_00000001~50000.JPEG
 
-meta_clsloc_mat: '/home/yma/imagenet/answer/ILSVRC2013_devkit/data/meta_clsloc.mat'
-val_label_file:  '/home/yma/imagenet/answer/ILSVRC2013_devkit/data/ILSVRC2013_clsloc_validation_ground_truth.txt'
+meta_clsloc_mat: '/home/data/iLSVRC12/ILSVRC2013_devkit/data/meta_clsloc.mat'
+val_label_file:  '/home/data/iLSVRC12/ILSVRC2013_devkit/data/ILSVRC2013_clsloc_validation_ground_truth.txt'
 # although from ILSVRC2014, these 2 files still work for ILSVRC2012
 
 tar_root_dir: '/home/yma/imagenet/data64/'  # dir to store all the preprocessed files
