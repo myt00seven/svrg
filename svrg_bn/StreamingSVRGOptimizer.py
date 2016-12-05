@@ -119,11 +119,23 @@ class StreamingSVRGOptimizer:
                     fpara_bn.write("%s\n" % item)
                 
                 bn_para_list = lasagne.layers.get_all_param_values(output_layer, trainable=False)
-                fpara_bn_mu.write(" %s \n" % bn_para_list[0])
-                fpara_bn_lambda.write("%s \n" % bn_para_list[1])
-                if epoch < n_epochs-1:
-                    fpara_bn_mu.write(",")
-                    fpara_bn_lambda.write(",")
+                # fpara_bn_mu.write(" %s " % bn_para_list[0])
+                # fpara_bn_lambda.write("%s " % bn_para_list[1])
+
+                if epoch == 0 :
+                    all_mu     = np.copy(bn_para_list[0])
+                    all_lambda = np.copy(bn_para_list[1])
+                else:
+                    all_mu     = np.column_stack([all_mu , bn_para_list[0]])
+                    all_lambda = np.column_stack([all_lambda , bn_para_list[1]])
+
+                for item in bn_para_list:
+                    fpara_bn.write("%s\n" % item)
+
+
+                # if epoch < n_epochs-1:
+                #     fpara_bn_mu.write(",")
+                #     fpara_bn_lambda.write(",")
 
                 # for item in bn_para_list:
                 #     fpara_bn.write("%s\n" % item)
@@ -272,8 +284,17 @@ class StreamingSVRGOptimizer:
 #                print("  validation loss:\t\t{:.6f}".format(val_err / val_batches))
 
         if DEBUG_PARA:
-            fpara_bn_mu.write(" ] \n")
-            fpara_bn_lambda.write("] \n")
+            all_mu = np.transpose(all_mu)
+            all_lambda = np.transpose(all_lambda)
+
+            np.savetxt("data/log_para_BN_mu.txt",all_mu)
+            np.savetxt("data/log_para_BN_lambda.txt",all_lambda)
+
+            # fpara_bn_mu.write(" %s " % bn_para_list[0])
+            # fpara_bn_lambda.write("%s " % bn_para_list[1])
+
+            # fpara_bn_mu.write(" ] \n")
+            # fpara_bn_lambda.write("] \n")
 
         print("Average time per epoch \t {:.3f}".format(np.mean(times)))
         return train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times
