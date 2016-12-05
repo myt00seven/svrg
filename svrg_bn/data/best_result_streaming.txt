@@ -1,8 +1,8 @@
-Rand Seed: 748930
-Best Idx: 4.00000
-Run Time: 33.07575
-Val Loss: 0.25324
-Val Acc: 0.95360
-Test Loss: 0.26359
-Test Acc: 0.94690
+Rand Seed: 8516788
+Best Idx: 300.00000
+Run Time: 2239.28661
+Val Loss: 0.07989
+Val Acc: 0.98380
+Test Loss: 0.07805
+Test Acc: 0.98450
 
