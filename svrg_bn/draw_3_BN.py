@@ -277,12 +277,14 @@ def main(num_epochs=NUM_EPOCHS):
 
 	if DRAW_BN_PARA:
 		bn_para_mu		=	np.loadtxt(PATH_DATA +"log_para_BN_mu.txt")
-		# bn_para_lambda	=	np.loadtxt(PATH_DATA +"log_para_BN_lambda.txt")
+		bn_para_lambda	=	np.loadtxt(PATH_DATA +"log_para_BN_lambda.txt")
+
 		EPOCH = 50
 		NODES = 500
 
 		count_BN_para = np.arange(EPOCH)+1
 		bn_para_mu = bn_para_mu.reshape(EPOCH,NODES)
+		bn_para_lambda = bn_para_lambda.reshape(EPOCH,NODES)
 		# bn_para_mu.reshape(50,500)
 
 		plt.figure(13)
@@ -293,6 +295,17 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.ylabel('Value')
 		# plt.legend()
 		pylab.savefig(PATH_FIGURE+'BN_Para_MU_Values'+'.png',bbox_inches='tight')
+
+		plt.figure(14)
+		plt.title('BN Parameters \lambda')
+		for i in range(NODES):
+			plt.plot(count_BN_para, bn_para_lambda[:,i], '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+		plt.xlabel('Epoch')
+		plt.ylabel('Value')
+		# plt.legend()
+		pylab.savefig(PATH_FIGURE+'BN_Para_LAMBDA_Values'+'.png',bbox_inches='tight')
+
+		
 		
 
 	
