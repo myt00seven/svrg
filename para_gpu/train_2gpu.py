@@ -133,6 +133,10 @@ def train_net(config, private_config):
 
     print '... training'
 
+    log_iter        = open("data/log_iter.txt",'w')        
+    log_err_cost     = open("data/log_error_cost.txt",'w') 
+    log_err_rate    = open("data/log_error_rate.txt",'w') 
+
     if flag_para_load:
         # pass ipc handle and related information
         gpuarray_batch = theano.misc.pycuda_utils.to_gpuarray(
@@ -232,7 +236,9 @@ def train_net(config, private_config):
 
                 if private_config['flag_verbose']:
                     print 'training @ iter = ', num_iter
+                    log_iter.write("%d\n" % num_iter)
                     print 'training cost:', cost_ij
+                    log_err_cost.write("%f\n" % cost_ij)
 
                 if config['print_train_error']:
                     error_ij = train_error()
@@ -243,6 +249,8 @@ def train_net(config, private_config):
 
                     if private_config['flag_verbose']:
                         print 'training error rate:', error_ij
+                        log_err_rate.write("%f\n" % error_ij)
+
 
             if flag_para_load and (count < len(minibatch_range)):
                 load_send_queue.put('calc_finished')
@@ -280,6 +288,7 @@ def train_net(config, private_config):
 
         if private_config['flag_save']:
             np.save(config['weights_dir'] + 'val_record.npy', val_record)
+            np.savetxt(config['weights_dir'] + 'val_record_txt.txt', val_record)
 
         DropoutLayer.SetDropoutOn()
         ############################################
