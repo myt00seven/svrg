@@ -27,7 +27,7 @@ def get_params_crop_and_mirror(param_rand, data_shape, cropsize):
     return crop_xs, crop_ys, flag_mirror
 
 
-def crop_and_mirror(data, param_rand, flag_batch=True, cropsize=227):
+def crop_and_mirror(data, param_rand, flag_batch=True, cropsize=224):
     '''
     when param_rand == (0.5, 0.5, 0), it means no randomness
     '''
