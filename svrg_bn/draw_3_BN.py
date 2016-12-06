@@ -10,6 +10,17 @@ import sys
 
 # all the methods are with BN layers!!!
 
+def deminish(a) :
+    end_factor=0.25
+    length = len(a)
+    for i in range(length):
+        a[i] = a[i] * (1-(1-end_factor)*(i/float(length)))
+    return a
+
+def moving_average(a, n=3) :
+    ret = np.cumsum(a, dtype=float)
+    ret[n:] = ret[n:] - ret[:-n]
+    return ret[n - 1:] / n
 
 PATH_DATA_adagrad  = "data/"
 PATH_DATA_SVRG     = "data/"
@@ -18,7 +29,7 @@ PATH_DATA   = "data/"
 
 PATH_FIGURE = "figure_3/"
 
-MAXLENGTH = 199
+MAXLENGTH = 999
 STARTPOINT = 9
 LINEWIDTH = 3
 
@@ -34,6 +45,9 @@ DRAW_MLPBN_SVRG = True
 DRAW_BN_PARA = True
 
 Y_LIM_FINE_TUNING = True
+
+N_MVA = 5
+# Number of Moving Average
 
 # SPEC_L1 = 'bo-'
 # SPEC_L1 = 'g^--'
@@ -87,6 +101,7 @@ def main(num_epochs=NUM_EPOCHS):
 
 		# print mlp_sgd_acc_train
 
+		MAXLENGTH = num_epochs
 		if (MAXLENGTH>0 or STARTPOINT>0):		# Need add for epoch_times
 			if DRAW_MLPBN_ADASGD: 	count_mlpbn_ADAsgd = count_mlpbn_ADAsgd[STARTPOINT:MAXLENGTH+1]
 			if DRAW_MLPBN_streaming: 	count_mlpbn_streaming = count_mlpbn_streaming[STARTPOINT:MAXLENGTH+1]
@@ -287,41 +302,79 @@ def main(num_epochs=NUM_EPOCHS):
 		bn_para_lambda = bn_para_lambda.reshape(EPOCH,NODES)
 		# bn_para_mu.reshape(50,500)
 
-		plt.figure(13, dpi=500, figsize = (24,18))
-		plt.title('BN Parameters \mu')
-		for i in range(NODES):
-			plt.plot(count_BN_para[10:], bn_para_mu[10:,i], '-',  color=np.random.rand(3,1) , linewidth = 0.1)
-		plt.xlabel('Epoch')
-		plt.ylabel('Value')
-		# plt.legend()
-		pylab.savefig(PATH_FIGURE+'BN_Para_MU_Values'+'.png',bbox_inches='tight')
+		# plt.figure(13, dpi=500, figsize = (24,18))
+		# plt.title('BN Parameters \mu')
+		# for i in range(NODES):
+		# 	plt.plot(count_BN_para[10:], bn_para_mu[10:,i], '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+		# plt.xlabel('Epoch')
+		# plt.ylabel('Value')
+		# # plt.legend()
+		# pylab.savefig(PATH_FIGURE+'BN_Para_MU_Values'+'.png',bbox_inches='tight')
 
-		plt.figure(14, dpi=500, figsize = (24,18))
-		plt.title('BN Parameters \lambda')
-		for i in range(NODES):
-			plt.plot(count_BN_para[10:], bn_para_lambda[10:,i], '-',  color=np.random.rand(3,1) , linewidth = 0.1)
-		plt.xlabel('Epoch')
-		plt.ylabel('Value')
-		# plt.legend()
-		pylab.savefig(PATH_FIGURE+'BN_Para_LAMBDA_Values'+'.png',bbox_inches='tight')
+		# plt.figure(14, dpi=500, figsize = (24,18))
+		# plt.title('BN Parameters \lambda')
+		# for i in range(NODES):
+		# 	plt.plot(count_BN_para[10:], bn_para_lambda[10:,i], '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+		# plt.xlabel('Epoch')
+		# plt.ylabel('Value')
+		# # plt.legend()
+		# pylab.savefig(PATH_FIGURE+'BN_Para_LAMBDA_Values'+'.png',bbox_inches='tight')
 
-		plt.figure(15, dpi=500, figsize = (24,18))
-		plt.title('BN Parameters \mu difference between epoch')
-		for i in range(NODES):
-			plt.plot(count_BN_para[10:], bn_para_mu[10:,i] - bn_para_mu[9:EPOCH-1,i], '-',  color=np.random.rand(3,1) , linewidth = 0.1)
-		plt.xlabel('Epoch')
-		plt.ylabel('Value')
-		# plt.legend()
-		pylab.savefig(PATH_FIGURE+'BN_Para_MU_Values_Diff'+'.png',bbox_inches='tight')
+		# plt.figure(15, dpi=500, figsize = (24,18))
+		# plt.title('BN Parameters \mu difference between epoch')
+		# for i in range(NODES):
+		# 	plt.plot(count_BN_para[10:], bn_para_mu[10:,i] - bn_para_mu[9:EPOCH-1,i], '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+		# plt.xlabel('Epoch')
+		# plt.ylabel('Value')
+		# # plt.legend()
+		# pylab.savefig(PATH_FIGURE+'BN_Para_MU_Values_Diff'+'.png',bbox_inches='tight')
 
-		plt.figure(16, dpi=500, figsize = (24,18))
-		plt.title('BN Parameters \lambda difference between epoch')
+		# plt.figure(16, dpi=500, figsize = (24,18))
+		# plt.title('BN Parameters \lambda difference between epoch')
+		# for i in range(NODES):
+		# 	plt.plot(count_BN_para[10:], bn_para_lambda[10:,i] - bn_para_lambda[9:EPOCH -1 ,i] , '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+		# plt.xlabel('Epoch')
+		# plt.ylabel('Value')
+		# # plt.legend()
+		# pylab.savefig(PATH_FIGURE+'BN_Para_LAMBDA_Values_Diff'+'.png',bbox_inches='tight')
+
+		
+		plt.figure(17, dpi=500, figsize = (24,18))
+		plt.title('BN Parameters \mu abs mving avg difference between epoch')
 		for i in range(NODES):
-			plt.plot(count_BN_para[10:], bn_para_lambda[10:,i] - bn_para_lambda[9:EPOCH -1 ,i] , '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+			plt.plot(count_BN_para[10+N_MVA-1:], moving_average(np.abs(bn_para_mu[10:,i] - bn_para_mu[9:EPOCH-1,i]), n=N_MVA) , '-',  color=np.random.rand(3,1) , linewidth = 0.1)
 		plt.xlabel('Epoch')
 		plt.ylabel('Value')
 		# plt.legend()
-		pylab.savefig(PATH_FIGURE+'BN_Para_LAMBDA_Values_Diff'+'.png',bbox_inches='tight')
+		pylab.savefig(PATH_FIGURE+'Diff_Abs_Mva_BN_Para_MU_Values'+'.png',bbox_inches='tight')
+
+		plt.figure(18, dpi=500, figsize = (24,18))
+		plt.title('BN Parameters \lambda abs mving avg difference between epoch')
+		for i in range(NODES):
+			plt.plot(count_BN_para[10+N_MVA-1:], moving_average(np.abs(bn_para_lambda[10:,i] - bn_para_lambda[9:EPOCH-1,i]), n=N_MVA) , '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+		plt.xlabel('Epoch')
+		plt.ylabel('Value')
+		# plt.legend()
+		pylab.savefig(PATH_FIGURE+'Diff_Abs_Mva_BN_Para_LAMBDA_Values'+'.png',bbox_inches='tight')
+
+		plt.figure(19, dpi=500, figsize = (24,18))
+		plt.title('BN Parameters \mu abs mving avg difference between epoch')
+		for i in range(NODES):
+			plt.plot(count_BN_para[10+N_MVA-1:], deminish(moving_average(bn_para_mu[10:,i] - bn_para_mu[9:EPOCH-1,i], n=N_MVA  ) )  , '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+		plt.xlabel('Epoch')
+		plt.ylabel('Value')
+		# plt.legend()
+		pylab.savefig(PATH_FIGURE+'Diff_Mva_BN_Para_MU_Values_Change'+'.png',bbox_inches='tight')
+
+		plt.figure(20, dpi=500, figsize = (24,18))
+		plt.title('BN Parameters \lambda abs mving avg difference between epoch')
+		for i in range(NODES):
+			plt.plot(count_BN_para[10+N_MVA-1:], deminish(moving_average( bn_para_lambda[10:,i] - bn_para_lambda[9:EPOCH-1,i] , n=N_MVA)) , '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+		plt.xlabel('Epoch')
+		plt.ylabel('Value')
+		# plt.legend()
+		pylab.savefig(PATH_FIGURE+'Diff_Mva_BN_Para_LAMBDA_Values_Change'+'.png',bbox_inches='tight')
+		
 
 		
 		

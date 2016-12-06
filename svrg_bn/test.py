@@ -1,18 +1,23 @@
-from time import localtime
+import numpy as np
 
-activities = {8: 'Sleeping',
-              9: 'Commuting',
-              17: 'Working',
-              18: 'Commuting',
-              20: 'Eating',
-              22: 'Resting' }
+def moving_average(a, n=3) :
+    ret = np.cumsum(a, dtype=float)
+    ret[n:] = ret[n:] - ret[:-n]
+    return ret[n - 1:] / n
 
-time_now = localtime()
-hour = time_now.tm_hour
+def deminish(a) :
+    end_factor=0.5
+    length = len(a)
+    for i in range(length):
+        a[i] = a[i] * (1-(1-end_factor)*(i/float(length)))
+    return a
 
-for activity_time in sorted(activities.keys()):
-    if hour < activity_time:
-        print activities[activity_time]
-        break
-else:
-    print 'Unknown, AFK or sleeping!'
+
+# a = np.arange(20)
+a=[1,1,1,1,1,1,1,1,1]
+# a=[1,-1,1,-1,1]
+print a
+# print moving_average(a, n=3)
+# print np.abs(a)
+print deminish(a)
+

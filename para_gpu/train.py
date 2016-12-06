@@ -158,6 +158,7 @@ def train_net(config):
               (epoch, this_validation_error * 100.))
         val_record.append([this_validation_error, this_validation_loss])
         np.save(config['weights_dir'] + 'val_record.npy', val_record)
+        np.savetxt(config['weights_dir'] + 'val_record_txt.txt', val_record)
 
         DropoutLayer.SetDropoutOn()
         ############################################

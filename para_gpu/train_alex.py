@@ -80,6 +80,8 @@ def train_net(config):
 
 
     # Start Training Loop
+    ferror_rate = open("data/error_rate.txt",'w')
+
     print '... start 0 epoch'
     epoch = 0
     step_idx = 0
@@ -136,6 +138,7 @@ def train_net(config):
                 print 'training cost:', cost_ij
                 if config['print_train_error']:
                     print 'training error rate:', train_error()
+                    # ferror_rate.write('training error rate:', train_error())
 
             if flag_para_load and (count < len(minibatch_range)):
                 load_send_queue.put('calc_finished')
