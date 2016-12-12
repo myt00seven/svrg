@@ -4,7 +4,8 @@ import numpy as np
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-def load_dataset():
+def load_dataset(if_data_shake):
+    
     if sys.version_info[0] == 2:
         from urllib import urlretrieve
     else:
@@ -30,16 +31,20 @@ def load_dataset():
         with gzip.open('mnist/' + filename, 'rb') as f:
             data = np.frombuffer(f.read(), np.uint8, offset=8)
         return data
+            
+    if if_data_shake==0:
+        # We can now download and read the training and test set images and labels.
+        X_train = load_mnist_images('train-images-idx3-ubyte.gz')
+        y_train = load_mnist_labels('train-labels-idx1-ubyte.gz')
+        X_test = load_mnist_images('t10k-images-idx3-ubyte.gz')
+        y_test = load_mnist_labels('t10k-labels-idx1-ubyte.gz')
 
-    # We can now download and read the training and test set images and labels.
-    X_train = load_mnist_images('train-images-idx3-ubyte.gz')
-    y_train = load_mnist_labels('train-labels-idx1-ubyte.gz')
-    X_test = load_mnist_images('t10k-images-idx3-ubyte.gz')
-    y_test = load_mnist_labels('t10k-labels-idx1-ubyte.gz')
+        # We reserve the last 10000 training examples for validation.
+        X_train, X_val = X_train[:-10000], X_train[-10000:]
+        y_train, y_val = y_train[:-10000], y_train[-10000:]
 
-    # We reserve the last 10000 training examples for validation.
-    X_train, X_val = X_train[:-10000], X_train[-10000:]
-    y_train, y_val = y_train[:-10000], y_train[-10000:]
+    else:
+
 
     return X_train, y_train, X_val, y_val, X_test, y_test
 

@@ -22,13 +22,14 @@ NUM_HIDDEN_UNITS = 500
 GRADIENT = "svrg"
 MODEL = "MLPBN"
 IF_SWITCH = 0
+IF_DATA_SHAKE = 0
 
 # as the training set of MNIST is 50000, set the batch size to 100 means it taks 500 batches to go through the entire training set
 
 def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HIDDEN_UNITS, if_switch = IF_SWITCH):
 
     print("Loading data...")
-    X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
+    X_train, y_train, X_val, y_val, X_test, y_test = load_dataset(IF_DATA_SHAKE)
 
     # n_epochs = 1000
     # n_hidden = 500
@@ -100,15 +101,15 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
             test_error  = test_error1 + test_error2
             epoch_times  = epoch_times1  + epoch_times2
 
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_loss_train.txt",train_error)
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_loss_val.txt",map(itemgetter(0), validation_error))
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_loss_gradient_number.txt",map(itemgetter(1),validation_error))
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_loss_test.txt",test_error)
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_train.txt",train_error)
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_val.txt",map(itemgetter(0), validation_error))
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_gradient_number.txt",map(itemgetter(1),validation_error))
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_test.txt",test_error)
 
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_acc_train.txt",acc_train)
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_acc_val.txt",acc_val)
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_acc_test.txt",acc_test)
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_epoch_times.txt",epoch_times)
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_acc_train.txt",acc_train)
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_acc_val.txt",acc_val)
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_acc_test.txt",acc_test)
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_epoch_times.txt",epoch_times)
             
         else:
             train_err, val_err = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
