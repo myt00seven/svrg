@@ -67,6 +67,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
 
     for model in models.keys():
         update, update_params = models[model]
+        set_switch = [0.2, 0.4 ,0.6,0.8]
 
         # seed = int(np.random.random()*10000000)
         seed = 19921010
@@ -77,40 +78,46 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
         file_seed.write("Rand Seed: {:d}\n".format(seed))
         file_seed.close()
 
+
+
         network = neuralclassifier.NeuralClassifier(n_input=X_train.shape[1], n_hidden=n_hidden, n_output=10)
 
         if if_switch:
-            switch_ratio = 0.8
-            for model1 in model_adagrad.keys():
-                update1, update_params1 = model_adagrad[model1] 
-                train_err1, val_err1, acc_train1, acc_val1, acc_test1, test_error1, epoch_times1 = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
-                                           n_epochs=int(n_epochs*switch_ratio), lambd=0.1,
-                                           objective=objective, update=update1, batch_size=BATCH_SIZE, gradient=model1,  **update_params1 )
 
-            for model2 in model_streaming.keys():
-                update2, update_params2 = model_streaming[model2]
-                train_err2, val_err2, acc_train2, acc_val2, acc_test2, test_error2, epoch_times2 = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
-                                           n_epochs=int(n_epochs*(1-switch_ratio)), lambd=0.1,
-                                           objective=objective, update=update2, batch_size=BATCH_SIZE, gradient=model2,  **update_params2 )
+            for switch_ratio in set_switch:
+            
+                network1 = neuralclassifier.NeuralClassifier(n_input=X_train.shape[1], n_hidden=n_hidden, n_output=10)                
+                
+                for model1 in model_adagrad.keys():
+                    update1, update_params1 = model_adagrad[model1] 
+                    train_err1, val_err1, acc_train1, acc_val1, acc_test1, test_error1, epoch_times1 = network1.train(X_train, y_train, X_val, y_val, X_test, y_test,
+                                               n_epochs=int(n_epochs*switch_ratio), lambd=0.1,
+                                               objective=objective, update=update1, batch_size=BATCH_SIZE, gradient=model1,  **update_params1 )
 
-            train_err  = train_err1 + train_err2
-            val_err  = val_err1 + val_err2
-            acc_train  = acc_train1 + acc_train2
-            acc_val  = acc_val1 + acc_val2
-            acc_test  = acc_test1 + acc_test2
-            test_error  = test_error1 + test_error2            
-            time_diff = int(n_epochs*switch_ratio)-1
-            [x+time_diff for x in epoch_times2]
-            epoch_times  = epoch_times1  + epoch_times2
+                for model2 in model_streaming.keys():
+                    update2, update_params2 = model_streaming[model2]
+                    train_err2, val_err2, acc_train2, acc_val2, acc_test2, test_error2, epoch_times2 = network1.train(X_train, y_train, X_val, y_val, X_test, y_test,
+                                               n_epochs=int(n_epochs*(1-switch_ratio)), lambd=0.1,
+                                               objective=objective, update=update2, batch_size=BATCH_SIZE, gradient=model2,  **update_params2 )
 
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_train.txt",train_err)
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_val.txt",val_err)            
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_test.txt",test_error)
+                train_err  = train_err1 + train_err2
+                val_err  = val_err1 + val_err2
+                acc_train  = acc_train1 + acc_train2
+                acc_val  = acc_val1 + acc_val2
+                acc_test  = acc_test1 + acc_test2
+                test_error  = test_error1 + test_error2            
+                time_diff = int(n_epochs*switch_ratio)-1
+                [x+time_diff for x in epoch_times2]
+                epoch_times  = epoch_times1  + epoch_times2
 
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_acc_train.txt",acc_train)
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_acc_val.txt",acc_val)
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_acc_test.txt",acc_test)
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_epoch_times.txt",epoch_times)
+                np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_train.txt",train_err)
+                np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_val.txt",val_err)            
+                np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_test.txt",test_error)
+
+                np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_acc_train.txt",acc_train)
+                np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_acc_val.txt",acc_val)
+                np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_acc_test.txt",acc_test)
+                np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_epoch_times.txt",epoch_times)
             
         else:
             train_err, val_err = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
