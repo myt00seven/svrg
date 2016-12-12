@@ -1,8 +1,8 @@
 Rand Seed: 19921010
-Best Idx: 0.00000
-Run Time: 9.55707
-Val Loss: 0.40993
-Val Acc: 0.96710
-Test Loss: 0.41367
-Test Acc: 0.96330
+Best Idx: 8.00000
+Run Time: 26.43988
+Val Loss: 0.21096
+Val Acc: 0.98210
+Test Loss: 0.21175
+Test Acc: 0.98240
 

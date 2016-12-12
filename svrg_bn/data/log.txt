@@ -1,3 +1,3004 @@
 Learning Rate:0.10
 Adaptive:0.00
 Non Uniform Prob of mini batch:20.00
+Epoch:0.00
+No. of epoch: 0
+No. of batch: 0
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 1
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 2
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 3
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 4
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 5
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 6
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 7
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 8
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 9
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 10
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 11
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 12
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 13
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 14
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 15
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 16
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 17
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 18
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 19
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 20
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 21
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 22
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 23
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 24
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 25
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 26
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 27
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 28
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 29
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 30
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 31
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 32
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 33
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 34
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 35
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 36
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 37
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 38
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 39
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 40
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 41
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 42
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 43
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 44
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 45
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 46
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 47
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 48
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 49
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 50
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 51
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 52
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 53
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 54
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 55
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 56
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 57
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 58
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 59
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 60
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 61
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 62
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 63
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 64
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 65
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 66
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 67
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 68
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 69
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 70
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 71
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 72
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 73
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 74
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 75
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 76
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 77
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 78
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 79
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 80
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 81
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 82
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 83
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 84
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 85
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 86
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 87
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 88
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 89
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 90
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 91
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 92
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 93
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 94
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 95
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 96
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 97
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 98
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 99
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 100
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 101
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 102
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 103
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 104
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 105
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 106
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 107
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 108
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 109
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 110
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 111
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 112
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 113
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 114
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 115
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 116
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 117
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 118
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 119
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 120
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 121
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 122
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 123
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 124
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 125
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 126
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 127
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 128
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 129
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 130
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 131
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 132
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 133
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 134
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 135
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 136
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 137
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 138
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 139
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 140
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 141
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 142
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 143
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 144
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 145
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 146
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 147
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 148
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 149
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 150
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 151
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 152
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 153
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 154
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 155
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 156
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 157
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 158
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 159
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 160
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 161
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 162
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 163
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 164
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 165
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 166
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 167
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 168
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 169
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 170
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 171
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 172
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 173
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 174
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 175
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 176
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 177
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 178
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 179
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 180
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 181
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 182
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 183
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 184
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 185
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 186
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 187
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 188
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 189
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 190
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 191
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 192
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 193
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 194
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 195
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 196
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 197
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 198
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 199
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 200
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 201
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 202
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 203
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 204
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 205
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 206
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 207
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 208
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 209
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 210
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 211
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 212
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 213
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 214
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 215
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 216
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 217
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 218
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 219
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 220
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 221
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 222
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 223
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 224
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 225
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 226
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 227
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 228
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 229
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 230
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 231
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 232
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 233
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 234
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 235
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 236
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 237
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 238
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 239
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 240
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 241
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 242
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 243
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 244
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 245
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 246
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 247
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 248
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 249
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 250
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 251
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 252
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 253
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 254
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 255
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 256
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 257
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 258
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 259
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 260
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 261
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 262
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 263
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 264
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 265
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 266
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 267
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 268
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 269
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 270
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 271
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 272
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 273
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 274
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 275
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 276
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 277
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 278
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 279
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 280
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 281
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 282
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 283
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 284
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 285
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 286
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 287
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 288
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 289
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 290
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 291
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 292
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 293
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 294
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 295
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 296
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 297
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 298
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 299
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 300
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 301
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 302
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 303
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 304
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 305
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 306
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 307
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 308
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 309
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 310
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 311
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 312
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 313
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 314
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 315
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 316
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 317
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 318
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 319
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 320
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 321
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 322
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 323
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 324
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 325
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 326
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 327
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 328
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 329
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 330
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 331
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 332
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 333
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 334
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 335
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 336
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 337
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 338
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 339
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 340
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 341
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 342
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 343
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 344
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 345
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 346
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 347
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 348
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 349
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 350
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 351
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 352
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 353
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 354
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 355
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 356
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 357
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 358
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 359
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 360
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 361
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 362
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 363
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 364
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 365
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 366
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 367
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 368
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 369
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 370
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 371
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 372
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 373
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 374
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 375
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 376
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 377
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 378
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 379
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 380
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 381
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 382
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 383
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 384
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 385
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 386
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 387
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 388
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 389
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 390
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 391
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 392
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 393
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 394
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 395
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 396
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 397
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 398
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 399
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 400
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 401
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 402
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 403
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 404
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 405
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 406
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 407
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 408
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 409
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 410
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 411
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 412
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 413
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 414
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 415
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 416
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 417
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 418
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 419
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 420
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 421
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 422
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 423
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 424
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 425
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 426
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 427
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 428
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 429
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 430
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 431
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 432
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 433
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 434
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 435
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 436
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 437
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 438
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 439
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 440
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 441
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 442
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 443
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 444
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 445
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 446
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 447
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 448
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 449
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 450
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 451
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 452
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 453
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 454
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 455
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 456
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 457
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 458
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 459
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 460
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 461
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 462
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 463
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 464
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 465
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 466
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 467
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 468
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 469
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 470
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 471
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 472
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 473
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 474
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 475
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 476
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 477
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 478
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 479
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 480
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 481
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 482
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 483
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 484
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 485
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 486
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 487
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 488
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 489
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 490
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 491
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 492
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 493
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 494
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 495
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 496
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 497
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 498
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
+No. of epoch: 0
+No. of batch: 499
+ori_learning_rate:  0.1
+current_factor:  1.0
+learning_rate:  0.1
+learning_rate(after adptive):  0.1
