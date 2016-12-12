@@ -31,7 +31,7 @@ def load_dataset(if_data_shake):
         with gzip.open('mnist/' + filename, 'rb') as f:
             data = np.frombuffer(f.read(), np.uint8, offset=8)
         return data
-            
+
     if if_data_shake==0:
         # We can now download and read the training and test set images and labels.
         X_train = load_mnist_images('train-images-idx3-ubyte.gz')
@@ -44,7 +44,7 @@ def load_dataset(if_data_shake):
         y_train, y_val = y_train[:-10000], y_train[-10000:]
 
     else:
-
+        X_train=1
 
     return X_train, y_train, X_val, y_val, X_test, y_test
 
