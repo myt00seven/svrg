@@ -44,6 +44,7 @@ from lasagne import nonlinearities
 
 from lasagne.layers.base import Layer
 
+DEFAULT_ALPHA= 0.1
 
 __all__ = [
     "LocalResponseNormalization2DLayer",
@@ -163,7 +164,7 @@ class BatchNormLayer(Layer):
            Batch Normalization: Accelerating Deep Network Training by Reducing
            Internal Covariate Shift. http://arxiv.org/abs/1502.03167.
     """
-    def __init__(self, incoming, axes='auto', epsilon=1e-4, alpha=0.1,
+    def __init__(self, incoming, axes='auto', epsilon=1e-4, alpha=DEFAULT_ALPHA,
                  beta=init.Constant(0), gamma=init.Constant(1),
                  mean=init.Constant(0), inv_std=init.Constant(1), **kwargs):
         super(BatchNormLayer, self).__init__(incoming, **kwargs)
@@ -236,7 +237,7 @@ class BatchNormLayer(Layer):
             # and make sure they end up in the graph without participating in
             # the computation (this way their default_update will be collected
             # and applied, but the computation will be optimized away):
-            mean += 0 * running_mean
+            mean += 0 * running_mean    
             inv_std += 0 * running_inv_std
 
         # prepare dimshuffle pattern inserting broadcastable axes as needed

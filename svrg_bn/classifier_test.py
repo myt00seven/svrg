@@ -22,7 +22,7 @@ NUM_HIDDEN_UNITS = 500
 GRADIENT = "svrg"
 MODEL = "MLPBN"
 IF_SWITCH = 0
-IF_DATA_SHAKE = 0 # give 1 -1 1 -1 data
+IF_DATA_SHAKE = 1 # give 1 -1 1 -1 data
 
 # as the training set of MNIST is 50000, set the batch size to 100 means it taks 500 batches to go through the entire training set
 

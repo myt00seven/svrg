@@ -62,8 +62,8 @@ def load_dataset(if_data_shake):
                 dd = -10
             else:
                 dd = 10
-            mm = np.ones((28,28))
-            x_train[i] = mm*dd
+            mm = np.ones(784)
+            X_train[i] = mm*dd
 
     return X_train, y_train, X_val, y_val, X_test, y_test
 

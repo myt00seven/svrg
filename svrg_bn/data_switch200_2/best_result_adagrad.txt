@@ -1,0 +1,29 @@
+Rand Seed: 19921010
+Best Idx: 39.00000
+Run Time: 136.79642
+Val Loss: 0.14321
+Val Acc: 0.98310
+Test Loss: 0.14548
+Test Acc: 0.98270
+
+Best Idx: 80.00000
+Run Time: 306.10260
+Val Loss: 0.12651
+Val Acc: 0.98210
+Test Loss: 0.12724
+Test Acc: 0.98220
+
+Best Idx: 116.00000
+Run Time: 440.66067
+Val Loss: 0.11368
+Val Acc: 0.98250
+Test Loss: 0.12103
+Test Acc: 0.98040
+
+Best Idx: 159.00000
+Run Time: 533.52750
+Val Loss: 0.10959
+Val Acc: 0.98270
+Test Loss: 0.11457
+Test Acc: 0.98060
+
