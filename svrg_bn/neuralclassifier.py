@@ -135,4 +135,4 @@ class NeuralClassifier:
         np.savetxt("data/""_mlpbn"+str(MLPBN)+"_"+ gradient +"_epoch_times.txt",epoch_times)
         
 
-        return train_error, validation_error
+        return train_error, validation_error, acc_train, acc_val, acc_test, test_error, epoch_times

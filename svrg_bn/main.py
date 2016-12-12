@@ -10,10 +10,11 @@ DEVICE = "cpu"
 GRADIENT = "adagrad"
 NUM_HIDDEN_NODES ="500"
 NUM_REP = "1"
+IF_SWITCH = 0
 
 methods = ["svrg", "streaming", "adagrad"]
 
-def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES, gradient = GRADIENT, num_rep = NUM_REP):
+def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES, gradient = GRADIENT, num_rep = NUM_REP, if_switch = IF_SWITCH):
     device = device.lower()
     str_device = "THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 "
     
@@ -24,7 +25,7 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
     for loop_idx in range(0,int(num_rep)):
         if gradient != "all":
             if (device == "cpu") or ("gpu" in device):
-                os.system(str_device + " python classifier_test.py mlpbn "+ gradient + " "+num_epochs+" "+num_hidden_nodes)
+                os.system(str_device + " python classifier_test.py mlpbn "+ gradient + " "+num_epochs+" "+if_switch+" "+num_hidden_nodes)
         elif gradient == "all":
             devices = ["GPU0", "GPU1", "GPU2"]
             combos = dict(zip(methods, devices))
@@ -35,7 +36,7 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
                 device = combos[method]
                 device = device.lower()
                 str_device = "THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 "
-                command = str_device + " python classifier_test.py mlpbn "+ method + " "+num_epochs+" "+num_hidden_nodes
+                command = str_device + " python classifier_test.py mlpbn "+ method + " "+num_epochs+" "+if_switch+" "+num_hidden_nodes
                 #command = 'help'
                 print(command)
 
@@ -63,6 +64,7 @@ if __name__ == '__main__':
         print ("arg:\t[NUM_EPOCHS](500)")
         print ("arg:\t[svrg\stream(OR streaming OR streamingsvrg OR ssvrg)\ adagrad\ all(Parallel)](default="+GRADIENT+")")
         print ("arg:\t[cpu\gpu\draw](default="+DEVICE+")")                
+        print ("arg:\t[y \ n\ 1\ 0](If switch method, default is adagrad to ssvrg")                
         print ("arg:\t[NUM_HIDDEN_NODES](500)")
     else:
         kwargs = {}
@@ -78,5 +80,12 @@ if __name__ == '__main__':
         if len(sys.argv) > 4:
             kwargs['device'] = sys.argv[4]
         if len(sys.argv) > 5:
-            kwargs['num_hidden_nodes'] = sys.argv[5]
+            tag_switch = sys.argv[5]
+            if (tag_switch == "y" or tag_switch == "yes" or tag_switch == "1"):
+                tag_switch = 1
+            else:
+                tag_switch = 0
+            kwargs['if_switch'] = sys.argv[5]
+        if len(sys.argv) > 6:
+            kwargs['num_hidden_nodes'] = sys.argv[6]
         main(**kwargs)

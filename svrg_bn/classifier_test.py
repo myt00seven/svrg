@@ -21,10 +21,11 @@ NUM_EPOCHS = 500
 NUM_HIDDEN_UNITS = 500
 GRADIENT = "svrg"
 MODEL = "MLPBN"
+IF_SWITCH = 0
 
 # as the training set of MNIST is 50000, set the batch size to 100 means it taks 500 batches to go through the entire training set
 
-def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HIDDEN_UNITS):
+def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HIDDEN_UNITS, if_switch = IF_SWITCH):
 
     print("Loading data...")
     X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
@@ -40,12 +41,20 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
     if gradient == "svrg" or gradient == "all":
         models.update({ 'svrg': (custom_svrg1, {'learning_rate': 0.01, 'm': 50, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
     if gradient == "streaming" or gradient == "all": # It is StreamingSVRG
-        models.update({ 'streaming': (custom_streaming_svrg1, {'learning_rate': 0.1, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.04, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
+        models.update({ 'streaming': (custom_streaming_svrg1, {'learning_rate': 0.1, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.10, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
         #k_s is the ratio of how many batches are used in this iteration of StreamingSVRG
     if gradient == "adagrad" or gradient == "all":        
         models.update( { 'adagrad': (custom_adagrad, {'learning_rate': l_r, 'eps': 1.0e-8, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
 
-
+    model_adagrad={}
+    model_adagrad.update({
+        'adagrad': (custom_adagrad, {'learning_rate': l_r, 'eps': 1.0e-8, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor})
+    })
+    
+    
+    model_streaming={}
+    model_streaming.update({'streaming':(custom_streaming_svrg1, {'learning_rate': 0.1, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.10, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor})    })
+    
 
     # print(models.keys())
 
@@ -69,7 +78,40 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
 
         network = neuralclassifier.NeuralClassifier(n_input=X_train.shape[1], n_hidden=n_hidden, n_output=10)
 
-        train_err, val_err = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
+        if if_switch:
+            switch_ratio = 0.2
+            for model1 in model_adagrad.keys():
+                update1, update_params1 = model_adagrad[model1] 
+                train_err1, val_err1, acc_train1, acc_val1, acc_test1, test_error1, epoch_times1 = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
+                                           n_epochs=int(n_epochs*switch_ratio), lambd=0.1,
+                                           objective=objective, update=update1, batch_size=BATCH_SIZE, gradient=model1,  **update_params1 )
+
+            for model2 in model_streaming.keys():
+                update2, update_params2 = model_streaming[model2]
+                train_err2, val_err2, acc_train2, acc_val2, acc_test2, test_error2, epoch_times2 = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
+                                           n_epochs=int(n_epochs*(1-switch_ratio)), lambd=0.1,
+                                           objective=objective, update=update2, batch_size=BATCH_SIZE, gradient=model2,  **update_params2 )
+
+            train_err  = train_err1 + train_err2
+            val_err  = val_err1 + val_err2
+            acc_train  = acc_train1 + acc_train2
+            acc_val  = acc_val1 + acc_val2
+            acc_test  = acc_test1 + acc_test2
+            test_error  = test_error1 + test_error2
+            epoch_times  = epoch_times1  + epoch_times2
+
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_loss_train.txt",train_error)
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_loss_val.txt",map(itemgetter(0), validation_error))
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_loss_gradient_number.txt",map(itemgetter(1),validation_error))
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_loss_test.txt",test_error)
+
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_acc_train.txt",acc_train)
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_acc_val.txt",acc_val)
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_acc_test.txt",acc_test)
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_"+str(MLPBN)+"_"+ gradient +"_epoch_times.txt",epoch_times)
+            
+        else:
+            train_err, val_err = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
                                            n_epochs=n_epochs, lambd=0.1,
                                            objective=objective, update=update, batch_size=BATCH_SIZE, gradient=model,  **update_params )
 
@@ -89,6 +131,9 @@ if __name__ == '__main__':
         kwargs['gradient'] = sys.argv[2]
     if len(sys.argv) > 3:
         kwargs['n_epochs'] = int(sys.argv[3])
-    if len(sys.argv) > 4:
-        kwargs['n_hidden'] = int(sys.argv[4])
+    if len(sys.argv) > 4:   
+        kwargs['if_switch'] = int(sys.argv[4])
+    if len(sys.argv) > 5:
+        kwargs['n_hidden'] = int(sys.argv[5])
+
     main(**kwargs)    
