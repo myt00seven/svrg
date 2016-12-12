@@ -106,7 +106,7 @@ def train(X_train, Y_train, X_val, Y_val, X_test, y_test, train_fn, val_fn, n_ep
                 val_acc += acc
                 val_batches += 1
        
-            validation_error.append((val_err / val_batches, gradient_times))
+            validation_error.append((val_err / val_batches))
             acc_val.append(val_acc / val_batches)
 
         test_err = 0

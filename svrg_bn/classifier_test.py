@@ -102,8 +102,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
             epoch_times  = epoch_times1  + epoch_times2
 
             np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_train.txt",train_err)
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_val.txt",map(itemgetter(0), val_err))
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_gradient_number.txt",map(itemgetter(1),val_err))
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_val.txt",val_err)            
             np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_test.txt",test_error)
 
             np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_acc_train.txt",acc_train)
