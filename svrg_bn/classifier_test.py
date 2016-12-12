@@ -22,7 +22,7 @@ NUM_HIDDEN_UNITS = 500
 GRADIENT = "svrg"
 MODEL = "MLPBN"
 IF_SWITCH = 0
-IF_DATA_SHAKE = 0
+IF_DATA_SHAKE = 0 # give 1 -1 1 -1 data
 
 # as the training set of MNIST is 50000, set the batch size to 100 means it taks 500 batches to go through the entire training set
 
@@ -42,7 +42,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
     if gradient == "svrg" or gradient == "all":
         models.update({ 'svrg': (custom_svrg1, {'learning_rate': 0.01, 'm': 50, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
     if gradient == "streaming" or gradient == "all": # It is StreamingSVRG
-        models.update({ 'streaming': (custom_streaming_svrg1, {'learning_rate': 0.1, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.10, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
+        models.update({ 'streaming': (custom_streaming_svrg1, {'learning_rate': 0.01, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.10, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
         #k_s is the ratio of how many batches are used in this iteration of StreamingSVRG
     if gradient == "adagrad" or gradient == "all":        
         models.update( { 'adagrad': (custom_adagrad, {'learning_rate': l_r, 'eps': 1.0e-8, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor}) })
@@ -54,7 +54,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
     
     
     model_streaming={}
-    model_streaming.update({'streaming':(custom_streaming_svrg1, {'learning_rate': 0.1, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.10, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor})    })
+    model_streaming.update({'streaming':(custom_streaming_svrg1, {'learning_rate': 0.01, 'm': 50, 'k_s_0': 1.0, 'k_s_ratio':1.10, 'adaptive': False, 'adaptive_half_life_period':20, 'ada_factor':ada_factor})    })
     
 
     # print(models.keys())
@@ -106,8 +106,8 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
                 acc_val  = acc_val1 + acc_val2
                 acc_test  = acc_test1 + acc_test2
                 test_error  = test_error1 + test_error2            
-                time_diff = int(n_epochs*switch_ratio)-1
-                [x+time_diff for x in epoch_times2]
+                time_diff = epoch_times1[int(n_epochs*switch_ratio)-1]
+                epoch_times2 = [x+time_diff for x in epoch_times2]
                 epoch_times  = epoch_times1  + epoch_times2
 
                 np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_train.txt",train_err)

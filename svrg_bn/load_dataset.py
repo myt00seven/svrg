@@ -44,7 +44,26 @@ def load_dataset(if_data_shake):
         y_train, y_val = y_train[:-10000], y_train[-10000:]
 
     else:
-        X_train=1
+        X_train = load_mnist_images('train-images-idx3-ubyte.gz')
+        y_train = load_mnist_labels('train-labels-idx1-ubyte.gz')
+        X_test = load_mnist_images('t10k-images-idx3-ubyte.gz')
+        y_test = load_mnist_labels('t10k-labels-idx1-ubyte.gz')
+
+        # We reserve the last 10000 training examples for validation.
+        X_train, X_val = X_train[:-10000], X_train[-10000:]
+        y_train, y_val = y_train[:-10000], y_train[-10000:]
+
+        X_train.flags.writeable = True
+        y_train.flags.writeable = True
+
+        for i in range(50000):
+            y_train[i] = i%2
+            if i%2 ==0:
+                dd = -10
+            else:
+                dd = 10
+            mm = np.ones((28,28))
+            x_train[i] = mm*dd
 
     return X_train, y_train, X_val, y_val, X_test, y_test
 

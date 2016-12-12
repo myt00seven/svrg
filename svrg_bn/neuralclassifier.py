@@ -12,13 +12,16 @@ from SVRGOptimizer import SVRGOptimizer
 from StreamingSVRGOptimizer import StreamingSVRGOptimizer
 from operator import itemgetter
 
+import my_bn_layer
+
 MLPBN= True
 
 def classifier_network(input_var, n_input, n_hidden, n_output):
 
     input_layer  =  lasagne.layers.InputLayer(shape=(None, n_input), input_var=input_var)
     hidden_layer =  lasagne.layers.DenseLayer(input_layer, num_units=n_hidden,nonlinearity=lasagne.nonlinearities.rectify)        
-    hidden_layer2 = lasagne.layers.batch_norm(lasagne.layers.DenseLayer(hidden_layer, num_units=n_hidden,nonlinearity=lasagne.nonlinearities.rectify))
+    # hidden_layer2 = lasagne.layers.batch_norm(lasagne.layers.DenseLayer(hidden_layer, num_units=n_hidden,nonlinearity=lasagne.nonlinearities.rectify))
+    hidden_layer2 = my_bn_layer.batch_norm(lasagne.layers.DenseLayer(hidden_layer, num_units=n_hidden,nonlinearity=lasagne.nonlinearities.rectify))
     output_layer =  lasagne.layers.DenseLayer(hidden_layer2, num_units=n_output, nonlinearity=lasagne.nonlinearities.softmax)                    
 
     return input_layer, hidden_layer, output_layer

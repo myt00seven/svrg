@@ -30,8 +30,10 @@ PATH_DATA   = "data/"
 PATH_FIGURE = "figure_3/"
 
 MAXLENGTH = 800
-STARTPOINT = 9
+STARTPOINT = 1
 LINEWIDTH = 3
+
+LINEWIDTH_BN = 1
 
 DRAW_COMPARE = False
 
@@ -59,7 +61,7 @@ SPEC_L2 = 'c:'
 SPEC_L3 = 'r-.'
 SPEC_L4 = 'g--'
 
-NUM_EPOCHS = 1000
+NUM_EPOCHS = 10
 
 def main(num_epochs=NUM_EPOCHS):
 
@@ -295,7 +297,7 @@ def main(num_epochs=NUM_EPOCHS):
 		bn_para_lambda	=	np.loadtxt(PATH_DATA +"log_para_BN_lambda.txt")
 
 		EPOCH = num_epochs
-		NODES = 500
+		NODES = 150
 
 		count_BN_para = np.arange(EPOCH)+1
 		bn_para_mu = bn_para_mu.reshape(EPOCH,NODES)
@@ -305,7 +307,7 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(13, dpi=500, figsize = (24,18))
 		plt.title('BN Parameters \mu')
 		for i in range(NODES):
-			plt.plot(count_BN_para[10:900], bn_para_mu[10:900,i], '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+			plt.plot(count_BN_para[2:], bn_para_mu[2:,i], '-',  color=np.random.rand(3,1) , linewidth = LINEWIDTH_BN)
 		plt.xlabel('Epoch')
 		plt.ylabel('Value')
 		# plt.legend()
@@ -314,7 +316,7 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(14, dpi=500, figsize = (24,18))
 		plt.title('BN Parameters \lambda')
 		for i in range(NODES):
-			plt.plot(count_BN_para[10:], bn_para_lambda[10:,i], '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+			plt.plot(count_BN_para[2:], bn_para_lambda[2:,i], '-',  color=np.random.rand(3,1) , linewidth = LINEWIDTH_BN)
 		plt.xlabel('Epoch')
 		plt.ylabel('Value')
 		# plt.legend()
@@ -323,7 +325,7 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(15, dpi=500, figsize = (24,18))
 		plt.title('BN Parameters \mu difference between epoch')
 		for i in range(NODES):
-			plt.plot(count_BN_para[10:], bn_para_mu[10:,i] - bn_para_mu[9:EPOCH-1,i], '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+			plt.plot(count_BN_para[2:], bn_para_mu[2:,i] - bn_para_mu[1:EPOCH-1,i], '-',  color=np.random.rand(3,1) , linewidth = LINEWIDTH_BN)
 		plt.xlabel('Epoch')
 		plt.ylabel('Value')
 		# plt.legend()
@@ -332,7 +334,7 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(16, dpi=500, figsize = (24,18))
 		plt.title('BN Parameters \lambda difference between epoch')
 		for i in range(NODES):
-			plt.plot(count_BN_para[10:], bn_para_lambda[10:,i] - bn_para_lambda[9:EPOCH -1 ,i] , '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+			plt.plot(count_BN_para[2:], bn_para_lambda[2:,i] - bn_para_lambda[1:EPOCH -1 ,i] , '-',  color=np.random.rand(3,1) , linewidth = LINEWIDTH_BN)
 		plt.xlabel('Epoch')
 		plt.ylabel('Value')
 		# plt.legend()
@@ -342,7 +344,7 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(17, dpi=500, figsize = (24,18))
 		plt.title('BN Parameters \mu abs mving avg difference between epoch')
 		for i in range(NODES):
-			plt.plot(count_BN_para[10+N_MVA-1:], moving_average(np.abs(bn_para_mu[10:,i] - bn_para_mu[9:EPOCH-1,i]), n=N_MVA) , '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+			plt.plot(count_BN_para[2+N_MVA-1:], moving_average(np.abs(bn_para_mu[2:,i] - bn_para_mu[1:EPOCH-1,i]), n=N_MVA) , '-',  color=np.random.rand(3,1) , linewidth = LINEWIDTH_BN)
 		plt.xlabel('Epoch')
 		plt.ylabel('Value')
 		# plt.legend()
@@ -351,7 +353,7 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(18, dpi=500, figsize = (24,18))
 		plt.title('BN Parameters \lambda abs mving avg difference between epoch')
 		for i in range(NODES):
-			plt.plot(count_BN_para[10+N_MVA-1:], moving_average(np.abs(bn_para_lambda[10:,i] - bn_para_lambda[9:EPOCH-1,i]), n=N_MVA) , '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+			plt.plot(count_BN_para[2+N_MVA-1:], moving_average(np.abs(bn_para_lambda[2:,i] - bn_para_lambda[1:EPOCH-1,i]), n=N_MVA) , '-',  color=np.random.rand(3,1) , linewidth = LINEWIDTH_BN)
 		plt.xlabel('Epoch')
 		plt.ylabel('Value')
 		# plt.legend()
@@ -360,7 +362,7 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(19, dpi=500, figsize = (24,18))
 		plt.title('BN Parameters \mu abs mving avg difference between epoch')
 		for i in range(NODES):
-			plt.plot(count_BN_para[10+N_MVA-1:], deminish(moving_average(bn_para_mu[10:,i] - bn_para_mu[9:EPOCH-1,i], n=N_MVA  ) )  , '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+			plt.plot(count_BN_para[2+N_MVA-1:], deminish(moving_average(bn_para_mu[2:,i] - bn_para_mu[1:EPOCH-1,i], n=N_MVA  ) )  , '-',  color=np.random.rand(3,1) , linewidth = LINEWIDTH_BN)
 		plt.xlabel('Epoch')
 		plt.ylabel('Value')
 		# plt.legend()
@@ -369,7 +371,7 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(20, dpi=500, figsize = (24,18))
 		plt.title('BN Parameters \lambda abs mving avg difference between epoch')
 		for i in range(NODES):
-			plt.plot(count_BN_para[10+N_MVA-1:], deminish(moving_average( bn_para_lambda[10:,i] - bn_para_lambda[9:EPOCH-1,i] , n=N_MVA)) , '-',  color=np.random.rand(3,1) , linewidth = 0.1)
+			plt.plot(count_BN_para[2+N_MVA-1:], deminish(moving_average( bn_para_lambda[2:,i] - bn_para_lambda[1:EPOCH-1,i] , n=N_MVA)) , '-',  color=np.random.rand(3,1) , linewidth = LINEWIDTH_BN)
 		plt.xlabel('Epoch')
 		plt.ylabel('Value')
 		# plt.legend()

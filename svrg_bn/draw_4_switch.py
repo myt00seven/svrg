@@ -29,17 +29,16 @@ PATH_DATA   = "data/"
 
 PATH_FIGURE = "figure_switch/"
 
-MAXLENGTH = 100
-STARTPOINT = 1
+STARTPOINT = 5
 LINEWIDTH = 2
 
 DRAW_COMPARE = True
 DRAW_Line1 = True
 LOAD_SVRG = True
 
-DRAW_Line1 = False
-DRAW_Line2 = False
-DRAW_Line3 = False
+DRAW_Line1 = True
+DRAW_Line2 = True
+DRAW_Line3 = True
 DRAW_Line4 = True
 
 Y_LIM_FINE_TUNING = True
@@ -56,7 +55,7 @@ SPEC_L2 = 'c:'
 SPEC_L3 = 'r-.'
 SPEC_L4 = 'g--'
 
-NUM_EPOCHS = 1000
+NUM_EPOCHS = 200
 
 def main(num_epochs=NUM_EPOCHS):
 
@@ -95,6 +94,9 @@ def main(num_epochs=NUM_EPOCHS):
 		if DRAW_Line4: Line4_acc_test=		np.loadtxt(PATH_DATA +"ratio_0.8_acc_test.txt")
 		if DRAW_Line4: Line4_loss_test=		np.loadtxt(PATH_DATA +"ratio_0.8_loss_test.txt")
 		if DRAW_Line4: Line4_epoch_times=		np.loadtxt(PATH_DATA +"ratio_0.8_epoch_times.txt")
+
+
+		if DRAW_Line1: np.ones(num_epochs*0.8)*Line1_epoch_times[39]
 
 		# count_Line1 = 200
 		# count_Line2 = 200
