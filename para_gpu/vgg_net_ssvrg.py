@@ -287,7 +287,27 @@ def compile_models(model, config, flag_top_5=False):
             for param_i in params]
 
     print '...set up the update method'
-    if config['use_momentum']:
+    if config['use_ssvrg']:
+        assert len(weight_types) == len(params)
+
+        for param_i, grad_i, vel_i, weight_type in \
+                zip(params, grads, vels, weight_types):
+
+            if weight_type == 'W':
+                real_grad = grad_i + eta * param_i
+                real_lr = lr
+            elif weight_type == 'b':
+                real_grad = grad_i
+                real_lr = 2. * lr
+            else:
+                raise TypeError("Weight Type Error")
+
+                vel_i_next = mu * vel_i - real_lr * real_grad
+
+            updates.append((vel_i, vel_i_next))
+            updates.append((param_i, param_i + vel_i_next))
+
+    elif config['use_momentum']:
 
         assert len(weight_types) == len(params)
 

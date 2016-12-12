@@ -237,8 +237,10 @@ def train_net(config, private_config):
                 if private_config['flag_verbose']:
                     print 'training @ iter = ', num_iter
                     log_iter.write("%d\n" % num_iter)
+                    log_iter.flush()
                     print 'training cost:', cost_ij
                     log_err_cost.write("%f\n" % cost_ij)
+                    log_err_cost.flush()
 
                 if config['print_train_error']:
                     error_ij = train_error()
@@ -250,6 +252,7 @@ def train_net(config, private_config):
                     if private_config['flag_verbose']:
                         print 'training error rate:', error_ij
                         log_err_rate.write("%f\n" % error_ij)
+                        log_err_rate.flush()
 
 
             if flag_para_load and (count < len(minibatch_range)):

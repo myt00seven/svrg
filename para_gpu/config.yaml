@@ -16,11 +16,12 @@ use_data_layer: False
 rand_crop: True # def: True
 shuffle: False # def: False, if shuffle the batches
 para_load: True
-batch_crop_mirror: True  # if False, do randomly on each image separately
+batch_crop_mirror: False  # if False, do randomly on each image separately
 cropsize: 224
 
 # Momentum
 use_momentum : True # def: True
+use_ssvrg : False # def: True
 use_nesterov_momentum: False # def: False
 momentum: 0.9 # def: 0.9
 
