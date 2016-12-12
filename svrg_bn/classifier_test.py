@@ -99,6 +99,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
             acc_val  = acc_val1 + acc_val2
             acc_test  = acc_test1 + acc_test2
             test_error  = test_error1 + test_error2
+            epoch_times2 = epoch_times2 + epoch_times1[int(n_epochs*switch_ratio)-1]
             epoch_times  = epoch_times1  + epoch_times2
 
             np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_train.txt",train_err)

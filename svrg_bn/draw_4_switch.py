@@ -27,27 +27,23 @@ PATH_DATA_SVRG     = "data/"
 PATH_DATA_Stream   = "data/"
 PATH_DATA   = "data/"
 
-PATH_FIGURE = "figure_3/"
+PATH_FIGURE = "figure_switch/"
 
-MAXLENGTH = 800
-STARTPOINT = 9
-LINEWIDTH = 3
+MAXLENGTH = 100
+STARTPOINT = 1
+LINEWIDTH = 2
 
-DRAW_COMPARE = False
-
-LOAD_SGD = True
+DRAW_COMPARE = True
+DRAW_Line1 = True
 LOAD_SVRG = True
 
-DRAW_Line1 = True
-DRAW_Line2 = True
-DRAW_Line3 = True
+DRAW_Line1 = False
+DRAW_Line2 = False
+DRAW_Line3 = False
 DRAW_Line4 = True
-
-DRAW_BN_PARA = True
 
 Y_LIM_FINE_TUNING = True
 
-N_MVA = 5
 # Number of Moving Average
 
 # SPEC_L1 = 'bo-'
@@ -68,37 +64,37 @@ def main(num_epochs=NUM_EPOCHS):
 
 		str_epochs = str(num_epochs)
 
-		if LOAD_SGD: Line0.2_acc_test=			np.loadtxt(PATH_DATA +"ratio_0.2_acc_test.txt")
-		if LOAD_SGD: Line0.2_acc_train=		np.loadtxt(PATH_DATA +"ratio_0.2_acc_train.txt")
-		if LOAD_SGD: Line0.2_acc_val=			np.loadtxt(PATH_DATA +"ratio_0.2_acc_val.txt")
-		if LOAD_SGD: Line0.2_loss_test=		np.loadtxt(PATH_DATA +"ratio_0.2_loss_test.txt")
-		if LOAD_SGD: Line0.2_loss_train=		np.loadtxt(PATH_DATA +"ratio_0.2_loss_train.txt")
-		if LOAD_SGD: Line0.2_loss_val=			np.loadtxt(PATH_DATA +"ratio_0.2_loss_val.txt")
-		if LOAD_SGD: Line0.2_epoch_times=			np.loadtxt(PATH_DATA +"ratio_0.2_epoch_times.txt")
+		if DRAW_Line1: Line1_acc_test=			np.loadtxt(PATH_DATA +"ratio_0.2_acc_test.txt")
+		if DRAW_Line1: Line1_acc_train=		np.loadtxt(PATH_DATA +"ratio_0.2_acc_train.txt")
+		if DRAW_Line1: Line1_acc_val=			np.loadtxt(PATH_DATA +"ratio_0.2_acc_val.txt")
+		if DRAW_Line1: Line1_loss_test=		np.loadtxt(PATH_DATA +"ratio_0.2_loss_test.txt")
+		if DRAW_Line1: Line1_loss_train=		np.loadtxt(PATH_DATA +"ratio_0.2_loss_train.txt")
+		if DRAW_Line1: Line1_loss_val=			np.loadtxt(PATH_DATA +"ratio_0.2_loss_val.txt")
+		if DRAW_Line1: Line1_epoch_times=			np.loadtxt(PATH_DATA +"ratio_0.2_epoch_times.txt")
 
-		if LOAD_SVRG: Line2_acc_train=		np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_acc_train.txt")
-		if LOAD_SVRG: Line2_acc_val=			np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_acc_val.txt")
-		if LOAD_SVRG: Line2_loss_train=		np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_loss_train.txt")
-		if LOAD_SVRG: Line2_loss_val=			np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_loss_val.txt")
-		if LOAD_SVRG: Line2_acc_test=			np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_acc_test.txt")
-		if LOAD_SVRG: Line2_loss_test=		np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_loss_test.txt")
-		if LOAD_SVRG: Line2_epoch_times=		np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_epoch_times.txt")
-		
-		if LOAD_SVRG: Line3_acc_train=		np.loadtxt(PATH_DATA +"ratio_0.6_acc_train.txt")
-		if LOAD_SVRG: Line3_acc_val=		np.loadtxt(PATH_DATA +"ratio_0.6_acc_val.txt")
-		if LOAD_SVRG: Line3_loss_train=		np.loadtxt(PATH_DATA +"ratio_0.6_loss_train.txt")
-		if LOAD_SVRG: Line3_loss_val=		np.loadtxt(PATH_DATA +"ratio_0.6_loss_val.txt")
-		if LOAD_SVRG: Line3_acc_test=		np.loadtxt(PATH_DATA +"ratio_0.6_acc_test.txt")
-		if LOAD_SVRG: Line3_loss_test=		np.loadtxt(PATH_DATA +"ratio_0.6_loss_test.txt")
-		if LOAD_SVRG: Line3_epoch_times=		np.loadtxt(PATH_DATA +"ratio_0.6_epoch_times.txt")
+		if DRAW_Line2: Line2_acc_train=		np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_acc_train.txt")
+		if DRAW_Line2: Line2_acc_val=			np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_acc_val.txt")
+		if DRAW_Line2: Line2_loss_train=		np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_loss_train.txt")
+		if DRAW_Line2: Line2_loss_val=			np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_loss_val.txt")
+		if DRAW_Line2: Line2_acc_test=			np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_acc_test.txt")
+		if DRAW_Line2: Line2_loss_test=		np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_loss_test.txt")
+		if DRAW_Line2: Line2_epoch_times=		np.loadtxt(PATH_DATA_SVRG +"ratio_0.4_epoch_times.txt")
 
-		if LOAD_SVRG: Line4_acc_train=		np.loadtxt(PATH_DATA +"ratio_0.8_acc_train.txt")
-		if LOAD_SVRG: Line4_acc_val=		np.loadtxt(PATH_DATA +"ratio_0.8_acc_val.txt")
-		if LOAD_SVRG: Line4_loss_train=		np.loadtxt(PATH_DATA +"ratio_0.8_loss_train.txt")
-		if LOAD_SVRG: Line4_loss_val=		np.loadtxt(PATH_DATA +"ratio_0.8_loss_val.txt")
-		if LOAD_SVRG: Line4_acc_test=		np.loadtxt(PATH_DATA +"ratio_0.8_acc_test.txt")
-		if LOAD_SVRG: Line4_loss_test=		np.loadtxt(PATH_DATA +"ratio_0.8_loss_test.txt")
-		if LOAD_SVRG: Line4_epoch_times=		np.loadtxt(PATH_DATA +"ratio_0.8_epoch_times.txt")
+		if DRAW_Line3: Line3_acc_train=		np.loadtxt(PATH_DATA +"ratio_0.6_acc_train.txt")
+		if DRAW_Line3: Line3_acc_val=		np.loadtxt(PATH_DATA +"ratio_0.6_acc_val.txt")
+		if DRAW_Line3: Line3_loss_train=		np.loadtxt(PATH_DATA +"ratio_0.6_loss_train.txt")
+		if DRAW_Line3: Line3_loss_val=		np.loadtxt(PATH_DATA +"ratio_0.6_loss_val.txt")
+		if DRAW_Line3: Line3_acc_test=		np.loadtxt(PATH_DATA +"ratio_0.6_acc_test.txt")
+		if DRAW_Line3: Line3_loss_test=		np.loadtxt(PATH_DATA +"ratio_0.6_loss_test.txt")
+		if DRAW_Line3: Line3_epoch_times=		np.loadtxt(PATH_DATA +"ratio_0.6_epoch_times.txt")
+
+		if DRAW_Line4: Line4_acc_train=		np.loadtxt(PATH_DATA +"ratio_0.8_acc_train.txt")
+		if DRAW_Line4: Line4_acc_val=		np.loadtxt(PATH_DATA +"ratio_0.8_acc_val.txt")
+		if DRAW_Line4: Line4_loss_train=		np.loadtxt(PATH_DATA +"ratio_0.8_loss_train.txt")
+		if DRAW_Line4: Line4_loss_val=		np.loadtxt(PATH_DATA +"ratio_0.8_loss_val.txt")
+		if DRAW_Line4: Line4_acc_test=		np.loadtxt(PATH_DATA +"ratio_0.8_acc_test.txt")
+		if DRAW_Line4: Line4_loss_test=		np.loadtxt(PATH_DATA +"ratio_0.8_loss_test.txt")
+		if DRAW_Line4: Line4_epoch_times=		np.loadtxt(PATH_DATA +"ratio_0.8_epoch_times.txt")
 
 		# count_Line1 = 200
 		# count_Line2 = 200
@@ -107,7 +103,7 @@ def main(num_epochs=NUM_EPOCHS):
 		if DRAW_Line1: 	count_Line1 = np.arange(Line1_acc_val.shape[0])+1
 		if DRAW_Line2: 	count_Line2 = np.arange(Line2_acc_train.shape[0])+1
 		if DRAW_Line3: count_Line3 = np.arange(Line3_acc_val.shape[0])+1
-		if DRAW_Line4: count_Line4 = np.a4ange(Line4_acc_val.shape[0])+1
+		if DRAW_Line4: count_Line4 = np.arange(Line4_acc_val.shape[0])+1
 
 
 		# print mlp_sgd_acc_train
@@ -162,6 +158,7 @@ def main(num_epochs=NUM_EPOCHS):
 			if DRAW_Line4: Line4_epoch_times = Line4_epoch_times[STARTPOINT:MAXLENGTH+1]
 
 
+		# print Line1_acc_test
 
 
 		#PLOT 
@@ -242,7 +239,7 @@ def main(num_epochs=NUM_EPOCHS):
 		if DRAW_Line1: plt.plot(count_Line1, Line1_loss_test, SPEC_L1 ,label="Switch 20%", linewidth = LINEWIDTH)
 		if DRAW_Line2: 	plt.plot(count_Line2, Line2_loss_test, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
 		if DRAW_Line3: 	plt.plot(count_Line3, Line3_loss_test, SPEC_L3 ,label="Switch 60%", linewidth = LINEWIDTH)
-		if DRAW_Line4: 	plt.plot(count_Line4, Line3_loss_test, SPEC_L4 ,label="Switch 80%", linewidth = LINEWIDTH)
+		if DRAW_Line4: 	plt.plot(count_Line4, Line4_loss_test, SPEC_L4 ,label="Switch 80%", linewidth = LINEWIDTH)
 
 		plt.xlabel('# Epochs')
 		plt.ylabel('Loss')
