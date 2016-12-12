@@ -80,7 +80,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
         network = neuralclassifier.NeuralClassifier(n_input=X_train.shape[1], n_hidden=n_hidden, n_output=10)
 
         if if_switch:
-            switch_ratio = 0.2
+            switch_ratio = 0.8
             for model1 in model_adagrad.keys():
                 update1, update_params1 = model_adagrad[model1] 
                 train_err1, val_err1, acc_train1, acc_val1, acc_test1, test_error1, epoch_times1 = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
@@ -101,9 +101,9 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
             test_error  = test_error1 + test_error2
             epoch_times  = epoch_times1  + epoch_times2
 
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_train.txt",train_error)
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_val.txt",map(itemgetter(0), validation_error))
-            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_gradient_number.txt",map(itemgetter(1),validation_error))
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_train.txt",train_err)
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_val.txt",map(itemgetter(0), val_err))
+            np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_gradient_number.txt",map(itemgetter(1),val_err))
             np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_loss_test.txt",test_error)
 
             np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_acc_train.txt",acc_train)
