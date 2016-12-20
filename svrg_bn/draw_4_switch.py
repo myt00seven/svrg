@@ -57,6 +57,10 @@ SPEC_L4 = 'g--'
 
 NUM_EPOCHS = 200
 
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+plt.xkcd()
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 def main(num_epochs=NUM_EPOCHS):
 
 	if DRAW_COMPARE:
@@ -168,10 +172,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(1)
 		plt.title('Loss of Validation Set')
 		
-		if DRAW_Line1: 	plt.plot(count_Line1, Line1_loss_val, SPEC_L1 ,label="Switch 20%",  linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(count_Line2, Line2_loss_val, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3:	plt.plot(count_Line3, Line3_loss_val, SPEC_L3 ,label="Switch 60%",  linewidth = LINEWIDTH)
-		if DRAW_Line4:	plt.plot(count_Line4, Line4_loss_val, SPEC_L4 ,label="Switch 80%",  linewidth = LINEWIDTH)
+		if DRAW_Line1: 	plt.plot(count_Line1, Line1_loss_val, SPEC_L1 ,label="Switch after 20%",  linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(count_Line2, Line2_loss_val, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3:	plt.plot(count_Line3, Line3_loss_val, SPEC_L3 ,label="Switch after 60%",  linewidth = LINEWIDTH)
+		if DRAW_Line4:	plt.plot(count_Line4, Line4_loss_val, SPEC_L4 ,label="Switch after 80%",  linewidth = LINEWIDTH)
 
 		plt.xlabel('# Epochs')
 		plt.ylabel('Loss')
@@ -182,10 +186,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(2)
 		plt.title('Predict Accuracy of Validation Set')
 		
-		if DRAW_Line1: 	plt.plot(count_Line1, Line1_acc_val, SPEC_L1 ,label="Switch 20%", linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(count_Line2, Line2_acc_val, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3:	plt.plot(count_Line3, Line3_acc_val, SPEC_L3 ,label="Switch 60%",  linewidth = LINEWIDTH)
-		if DRAW_Line4:	plt.plot(count_Line4, Line4_acc_val, SPEC_L4 ,label="Switch 80%",  linewidth = LINEWIDTH)
+		if DRAW_Line1: 	plt.plot(count_Line1, Line1_acc_val, SPEC_L1 ,label="Switch after 20%", linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(count_Line2, Line2_acc_val, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3:	plt.plot(count_Line3, Line3_acc_val, SPEC_L3 ,label="Switch after 60%",  linewidth = LINEWIDTH)
+		if DRAW_Line4:	plt.plot(count_Line4, Line4_acc_val, SPEC_L4 ,label="Switch after 80%",  linewidth = LINEWIDTH)
 
 		plt.xlabel('# Epochs')
 		plt.ylabel('Predict Accuracy')
@@ -196,10 +200,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(3)
 		plt.title('Loss of Training Set')
 		# if Y_LIM_FINE_TUNING:	pylab.ylim([-0.01,0.25])	
-		if DRAW_Line1: 	plt.plot(count_Line1, Line1_loss_train, SPEC_L1 ,label="Switch 20%", linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(count_Line2, Line2_loss_train, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3:	plt.plot(count_Line3, Line3_loss_train, SPEC_L3 ,label="Switch 60%", linewidth = LINEWIDTH)
-		if DRAW_Line4:	plt.plot(count_Line4, Line4_loss_train, SPEC_L4 ,label="Switch 80%", linewidth = LINEWIDTH)
+		if DRAW_Line1: 	plt.plot(count_Line1, Line1_loss_train, SPEC_L1 ,label="Switch after 20%", linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(count_Line2, Line2_loss_train, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3:	plt.plot(count_Line3, Line3_loss_train, SPEC_L3 ,label="Switch after 60%", linewidth = LINEWIDTH)
+		if DRAW_Line4:	plt.plot(count_Line4, Line4_loss_train, SPEC_L4 ,label="Switch after 80%", linewidth = LINEWIDTH)
 
 		plt.xlabel('# Epochs')
 		plt.ylabel('Loss')
@@ -210,10 +214,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(4)
 		plt.title('Predict Accuracy of Training Set')
 		if Y_LIM_FINE_TUNING:	pylab.ylim([0.93,1.01])	
-		if DRAW_Line1: 	plt.plot(count_Line1, Line1_acc_train, SPEC_L1 ,label="Switch 20%", linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(count_Line2, Line2_acc_train, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3:	plt.plot(count_Line3, Line3_acc_train, SPEC_L3 ,label="Switch 60%",  linewidth = LINEWIDTH)
-		if DRAW_Line4:	plt.plot(count_Line4, Line4_acc_train, SPEC_L4 ,label="Switch 80%",  linewidth = LINEWIDTH)
+		if DRAW_Line1: 	plt.plot(count_Line1, Line1_acc_train, SPEC_L1 ,label="Switch after 20%", linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(count_Line2, Line2_acc_train, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3:	plt.plot(count_Line3, Line3_acc_train, SPEC_L3 ,label="Switch after 60%",  linewidth = LINEWIDTH)
+		if DRAW_Line4:	plt.plot(count_Line4, Line4_acc_train, SPEC_L4 ,label="Switch after 80%",  linewidth = LINEWIDTH)
 
 		plt.xlabel('# Epochs')
 		plt.ylabel('Predict Accuracy')
@@ -224,10 +228,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(5)
 		plt.title('Predict Accuracy of Test Set')
 		
-		if DRAW_Line1: plt.plot(count_Line1, Line1_acc_test, SPEC_L1 ,label="Switch 20%", linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(count_Line2, Line2_acc_test, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3: 	plt.plot(count_Line3, Line3_acc_test, SPEC_L3 ,label="Switch 60%", linewidth = LINEWIDTH)
-		if DRAW_Line4: 	plt.plot(count_Line4, Line4_acc_test, SPEC_L4 ,label="Switch 80%", linewidth = LINEWIDTH)
+		if DRAW_Line1: plt.plot(count_Line1, Line1_acc_test, SPEC_L1 ,label="Switch after 20%", linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(count_Line2, Line2_acc_test, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3: 	plt.plot(count_Line3, Line3_acc_test, SPEC_L3 ,label="Switch after 60%", linewidth = LINEWIDTH)
+		if DRAW_Line4: 	plt.plot(count_Line4, Line4_acc_test, SPEC_L4 ,label="Switch after 80%", linewidth = LINEWIDTH)
 
 		plt.xlabel('# Epochs')
 		plt.ylabel('Predict Accuracy')
@@ -238,10 +242,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(6)
 		plt.title('Loss of Test Set')
 		
-		if DRAW_Line1: plt.plot(count_Line1, Line1_loss_test, SPEC_L1 ,label="Switch 20%", linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(count_Line2, Line2_loss_test, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3: 	plt.plot(count_Line3, Line3_loss_test, SPEC_L3 ,label="Switch 60%", linewidth = LINEWIDTH)
-		if DRAW_Line4: 	plt.plot(count_Line4, Line4_loss_test, SPEC_L4 ,label="Switch 80%", linewidth = LINEWIDTH)
+		if DRAW_Line1: plt.plot(count_Line1, Line1_loss_test, SPEC_L1 ,label="Switch after 20%", linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(count_Line2, Line2_loss_test, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3: 	plt.plot(count_Line3, Line3_loss_test, SPEC_L3 ,label="Switch after 60%", linewidth = LINEWIDTH)
+		if DRAW_Line4: 	plt.plot(count_Line4, Line4_loss_test, SPEC_L4 ,label="Switch after 80%", linewidth = LINEWIDTH)
 
 		plt.xlabel('# Epochs')
 		plt.ylabel('Loss')
@@ -256,10 +260,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(7)
 		plt.title('Loss of Validation Set')
 		
-		if DRAW_Line1: 	plt.plot(Line1_epoch_times, Line1_loss_val, SPEC_L1 ,label="Switch 20%",  linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_loss_val, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3:	plt.plot(Line3_epoch_times, Line3_loss_val, SPEC_L3 ,label="Switch 60%",  linewidth = LINEWIDTH)
-		if DRAW_Line4:	plt.plot(Line4_epoch_times, Line4_loss_val, SPEC_L4 ,label="Switch 80%",  linewidth = LINEWIDTH)
+		if DRAW_Line1: 	plt.plot(Line1_epoch_times, Line1_loss_val, SPEC_L1 ,label="Switch after 20%",  linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_loss_val, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3:	plt.plot(Line3_epoch_times, Line3_loss_val, SPEC_L3 ,label="Switch after 60%",  linewidth = LINEWIDTH)
+		if DRAW_Line4:	plt.plot(Line4_epoch_times, Line4_loss_val, SPEC_L4 ,label="Switch after 80%",  linewidth = LINEWIDTH)
 
 		plt.xlabel('Seconds')
 		plt.ylabel('Loss')
@@ -270,10 +274,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(8)
 		plt.title('Predict Accuracy of Validation Set')
 		
-		if DRAW_Line1: 	plt.plot(Line1_epoch_times, Line1_acc_val, SPEC_L1 ,label="Switch 20%", linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_acc_val, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3:	plt.plot(Line3_epoch_times, Line3_acc_val, SPEC_L3 ,label="Switch 60%",  linewidth = LINEWIDTH)
-		if DRAW_Line4:	plt.plot(Line4_epoch_times, Line4_acc_val, SPEC_L4 ,label="Switch 80%",  linewidth = LINEWIDTH)
+		if DRAW_Line1: 	plt.plot(Line1_epoch_times, Line1_acc_val, SPEC_L1 ,label="Switch after 20%", linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_acc_val, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3:	plt.plot(Line3_epoch_times, Line3_acc_val, SPEC_L3 ,label="Switch after 60%",  linewidth = LINEWIDTH)
+		if DRAW_Line4:	plt.plot(Line4_epoch_times, Line4_acc_val, SPEC_L4 ,label="Switch after 80%",  linewidth = LINEWIDTH)
 
 		plt.xlabel('Seconds')
 		plt.ylabel('Predict Accuracy')
@@ -285,10 +289,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.title('Loss of Training Set')
 		# if Y_LIM_FINE_TUNING:	pylab.ylim([-0.01,0.25])
 		
-		if DRAW_Line1: 	plt.plot(Line1_epoch_times, Line1_loss_train, SPEC_L1 ,label="Switch 20%", linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_loss_train, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3:	plt.plot(Line3_epoch_times, Line3_loss_train, SPEC_L3 ,label="Switch 60%", linewidth = LINEWIDTH)
-		if DRAW_Line4:	plt.plot(Line4_epoch_times, Line4_loss_train, SPEC_L4 ,label="Switch 80%", linewidth = LINEWIDTH)
+		if DRAW_Line1: 	plt.plot(Line1_epoch_times, Line1_loss_train, SPEC_L1 ,label="Switch after 20%", linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_loss_train, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3:	plt.plot(Line3_epoch_times, Line3_loss_train, SPEC_L3 ,label="Switch after 60%", linewidth = LINEWIDTH)
+		if DRAW_Line4:	plt.plot(Line4_epoch_times, Line4_loss_train, SPEC_L4 ,label="Switch after 80%", linewidth = LINEWIDTH)
 
 		plt.xlabel('Seconds')
 		plt.ylabel('Loss')
@@ -300,10 +304,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.title('Predict Accuracy of Training Set')
 		if Y_LIM_FINE_TUNING:	pylab.ylim([0.93,1.01])
 		
-		if DRAW_Line1: 	plt.plot(Line1_epoch_times, Line1_acc_train, SPEC_L1 ,label="Switch 20%", linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_acc_train, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3:	plt.plot(Line3_epoch_times, Line3_acc_train, SPEC_L3 ,label="Switch 60%",  linewidth = LINEWIDTH)
-		if DRAW_Line4:	plt.plot(Line4_epoch_times, Line4_acc_train, SPEC_L4 ,label="Switch 80%",  linewidth = LINEWIDTH)
+		if DRAW_Line1: 	plt.plot(Line1_epoch_times, Line1_acc_train, SPEC_L1 ,label="Switch after 20%", linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_acc_train, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3:	plt.plot(Line3_epoch_times, Line3_acc_train, SPEC_L3 ,label="Switch after 60%",  linewidth = LINEWIDTH)
+		if DRAW_Line4:	plt.plot(Line4_epoch_times, Line4_acc_train, SPEC_L4 ,label="Switch after 80%",  linewidth = LINEWIDTH)
 
 		plt.xlabel('Seconds')
 		plt.ylabel('Predict Accuracy')
@@ -314,10 +318,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(11)
 		plt.title('Predict Accuracy of Test Set')
 		
-		if DRAW_Line1: plt.plot(Line1_epoch_times, Line1_acc_test, SPEC_L1 ,label="Switch 20%", linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_acc_test, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3: 	plt.plot(Line3_epoch_times, Line3_acc_test, SPEC_L3 ,label="Switch 60%", linewidth = LINEWIDTH)
-		if DRAW_Line4: 	plt.plot(Line4_epoch_times, Line4_acc_test, SPEC_L4 ,label="Switch 80%", linewidth = LINEWIDTH)
+		if DRAW_Line1: plt.plot(Line1_epoch_times, Line1_acc_test, SPEC_L1 ,label="Switch after 20%", linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_acc_test, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3: 	plt.plot(Line3_epoch_times, Line3_acc_test, SPEC_L3 ,label="Switch after 60%", linewidth = LINEWIDTH)
+		if DRAW_Line4: 	plt.plot(Line4_epoch_times, Line4_acc_test, SPEC_L4 ,label="Switch after 80%", linewidth = LINEWIDTH)
 
 		plt.xlabel('Seconds')
 		plt.ylabel('Predict Accuracy')
@@ -328,10 +332,10 @@ def main(num_epochs=NUM_EPOCHS):
 		plt.figure(12)
 		plt.title('Loss of Test Set')
 		
-		if DRAW_Line1: plt.plot(Line1_epoch_times, Line1_loss_test, SPEC_L1 ,label="Switch 20%", linewidth = LINEWIDTH)
-		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_loss_test, SPEC_L2 ,label="Switch 40%",  linewidth = LINEWIDTH)
-		if DRAW_Line3: 	plt.plot(Line3_epoch_times, Line3_loss_test, SPEC_L3 ,label="Switch 60%", linewidth = LINEWIDTH)
-		if DRAW_Line4: 	plt.plot(Line4_epoch_times, Line4_loss_test, SPEC_L4 ,label="Switch 80%", linewidth = LINEWIDTH)
+		if DRAW_Line1: plt.plot(Line1_epoch_times, Line1_loss_test, SPEC_L1 ,label="Switch after 20%", linewidth = LINEWIDTH)
+		if DRAW_Line2: 	plt.plot(Line2_epoch_times, Line2_loss_test, SPEC_L2 ,label="Switch after 40%",  linewidth = LINEWIDTH)
+		if DRAW_Line3: 	plt.plot(Line3_epoch_times, Line3_loss_test, SPEC_L3 ,label="Switch after 60%", linewidth = LINEWIDTH)
+		if DRAW_Line4: 	plt.plot(Line4_epoch_times, Line4_loss_test, SPEC_L4 ,label="Switch after 80%", linewidth = LINEWIDTH)
 
 		plt.xlabel('Seconds')
 		plt.ylabel('Loss')

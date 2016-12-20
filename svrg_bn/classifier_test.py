@@ -120,7 +120,7 @@ def main(model=MODEL,gradient = GRADIENT, n_epochs=NUM_EPOCHS, n_hidden = NUM_HI
                 np.savetxt("data/"+"ratio_"+str(switch_ratio)+"_epoch_times.txt",epoch_times)
             
         else:
-            train_err, val_err = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
+            train_err, val_err, acc_train, acc_val, acc_test, test_error, epoch_times = network.train(X_train, y_train, X_val, y_val, X_test, y_test,
                                            n_epochs=n_epochs, lambd=0.1,
                                            objective=objective, update=update, batch_size=BATCH_SIZE, gradient=model,  **update_params )
 

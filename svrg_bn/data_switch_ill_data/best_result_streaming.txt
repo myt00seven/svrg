@@ -1,0 +1,28 @@
+Best Idx: 11.00000
+Run Time: 94.43102
+Val Loss: 5.34327
+Val Acc: 0.05700
+Test Loss: 5.31337
+Test Acc: 0.02290
+
+Best Idx: 8.00000
+Run Time: 68.97291
+Val Loss: 5.97215
+Val Acc: 0.05080
+Test Loss: 5.95826
+Test Acc: 0.01890
+
+Best Idx: 5.00000
+Run Time: 28.34625
+Val Loss: 5.79457
+Val Acc: 0.05350
+Test Loss: 5.77580
+Test Acc: 0.02020
+
+Best Idx: 30.00000
+Run Time: 250.36742
+Val Loss: 6.30788
+Val Acc: 0.03420
+Test Loss: 6.27764
+Test Acc: 0.02300
+
