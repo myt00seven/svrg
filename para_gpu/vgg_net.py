@@ -52,14 +52,16 @@ class VggNet(object):
         params += convpool_layer1_1.params
         weight_types += convpool_layer1_1.weight_type
 
-        convpool_layer1_2 = ConvPoolLayer(input=convpool_layer1_1.output,
+        convpool_layer1_2 = 
+                            batch_norm(ConvPoolLayer(input=convpool_layer1_1.output,
                                         image_shape=(64, 224, 224, batch_size), 
                                         filter_shape=(64, 3, 3, 64), 
                                         convstride=1, padsize=1, group=1, 
                                         poolsize=2, poolstride=2, 
                                         bias_init=0.0, lrn=False,
                                         lib_conv=lib_conv,
-                                        )
+                                        ))
+        
         self.layers.append(convpool_layer1_2)
         params += convpool_layer1_2.params
         weight_types += convpool_layer1_2.weight_type
@@ -287,8 +289,7 @@ def compile_models(model, config, flag_top_5=False):
             for param_i in params]
 
     print '...set up the update method'
-    if config['use_momentum']:
-
+    if config['use_ssvrg']:
         assert len(weight_types) == len(params)
 
         for param_i, grad_i, vel_i, weight_type in \
@@ -303,23 +304,43 @@ def compile_models(model, config, flag_top_5=False):
             else:
                 raise TypeError("Weight Type Error")
 
-            if config['use_nesterov_momentum']:
-                vel_i_next = mu ** 2 * vel_i - (1 + mu) * real_lr * real_grad
-            else:
-                vel_i_next = mu * vel_i - real_lr * real_grad
-
+            vel_i_next = mu ** 2 * vel_i - (1 + mu) * real_lr * real_grad
+    
             updates.append((vel_i, vel_i_next))
             updates.append((param_i, param_i + vel_i_next))
-
     else:
-        for param_i, grad_i, weight_type in zip(params, grads, weight_types):
-            if weight_type == 'W':
-                updates.append((param_i,
-                                param_i - lr * grad_i - eta * lr * param_i))
-            elif weight_type == 'b':
-                updates.append((param_i, param_i - 2 * lr * grad_i))
-            else:
-                raise TypeError("Weight Type Error")
+        if config['use_momentum']:
+            assert len(weight_types) == len(params)
+
+            for param_i, grad_i, vel_i, weight_type in \
+                    zip(params, grads, vels, weight_types):
+
+                if weight_type == 'W':
+                    real_grad = grad_i + eta * param_i
+                    real_lr = lr
+                elif weight_type == 'b':
+                    real_grad = grad_i
+                    real_lr = 2. * lr
+                else:
+                    raise TypeError("Weight Type Error")
+
+                if config['use_nesterov_momentum']:
+                    vel_i_next = mu ** 2 * vel_i - (1 + mu) * real_lr * real_grad
+                else:
+                    vel_i_next = mu * vel_i - real_lr * real_grad
+
+                updates.append((vel_i, vel_i_next))
+                updates.append((param_i, param_i + vel_i_next))
+
+        else:
+            for param_i, grad_i, weight_type in zip(params, grads, weight_types):
+                if weight_type == 'W':
+                    updates.append((param_i,
+                                    param_i - lr * grad_i - eta * lr * param_i))
+                elif weight_type == 'b':
+                    updates.append((param_i, param_i - 2 * lr * grad_i))
+                else:
+                    raise TypeError("Weight Type Error")
 
     # Define Theano Functions
     print '...Define Theano Functions'

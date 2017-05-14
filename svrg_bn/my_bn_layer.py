@@ -200,9 +200,16 @@ class BatchNormLayer(Layer):
         self.inv_std = self.add_param(inv_std, shape, 'inv_std',
                                       trainable=False, regularizable=False)
 
+        self.count = 1
+
     def get_output_for(self, input, deterministic=False,
                        batch_norm_use_averages=None,
                        batch_norm_update_averages=None, **kwargs):
+
+        self.count = self.count + 1
+        self.alpha = 1.0 / self.count 
+        # self.alpha = 1.0 / (self.count^2)
+
         input_mean = input.mean(self.axes)
         input_inv_std = T.inv(T.sqrt(input.var(self.axes) + self.epsilon))
 

@@ -1,3 +1,7 @@
+'''
+svrg_bn most updated
+'''
+
 import sys, os, time
 import numpy as np
 

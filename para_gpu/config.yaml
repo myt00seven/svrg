@@ -15,7 +15,7 @@ lr_step: [20, 40]  # def: 20, learning rate will be reduced by 10 times at these
 use_data_layer: False
 rand_crop: True # def: True
 shuffle: False # def: False, if shuffle the batches
-para_load: True
+para_load: False
 batch_crop_mirror: False  # if False, do randomly on each image separately
 cropsize: 224
 

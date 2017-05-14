@@ -33,9 +33,6 @@ def unpack_configs(config, ext_data='.hkl', ext_label='.npy'):
             train_filenames, val_filenames, train_labels, val_labels, img_mean)
 
 
-
-
-
 def adjust_learning_rate(config, epoch, step_idx, val_record, learning_rate):
     # Adapt Learning Rate
     if config['lr_policy'] == 'step':
