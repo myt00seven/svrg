@@ -1,0 +1,4 @@
+Learning Rate:0.01
+Adaptive:0.00
+Non Uniform Prob of mini batch:20.00
+
