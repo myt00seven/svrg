@@ -302,11 +302,11 @@ def build_mlpbn(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS,bnalg = BNALG)
                 ), alpha = the_alpha
             )
 
-            l_out = lasagne.layers.DenseLayer(
-                l_hidden,
-                num_units=NUM_HIDDEN_UNITS,
-                nonlinearity=lasagne.nonlinearities.softmax,
-            )        
+    l_out = lasagne.layers.DenseLayer(
+        l_hidden,
+        num_units=NUM_HIDDEN_UNITS,
+        nonlinearity=lasagne.nonlinearities.softmax,
+    )        
     
     return l_out
 
