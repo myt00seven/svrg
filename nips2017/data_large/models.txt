@@ -1,5 +1,4 @@
-4
-mlpbn_sgd_10_original
-mlpbn_sgd_10_dbn
-mlpbn_sgd_10_dbn2
-mlpbn_sgd_10_dbn5_10_m
+3
+mlpbn_sgd_10_const1
+mlpbn_sgd_10_const05
+mlpbn_sgd_10_const075

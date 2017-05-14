@@ -178,6 +178,8 @@ class BatchNormLayer(Layer):
 
         self.epsilon = epsilon
         self.alpha = alpha
+        print("The alpha in the BN layer is")
+        print(alpha)
 
         # create parameters, ignoring all dimensions in axes
         shape = [size for axis, size in enumerate(self.input_shape)
