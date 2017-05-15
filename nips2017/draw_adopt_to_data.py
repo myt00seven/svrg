@@ -68,7 +68,7 @@ PRINT = [
 
 # SPEC = ['b-', 'c:', 'r-.', 'g--', 'kv', 'c-', 'r:', 'g-.', 'k-','r-', 'g:','rv','gv']
 
-colors=('b','g','r')
+colors=('b','g','r','g')
 # colors=('m','c','b','g','r')
 #,'#CE0058' Rubine
 # k black
@@ -157,12 +157,13 @@ def main(num_epochs=NUM_EPOCHS):
     if DRAW_COMPARE:
 
         #PLFOT 
-        matplotlib.rcParams.update({'font.size': 10})
+        matplotlib.rcParams.update({'font.size': 16})
 
 #!!!
         if PRINT[1] == 1:
             plt.figure(1)
             plt.title('Loss on Validation')
+
             
             for model in models:
                 index = models.index(model)
@@ -170,7 +171,12 @@ def main(num_epochs=NUM_EPOCHS):
 
             plt.xlabel('# Epochs')
             plt.ylabel('Loss')
-            plt.legend()
+            # plt.legend(bbox_to_anchor=(1,0.65)) # 10 lines
+            # plt.legend(bbox_to_anchor=(1,1)) # 5 lines
+            plt.legend(loc='best', fontsize = 12)
+            axes = plt.gca()
+            # axes.set_ylim([0.05,0.15]) # 5 lines
+
             # plt.show()
             pylab.savefig(PATH_FIGURE+'CM_Validation_Loss'+'.png',bbox_inches='tight')
 
@@ -226,7 +232,7 @@ def main(num_epochs=NUM_EPOCHS):
 
             axes = plt.gca()
             # axes.set_xlim([xmin,xmax])
-            axes.set_ylim([0.972,0.987])
+            # axes.set_ylim([0.972,0.987]) # 5 line
             
             for model in models:
                 index = models.index(model)
@@ -234,7 +240,10 @@ def main(num_epochs=NUM_EPOCHS):
 
             plt.xlabel('# Epochs')
             plt.ylabel('Predict Accuracy')
-            plt.legend(bbox_to_anchor=(1,0.4))
+            # plt.legend(bbox_to_anchor=(1,0.8)) # all 10 lines
+            # plt.legend(bbox_to_anchor=(1,0.4)) # 5 line
+            plt.legend(loc='best', fontsize = 12)
+
             # plt.show()
             pylab.savefig(PATH_FIGURE+'CM_Test_Set_Accuracy'+'.png',bbox_inches='tight')
 
