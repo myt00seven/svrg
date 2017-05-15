@@ -31,7 +31,8 @@ if __name__ == '__main__':
 		print ("\t[cpu\gpu\draw](default="+DEVICE+")")
 		print ("\t[original\dbn\dbn2\const?](What BN lagorithm to use, default="+BNALG+")")
 		print ("\t\t(original is the original BN algorithm. dbn is 1/m MA, dbn2 is 1/m^2 MA.)")
-		print ("\t\t(const_? is constant alpha=?,?=1, 075, 05, 025, 01, 001, 0001, 0")
+		print ("\t\t(const? is constant alpha=?,?=1, 075, 05, 025, 01, 001, 0001, 0")
+		print ("\t\t(const1, const075, const05, const025, const01, const001, const0001, const0")
 	else:
 		kwargs = {}
 		if len(sys.argv) > 1:

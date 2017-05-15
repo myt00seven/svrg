@@ -1,6 +1,8 @@
-6
+9
 mlpbn_sgd_200_const1,Alpha = 1,
+mlpbn_sgd_200_const075,Alpha = 0.75,
 mlpbn_sgd_200_const05,Alpha = 0.5,
+mlpbn_sgd_200_const025,Alpha = 0.25,
 mlpbn_sgd_200_const01,Alpha = 0.1,
 mlpbn_sgd_200_const0001,Alpha = 0.001,
 mlpbn_sgd_200_dbn,Alpha = 1/m,

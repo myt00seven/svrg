@@ -1,0 +1,9 @@
+Min_Epoch 	 Loss_Val 	 Accuracy_Test 	 Model
+52		0.0767		0.9793		Alpha = 1
+69		0.0768		0.9809		Alpha = 0.75
+69		0.0756		0.9816		Alpha = 0.5
+46		0.0744		0.9809		Alpha = 0.25
+55		0.0732		0.9806		Alpha = 0.1
+48		0.0746		0.9805		Alpha = 0.001
+59		0.0773		0.9790		Alpha = 1/m
+53		0.0738		0.9800		Alpha = 1/m^2
