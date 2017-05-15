@@ -1,0 +1,42 @@
+In the code from Jaehoon, the dataset is read as:
+
+print(train_x.shape) 	(494021, 41)
+print(train_y.shape) 	(494021,)
+print(test_x.shape) 	(311029, 41)
+print(test_y.shape) 	(311029,)
+
+In the code for MNIST, the dataset is read as:
+
+
+X_train
+(50000, 1, 28, 28)
+float32
+y_train
+(50000,)
+X_val
+(10000, 1, 28, 28)
+y_val
+(10000,)
+X_test
+(10000, 1, 28, 28)
+y_test
+(10000,)
+
+Todo:
+1) read the NI dataset
+2) adjust the dimension, as MNIST is 28*28, and NI is just 41
+
+1): Now the output is:
+X_train
+(484021, 41)
+float32
+y_train
+(484021,)
+X_val
+(10000, 41)
+y_val
+(10000,)
+X_test
+(311029, 41)
+y_test
+(311029,)
