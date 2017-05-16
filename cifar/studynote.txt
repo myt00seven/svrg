@@ -44,7 +44,7 @@ todo:
 1) read the CFIAR dataste √
 2) run the "naive" CNN model with original BN layer √
 3) add data output to output val_loss and val_acc √
-4) adjust the drawing python script accordingly 
+4) adjust the drawing python script accordingly √
 5) add customized BN layer \ DBN to the model 
 5.2) add control for main.py √
 6) small scale, all models test (5 epoches maybe)
