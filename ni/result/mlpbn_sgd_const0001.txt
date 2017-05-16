@@ -1,0 +1,3 @@
+Final results:
+  test loss:			1.326635
+  test accuracy:		92.48 %
