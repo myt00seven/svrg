@@ -26,3 +26,12 @@ Todo:
 1) read the CIFAR dataset
 2) put the origianl alexnet into work
 3) modify the original alexnet, change LRN layer to BN layer 
+
+1)
+it seems now the CIFAR dataset is read. 
+
+2)
+compute the mean_file
+the BN use different prediction for training and predicting
+
+I just realized that we can't apply Alexnet to CIFAR. Since the structure of conv layer highly rely on the specifics of the input data. Changing the dimension of data also means change the structure of the cnn network and thus it is no more the same model.
