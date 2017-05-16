@@ -162,7 +162,19 @@ def load_dataset():
     else:
         from urllib.request import urlretrieve
 
-    
+    CIFAR_PATH = "../../data/cifar-10-batches-py/"
+
+    def load_CIFAR_batch(filename):
+        """ load single batch of cifar """
+        with open(filename, 'rb') as f:
+            datadict = pickle.load(f)
+            X = datadict['data']
+            Y = datadict['labels']
+            # print X.shape
+            #X = X.reshape(10000, 3, 32, 32).transpose(0,2,3,1).astype("float")
+            X = X.reshape(10000, 3, 32, 32).transpose(0,1,2,3).astype("float")
+            Y = np.array(Y)
+            return X, Y
 
     # We can now download and read the training and test set images and labels.
     # X_train = load_mnist_images('train-images-idx3-ubyte.gz')
@@ -172,37 +184,34 @@ def load_dataset():
 
     # Read NI dataset
     # DATA_PATH = "/Users/myt007/git/svrg/ni/"
-    DATA_PATH = ""
 
-    train_x_raw = gzip.open(DATA_PATH+"train_x.txt.gz", 'rb')
-    X_train = pickle.load(train_x_raw)
-    train_y_raw = gzip.open(DATA_PATH+"train_y.txt.gz", 'rb')
-    y_train = pickle.load(train_y_raw)
-    test_x_raw = gzip.open(DATA_PATH+"test_x.txt.gz", 'rb')
-    X_test = pickle.load(test_x_raw)
-    test_y_raw = gzip.open(DATA_PATH+"test_y.txt.gz", 'rb')
-    y_test = pickle.load(test_y_raw)
+    X_train1,y_train1 = load_CIFAR_batch(CIFAR_PATH + "data_batch_1")
+    X_train2,y_train2 = load_CIFAR_batch(CIFAR_PATH + "data_batch_2")
+    X_train3,y_train3 = load_CIFAR_batch(CIFAR_PATH + "data_batch_3")
+    X_train4,y_train4 = load_CIFAR_batch(CIFAR_PATH + "data_batch_4")
+    X_train5,y_train5 = load_CIFAR_batch(CIFAR_PATH + "data_batch_5")
+    X_test,y_test = load_CIFAR_batch(CIFAR_PATH + "test_batch")
 
     # We reserve the last 10000 training examples for validation.
-    X_train, X_val = X_train[:-10000], X_train[-10000:]
-    y_train, y_val = y_train[:-10000], y_train[-10000:]
+    # X_train, X_val = X_train[:-10000], X_train[-10000:]
+    # y_train, y_val = y_train[:-10000], y_train[-10000:]
 
     # We just return all the arrays in order, as expected in main().
     # (It doesn't matter how we do this as long as we can read them again.)
-    # print("X_train")
-    # print(X_train.shape)
-    # print(X_train.dtype)
-    # print("\n")
-    # print("y_train")
-    # print(y_train.shape)
+    print("X_train1")
+    print(X_train1.shape)
+    print(X_train1.dtype)
+    print("\n")
+    print("y_train1")
+    print(y_train1.shape)
     # print("X_val")
     # print(X_val.shape)
     # print("y_val")
     # print(y_val.shape)
-    # print("X_test")
-    # print(X_test.shape)
-    # print("y_test")
-    # print(y_test.shape)
+    print("X_test")
+    print(X_test.shape)
+    print("y_test")
+    print(y_test.shape)
 
     return X_train, y_train, X_val, y_val, X_test, y_test
 
@@ -213,7 +222,7 @@ def load_dataset():
 # the output layer of a neural network model built in Lasagne.
 
 def build_mlp(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS):
-    l_in = lasagne.layers.InputLayer(shape=(None, 1, 28, 28),
+    l_in = lasagne.layers.InputLayer(shape=(None, 3, 32, 32),
                                      input_var=input_var)
     l_hid = lasagne.layers.DenseLayer(
             l_in, num_units=num_hidden_units,
@@ -232,7 +241,7 @@ def build_mlpbn(input_var=None, num_hidden_units=NUM_HIDDEN_UNITS,bnalg = BNALG)
 
     
 
-    l_in = lasagne.layers.InputLayer(shape=(None, 41),
+    l_in = lasagne.layers.InputLayer(shape=(None, 3, 32, 32),
                                      input_var=input_var)
 
     if bnalg == 'original':
