@@ -20,6 +20,21 @@ from lasagne.layers import batch_norm
 from keras.preprocessing.image import ImageDataGenerator
 # Define a Neural Network using Lasagne APIs
 
+import my_bn_layer # Define DBN, e.g., DBN1
+import my_bn_layer2 # Define DBN2, e.g. ,1/m^2 MA
+import my_bn_layer_const # Define for const alpha (actually we can just use the my_bn_layer)
+
+#input area
+NUM_EPOCHS = 2
+
+### no efect
+NUM_HIDDEN_UNITS = 100 # no effect
+BNALG = 'original'
+OUTPUT_DATA_PATH = 'data_large/'
+MODEL = 'mlpbn'
+GRADIENT = 'sgd_adagrad'
+
+
 # We will build a reasonably complex Convolutional neural network incorporating all the modern innovations such as:
     # a. Batch Norm [See: http://arxiv.org/abs/1502.03167], 
     #b. Dropout [See: http://www.jmlr.org/papers/volume15/srivastava14a.old/source/srivastava14a.pdf] and 
@@ -71,6 +86,7 @@ def cnn_network(input_var,input_channels=3,input_img_size=(32,32),num_classes=10
 def batch_train(datagen,f_train,f_val,lr_start,lr_decay,N_train_batches=5,mini_batch_size=32,img_dim=(3,32,32),\
     epochs=10,test_interval=1,data_dir='/Users/sachintalathi/Work/Python/Data/cifar-10-batches-py',\
     data_augment_bool=False,train_bool=True):
+
     # Input:
         # Datagenerator.. Python generator function for loading input data and performing series of data augmentations
         # f_train: Theano function to compute loss on training data and labels and perform gradient weight updates
@@ -187,8 +203,10 @@ def batch_train(datagen,f_train,f_val,lr_start,lr_decay,N_train_batches=5,mini_b
             train_loss=train_loss/N_train_batches
             train_err=train_err/N_train_batches
             per_epoch_train_stats.append([epoch,train_loss,train_err])
+
         if (epoch+1)%test_interval==0:
             val_loss,val_err=val_on_batch(data_dir,img_dim,mini_batch_size,f_val)
+
             per_epoch_val_stats.append([epoch,val_loss,val_err])
             print ('Epoch  (Time) %d (%0.03f s) Learning_Rate %0.04f Test Loss (Error)\
                 %.03f (%.03f)'%(epoch,toc-tic,LR,val_loss,val_err))
@@ -197,77 +215,127 @@ def batch_train(datagen,f_train,f_val,lr_start,lr_decay,N_train_batches=5,mini_b
     #Return the performance Stats after training is complete
     return per_epoch_train_stats,per_epoch_val_stats
 
-# Set the Initial Learning Rate; the Final Learning Rate and the number of training epochs
-LR_start=0.01
-LR_fin = 0.0003
-epochs=10
-LR_decay = (LR_fin/LR_start)**(1./epochs)
 
-print("Generating the ImageDataGenerator")
-#Define the Image Data Generator, which is used for real-time data augmentation while training
-datagen = ImageDataGenerator(
-          featurewise_center=False,  # set input mean to 0 over the dataset
-          samplewise_center=False,  # set each sample mean to 0
-          featurewise_std_normalization=False,  # divide inputs by std of the dataset
-          samplewise_std_normalization=False,  # divide each input by its std
-          zca_whitening=False,  # apply ZCA whitening
-          rotation_range=0,  # randomly rotate images in the range (degrees, 0 to 180)
-          width_shift_range=0.1,  # randomly shift images horizontally (fraction of total width)
-          height_shift_range=0.1,  # randomly shift images vertically (fraction of total height)
-          horizontal_flip=True,  # randomly flip images
-          vertical_flip=False)  # randomly flip images
+def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_units = NUM_HIDDEN_UNITS, bnalg = BNALG):
 
-#Define Theano tensor variables for input, the labels and the learning rate
-input=T.tensor4('input')
-target=T.ivector('target')
-LR = T.scalar('LR', dtype=theano.config.floatX)
+    # Set the Initial Learning Rate; the Final Learning Rate and the number of training epochs
+    LR_start=0.01
+    LR_fin = 0.01
+    epochs=num_epochs
+    # LR_decay = (LR_fin/LR_start)**(1./epochs)
+    LR_decay = 1
 
-#Define the Network
-print("Generating the cnn network")
-net=cnn_network(input)
+    print("Generating the ImageDataGenerator")
+    #Define the Image Data Generator, which is used for real-time data augmentation while training
+    datagen = ImageDataGenerator(
+              featurewise_center=False,  # set input mean to 0 over the dataset
+              samplewise_center=False,  # set each sample mean to 0
+              featurewise_std_normalization=False,  # divide inputs by std of the dataset
+              samplewise_std_normalization=False,  # divide each input by its std
+              zca_whitening=False,  # apply ZCA whitening
+              rotation_range=0,  # randomly rotate images in the range (degrees, 0 to 180)
+              width_shift_range=0.1,  # randomly shift images horizontally (fraction of total width)
+              height_shift_range=0.1,  # randomly shift images vertically (fraction of total height)
+              horizontal_flip=True,  # randomly flip images
+              vertical_flip=False)  # randomly flip images
 
-#Define Training Output Variables
+    #Define Theano tensor variables for input, the labels and the learning rate
+    input=T.tensor4('input')
+    target=T.ivector('target')
+    LR = T.scalar('LR', dtype=theano.config.floatX)
 
-print("Compiling the functions")
+    #Define the Network
+    print("Generating the cnn network")
+    net=cnn_network(input)
 
-train_output=lasagne.layers.get_output(net['l_out'],input,deterministic=False) ## Get the class probabilities
-train_pred=train_output.argmax(-1) ## Get the predicted class label
-train_loss=T.mean(lasagne.objectives.categorical_crossentropy(train_output,target)) #Using Cross-Entropy Loss
-train_err=T.mean(T.neq(T.argmax(train_output,axis=1), target),dtype=theano.config.floatX) #Compute the mean training precdiction error
+    #Define Training Output Variables
 
-# Define Validation Output Variables
+    print("Compiling the functions")
 
-val_output=lasagne.layers.get_output(net['l_out'],input,deterministic=True)
-val_loss=T.mean(lasagne.objectives.categorical_crossentropy(val_output,target))
-val_err = T.mean(T.neq(T.argmax(val_output,axis=1), target),dtype=theano.config.floatX)
-val_pred=val_output.argmax(-1)
+    train_output=lasagne.layers.get_output(net['l_out'],input,deterministic=False) ## Get the class probabilities
+    train_pred=train_output.argmax(-1) ## Get the predicted class label
+    train_loss=T.mean(lasagne.objectives.categorical_crossentropy(train_output,target)) #Using Cross-Entropy Loss
+    train_err=T.mean(T.neq(T.argmax(train_output,axis=1), target),dtype=theano.config.floatX) #Compute the mean training precdiction error
 
-# Set L2 regularization coefficient
-layers={}
-for k in net.keys():
-    layers[net[k]]=0.0005
+    # Define Validation Output Variables
 
-l2_penalty = regularize_layer_params_weighted(layers, l2)
-train_loss=train_loss+l2_penalty
+    val_output=lasagne.layers.get_output(net['l_out'],input,deterministic=True)
+    val_loss=T.mean(lasagne.objectives.categorical_crossentropy(val_output,target))
+    val_err = T.mean(T.neq(T.argmax(val_output,axis=1), target),dtype=theano.config.floatX)
+    val_pred=val_output.argmax(-1)
 
-#Define the Gradient Update Rule
-params = lasagne.layers.get_all_params(net['l_out'], trainable=True) #Get list of all trainable network parameters
-updates = lasagne.updates.adagrad(loss_or_grads=train_loss, params=params, learning_rate=LR) ## Use Adagrad Gradient Descent Learning Algorithm
+    # Set L2 regularization coefficient
+    layers={}
+    for k in net.keys():
+        layers[net[k]]=0.0005
 
-#Define Theano Functions for Training and Validation
+    l2_penalty = regularize_layer_params_weighted(layers, l2)
+    train_loss=train_loss+l2_penalty
 
-#Theano Function for Training
-f_train=theano.function([input,target,LR],[train_loss,train_err],updates=updates,allow_input_downcast=True)
+    #Define the Gradient Update Rule
+    params = lasagne.layers.get_all_params(net['l_out'], trainable=True) #Get list of all trainable network parameters
+    updates = lasagne.updates.adagrad(loss_or_grads=train_loss, params=params, learning_rate=LR) ## Use Adagrad Gradient Descent Learning Algorithm
 
-# Theano Function for Validation
-f_val=theano.function([input,target],[val_loss,val_err],allow_input_downcast=True)
+    #Define Theano Functions for Training and Validation
 
-#Begin Training
-print("Beging Training")
-train_stats,val_stats=batch_train(datagen,f_train,f_val,LR_start,LR_decay,epochs=epochs,\
-    data_dir="../../data/cifar-10-batches-py/",train_bool=True)
+    #Theano Function for Training
+    f_train=theano.function([input,target,LR],[train_loss,train_err],updates=updates,allow_input_downcast=True)
+
+    # Theano Function for Validation
+    f_val=theano.function([input,target],[val_loss,val_err],allow_input_downcast=True)
+
+    #Begin Training
+    print("Beging Training")
+    train_stats,val_stats=batch_train(datagen,f_train,f_val,LR_start,LR_decay,epochs=epochs,\
+        data_dir="../../data/cifar-10-batches-py/",train_bool=True)
+
+    #output data
+    list_epoch      = [i[0] for i in val_stats]
+    list_val_loss   = [i[1] for i in val_stats]
+    list_val_err    = [i[2] for i in val_stats]
+    list_val_acc    = [1-i  for i in list_val_err]
+
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(num_epochs)+"_"+bnalg+"_"+"epoch.txt",list_epoch)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(num_epochs)+"_"+bnalg+"_"+"loss_val.txt",list_val_loss)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(num_epochs)+"_"+bnalg+"_"+"acc_val.txt",list_val_acc)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(num_epochs)+"_"+bnalg+"_"+"err_val.txt",list_val_err)
+    print ("Data saved...")
+
+
+if __name__ == '__main__':
+    if ('--help' in sys.argv) or ('-h' in sys.argv) or ('help' in sys.argv):
+        print("Trains a neural network on MNIST using Lasagne.")
+        print("Usage: %s [MODEL] [GRADIENT] [NUM_EPOCHS]" % sys.argv[0])
+        print()
+        print("MODEL: 'mlp' for a simple Multi-Layer Perceptron (MLP),")
+        print("       'mlpbn: for an MLP with batch Normalization")
+        print("GRADIENT: 'sgd', 'svrg'")
+        print("NUM_EPOCHS: ")
+        print("NUM_HIDDEN_UNITS: (No effect)")
+        print("BNALG: ")
+    else:
+        kwargs = {}
+        if len(sys.argv) > 1:
+            kwargs['model'] = sys.argv[1]
+        if len(sys.argv) > 2:
+            kwargs['gradient'] = sys.argv[2]
+        if len(sys.argv) > 3:
+            kwargs['num_epochs'] = int(sys.argv[3])
+        if len(sys.argv) > 4:
+            kwargs['num_hidden_units'] = int(sys.argv[4])
+        if len(sys.argv) > 5:
+            kwargs['bnalg'] = sys.argv[5]
+        main(**kwargs)
+
+
 
 #Plot the Evolution of Training and Testing
-import matplotlib.pylab as py
-py.ion()
-py.figure();py.plot(np.array(train_stats)[:,2]);py.hold('on');py.plot(np.array(val_stats)[:,2]);
+# import matplotlib.pylab as py
+# py.ion()
+# py.figure();py.plot(np.array(train_stats)[:,2]);py.hold('on');py.plot(np.array(val_stats)[:,2]);
+
+
+
+
+
+

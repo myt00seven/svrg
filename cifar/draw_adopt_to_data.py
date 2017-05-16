@@ -31,7 +31,7 @@ STARTPOINT = 0
 LINEWIDTH = 2
 
 DRAW_COMPARE = True
-FIND_BEST = True # output the best predict when loss on validation is lowest
+FIND_BEST = False # output the best predict when loss on validation is lowest
 DRAW_Line1 = True
 LOAD_SVRG = True
 
@@ -47,10 +47,10 @@ MODE = "all"
 PRINT = [
 0, #fill the index 0
 1, #'NI_CM_Validation_Loss'                     1
-0, #'NI_CM_Validation_Set_Accuracy'                     2
-1, #'NI_CM_Training_Set_Loss'                     3
+1, #'NI_CM_Validation_Set_Accuracy'                     2
+0, #'NI_CM_Training_Set_Loss'                     3
 0, #'NI_CM_Training_Set_Accuracy'                     4
-1, #'NI_CM_Test_Set_Accuracy'                     5
+0, #'NI_CM_Test_Set_Accuracy'                     5
 0, #'NI_CM_Test_Loss'                     6
 0, #'Timediff_Validation_Loss'                     7
 0, #'TimeDiff_Validation_Set_Accuracy'                     8
@@ -58,6 +58,7 @@ PRINT = [
 0, #'TimeDiff_Training_Set_Accuracy'                     10
 0, #'TimeDiff_Test_Set_Accuracy'                     11
 0, #'TimeDiff_Test_Loss'                     12
+1, #'NI_CM_Validation_Set_Error'                     13
 ]
 
 
@@ -112,9 +113,8 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
 
     if mode == 'all':
         styles = styles_11_colors
-    if mode == 'select':
+    if mode == 'select' or mode == "single":
         styles = styles_5_colors
-
 
     tag_first_line=True
     models= []
@@ -124,6 +124,8 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
         models_file_name = 'models.txt'
     elif mode == "select":
         models_file_name = "select_models.txt"
+    elif mode == "single":
+        models_file_name = "single_models.txt"
     else:
         colors=('m','c','b','g','r')
         linestyles=('-','--','-.',':')
@@ -132,7 +134,6 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
         # print styles
 
     with open(models_file_name) as f:
-
         for line in f:
             if tag_first_line:
                 models_count = int(line)
@@ -147,6 +148,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
     line_acc_test=[]
     line_acc_train=[]
     line_acc_val=[]
+    line_err_val=[]
     line_loss_test=[]
     line_loss_train=[]
     line_loss_val=[]
@@ -157,13 +159,14 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
         # print str(model)
         # print model
         index = models.index(model)
-        line_acc_test.append(np.loadtxt(PATH_DATA+str(model)+"_acc_test.txt"))
-        line_acc_train.append(np.loadtxt(PATH_DATA+str(model)+"_acc_train.txt"))
+        # line_acc_test.append(np.loadtxt(PATH_DATA+str(model)+"_acc_test.txt"))
+        # line_acc_train.append(np.loadtxt(PATH_DATA+str(model)+"_acc_train.txt"))
         line_acc_val.append(np.loadtxt(PATH_DATA+str(model)+"_acc_val.txt"))
-        line_loss_test.append(np.loadtxt(PATH_DATA+str(model)+"_loss_test.txt"))
-        line_loss_train.append(np.loadtxt(PATH_DATA+str(model)+"_loss_train.txt"))
+        line_err_val.append(np.loadtxt(PATH_DATA+str(model)+"_err_val.txt"))
+        # line_loss_test.append(np.loadtxt(PATH_DATA+str(model)+"_loss_test.txt"))
+        # line_loss_train.append(np.loadtxt(PATH_DATA+str(model)+"_loss_train.txt"))
         line_loss_val.append(np.loadtxt(PATH_DATA+str(model)+"_loss_val.txt"))
-        line_epoch_times.append(np.loadtxt(PATH_DATA+str(model)+"_epoch_times.txt"))
+        # line_epoch_times.append(np.loadtxt(PATH_DATA+str(model)+"_epoch_times.txt"))
         count_line.append(np.arange(line_acc_val[index].shape[0])+1)
         # print count_line
         
@@ -212,10 +215,14 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             # plt.show()
             pylab.savefig(PATH_FIGURE+'NI_CM_Validation_Loss'+'.png',bbox_inches='tight')
 
+#!!1
         if PRINT[2] == 1:
             plt.figure(2)
             plt.title('Accuracy on Validation')
             
+            if mode == 'select':
+                axes.set_ylim([0.915,0.93]) # 5 line
+
             for model in models:
                 index = models.index(model)                
                 plt.plot(count_line[index], line_acc_val[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index], linewidth = LINEWIDTH)
@@ -223,7 +230,8 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
 
             plt.xlabel('# Epochs')
             plt.ylabel('Predict Accuracy')
-            plt.legend(bbox_to_anchor=(1,0.4))
+            plt.legend(loc='best', fontsize = 12)
+            
             # plt.show()
             pylab.savefig(PATH_FIGURE+'NI_CM_Validation_Accuracy'+'.png',bbox_inches='tight')
 
@@ -257,7 +265,6 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             # plt.show()
             pylab.savefig(PATH_FIGURE+'NI_CM_Training_Set_Accuracy'+'.png',bbox_inches='tight')
 
-#!!!
         if PRINT[5] == 1:
             plt.figure(5)
             plt.title('Accuracy on Test')
@@ -280,114 +287,24 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             # plt.show()
             pylab.savefig(PATH_FIGURE+'NI_CM_Test_Set_Accuracy'+'.png',bbox_inches='tight')
 
-        if PRINT[6] == 1:
-            plt.figure(6)
-            plt.title('Loss of Test')
+#!!!
+        if PRINT[13] == 1:
+            plt.figure(13)
+            plt.title('Error on Validation')
             
+            if mode == 'select':
+                axes.set_ylim([0.,0.3]) # 5 line
+
             for model in models:
-                index = models.index(model)
-                plt.plot(count_line[index], line_loss_test[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index], linewidth = LINEWIDTH)
-            
+                index = models.index(model)                
+                plt.plot(count_line[index], line_err_val[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index], linewidth = LINEWIDTH)
 
             plt.xlabel('# Epochs')
-            plt.ylabel('Loss')
-            plt.legend()
-            pylab.savefig(PATH_FIGURE+'NI_CM_Test_Loss'+'.png',bbox_inches='tight')
+            plt.ylabel('Test Error')
+            plt.legend(loc='best', fontsize = 12)
+            
             # plt.show()
-
-            #PLOT Per Second
-            matplotlib.rcParams.update({'font.size': 16})
-        if PRINT[7] == 1:
-            plt.figure(7)
-            plt.title('Loss on Validation')
-            
-            for model in models:
-                index = models.index(model)
-                plt.plot(line_epoch_times[index], line_loss_val[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index],  linewidth = LINEWIDTH)
-            
-
-            plt.xlabel('Seconds')
-            plt.ylabel('Loss')
-            plt.legend()
-            # plt.show()
-            pylab.savefig(PATH_FIGURE+'Timediff_Validation_Loss'+'.png',bbox_inches='tight')
-
-        if PRINT[8] == 1:
-            plt.figure(8)
-            plt.title('Accuracy on Validation')
-            
-            for model in models:
-                index = models.index(model)
-                plt.plot(line_epoch_times[index], line_acc_val[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index], linewidth = LINEWIDTH)
-            
-
-            plt.xlabel('Seconds')
-            plt.ylabel('Predict Accuracy')
-            plt.legend(bbox_to_anchor=(1,0.4))
-            # plt.show()
-            pylab.savefig(PATH_FIGURE+'TimeDiff_Validation_Set_Accuracy'+'.png',bbox_inches='tight')
-
-        if PRINT[9] == 1:
-            plt.figure(9)
-            plt.title('Loss on Training')
-            # if Y_LIM_FINE_TUNING:    pylab.ylim([-0.01,0.25])
-            
-            for model in models:
-                index = models.index(model)
-                plt.plot(line_epoch_times[index], line_loss_train[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index], linewidth = LINEWIDTH)
-            
-
-            plt.xlabel('Seconds')
-            plt.ylabel('Loss')
-            plt.legend()
-            # plt.show()
-            pylab.savefig(PATH_FIGURE+'TimeDiff_Training_Set_Loss'+'.png',bbox_inches='tight')
-
-        if PRINT[10] == 1:
-            plt.figure(10)
-            plt.title('Accuracy on Training')
-            if Y_LIM_FINE_TUNING:    pylab.ylim([0.93,1.01])
-            
-            for model in models:
-                index = models.index(model)
-                plt.plot(line_epoch_times[index], line_acc_train[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index], linewidth = LINEWIDTH)
-            
-
-            plt.xlabel('Seconds')
-            plt.ylabel('Predict Accuracy')
-            plt.legend(bbox_to_anchor=(1,0.4))
-            # plt.show()
-            pylab.savefig(PATH_FIGURE+'TimeDiff_Training_Set_Accuracy'+'.png',bbox_inches='tight')
-
-        if PRINT[11] == 1:
-            plt.figure(11)
-            plt.title('Accuracy on Test')
-            
-            for model in models:
-                index = models.index(model)
-                plt.plot(line_epoch_times[index], line_acc_test[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index], linewidth = LINEWIDTH)
-            
-
-            plt.xlabel('Seconds')
-            plt.ylabel('Predict Accuracy')
-            plt.legend(bbox_to_anchor=(1,0.4))
-            # plt.show()
-            pylab.savefig(PATH_FIGURE+'TimeDiff_Test_Set_Accuracy'+'.png',bbox_inches='tight')
-
-        if PRINT[12] == 1:
-            plt.figure(12)
-            plt.title('Loss on Test')
-            
-            for model in models:
-                index = models.index(model)
-                plt.plot(line_epoch_times[index], line_loss_test[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index], linewidth = LINEWIDTH)
-            
-
-            plt.xlabel('Seconds')
-            plt.ylabel('Loss')
-            plt.legend()
-            pylab.savefig(PATH_FIGURE+'TimeDiff_Test_Loss'+'.png',bbox_inches='tight')
-            # plt.show()
+            pylab.savefig(PATH_FIGURE+'NI_CM_Validation_Error'+'.png',bbox_inches='tight') 
 
     if FIND_BEST == True:
 
@@ -418,6 +335,8 @@ if __name__ == '__main__':
         if len(sys.argv) > 1:
             if sys.argv[1] == "select":
                 kwargs['mode'] = "select"
+            elif sys.argv[1] == "single":
+                kwargs['mode'] = "single"
             else:
                 kwargs['mode'] = "all"
                 kwargs['num_epochs'] = int(sys.argv[1])

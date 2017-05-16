@@ -25,7 +25,7 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
 	# if mode == "manual":
 	if (device == "cpu") or ("gpu" in device):
 		# os.system(str_device + " python large_gpu_mnist.py mlp sgd "+num_epochs+" "+num_hidden_nodes)
-		os.system(str_device + " python large_gpu_ni.py mlpbn sgd "+num_epochs+" "+num_hidden_nodes + " "+ bnalg)
+		os.system(str_device + " python cifar_cnn.py mlpbn sgd_adagrad "+num_epochs+" "+num_hidden_nodes + " "+ bnalg)
 	# elif mode == "all":
 		
 
@@ -42,10 +42,7 @@ if __name__ == '__main__':
 	else:
 		kwargs = {}
 		if len(sys.argv) > 1:
-			if sys.argv[1] == "all":
-				mode = sys.argv[1] # run all the commands prestored in main.py with processes control
-			else:
-				kwargs['num_epochs'] = sys.argv[1]
+			kwargs['num_epochs'] = sys.argv[1]
 		if len(sys.argv) > 2:
 			kwargs['num_hidden_nodes'] = sys.argv[2]
 		if len(sys.argv) > 3:

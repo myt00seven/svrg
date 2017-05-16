@@ -1,0 +1,2 @@
+1
+mlpbn_sgd_adagrad_3_original,$\alpha^{(m)}$ = 1,
