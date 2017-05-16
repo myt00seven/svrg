@@ -55,7 +55,7 @@ OUTPUT_FIGURE_PATH = 'data_large/'
 OUTPUT_DATA_PATH = 'data_large/'
 NUM_EPOCHS = 20
 BATCH_SIZE = 100
-NUM_HIDDEN_UNITS = 500
+NUM_HIDDEN_UNITS = 300
 LEARNING_RATE = 0.01
 MOMENTUM = 0.9
 FREQUENCY = 0.1
@@ -192,26 +192,35 @@ def load_dataset():
     X_train5,y_train5 = load_CIFAR_batch(CIFAR_PATH + "data_batch_5")
     X_test,y_test = load_CIFAR_batch(CIFAR_PATH + "test_batch")
 
+    X_train = np.concatenate((X_train1,X_train2,X_train3,X_train4,X_train5))
+    y_train = np.concatenate((y_train1,y_train2,y_train3,y_train4,y_train5))
+
     # We reserve the last 10000 training examples for validation.
-    # X_train, X_val = X_train[:-10000], X_train[-10000:]
-    # y_train, y_val = y_train[:-10000], y_train[-10000:]
+    X_train, X_val = X_train[:-10000], X_train[-10000:]
+    y_train, y_val = y_train[:-10000], y_train[-10000:]
 
     # We just return all the arrays in order, as expected in main().
     # (It doesn't matter how we do this as long as we can read them again.)
-    print("X_train1")
-    print(X_train1.shape)
-    print(X_train1.dtype)
-    print("\n")
-    print("y_train1")
-    print(y_train1.shape)
-    # print("X_val")
-    # print(X_val.shape)
-    # print("y_val")
-    # print(y_val.shape)
-    print("X_test")
-    print(X_test.shape)
-    print("y_test")
-    print(y_test.shape)
+    # print("X_train1")
+    # print(X_train1.shape)
+    # print(X_train1.dtype)
+    # print("\n")
+    # print("y_train1")
+    # print(y_train1.shape)
+    # print("X_train")
+    # print(X_train.shape)
+    # print(X_train.dtype)
+    # print("\n")
+    # print("y_train")
+    # print(y_train.shape)
+    # # print("X_val")
+    # # print(X_val.shape)
+    # # print("y_val")
+    # # print(y_val.shape)
+    # print("X_test")
+    # print(X_test.shape)
+    # print("y_test")
+    # print(y_test.shape)
 
     return X_train, y_train, X_val, y_val, X_test, y_test
 
@@ -360,7 +369,7 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_unit
     X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
 
     # Prepare Theano variables for inputs and targets
-    input_var = T.matrix('inputs')
+    input_var = T.tensor4('inputs')
     target_var = T.ivector('targets')
 
     # Create neural network model (depending on first command line parameter)
