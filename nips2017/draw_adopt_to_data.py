@@ -42,11 +42,13 @@ DRAW_Line4 = True
 
 Y_LIM_FINE_TUNING = True
 
+MODE = "all"
+
 PRINT = [
 0, #fill the index 0
 1, #'CM_Validation_Loss'                     1
 0, #'CM_Validation_Set_Accuracy'                     2
-0, #'CM_Training_Set_Loss'                     3
+1, #'CM_Training_Set_Loss'                     3
 0, #'CM_Training_Set_Accuracy'                     4
 1, #'CM_Test_Set_Accuracy'                     5
 0, #'CM_Test_Loss'                     6
@@ -56,6 +58,28 @@ PRINT = [
 0, #'TimeDiff_Training_Set_Accuracy'                     10
 0, #'TimeDiff_Test_Set_Accuracy'                     11
 0, #'TimeDiff_Test_Loss'                     12
+]
+
+
+styles_11_colors = [
+('r', '-'), # 1
+('b', '-'), # 0.75
+('g', '-'), # 0.5
+('y', '-'), # 0.25
+('c', '--'),    # 0.1
+('m', '--'),    # 0.01
+('b', '--'),    # 0.001
+('b', ':'), # 1/m
+('c', ':'), # 1/m^2
+('k', '-')  # 0
+]
+
+styles_5_colors = [
+('r', '-'), # 1
+('g', '-'), # 0.5
+('m', '--'),    # 0.01
+('b', ':'), # 1/m
+('c', ':'), # 1/m^2
 ]
 
 # Number of Moving Average
@@ -68,18 +92,6 @@ PRINT = [
 
 # SPEC = ['b-', 'c:', 'r-.', 'g--', 'kv', 'c-', 'r:', 'g-.', 'k-','r-', 'g:','rv','gv']
 
-colors=('b','g','r','g')
-# colors=('m','c','b','g','r')
-#,'#CE0058' Rubine
-# k black
-# y yellow
-linestyles=('-',':','--')
-# linestyles=('-','--','-.',':')
-styles=[(color,linestyle) for linestyle in linestyles for color in colors]
-
-# print styles
-random.shuffle(styles)
-# print styles
 
 
 def my_min_index(sequence):
@@ -96,12 +108,31 @@ def my_min_index(sequence):
 
 NUM_EPOCHS = 10
 
-def main(num_epochs=NUM_EPOCHS):
+def main(num_epochs=NUM_EPOCHS, mode = MODE):
+
+    if mode == 'all':
+        styles = styles_11_colors
+    if mode == 'select':
+        styles = styles_5_colors
+
 
     tag_first_line=True
     models= []
     models_name= []
-    with open(PATH_DATA+'models.txt') as f:
+
+    if mode == "all":
+        models_file_name = 'models.txt'
+    elif mode == "select":
+        models_file_name = "select_models.txt"
+    else:
+        colors=('m','c','b','g','r')
+        linestyles=('-','--','-.',':')
+        styles=[(color,linestyle) for linestyle in linestyles for color in colors]
+        random.shuffle(styles)
+        # print styles
+
+    with open(models_file_name) as f:
+
         for line in f:
             if tag_first_line:
                 models_count = int(line)
@@ -175,7 +206,8 @@ def main(num_epochs=NUM_EPOCHS):
             # plt.legend(bbox_to_anchor=(1,1)) # 5 lines
             plt.legend(loc='best', fontsize = 12)
             axes = plt.gca()
-            # axes.set_ylim([0.05,0.15]) # 5 lines
+            if mode == 'select':
+                axes.set_ylim([0.06,0.12]) # 5 lines
 
             # plt.show()
             pylab.savefig(PATH_FIGURE+'CM_Validation_Loss'+'.png',bbox_inches='tight')
@@ -232,7 +264,8 @@ def main(num_epochs=NUM_EPOCHS):
 
             axes = plt.gca()
             # axes.set_xlim([xmin,xmax])
-            # axes.set_ylim([0.972,0.987]) # 5 line
+            if mode == 'select':
+                axes.set_ylim([0.972,0.987]) # 5 line
             
             for model in models:
                 index = models.index(model)
@@ -383,7 +416,11 @@ if __name__ == '__main__':
     else:
         kwargs = {}
         if len(sys.argv) > 1:
-            kwargs['num_epochs'] = int(sys.argv[1])
+            if sys.argv[1] == "select":
+                kwargs['mode'] = "select"
+            else:
+                kwargs['mode'] = "all"
+                kwargs['num_epochs'] = int(sys.argv[1])
         main(**kwargs)
 
 
