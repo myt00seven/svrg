@@ -31,7 +31,8 @@ STARTPOINT = 0
 LINEWIDTH = 2
 
 DRAW_COMPARE = True
-FIND_BEST = False # output the best predict when loss on validation is lowest
+FIND_BEST = True 
+# output the best predict when loss on validation is lowest
 DRAW_Line1 = True
 LOAD_SVRG = True
 
@@ -201,6 +202,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             
             for model in models:
                 index = models.index(model)
+                print line_loss_val[index]
                 plt.plot(count_line[index], line_loss_val[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index],  linewidth = LINEWIDTH)
 
             plt.xlabel('# Epochs')
@@ -210,7 +212,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             plt.legend(loc='best', fontsize = 12)
             axes = plt.gca()
             if mode == 'select':
-                axes.set_ylim([0.0,0.1]) # 5 lines
+                axes.set_ylim([0.0,1]) # 5 lines
 
             # plt.show()
             pylab.savefig(PATH_FIGURE+'NI_CM_Validation_Loss'+'.png',bbox_inches='tight')
@@ -318,7 +320,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             index_min = my_min_index(line_loss_val[index])
             o_file.write("%d\t\t" %index_min)
             o_file.write("%.4f\t\t" %line_loss_val[index][index_min])
-            o_file.write("%.4f\t\t" %line_acc_test[index][index_min])
+            o_file.write("%.4f\t\t" %line_acc_val[index][index_min])
             o_file.write(models_name[index]+ "\n")
 
             
