@@ -29,18 +29,44 @@ NUM_EPOCHS = 2
 
 ### no efect
 NUM_HIDDEN_UNITS = 100 # no effect
-BNALG = 'original'
+BNALG = 'const1'
 OUTPUT_DATA_PATH = 'data_large/'
 MODEL = 'mlpbn'
 GRADIENT = 'sgd_adagrad'
+
+bnalg_const_dict = {
+"const1":     1.0, 
+"const075":   0.75, 
+"const05":    0.5, 
+"const025":   0.25, 
+"const01":    0.1, 
+"const001":   0.01, 
+"const0001":  0.001, 
+"const0":     0.0, }    
 
 
 # We will build a reasonably complex Convolutional neural network incorporating all the modern innovations such as:
     # a. Batch Norm [See: http://arxiv.org/abs/1502.03167], 
     #b. Dropout [See: http://www.jmlr.org/papers/volume15/srivastava14a.old/source/srivastava14a.pdf] and 
     #c. Intelligent Weight Initialization [See: http://www.cv-foundation.org/openaccess/content_iccv_2015/html/He_Delving_Deep_into_ICCV_2015_paper.html]
+def batch_norm_adopted(layer,bnalg):
+    print "Inside the batch_norm_adopted(), the bnalg is:", bnalg
 
-def cnn_network(input_var,input_channels=3,input_img_size=(32,32),num_classes=10):
+    if bnalg == 'original':
+        return batch_norm(layer)
+    elif bnalg == 'dbn':
+        return my_bn_layer.my_batch_norm(layer)
+    elif bnalg == 'dbn2':
+        return my_bn_layer2.my_batch_norm(layer)
+    elif 'const' in bnalg:
+        if bnalg not in bnalg_const_dict:
+            print("Incorrect bnalg method. Can't find in predefined dictionary.")
+            return 
+        else:
+            the_alpha = bnalg_const_dict[bnalg]
+            return my_bn_layer_const.my_batch_norm(layer,alpha = the_alpha)
+
+def cnn_network(input_var, bnalg = BNALG,input_channels=3,input_img_size=(32,32),num_classes=10):
     #Choose hidden-node nonlinearity as ReLU function
     nonlinearity=lasagne.nonlinearities.rectify
     #Create an empty dictionary that we will populate with the network layers
@@ -52,10 +78,11 @@ def cnn_network(input_var,input_channels=3,input_img_size=(32,32),num_classes=10
     #output image size is same as the input image size
     #The output convolution layer is passed through a batch normalization layer
     #We also use He initialization to initialize the weights of the convolution filter
-    net[0]=batch_norm(lasagne.layers.Conv2DLayer(net['l_in'],32,3,W=lasagne.init.HeUniform(),pad='same',nonlinearity=nonlinearity))
+
+    net[0]=batch_norm_adopted(lasagne.layers.Conv2DLayer(net['l_in'],32,3,W=lasagne.init.HeUniform(),pad='same',nonlinearity=nonlinearity), bnalg)
     
     #Add another convolution layer
-    net[1]=batch_norm(lasagne.layers.Conv2DLayer(net[0],32,3,W=lasagne.init.HeUniform(),pad='same',nonlinearity=nonlinearity))
+    net[1]=batch_norm_adopted(lasagne.layers.Conv2DLayer(net[0],32,3,W=lasagne.init.HeUniform(),pad='same',nonlinearity=nonlinearity), bnalg)
     
     #Add max pooling layer.. which reduces the output image size by half
     net[2]=lasagne.layers.MaxPool2DLayer(net[1],2)
@@ -64,17 +91,17 @@ def cnn_network(input_var,input_channels=3,input_img_size=(32,32),num_classes=10
     net[3]=lasagne.layers.DropoutLayer(net[2],p=.25)
     
     #Add yet another convolution layer, this time with 64 channels.
-    net[4]=batch_norm(lasagne.layers.Conv2DLayer(net[3],64,3,W=lasagne.init.HeUniform(),pad='same',nonlinearity=nonlinearity))
+    net[4]=batch_norm_adopted(lasagne.layers.Conv2DLayer(net[3],64,3,W=lasagne.init.HeUniform(),pad='same',nonlinearity=nonlinearity), bnalg)
     
     #Repeat with another convolution layer
-    net[5]=batch_norm(lasagne.layers.Conv2DLayer(net[4],64,3,W=lasagne.init.HeUniform(),pad='same',nonlinearity=nonlinearity))
+    net[5]=batch_norm_adopted(lasagne.layers.Conv2DLayer(net[4],64,3,W=lasagne.init.HeUniform(),pad='same',nonlinearity=nonlinearity), bnalg)
     
     #Second stage of max pooling, followed by drop out
     net[6]=lasagne.layers.MaxPool2DLayer(net[5],2)
     net[7]=lasagne.layers.DropoutLayer(net[6],p=.25)
    
     #Add a fully connected layer with 512 hidden nodes with ReLU nonlinearity, followed by a drop out layer
-    net[8]=batch_norm(lasagne.layers.DenseLayer(net[7],num_units=512,nonlinearity=lasagne.nonlinearities.rectify))
+    net[8]=batch_norm_adopted(lasagne.layers.DenseLayer(net[7],num_units=512,nonlinearity=lasagne.nonlinearities.rectify), bnalg)
     net[9]=lasagne.layers.DropoutLayer(net[8],p=.5)
     
     #Finally add the output probability layer to classify the input image into one of 10 classes
@@ -246,7 +273,7 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_unit
 
     #Define the Network
     print("Generating the cnn network")
-    net=cnn_network(input)
+    net=cnn_network(input, bnalg)
 
     #Define Training Output Variables
 

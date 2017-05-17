@@ -45,11 +45,12 @@ todo:
 2) run the "naive" CNN model with original BN layer √
 3) add data output to output val_loss and val_acc √
 4) adjust the drawing python script accordingly √
-5) add customized BN layer \ DBN to the model 
+5) add customized BN layer \ DBN to the model √
 5.2) add control for main.py √
-6) small scale, all models test (5 epoches maybe)
+6) small scale, all models test (3 epoches)
+7) estimate time and epoches for best result 
 	-	from the obervation of first experiment, the loss_val is decreasing after 20 epochs. So I estimate the full scale will take up to 30-50 epochs to run.
-7) estimate time and epoches for best result
+	- so I will suggest 50 epochs for the first runs
 8) run all 10 models for full scale experiment 
 9) The MNIST and NI dataset is run with sgd instead of adagrad! Need to rerun them as well!
 9.1) store the old results run with sgd

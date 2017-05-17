@@ -9,4 +9,3 @@ mlpbn_sgd_adagrad_3_const0001,$\alpha^{(m)}$ = 0.001,
 mlpbn_sgd_adagrad_3_dbn,$\alpha^{(m)}$ = 1/m,
 mlpbn_sgd_adagrad_3_dbn2,$\alpha^{(m)}$ = 1/m^2,
 mlpbn_sgd_adagrad_3_const0,$\alpha^{(m)}$ = 0,
-

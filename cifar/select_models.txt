@@ -1,5 +1,4 @@
-1
-mlpbn_sgd_adagrad_3_original,$\alpha^{(m)}$ = 1,
+5
 mlpbn_sgd_adagrad_3_const1,$\alpha^{(m)}$ = 1,
 mlpbn_sgd_adagrad_3_const05,$\alpha^{(m)}$ = 0.5,
 mlpbn_sgd_adagrad_3_const001,$\alpha^{(m)}$ = 0.01,
