@@ -12,20 +12,21 @@ arg:	[NUM_EPOCHS](500)
 
 commands
 
-python main.py 100 50 gpu0 const1
-python main.py 100 50 gpu1 const075
-python main.py 100 50 gpu2 const05
+cd /home/yma/git/svrg/ni/
+python main.py 100 50 gpu0 const1 √
+python main.py 100 50 gpu1 const075 √
+python main.py 100 50 gpu2 const05 √
 
-python main.py 100 50 gpu1 const025
-python main.py 100 50 gpu2 const01
+python main.py 100 50 gpu0 const025 √
+python main.py 100 50 gpu1 const01 √
 
-python main.py 100 50 gpu1 const001
-python main.py 100 50 gpu2 const0001
+python main.py 100 50 gpu2 const001 √
 
+python main.py 100 50 gpu0 const0001 
 python main.py 100 50 gpu1 dbn
 python main.py 100 50 gpu2 dbn2
 python main.py 100 50 gpu1 const0
 
-python main.py 200 300 gpu2 const01
+# /home/yma/git/svrg/nipython main.py 200 300 gpu2 const01
 # this is for MNIST
 # I miss this run

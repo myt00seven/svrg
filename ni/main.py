@@ -25,7 +25,7 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
 	# if mode == "manual":
 	if (device == "cpu") or ("gpu" in device):
 		# os.system(str_device + " python large_gpu_mnist.py mlp sgd "+num_epochs+" "+num_hidden_nodes)
-		os.system(str_device + " python large_gpu_ni.py mlpbn sgd "+num_epochs+" "+num_hidden_nodes + " "+ bnalg)
+		os.system(str_device + " python large_gpu_ni.py mlpbn sgd_adagrad "+num_epochs+" "+num_hidden_nodes + " "+ bnalg)
 	# elif mode == "all":
 		
 

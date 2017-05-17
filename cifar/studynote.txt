@@ -47,17 +47,18 @@ todo:
 4) adjust the drawing python script accordingly √
 5) add customized BN layer \ DBN to the model √
 5.2) add control for main.py √
-6) small scale, all models test (3 epoches)
-7) estimate time and epoches for best result 
+6) small scale, all models test (3 epoches) √
+7) estimate time and epoches for best result  √
 	-	from the obervation of first experiment, the loss_val is decreasing after 20 epochs. So I estimate the full scale will take up to 30-50 epochs to run.
 	- so I will suggest 50 epochs for the first runs
-8) run all 10 models for full scale experiment 
-9) The MNIST and NI dataset is run with sgd instead of adagrad! Need to rerun them as well!
-9.1) store the old results run with sgd
-9.2) rerun MNIST with adagrad and update all the graphs and tables
-9.3) rerun NI with adagrad and update all the graphs and tables
+8) run all 10 models for full scale experiment √
+9) The MNIST and NI dataset is run with sgd instead of adagrad! Need to rerun them as well! √
+9.1) store the old results run with sgd √
+9.2) rerun MNIST with adagrad and update all the graphs and tables √
+9.3) rerun NI with adagrad and update all the graphs and tables √
+10) Update the results with adagrad for all three dataset
 
-10) focus on abastract
+11) focus on abastract
 
 
 

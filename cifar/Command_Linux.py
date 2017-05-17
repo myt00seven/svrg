@@ -15,15 +15,17 @@ arg:	[NUM_EPOCHS](500)
 
 python main.py 50 999 gpu0 const1
 python main.py 50 999 gpu1 const05
-python main.py 50 999 gpu0 const0
 python main.py 50 999 gpu1 dbn
 python main.py 50 999 gpu0 dbn2
-python main.py 50 999 gpu1 const001
 
-python main.py 50 999 gpu1 const075
+python main.py 50 999 gpu1 const001
+python main.py 50 999 gpu0 const0
+
+python main.py 50 999 gpu0 const075
 python main.py 50 999 gpu1 const025
-python main.py 50 999 gpu2 const01
-python main.py 50 999 gpu2 const0001
+
+python main.py 50 999 gpu0 const01
+python main.py 50 999 gpu1 const0001
 
 # for select model test
 python main.py 3 999 gpu0 const1

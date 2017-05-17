@@ -18,7 +18,7 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
 	str_device = "THEANO_FLAGS=mode=FAST_RUN,device="+device+",floatX=float32 "
 	if (device == "cpu") or ("gpu" in device):
 		# os.system(str_device + " python large_gpu_mnist.py mlp sgd "+num_epochs+" "+num_hidden_nodes)
-		os.system(str_device + " python large_gpu_mnist.py mlpbn sgd "+num_epochs+" "+num_hidden_nodes + " "+ bnalg)
+		os.system(str_device + " python large_gpu_mnist.py mlpbn sgd_adagrad "+num_epochs+" "+num_hidden_nodes + " "+ bnalg)
 	# else:
 	#	 print "Unsupported device, please type cpu or gpu"
 	# os.system("python draw.py "+num_epochs)

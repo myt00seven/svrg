@@ -1,0 +1,11 @@
+11
+mlpbn_sgd_200_const1,$\alpha^{(m)}$ = 1,
+mlpbn_sgd_200_const075,$\alpha^{(m)}$ = 0.75,
+mlpbn_sgd_200_const05,$\alpha^{(m)}$ = 0.5,
+mlpbn_sgd_200_const025,$\alpha^{(m)}$ = 0.25,
+mlpbn_sgd_200_const01,$\alpha^{(m)}$ = 0.1,
+mlpbn_sgd_200_const001,$\alpha^{(m)}$ = 0.01,
+mlpbn_sgd_200_const0001,$\alpha^{(m)}$ = 0.001,
+mlpbn_sgd_200_const0,$\alpha^{(m)}$ = 0,
+mlpbn_sgd_200_dbn,$\alpha^{(m)}$ = 1/m,
+mlpbn_sgd_200_dbn2,$\alpha^{(m)}$ = 1/m^2,

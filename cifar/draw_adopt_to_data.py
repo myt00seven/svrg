@@ -202,7 +202,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             
             for model in models:
                 index = models.index(model)
-                print line_loss_val[index]
+                # print line_loss_val[index]
                 plt.plot(count_line[index], line_loss_val[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index],  linewidth = LINEWIDTH)
 
             plt.xlabel('# Epochs')
