@@ -53,7 +53,7 @@ from collections import OrderedDict
 
 OUTPUT_FIGURE_PATH = 'data_large/'
 OUTPUT_DATA_PATH = 'data_large/'
-NUM_EPOCHS = 20
+NUM_EPOCHS = 2
 BATCH_SIZE = 100
 NUM_HIDDEN_UNITS = 300
 LEARNING_RATE = 0.01

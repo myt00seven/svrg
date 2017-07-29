@@ -8,11 +8,11 @@ run the python script of DL
 
 #default value
 NUM_EPOCHS = "500"
-DEVICE = "GPU1" 
+DEVICE = "cuda1" 
 NUM_HIDDEN_NODES ="500"
 BNALG = "original"
 MODE = "manual"
-devices = ["GPU0", "GPU1", "GPU2"]
+devices = ["cuda0", "cuda1", "cuda2"]
  
 
 def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES, bnalg = BNALG, mode = MODE):
