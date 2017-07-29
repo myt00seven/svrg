@@ -47,19 +47,19 @@ MODE = "all"
 
 PRINT = [
 0, #fill the index 0
-1, #'NI_CM_Validation_Loss'                     1
-1, #'NI_CM_Validation_Set_Accuracy'                     2
-0, #'NI_CM_Training_Set_Loss'                     3
-0, #'NI_CM_Training_Set_Accuracy'                     4
-0, #'NI_CM_Test_Set_Accuracy'                     5
-0, #'NI_CM_Test_Loss'                     6
+1, #'CIFAR_CM_Validation_Loss'                     1
+1, #'CIFAR_CM_Validation_Set_Accuracy'                     2
+0, #'CIFAR_CM_Training_Set_Loss'                     3
+0, #'CIFAR_CM_Training_Set_Accuracy'                     4
+0, #'CIFAR_CM_Test_Set_Accuracy'                     5
+0, #'CIFAR_CM_Test_Loss'                     6
 0, #'Timediff_Validation_Loss'                     7
 0, #'TimeDiff_Validation_Set_Accuracy'                     8
 0, #'TimeDiff_Training_Set_Loss'                     9
 0, #'TimeDiff_Training_Set_Accuracy'                     10
 0, #'TimeDiff_Test_Set_Accuracy'                     11
 0, #'TimeDiff_Test_Loss'                     12
-1, #'NI_CM_Validation_Set_Error'                     13
+1, #'CIFAR_CM_Validation_Set_Error'                     13
 ]
 
 
@@ -73,13 +73,13 @@ styles_11_colors = [
 ('b', '--'),    # 0.001
 ('b', ':'), # 1/m
 ('c', ':'), # 1/m^2
-('k', '-')  # 0
+('k', '-.')  # 0
 ]
 
 styles_5_colors = [
 ('r', '-'), # 1
 ('g', '-'), # 0.5
-('m', '--'),    # 0.01
+('m', '--'),# 0.01
 ('b', ':'), # 1/m
 ('c', ':'), # 1/m^2
 ]
@@ -197,7 +197,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
 #!!!
         if PRINT[1] == 1:
             plt.figure(1)
-            plt.title('Loss on Validation')
+            # plt.title('Loss on Validation')
 
             
             for model in models:
@@ -206,21 +206,21 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
                 plt.plot(count_line[index], line_loss_val[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index],  linewidth = LINEWIDTH)
 
             plt.xlabel('# Epochs')
-            plt.ylabel('Loss')
+            plt.ylabel('Loss on Validation')
             # plt.legend(bbox_to_anchor=(1,0.65)) # 10 lines
             # plt.legend(bbox_to_anchor=(1,1)) # 5 lines
             plt.legend(loc='best', fontsize = 12)
             axes = plt.gca()
             if mode == 'select':
-                axes.set_ylim([0.0,1]) # 5 lines
+                axes.set_ylim([0.5,1]) # 5 lines
 
             # plt.show()
-            pylab.savefig(PATH_FIGURE+'NI_CM_Validation_Loss'+'.png',bbox_inches='tight')
+            pylab.savefig(PATH_FIGURE+'CIFAR_CM_Validation_Loss'+'.png',bbox_inches='tight')
 
 #!!1
         if PRINT[2] == 1:
             plt.figure(2)
-            plt.title('Accuracy on Validation')
+            # plt.title('Accuracy on Test')
             
             if mode == 'select':
                 axes.set_ylim([0.915,0.93]) # 5 line
@@ -231,11 +231,11 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             
 
             plt.xlabel('# Epochs')
-            plt.ylabel('Predict Accuracy')
+            plt.ylabel('Predicted Accuracy on Test')
             plt.legend(loc='best', fontsize = 12)
             
             # plt.show()
-            pylab.savefig(PATH_FIGURE+'NI_CM_Validation_Accuracy'+'.png',bbox_inches='tight')
+            pylab.savefig(PATH_FIGURE+'CIFAR_CM_Validation_Accuracy'+'.png',bbox_inches='tight')
 
         if PRINT[3] == 1:
             plt.figure(3)
@@ -250,7 +250,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             plt.ylabel('Loss')
             plt.legend()
             # plt.show()
-            pylab.savefig(PATH_FIGURE+'NI_CM_Training_Set_Loss'+'.png',bbox_inches='tight')
+            pylab.savefig(PATH_FIGURE+'CIFAR_CM_Training_Set_Loss'+'.png',bbox_inches='tight')
 
         if PRINT[4] == 1:
             plt.figure(4)
@@ -265,7 +265,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             plt.ylabel('Predict Accuracy')
             plt.legend(bbox_to_anchor=(1,0.4))
             # plt.show()
-            pylab.savefig(PATH_FIGURE+'NI_CM_Training_Set_Accuracy'+'.png',bbox_inches='tight')
+            pylab.savefig(PATH_FIGURE+'CIFAR_CM_Training_Set_Accuracy'+'.png',bbox_inches='tight')
 
         if PRINT[5] == 1:
             plt.figure(5)
@@ -287,7 +287,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             plt.legend(loc='best', fontsize = 12)
 
             # plt.show()
-            pylab.savefig(PATH_FIGURE+'NI_CM_Test_Set_Accuracy'+'.png',bbox_inches='tight')
+            pylab.savefig(PATH_FIGURE+'CIFAR_CM_Test_Set_Accuracy'+'.png',bbox_inches='tight')
 
 #!!!
         if PRINT[13] == 1:
@@ -302,17 +302,17 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
                 plt.plot(count_line[index], line_err_val[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index], linewidth = LINEWIDTH)
 
             plt.xlabel('# Epochs')
-            plt.ylabel('Test Error')
+            plt.ylabel('Validation Error')
             plt.legend(loc='best', fontsize = 12)
             
             # plt.show()
-            pylab.savefig(PATH_FIGURE+'NI_CM_Validation_Error'+'.png',bbox_inches='tight') 
+            pylab.savefig(PATH_FIGURE+'CIFAR_CM_Validation_Error'+'.png',bbox_inches='tight') 
 
     if FIND_BEST == True:
 
         o_file = open(PATH_FIGURE+'best_record.txt', 'w+')
 
-        o_file.write("Min_Epoch \t Loss_Val \t Accuracy_Test \t Model\n")
+        o_file.write("Min_Epoch \t Loss_Val \t Error_Test \t Model\n")
 
         for model in models:
 
@@ -320,7 +320,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             index_min = my_min_index(line_loss_val[index])
             o_file.write("%d\t\t" %index_min)
             o_file.write("%.4f\t\t" %line_loss_val[index][index_min])
-            o_file.write("%.4f\t\t" %line_acc_val[index][index_min])
+            o_file.write("%.4f\t\t" %line_err_val[index][index_min])
             o_file.write(models_name[index]+ "\n")
 
             

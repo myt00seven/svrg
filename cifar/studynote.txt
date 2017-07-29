@@ -56,9 +56,21 @@ todo:
 9.1) store the old results run with sgd √
 9.2) rerun MNIST with adagrad and update all the graphs and tables √
 9.3) rerun NI with adagrad and update all the graphs and tables √
-10) Update the results with adagrad for all three dataset
+10) Update the results with adagrad for all three dataset √
 
-11) focus on abastract
+11) incorperate the edits √
+11.1) edit words √
+11.2) regenerate figures √
+12) read the whole paper for once √
+
+13) finish incorprating the edits and comments √
+13.1) I still have three paragraphs to edit. The first one is going to be harder, and the rest of two is easier. √
+14) try to compress into 8 pages (whatever send to diego will include what's changed. Maybe I should delelte the deleted sentences and only leave the new one. So I won't need to compress twice.) I still have half more page. √
+15) add a new title for the appendix √
+16) check the nips backup pdf and the nips website for format requirement  √
+17) send it to Diego √
+18) upload to NIPS
+19) upload to arxiv
 
 
 

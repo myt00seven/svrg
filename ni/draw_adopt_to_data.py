@@ -71,7 +71,7 @@ styles_11_colors = [
 ('b', '--'),    # 0.001
 ('b', ':'), # 1/m
 ('c', ':'), # 1/m^2
-('k', '-')  # 0
+('k', '-.')  # 0
 ]
 
 styles_5_colors = [
@@ -193,7 +193,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
 #!!!
         if PRINT[1] == 1:
             plt.figure(1)
-            plt.title('Loss on Validation')
+            # plt.title('Loss on Validation')
 
             
             for model in models:
@@ -201,7 +201,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
                 plt.plot(count_line[index], line_loss_val[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index],  linewidth = LINEWIDTH)
 
             plt.xlabel('# Epochs')
-            plt.ylabel('Loss')
+            plt.ylabel('Loss on Validation')
             # plt.legend(bbox_to_anchor=(1,0.65)) # 10 lines
             # plt.legend(bbox_to_anchor=(1,1)) # 5 lines
             plt.legend(loc='best', fontsize = 12)
@@ -214,7 +214,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
 
         if PRINT[2] == 1:
             plt.figure(2)
-            plt.title('Accuracy on Validation')
+            # plt.title('Accuracy on Validation')
             
             for model in models:
                 index = models.index(model)                
@@ -222,7 +222,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             
 
             plt.xlabel('# Epochs')
-            plt.ylabel('Predict Accuracy')
+            plt.ylabel('Predicted Accuracy on Test')
             plt.legend(bbox_to_anchor=(1,0.4))
             # plt.show()
             pylab.savefig(PATH_FIGURE+'NI_CM_Validation_Accuracy'+'.png',bbox_inches='tight')
@@ -260,7 +260,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
 #!!!
         if PRINT[5] == 1:
             plt.figure(5)
-            plt.title('Accuracy on Test')
+            # plt.title('Accuracy on Test')
 
             axes = plt.gca()
             # axes.set_xlim([xmin,xmax])
@@ -272,7 +272,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
                 plt.plot(count_line[index], line_acc_test[index], color=styles[index][0],ls=styles[index][1] ,label=models_name[index], linewidth = LINEWIDTH)
 
             plt.xlabel('# Epochs')
-            plt.ylabel('Predict Accuracy')
+            plt.ylabel('Predicted Accuracy on Test')
             # plt.legend(bbox_to_anchor=(1,0.8)) # all 10 lines
             # plt.legend(bbox_to_anchor=(1,0.4)) # 5 line
             plt.legend(loc='best', fontsize = 12)
@@ -393,7 +393,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
 
         o_file = open(PATH_FIGURE+'best_record.txt', 'w+')
 
-        o_file.write("Min_Epoch \t Loss_Val \t Accuracy_Test \t Model\n")
+        o_file.write("Min_Epoch \t Loss_Val \t Error_Test \t Model\n")
 
         for model in models:
 
@@ -401,7 +401,7 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             index_min = my_min_index(line_loss_val[index])
             o_file.write("%d\t\t" %index_min)
             o_file.write("%.4f\t\t" %line_loss_val[index][index_min])
-            o_file.write("%.4f\t\t" %line_acc_test[index][index_min])
+            o_file.write("%.4f\t\t" %(1-line_acc_test[index][index_min]))
             o_file.write(models_name[index]+ "\n")
 
             

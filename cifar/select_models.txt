@@ -1,6 +1,6 @@
 5
-mlpbn_sgd_adagrad_3_const1,$\alpha^{(m)}$ = 1,
-mlpbn_sgd_adagrad_3_const05,$\alpha^{(m)}$ = 0.5,
-mlpbn_sgd_adagrad_3_const001,$\alpha^{(m)}$ = 0.01,
-mlpbn_sgd_adagrad_3_dbn,$\alpha^{(m)}$ = 1/m,
-mlpbn_sgd_adagrad_3_dbn2,$\alpha^{(m)}$ = 1/m^2
+mlpbn_sgd_adagrad_50_const1,$\alpha^{(m)}$ = 1,
+mlpbn_sgd_adagrad_50_const05,$\alpha^{(m)}$ = 0.5,
+mlpbn_sgd_adagrad_50_const001,$\alpha^{(m)}$ = 0.01,
+mlpbn_sgd_adagrad_50_dbn,$\alpha^{(m)}$ = 1/m,
+mlpbn_sgd_adagrad_50_dbn2,$\alpha^{(m)}$ = 1/m^2
