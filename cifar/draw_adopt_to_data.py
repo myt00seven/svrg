@@ -25,10 +25,11 @@ def moving_average(a, n=3) :
 
 PATH_DATA   = "data_large/"
 
-PATH_FIGURE = "figure_arbitrary/"
+PATH_FIGURE = "figure_arbitrary_Jul29/"
 
 STARTPOINT = 0
 LINEWIDTH = 2
+SmoothRate = 0.4
 
 DRAW_COMPARE = True
 FIND_BEST = True 
@@ -94,7 +95,13 @@ styles_5_colors = [
 
 # SPEC = ['b-', 'c:', 'r-.', 'g--', 'kv', 'c-', 'r:', 'g-.', 'k-','r-', 'g:','rv','gv']
 
+def smoothit(seq, weight = SmoothRate):
+    length = len(seq)
+    for i in range(length):
+        if i>0:
+            seq[i] = seq[i-1]*(1-weight) + seq[i]*weight
 
+    return seq
 
 def my_min_index(sequence):
     """return the index of the minimum element of sequence"""
@@ -162,11 +169,17 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
         index = models.index(model)
         # line_acc_test.append(np.loadtxt(PATH_DATA+str(model)+"_acc_test.txt"))
         # line_acc_train.append(np.loadtxt(PATH_DATA+str(model)+"_acc_train.txt"))
-        line_acc_val.append(np.loadtxt(PATH_DATA+str(model)+"_acc_val.txt"))
-        line_err_val.append(np.loadtxt(PATH_DATA+str(model)+"_err_val.txt"))
+        line_data = smoothit( np.loadtxt(PATH_DATA+str(model)+"_acc_val.txt") )
+        line_acc_val.append(line_data)
+
+        line_data = smoothit(np.loadtxt(PATH_DATA+str(model)+"_err_val.txt") )
+        line_err_val.append(line_data)
+
         # line_loss_test.append(np.loadtxt(PATH_DATA+str(model)+"_loss_test.txt"))
         # line_loss_train.append(np.loadtxt(PATH_DATA+str(model)+"_loss_train.txt"))
-        line_loss_val.append(np.loadtxt(PATH_DATA+str(model)+"_loss_val.txt"))
+        line_data = smoothit(np.loadtxt(PATH_DATA+str(model)+"_loss_val.txt" ) )
+        line_loss_val.append(line_data)
+
         # line_epoch_times.append(np.loadtxt(PATH_DATA+str(model)+"_epoch_times.txt"))
         count_line.append(np.arange(line_acc_val[index].shape[0])+1)
         # print count_line
@@ -322,16 +335,13 @@ def main(num_epochs=NUM_EPOCHS, mode = MODE):
             o_file.write("%.4f\t\t" %line_loss_val[index][index_min])
             o_file.write("%.4f\t\t" %line_err_val[index][index_min])
             o_file.write(models_name[index]+ "\n")
-
-            
-
-
     
     print ("Finish drawing cross model plots.")
 
 if __name__ == '__main__':
     if ('--help' in sys.argv) or ('-h' in sys.argv) or ('help' in sys.argv):
         print("arg: NUM_EPOCHS")
+        print("arg: mode")
     else:
         kwargs = {}
         if len(sys.argv) > 1:

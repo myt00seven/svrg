@@ -30,7 +30,7 @@ NUM_EPOCHS = 2
 ### no efect
 NUM_HIDDEN_UNITS = 100 # no effect
 BNALG = 'const1'
-OUTPUT_DATA_PATH = 'data_large/'
+OUTPUT_DATA_PATH = 'data_nips_rebuttal/'
 MODEL = 'mlpbn'
 GRADIENT = 'sgd_adagrad'
 
