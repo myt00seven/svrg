@@ -23,7 +23,7 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
 	str_device = str_COM1+device+str_COM2
 
 	# if mode == "manual":
-	if (device == "cpu") or ("gpu" in device):
+	if (device == "cpu") or ("cuda" in device):
 		# os.system(str_device + " python large_gpu_mnist.py mlp sgd "+num_epochs+" "+num_hidden_nodes)
 		os.system(str_device + " python cifar_cnn.py mlpbn sgd_adagrad "+num_epochs+" "+num_hidden_nodes + " "+ bnalg)
 	# elif mode == "all":
