@@ -110,7 +110,7 @@ def cnn_network(input_var, bnalg = BNALG,input_channels=3,input_img_size=(32,32)
     return net
 
 # Batch Training Module
-def batch_train(datagen,f_train,f_val,lr_start,lr_decay,N_train_batches=5,mini_batch_size=32,img_dim=(3,32,32),\
+def batch_train(datagen,f_train,f_val,output_layer,lr_start,lr_decay,N_train_batches=5,mini_batch_size=32,img_dim=(3,32,32),\
     epochs=10,test_interval=1,data_dir='/Users/sachintalathi/Work/Python/Data/cifar-10-batches-py',\
     data_augment_bool=False,train_bool=True):
 
@@ -209,6 +209,7 @@ def batch_train(datagen,f_train,f_val,lr_start,lr_decay,N_train_batches=5,mini_b
         return val_loss,val_err
 
     per_epoch_train_stats=[];per_epoch_val_stats=[]
+    per_epoch_params=[]
     Data_Mean,Data_Std=Get_Data_Stats(data_dir,img_dim,N_train_batches)
     
     #Now that all the necessary modules are defined, we are ready to perform training
@@ -231,6 +232,19 @@ def batch_train(datagen,f_train,f_val,lr_start,lr_decay,N_train_batches=5,mini_b
             train_err=train_err/N_train_batches
             per_epoch_train_stats.append([epoch,train_loss,train_err])
 
+            bn_params =    lasagne.layers.get_all_param_values(output_layer, trainable=False)
+
+            this_mu     = np.copy(bn_params[0])
+            this_lambda = np.copy(bn_params[1])
+            per_epoch_params.append([this_mu,this_lambda])
+
+            # all_mu  = [bn_params[0], bn_params[2],bn_params[4],bn_params[6],bn_params[8]]
+            # all_mu  = bn_params[0]
+            # all_std = [bn_params[1], bn_params[3],bn_params[5],bn_params[7],bn_params[9]]
+            # all_std = bn_params[1]
+            # per_epoch_params.append([all_mu,all_std])
+
+
         if (epoch+1)%test_interval==0:
             val_loss,val_err=val_on_batch(data_dir,img_dim,mini_batch_size,f_val)
 
@@ -240,7 +254,7 @@ def batch_train(datagen,f_train,f_val,lr_start,lr_decay,N_train_batches=5,mini_b
         LR*=lr_decay
 
     #Return the performance Stats after training is complete
-    return per_epoch_train_stats,per_epoch_val_stats
+    return per_epoch_train_stats,per_epoch_val_stats,per_epoch_params
 
 
 def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_units = NUM_HIDDEN_UNITS, bnalg = BNALG):
@@ -300,20 +314,30 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_unit
     train_loss=train_loss+l2_penalty
 
     #Define the Gradient Update Rule
+    print("Compiling the functions: extract params")
+
     params = lasagne.layers.get_all_params(net['l_out'], trainable=True) #Get list of all trainable network parameters
+    # bnparams = lasagne.layers.get_all_params(net['l_out'], trainable=False) #Get list of all BN untrainable network parameters
+
     updates = lasagne.updates.adagrad(loss_or_grads=train_loss, params=params, learning_rate=LR) ## Use Adagrad Gradient Descent Learning Algorithm
 
     #Define Theano Functions for Training and Validation
 
     #Theano Function for Training
+    print("Compiling the functions: define train function")
+
     f_train=theano.function([input,target,LR],[train_loss,train_err],updates=updates,allow_input_downcast=True)
 
     # Theano Function for Validation
+    
+    print("Compiling the functions: define val function")
     f_val=theano.function([input,target],[val_loss,val_err],allow_input_downcast=True)
+
+    # f_get_params=theano.function([LR],[bnparams],allow_input_downcast=True)
 
     #Begin Training
     print("Beging Training")
-    train_stats,val_stats=batch_train(datagen,f_train,f_val,LR_start,LR_decay,epochs=epochs,\
+    train_stats,val_stats,per_epoch_params=batch_train(datagen,f_train,f_val,net['l_out'],LR_start,LR_decay,epochs=epochs,\
         data_dir="../../data/cifar-10-batches-py/",train_bool=True)
 
     #output data
@@ -322,10 +346,18 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_unit
     list_val_err    = [i[2] for i in val_stats]
     list_val_acc    = [1-i  for i in list_val_err]
 
+    epoch_mu        = [i[0] for i in per_epoch_params]
+    epoch_lambda    = [i[1] for i in per_epoch_params]
+    
+    # epoch_params_mu = [i[0] for i in epoch_params]
+    # epoch_params_std= [i[1] for i in epoch_params]
+
     np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(num_epochs)+"_"+bnalg+"_"+"epoch.txt",list_epoch)
     np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(num_epochs)+"_"+bnalg+"_"+"loss_val.txt",list_val_loss)
     np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(num_epochs)+"_"+bnalg+"_"+"acc_val.txt",list_val_acc)
     np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(num_epochs)+"_"+bnalg+"_"+"err_val.txt",list_val_err)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(num_epochs)+"_"+bnalg+"_"+"params_mu.txt",epoch_mu)
+    np.savetxt(OUTPUT_DATA_PATH+model+"_"+gradient+"_"+str(num_epochs)+"_"+bnalg+"_"+"params_std.txt",epoch_lambda)
     print ("Data saved...")
 
 

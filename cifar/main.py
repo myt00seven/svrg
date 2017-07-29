@@ -7,12 +7,12 @@ run the python script of DL
 
 
 #default value
-NUM_EPOCHS = "500"
-DEVICE = "cuda1" 
-NUM_HIDDEN_NODES ="500"
+NUM_EPOCHS = "5"
+DEVICE = "gpu1" 
+NUM_HIDDEN_NODES ="300"
 BNALG = "original"
 MODE = "manual"
-devices = ["cuda0", "cuda1", "cuda2"]
+devices = ["gpu0", "gpu1", "gpu2", "gpu3"]
  
 
 def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NODES, bnalg = BNALG, mode = MODE):
