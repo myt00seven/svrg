@@ -32,7 +32,8 @@ NUM_HIDDEN_UNITS = 100 # no effect
 BNALG = 'const1'
 OUTPUT_DATA_PATH = 'data_nips_rebuttal/'
 MODEL = 'mlpbn'
-GRADIENT = 'sgd_adagrad'
+GRADIENT = 'adagrad'
+LR_START = 0.01
 
 bnalg_const_dict = {
 "const1":     1.0, 
@@ -251,16 +252,18 @@ def batch_train(datagen,f_train,f_val,output_layer,lr_start,lr_decay,N_train_bat
             per_epoch_val_stats.append([epoch,val_loss,val_err])
             print ('Epoch  (Time) %d (%0.03f s) Learning_Rate %0.04f Test Loss (Error)\
                 %.03f (%.03f)'%(epoch,toc-tic,LR,val_loss,val_err))
-        LR*=lr_decay
+        
+        if epoch%10 ==0 and gradient=="sgd":
+            LR*=0.9
 
     #Return the performance Stats after training is complete
     return per_epoch_train_stats,per_epoch_val_stats,per_epoch_params
 
 
-def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_units = NUM_HIDDEN_UNITS, bnalg = BNALG):
+def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_units = NUM_HIDDEN_UNITS, bnalg = BNALG, lr_start = LR_START):
 
     # Set the Initial Learning Rate; the Final Learning Rate and the number of training epochs
-    LR_start=0.01
+    LR_start= lr_start
     LR_fin = 0.01
     epochs=num_epochs
     # LR_decay = (LR_fin/LR_start)**(1./epochs)
@@ -319,7 +322,15 @@ def main(model=MODEL,gradient = GRADIENT, num_epochs=NUM_EPOCHS, num_hidden_unit
     params = lasagne.layers.get_all_params(net['l_out'], trainable=True) #Get list of all trainable network parameters
     # bnparams = lasagne.layers.get_all_params(net['l_out'], trainable=False) #Get list of all BN untrainable network parameters
 
-    updates = lasagne.updates.adagrad(loss_or_grads=train_loss, params=params, learning_rate=LR) ## Use Adagrad Gradient Descent Learning Algorithm
+    if gradient == "adagrad":
+        updates = lasagne.updates.adagrad(loss_or_grads=train_loss, params=params, learning_rate=LR) 
+        ## Use Adagrad Gradient Descent Learning Algorithm
+    elif gradient == "rmsprop":
+        updates = lasagne.updates.rmsprop(loss_or_grads=train_loss, params=params, learning_rate=LR) 
+    elif gradient == "sgd":
+        updates = lasagne.updates.sgd(loss_or_grads=train_loss, params=params, learning_rate=LR) 
+    else:
+        print("Invalid gradient name")
 
     #Define Theano Functions for Training and Validation
 
@@ -384,6 +395,8 @@ if __name__ == '__main__':
             kwargs['num_hidden_units'] = int(sys.argv[4])
         if len(sys.argv) > 5:
             kwargs['bnalg'] = sys.argv[5]
+        if len(sys.argv) > 6:
+            kwargs['lr_start'] = float(sys.argv[6])
         main(**kwargs)
 
 

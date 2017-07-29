@@ -12,6 +12,12 @@ DEVICE = "gpu1"
 NUM_HIDDEN_NODES ="300"
 BNALG = "original"
 MODE = "manual"
+GRADIENT = "adagrad"
+LR_START = "0.01"
+#  adagrad / rmsprop / sgd 
+#  sgd with decay 0.9895 so it decays by 0.9 after 10 epochs
+
+
 devices = ["gpu0", "gpu1", "gpu2", "gpu3"]
  
 
@@ -25,7 +31,7 @@ def main(num_epochs=NUM_EPOCHS, device = DEVICE, num_hidden_nodes=NUM_HIDDEN_NOD
 	# if mode == "manual":
 	#if (device == "cpu") or ("cuda" in device):
 		# os.system(str_device + " python large_gpu_mnist.py mlp sgd "+num_epochs+" "+num_hidden_nodes)
-	os.system(str_device + " python cifar_cnn.py mlpbn sgd_adagrad "+num_epochs+" "+num_hidden_nodes + " "+ bnalg)
+	os.system(str_device + " python cifar_cnn.py mlpbn "+GRADIENT+" "+num_epochs+" "+num_hidden_nodes + " "+ bnalg + " "+LR_START)
 	# elif mode == "all":
 		
 
